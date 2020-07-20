@@ -1,0 +1,171 @@
+.wrapper {
+  margin: 0 auto;
+  width: 1100px;
+}
+
+header {
+  background-color: black;
+  height: 50px;
+}
+
+header h4 {
+  color: white;
+  text-align: center;
+  padding-top: 0.5rem;
+  font-size: 2rem;
+}
+
+.main-articles {
+  display: flex;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid black;
+  height: 400px;
+}
+
+.main-article {
+  flex: 2;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.main-articles:first-child {
+  border-right: 1px solid black;
+}
+
+.main-article img {
+  width: 100%;
+}
+
+.running-feed {
+  flex: 1;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.running-feed .running-feed-img img {
+  width: 100%;
+  /* border: none; */
+}
+.running-feed .running-feed-content {
+  animation: running-news 15s infinite;
+}
+.running-feed-content .par {
+  margin-bottom: 0.2rem;
+}
+
+.secondary-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  height: 40px;
+  background-color: #133272;
+  padding-left: 0.8rem;
+}
+
+.search-bar {
+  display: flex;
+}
+.search-bar .btn {
+  height: 25px;
+  width: 25px;
+  background-image: url("./search.png");
+  background-size: cover;
+  background-position: center;
+  margin-right: 0.2rem;
+}
+
+.nav-items span {
+  color: white;
+  margin-right: 0.3rem;
+  padding: 0.5rem;
+}
+
+.nav-items span:not(:nth-child(2)) {
+  border-right: 1px white solid;
+  color: white;
+}
+
+.episodes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.episode {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  padding: 0.5rem;
+  width: 300px;
+}
+.episode p {
+  direction: rtl;
+}
+
+.news {
+  display: flex;
+  margin-top: 0.8rem;
+}
+
+.top-daily-articles {
+  display: flex;
+  flex-direction: column;
+  flex: 6;
+}
+
+.daily-article {
+  display: flex;
+  border: 1px solid grey;
+  height: 100px;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+}
+
+.daily-article .daily-article-content {
+  direction: rtl;
+  color: white;
+  padding-right: 1rem;
+}
+
+.side-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.side-nav .nav-btn {
+  display: block;
+  background-color: white;
+  height: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.side-nav .nav-btn:hover {
+  background-color: orange;
+}
+
+/************************************ Animation ******************************************************/
+@keyframes running-news {
+  from {
+    transform: translate3d(0%, 100%, 0px);
+  }
+  to {
+    transform: translate3d(0%, 0%, 0px);
+  }
+}
+
+/*********** common ***********/
+
+.bg-red {
+  background-color: red;
+}
+.bg-blue {
+  background-color: #133272;
+}
+
+.bg-grey {
+  background-color: #333;
+}
