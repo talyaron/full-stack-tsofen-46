@@ -3,7 +3,7 @@
     background-color: black;
     width: 100%;
     height: 200px;
-    position: absolute;
+    
     
 }
 .headContainer{
@@ -87,14 +87,16 @@ font-size: 20px;
 
 
 .card-h{
-    top: 230px;
-    color: yellow;
+    
+    color: black;
     font-size: bold;
     margin-left:34%;
     
 }
+
+
 .card-wrapper{
-    top: 250px;
+    top: 30px;
     position: relative;
     display: flex;
     border: 1px solid lightgray;
