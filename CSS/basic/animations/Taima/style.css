@@ -1,0 +1,47 @@
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(54, 78, 158);
+    position: relative;
+
+   
+   
+}
+
+
+.runRight{
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: runRight 600ms linear 1s infinite alternate forwards ;
+}
+
+@keyframes runRight {
+    from {
+        background-color: goldenrod;
+        left: 0px;
+    }
+    to {
+        background-color: green;
+        left: 100px;
+    }
+  }
+
+.runDown{
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: runDown 600ms linear 0.5s infinite alternate forwards ;
+}
+  @keyframes runDown {
+    from {
+        background-color: palevioletred;
+        top: 0px;
+        left: 100px;
+    }
+    to {
+        background-color: red;
+        top: 100px;
+        left: 200px;
+    }
+  }
+  .runBottom{
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: runBottom 600ms linear 0.5s infinite alternate forwards ;
+}
