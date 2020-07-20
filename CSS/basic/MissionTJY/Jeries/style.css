@@ -1,0 +1,65 @@
+.cards {
+    margin-top: 20px;
+    margin: auto;
+    width: fit-content;
+    margin-top: 30px;
+    
+}
+
+.container {
+    position: relative;
+    display: flex;
+    width: 350px;
+    height: 200px;
+    background-color: lightgray;
+    border-radius: 20px ;
+    margin-top: 15px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.418);
+    
+}
+
+.cart-image img {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    left: 20px;
+    top: 50px;
+}
+
+.data{
+    padding: 5px;
+    position: relative;
+    left: 80px;
+    font-size: small;
+    font-family: 'Rowdies', cursive;
+}
+
+hr {
+    width: 100px;
+}
+
+.btn {
+    
+    /* border-top-right-radius: 5px; */
+    /* border-top-left-radius: 5px; */
+    /* border-bottom-right-radius: 5px; */
+    border-radius: 6px;
+    position: absolute;
+    background-color: black;
+    color: white;
+    height: 25px;
+    /* left: 90%; */
+    right: -10px;
+    top: -10px;
+    width: 60px;
+    text-align: center;
+    padding-top: 2px;
+
+
+    
+
+}
+
+.afterDis{
+    color: blue;
+}
