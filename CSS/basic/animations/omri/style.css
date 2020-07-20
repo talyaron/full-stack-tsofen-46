@@ -1,0 +1,55 @@
+.squares {
+    display: flex;
+    flex-direction: column;
+    margin: 6rem auto;
+    width: 760px;
+
+
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    position: relative;
+    margin-bottom: 1rem;
+    animation: runRight 15s linear 1s infinite alternate forwards;
+
+}
+
+.square-two {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    position: relative;
+    align-self: flex-end;
+    animation: runLeft 15s linear 1s infinite alternate forwards;
+}
+
+@keyframes runRight {
+    from {
+        background-color: red;
+        left: 0px;
+        /* transform: rotate(0deg); */
+    }
+
+    to {
+        background-color: yellow;
+        left: 100%;
+        /* transform: rotate(180deg); */
+    }
+}
+
+@keyframes runLeft {
+    from {
+        background-color: red;
+        right: 0px;
+        /* transform: rotate(0deg); */
+    }
+
+    to {
+        background-color: yellow;
+        right: 100%;
+        /* transform: rotate(180deg); */
+    }
+}
