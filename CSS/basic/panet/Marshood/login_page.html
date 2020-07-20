@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+  <html>
+
+  <head>
+
+    <title>Login</title>
+    <link rel="icon" href="login.png"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="all" href="logincss.css" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("#btnLogin1").click(function(){
+    $.post("/logintest1",
+    {
+      email: document.getElementById("email").value,
+      pass:document.getElementById("pas").value
+    },
+   
+    function(data,status){
+    
+      alert("failed to login please try again.!\n");
+     // $("#div_content").load("/contact_us.html");
+      $( "html" ).html( data );
+      document.open();
+      document.write(data);
+       document.close();
+     // $(this).load("contact_us.html");
+     // window.location.replace("http://stackoverflow.com");
+      alert("Data: " + data + "\nStatus: " + status);
+    });
+  });
+});
+</script>
+  
+
+  <script>
+    $(document).ready(function(){
+  // Click this button to send get request with parameter.
+  $("#btnLogin").click(function () {
+
+var url = '/logintest1';
+var params = {      
+email: document.getElementById("email").value, pass:document.getElementById("pas").value
+}
+alert("123");
+$.get(url, params, function (data,status) {
+  alert("status ::-00 ." + status);
+  alert("123"+data);
+  if(status=="success"){
+                   document.open();
+                   document.write(data);
+                   document.close();
+                  alert("Log in successfully ..!");
+  }
+  else {
+    alert("try Again Error!!");
+  }
+})
+ 
+
+});
+});</script>
+  <body class="backgroundPhoto center  container  container-fluid " id="ma";><br>
+    <div id="div_content"> 
+    <h1> <span style="color: #e84545">Login<br>Client and Server Side Programming Lab</h1>
+      <!-- Adding line (hr) -->
+    <hr color="red"><br>
+    <form    id="contact_us"   method="GET" action="/connect" style="max-width:500px;margin:auto">
+      <a href="contact_us.html"><img src="Contact-Us-Logo.png" alg= "facebook Logo" alt="contact us logo" width=" 8%" class="bottomright" title="Contact-Us"  align="right" ></a>
+    </form>
+     <!-- Adding Login logo  !-->
+    <img src="login.png" alt="login logo" width=" 5%" class="animationphoto">
+    <br>
+    <div  class="row">
+      <div class="col-md-4">
+        
+      </div>
+        <div class="col-md-4 ">
+       
+      <!-- Forms  method="GET" action="/checkLogin" !-->  
+      <form  class="box"  id="Log_in_val" style="max-width:500px;margin:auto ">
+         
+              <div  class="row">
+                <h3>Login:</h3>
+                <br>
+              <div> <span style="color:#e84545;  font: larger; font-size: 16px"> <i class="glyphicon glyphicon-user"></i>
+         Email:<br></div><input type="email" class ="center"name="email" id="email"type="text" placeholder="Enter Email"   ><br>
+            </div>
+            <br>
+         <div class="input-container">
+            <div> <span style="color: #e84545;  font: larger; font-size: 16px"> <i class="	glyphicon glyphicon-lock"></i>
+        Password:<br> </div><input type="password" id="pas"  name="password" class ="center" placeholder="Enter Password" 
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}|([A])+([d])+([m])+([i])+([n])" title="Must contain at least one number and one uppercase and lowercase letter and one Special Character , and at least 6  or more characters" ><br> 
+        </div>
+         <label>
+            <br>
+        <input type="checkbox" checked="checked" name="remember"  ><span style="color: #e84545; "> Remember Me       
+        </label>
+        <a href="contact_us.html"><span style="font-size:12;float: center; color: #903749;">*Forget Password? </a>
+        <br>
+        <a href="singUp_login.html"><span style="font-size:12;width: 150; "class="btn btn-lg btn-default  center" >Sign Up</button></a>
+        <button type="submit" id="btnLogin" class="btn btn-lg btn-default pull-right" <span style="font-size:12;width: 150;  " >Log In</button>
+        
+        </form>
+         
+         </div>
+         <div class="col-md-4">
+            <div id="message" class= "box" text-align= "center"       >
+                <h3>Password must contain the following:</h3>
+               <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+               <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
+               <p id="number" class="invalid">A <b>number</b></p>
+               <p id="length" class="invalid">Minimum <b>6 characters</b></p>
+               <p id="Special" class="invalid">A Special Character (!, @, #, etc.). <b>Special Character</b></p>                </div>
+    
+
+         
+      </div>
+    </div>
+    <br> 
+  </div>
+  </div></div>
+     <script src="LoginJs.js"></script>
+    </div>
+  </body>
+
+
+  </html>
