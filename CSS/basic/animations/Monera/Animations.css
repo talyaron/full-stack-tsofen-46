@@ -1,0 +1,28 @@
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: runRight 200ms linear 1s infinite alternate forwards ;
+    animation-duration: 4s;
+  
+    
+}
+
+
+@keyframes runRight {
+    8%   {background-color:black;
+        transform: rotate(45deg);
+    transform: scale(0);}
+    25%  {background-color: yellow;
+        }
+    50%  {background-color: blue;}
+    75% {background-color: lightcoral;}
+    100% {background-color: green;
+        transform: scale(2);}
+    
+}
+
+
+

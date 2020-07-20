@@ -1,0 +1,33 @@
+.headerPanel {
+  background-color: black;
+  height: 220px;
+  width: 300px;
+  border-radius: 10px;
+  margin: auto;
+}
+.header {
+  margin: auto;
+}
+.header h2 {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  color: grey;
+}
+.header h1 {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  color: white;
+}
+.headerFirstLine {
+  display: flex;
+  justify-content: center;
+}
+.headerFirstLine h1 {
+  color: white;
+}
+.headerFirstLine img {
+  height: 64px;
+  width: 90px;
+}

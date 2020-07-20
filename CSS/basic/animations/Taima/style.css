@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:CSS/basic/animations/Taima/style.css
 .square{
     width: 100px;
     height: 100px;
@@ -45,3 +46,44 @@
     animation: name duration timing-function delay iteration-count direction fill-mode;
     animation: runBottom 600ms linear 0.5s infinite alternate forwards ;
 }
+=======
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    position: relative;
+/* 
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: runRight 200ms linear 1s infinite alternate forwards ; */
+}
+
+.square>img{
+
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.teal{
+    background-color: teal;
+}
+
+/* @keyframes runRight {
+    from {
+        background-color: red;
+        left: 0px;
+        transform: rotate(0deg);
+    }
+    to {
+        background-color: yellow;
+        left: 100px;
+        transform: rotate(180deg);
+    }
+  }
+   */
+>>>>>>> Stashed changes:CSS/basic/animations/Tal/style.css
