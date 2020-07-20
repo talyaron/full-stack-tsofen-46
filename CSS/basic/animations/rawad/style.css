@@ -1,0 +1,59 @@
+.ball{
+   
+    border-radius: 50%;
+    width: 100px;
+
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: mover 1s linear 1s 1 alternate forwards ;
+    animation: movel 1s linear 1s 1 alternate forwards ;
+    animation: move 1s linear 1s 1 alternate forwards ;
+
+}
+
+@keyframes mover {
+    from {
+        background-color: red;
+        left: 0px;
+        
+    }
+    to {
+        background-color: blue;
+        left: 300px;
+       
+        
+    }
+  }
+  @keyframes movel {
+    from {
+        background-color: red;
+        left: 300px;
+        top: 0px;
+        
+    }
+    to {
+        background-color: blue;
+        left: 300px;
+        top: 300px;
+       
+        
+    }
+  }
+  @keyframes move {
+    from {
+        background-color: red;
+        left: 300px;
+        top: 300px;
+        
+    }
+    to {
+        background-color: blue;
+        left: 500px;
+        top: 300px;
+       
+        
+    }
+  }
+  

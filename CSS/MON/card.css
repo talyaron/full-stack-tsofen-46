@@ -1,0 +1,51 @@
+.container {
+  background-color: white;
+  width: 300px;
+  height: 180px;
+  border-radius: 32px;
+  margin: auto;
+  flex-direction: row;
+  display: flex;
+  margin-bottom: 20px;
+  position: relative;
+  box-shadow: gray;
+
+  /* 
+  justify-content: center; */
+}
+
+.beforeCard {
+  width: 300px;
+
+  border-radius: 32px;
+  margin: auto;
+  flex-direction: row;
+  display: flex;
+  margin-bottom: 20px;
+  position: relative;
+}
+.insideCard {
+  background-color: white;
+  border-radius: 32px;
+}
+
+.insideCard > img {
+  width: 60px;
+  height: 90px;
+  padding: 20px;
+}
+
+#horzLine {
+  border-bottom: 2px solid gray;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  width: 30px;
+  height: 25px;
+  border-radius: 8px;
+  position: absolute;
+  right: -8px;
+  padding: 8px;
+}
