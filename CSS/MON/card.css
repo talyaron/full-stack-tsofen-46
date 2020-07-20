@@ -13,6 +13,16 @@
   justify-content: center; */
 }
 
+.beforeCard {
+  width: 300px;
+
+  border-radius: 32px;
+  margin: auto;
+  flex-direction: row;
+  display: flex;
+  margin-bottom: 20px;
+  position: relative;
+}
 .insideCard {
   background-color: silver;
 }
@@ -34,5 +44,4 @@
   border-radius: 4px;
   position: absolute;
   right: -5px;
-
 }

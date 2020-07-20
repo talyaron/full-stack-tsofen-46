@@ -1,37 +1,38 @@
 .app-footer {
-    background-color: white;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
+  background-color: black;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  width: fit-content;
+  height: fit-content;
 }
 
 .app-footer .icons {
-    padding: 5px;
-    display: flex;
+  padding: 5px;
+  display: flex;
 }
 
 .icon-box {
-    display: flex;
-    flex: 2;
-    align-items: center;
-    background-color: grey;
-    color: white;
-    padding: 10px;
-    border-radius: 100px;
+  display: flex;
+  flex: 2;
+  align-items: center;
+  background-color: grey;
+  color: white;
+  padding: 10px;
+  border-radius: 100px;
 }
 
 .icon-box:not(:first-child) {
-    background-color: aliceblue;
-    color: black
+  background-color: aliceblue;
+  color: black;
 }
 
 .icon-box .icon img {
-    width: 20px;
-
+  width: 20px;
 }
 
 .icon-box .title {
-    margin-left: 5px;
+  margin-left: 5px;
 }
