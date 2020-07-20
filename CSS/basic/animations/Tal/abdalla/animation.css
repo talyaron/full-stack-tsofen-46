@@ -1,0 +1,41 @@
+.square{
+    width: 100px;
+    height: 800px;
+    background-color: purple;
+    position: relative;
+
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: runRight 200ms linear 1s infinite alternate forwards ;
+    
+}
+
+@keyframes runRight {
+    from {
+        background-color: red;
+        left: 600px;
+        transform: rotate(540deg);
+    }
+    to {
+        background-color : blue : 
+        left: 100px;
+        transform: rotate(540deg);
+    }
+  }
+
+  div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: example;
+    animation-duration: 4s;
+  }
+  
+  @keyframes example {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+
+  
+  }
