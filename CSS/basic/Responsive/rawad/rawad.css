@@ -1,0 +1,48 @@
+.cont{
+ 
+    display: flex;
+    border-radius: 20px ;
+    border: 2px solid  gray;
+    width: 500px;
+    height: 300px;
+    justify-content: center;
+    background-color:whitesmoke;
+    position: relative;
+    top: 10px;
+    font-size: 15px;
+    box-shadow: 5px 5px gray;
+   
+}
+.card img{
+   
+   width: 150px;
+   height: 150px;
+   padding-top: 50px;
+   padding-left: 50px;
+  
+}
+.card{
+
+    padding-right: 10px ;
+    padding-top: 20px;
+    flex :2;
+   
+    
+}
+ #kav{
+     border-bottom: 1px solid black;
+ }
+ .icon{
+    border-radius:20px ;
+     background-color: black ;
+    padding: 15px 20px;
+    position: absolute;
+    left:440px;
+   top: -17px;
+     color: white;
+     font-size:20px;
+
+ }
+
+
+
