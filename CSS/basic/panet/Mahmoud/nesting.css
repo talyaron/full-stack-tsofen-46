@@ -1,0 +1,27 @@
+.box{
+    position: relative;
+    left: 100px;
+    top: 100px;
+    border: 1px solid gray;
+    color: red;
+    background-color:silver;
+    height: 200vh;
+}
+
+.specialP{
+    position: fixed;
+    left: 50px;
+    top: 20px;
+    color: purple;
+}
+
+.fap{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    background-color: rgb(12, 23, 122);
+    width: fit-content;
+    padding: 4px 10px;
+    border-radius: 100%;
+}
