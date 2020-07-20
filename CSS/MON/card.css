@@ -1,5 +1,5 @@
 .container {
-  background-color: silver;
+  background-color: white;
   width: 300px;
   height: 180px;
   border-radius: 32px;
@@ -8,6 +8,7 @@
   display: flex;
   margin-bottom: 20px;
   position: relative;
+  box-shadow: gray;
 
   /* 
   justify-content: center; */
@@ -24,11 +25,13 @@
   position: relative;
 }
 .insideCard {
-  background-color: silver;
+  background-color: white;
+  border-radius: 32px;
 }
 
 .insideCard > img {
   width: 60px;
+  height: 90px;
   padding: 20px;
 }
 
@@ -39,9 +42,10 @@
 .button {
   background-color: black;
   color: white;
-  width: fit-content;
-  height: fit-content;
-  border-radius: 4px;
+  width: 30px;
+  height: 25px;
+  border-radius: 8px;
   position: absolute;
-  right: -5px;
+  right: -8px;
+  padding: 8px;
 }
