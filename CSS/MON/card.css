@@ -1,0 +1,36 @@
+.container {
+  background-color: silver;
+  width: 300px;
+  height: 180px;
+  border-radius: 32px;
+  margin: auto;
+  flex-direction: row;
+  display: flex;
+  margin-bottom: 20px;
+  position: relative;
+
+  /* 
+  justify-content: center; */
+}
+
+.insideCard {
+  background-color: silver;
+}
+
+.insideCard > img {
+  width: 60px;
+  padding: 20px;
+}
+
+#horzLine {
+  border-bottom: 2px solid gray;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 4px;
+  float: right;
+}
