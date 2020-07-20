@@ -11,7 +11,11 @@
     top: 10px;
     font-size: 15px;
     box-shadow: 5px 5px gray;
-   
+    margin: auto;
+}
+.wraper
+{
+    margin: auto;
 }
 .card img{
    
@@ -46,3 +50,86 @@
 
 
 
+ .container {
+    display: flex;
+  }
+ 
+.box {
+   background-color: rgb(26, 26, 26);
+   background-size: cover;
+   background-repeat:no-repeat; 
+   width: 100%;
+   border-radius: 20px;
+   margin: 15 auto 15 auto;
+   padding: 25px 10px 70px 0px;
+   border: black 3px solid;
+   flex-grow: 2;
+}
+.Head1 {
+    display: flex;
+    justify-content: center;
+  }
+  .Head1 h1 {
+    color: white;
+  }
+  .Head1 img {
+    height: 64px;
+    width: 90px;
+  }
+  .header h2 {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    color: grey;}
+.icon1
+{
+    margin: 100 auto 100 auto;
+    width: 100%;
+    
+}
+.circle {
+    background-color: #F80;
+     border-radius: 18px;
+   
+      top: 50px;
+      left: 100px;
+ 
+  }
+.colorwhite{
+    color: white;
+}
+.center
+{
+    
+ justify-content:  center ;
+text-align: center;
+}
+
+
+
+
+.button {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 5px 5px grey;
+
+    
+  }
+  
+  
+  .button:hover {
+    background-color: black;
+    color: white;
+  }
+  
+  
