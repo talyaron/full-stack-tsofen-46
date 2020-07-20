@@ -1,0 +1,45 @@
+.circle{
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    position: relative;
+    border-radius: 50%;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: runRight 1s linear 1s infinite alternate forwards ;
+}
+.circle1{
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    position: relative;
+    border-radius: 50%;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: runLeft 1s linear 1s infinite alternate forwards ;
+}
+
+@keyframes runRight {
+    from {
+        background-color: red;
+        left: 0px;
+        
+        
+    }
+    to {
+        background-color: yellow;
+        left: 1000px;
+    }
+  }
+
+
+  @keyframes runLeft {
+    from {
+        background-color: blue;
+        left: 1000px;
+    }
+    to {
+        background-color: black;
+        left: 0px;
+
+        
+    }
+  }

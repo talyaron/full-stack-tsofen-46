@@ -1,0 +1,29 @@
+.square {
+   
+    position: relative;
+
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: runRight 1s linear 1s infinite alternate forwards ;
+}
+.next{
+    font-size:50;
+    color: red;
+    font-weight: bold;
+   
+
+}
+
+@keyframes runRight {
+    from {
+       background-image: url('https://img.mako.co.il/2018/12/17/toki_i.jpg');
+        left: 0px;
+        transform: rotate(0deg);
+    }
+    to {
+        background-image: url('https://lh3.googleusercontent.com/proxy/VQ7jnUkwaw9juAq-02p5iaoX2eNznKECLUoT1wQFdoWhNyQ1MZmtYLhCroRAensb14bFr1CVlepymKsSVFj8X7RBXsuxUCbWQIK64uNKKPFsYo44dratKle6yXet');
+        left: 100px;
+        transform: rotate(180deg);
+    }
+    
+  }
+  
