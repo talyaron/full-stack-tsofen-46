@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="header">
+        <div class="large2">
+            <div class="large3">
+                <img class="logoimg" src="Logo%20icon.svg"></img>
+                <div calss="innerheader">Social sales</div>
+            </div>
+            <div class="mid"><br>So far you earned</div>
+            <div>$320 </div>
+        </div>
+        <div class="container2">
+            <div class="item1"><br>This month bonous</div>
+            <div class="item1"><br>This week bonous</div>
+            <div class="item">50$</div>
+            <div class="item">14$</div>
+            <div></div>
+        </div>
+
+    </div>
+    <div class="cards">
+
+        <div class="container">
+
+            <div class="btn"> Add </div>
+
+            <div class="cart-image">
+                <img
+                    src="http://mistillas.cl/wp-content/uploads/2018/04/Nike-Epic-React-Flyknit-%E2%80%9CPearl-Pink%E2%80%9D-01.jpg" />
+            </div>
+
+            <div class="data">
+                <h3>Nike air max 2090</h3>
+                <h4>$150</h4>
+                <hr>
+                <h6>20% discount</h6>
+                <h6>commision $7.20</h6>
+                <h6 class="afterDis">$164 after discount</h6>
+            </div>
+
+        </div>
+
+        <div class="container">
+
+            <div class="btn"> Add </div>
+
+            <div class="cart-image">
+                <img
+                    src="http://mistillas.cl/wp-content/uploads/2018/04/Nike-Epic-React-Flyknit-%E2%80%9CPearl-Pink%E2%80%9D-01.jpg" />
+            </div>
+
+
+            <div class="data">
+                <h3>Nike air max 2090</h3>
+                <h4>$150</h4>
+                <hr>
+                <h6>20% discount</h6>
+                <h6>commision $7.20</h6>
+                <h6 class="afterDis">$164 after discount</h6>
+            </div>
+
+        </div>
+
+        <div class="container">
+
+            <div class="btn"> Add </div>
+
+            <div class="cart-image">
+                <img
+                    src="http://mistillas.cl/wp-content/uploads/2018/04/Nike-Epic-React-Flyknit-%E2%80%9CPearl-Pink%E2%80%9D-01.jpg" />
+            </div>
+
+            <div class="data">
+                <h3>Nike air max 2090</h3>
+                <h4>$150</h4>
+                <hr>
+                <h6>20% discount</h6>
+                <h6>commision $7.20</h6>
+                <h6 class="afterDis">$164 after discount</h6>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="buttons-wrapper">
+        <div class="items">
+            <div class="black-background button1">
+                Home
+            </div>
+        </div>
+        <div class="items">
+            <div class="black-background button2">   
+                    Market
+            </div>
+        </div>
+        <div class="items">
+            <div class="black-background button3">
+                    Reports
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
