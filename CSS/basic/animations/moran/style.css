@@ -5,6 +5,13 @@
     animation: name duration timing-function delay iteration-count direction fill-mode;
     animation: runRight 1s linear 1s infinite alternate forwards ;
 }
+.next{
+    font-size:50;
+    color: red;
+    font-weight: bold;
+   
+
+}
 
 @keyframes runRight {
     from {
@@ -17,5 +24,6 @@
         left: 100px;
         transform: rotate(180deg);
     }
+    
   }
   
