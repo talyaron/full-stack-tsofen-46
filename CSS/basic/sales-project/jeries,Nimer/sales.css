@@ -136,7 +136,7 @@ hr {
   margin: 10px;
 }
 
-.btn {
+#btn1 {
   
   /* border-top-right-radius: 5px; */
   /* border-top-left-radius: 5px; */
@@ -154,9 +154,104 @@ hr {
   padding-top: 2px;
 
 }
+#btn2 {
+  
+  /* border-top-right-radius: 5px; */
+  /* border-top-left-radius: 5px; */
+  /* border-bottom-right-radius: 5px; */
+  border-radius: 6px;
+  position: absolute;
+  background-color: black;
+  color: white;
+  height: 25px;
+  /* left: 90%; */
+  right: -10px;
+  top: -10px;
+  width: 60px;
+  text-align: center;
+  padding-top: 2px;
+
+}
+#btn3 {
+  
+  /* border-top-right-radius: 5px; */
+  /* border-top-left-radius: 5px; */
+  /* border-bottom-right-radius: 5px; */
+  border-radius: 6px;
+  position: absolute;
+  background-color: black;
+  color: white;
+  height: 25px;
+  /* left: 90%; */
+  right: -10px;
+  top: -10px;
+  width: 60px;
+  text-align: center;
+  padding-top: 2px;
+
+}
+#btn22 {
+  
+  /* border-top-right-radius: 5px; */
+  /* border-top-left-radius: 5px; */
+  /* border-bottom-right-radius: 5px; */
+  border-radius: 6px;
+  position: absolute;
+  background-color: red;
+  color: white;
+  height: 25px;
+  /* left: 90%; */
+  left: -10px;
+  top: -10px;
+  width: 60px;
+  text-align: center;
+  padding-top: 2px;
+
+}
+#btn33 {
+  
+  /* border-top-right-radius: 5px; */
+  /* border-top-left-radius: 5px; */
+  /* border-bottom-right-radius: 5px; */
+  border-radius: 6px;
+  position: absolute;
+  background-color: red;
+  color: white;
+  height: 25px;
+  /* left: 90%; */
+  left: -10px;
+  top: -10px;
+  width: 60px;
+  text-align: center;
+  padding-top: 2px;
+
+}
+#btn11 {
+  
+  /* border-top-right-radius: 5px; */
+  /* border-top-left-radius: 5px; */
+  /* border-bottom-right-radius: 5px; */
+  border-radius: 6px;
+  position: absolute;
+  background-color: red;
+  color: white;
+  height: 25px;
+  /* left: 90%; */
+  left: -10px;
+  top: -10px;
+  width: 60px;
+  text-align: center;
+  padding-top: 2px;
+
+}
+
+
+
+
 .afterDis{
   margin-top: 1px;
   color: blue;
+  
 }
 
 h5 {
@@ -187,22 +282,46 @@ h5 {
   margin-right: 30px;
   justify-content: space-evenly;
   
-
 }
 
 
 
 .navigator{
-  position: static;
-  margin: auto;
+  background-color: black;
+  position: fixed;
+  bottom: 0px;
+ border: black;
   width: 350px;
-  height: 30px;
- 
+  height: 20px;
+  z-index: 10;
 }
 
 
 .navigatorContainer{
-  width: 100%;
-  justify-content: space-evenly;
+  border: black;
+  
 
+}
+
+
+.navigator button{
+  background-color: black;
+  color: lightgray;
+  
+  width: 32%;
+}
+
+
+#totalSpent{
+  margin-bottom: 5px;
+}
+
+.salesContainer {
+  justify-content: space-evenly;
+  position: fixed;
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  background-color: black;
+  color: white;
 }

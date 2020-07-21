@@ -8,19 +8,23 @@
   <link rel="stylesheet" href="sales.css">
 </head>
 
-<body>
-  <header class="navigator">
-    <div class="navigatorContainer">   
-        <button class="navigatorbuttons">Home</button>
-        <button class="navigatorbuttons">Media</button>
-        <button class="navigatorbuttons">BraBaa</button>
-
-
-    </div>
-
-
-</header>
+<body id="bodyyyy">
+  <div class="salesContainer">
+  <div id="totalSpent">cart total</div>
+  <div id="totalbyAdd"></div>
+</div>
   <header class="mainHeader">
+
+
+    <div class="navigator">
+      <div class="navigatorContainer">   
+          <button id="navigatorDark">Dark</button>
+          <button id="navigatorLight">Light</button>
+          <button id="navigatorRandomColor">randomColor</button>
+  
+  
+      </div>
+    </div>
 
     <div class="headContainer">
 
@@ -70,12 +74,13 @@
 
     </div>
     
+    
     <div class="cards"> 
       <h3 class="hot-sales"> Hot sales</h3>
         <div class="container"> 
  
-            <button class="btn"> Add </button> 
- 
+            <button id="btn1"> Add </button> 
+            <button id="btn11"> Sub </button> 
             <div class="cart-image"> 
                 <img 
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ7zUKcdlNGo_TaubJeXfntJJJ4oFghFZrvT877LZMeYq5NB0cw9qkByZ6V3g&usqp=CAc" /> 
@@ -94,8 +99,8 @@
  
         <div class="container"> 
  
-            <button class="btn"> Add </button> 
- 
+            <button id="btn2"> Add </button> 
+            <button id="btn22"> Sub </button> 
             <div class="cart-image"> 
                 <img 
                     src="http://mistillas.cl/wp-content/uploads/2018/04/Nike-Epic-React-Flyknit-%E2%80%9CPearl-Pink%E2%80%9D-01.jpg" /> 
@@ -115,7 +120,8 @@
  
         <div class="container"> 
  
-            <button class="btn"> Add </button> 
+            <button id="btn3"> Add </button> 
+            <button id="btn33"> Sub </button> 
  
             <div class="cart-image"> 
                 <img 
@@ -192,12 +198,12 @@
     </div>
 
 
+    
 
 
 
 
-
-
+<script src="sales.js"></script>
 </body>
 
 </html>
