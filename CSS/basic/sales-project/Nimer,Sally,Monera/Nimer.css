@@ -30,8 +30,8 @@ font-size: 20px;
     color: lightgray;
     margin: 1px;
     font-size: 15px;
-
 }
+
 .totalspent{
     color: white;
     margin: 1px;
@@ -56,9 +56,7 @@ font-size: 20px;
     
 }
 
-.bonusesContainer{
-    width: 660px;
-}
+
 .monthBonus{
     margin: 1px;
     margin-left: 10px;
