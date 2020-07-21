@@ -1,0 +1,208 @@
+.mainHeader{
+  top: 0px;
+  background-color: black;
+  width: 350px;
+  height: 200px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin: auto;
+  
+  
+}
+.headContainer{
+  width: 100%;
+  text-align: center;
+  margin:auto;
+}
+.titleContainer{
+  width: 100%; 
+ justify-content: center;
+ display: flex;
+ align-items: center;
+}
+
+.headerLogo{
+  width: 40px;
+  height: 40px;   
+}
+.headerTitle{
+color: white;
+font-weight: bold;
+font-size: 20px;
+}
+.secondLine{
+  color: lightgray;
+  margin: 1px;
+  font-size: 15px;
+}
+
+.totalspent{
+  color: white;
+  margin: 1px;
+  font-size: 22px;
+  
+}
+.bonusesContainer{
+  display: flex;
+  width: 100%;
+  
+
+}
+.bonusesContainer{
+  margin: auto;
+  
+  justify-content: space-evenly;
+}
+
+
+  
+
+
+.cont{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.circle{
+  width: 10px;
+  height: 10px;
+  background-color: orange;
+  border-radius: 50%;
+  }
+  
+.circle2{
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+  border-radius: 50%;
+  
+}
+.monthBonus{
+  margin-left: 5px;
+  color: lightgrey;
+}
+.weekBonus{
+  margin-left: 5px;
+  color: lightgrey;
+
+}
+.totalMonthBonus{
+  margin: 1px;
+  margin-left: 50px;
+}
+.totalWeekBonus{
+  margin: 1px;
+  margin-left: 50px;
+}
+
+.cards {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin: auto; 
+  width: fit-content; 
+}
+
+.container {
+  position: relative;
+  display: flex;
+  height: 200px;
+  width: 350px;
+  top: 20px;
+  background-color: whitesmoke;
+  border-radius: 20px ;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.418);    
+}
+
+.cart-image img {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  left: 20px;
+  top: 35px;
+}
+
+.data{
+  padding: 5px;
+  position: relative;
+  left: 80px;
+  font-size: small;
+  font-family: 'Rowdies', cursive;
+}
+
+hr {
+  width: 100px;
+  margin: 10px;
+}
+
+.btn {
+  
+  /* border-top-right-radius: 5px; */
+  /* border-top-left-radius: 5px; */
+  /* border-bottom-right-radius: 5px; */
+  border-radius: 6px;
+  position: absolute;
+  background-color: black;
+  color: white;
+  height: 25px;
+  /* left: 90%; */
+  right: -10px;
+  top: -10px;
+  width: 60px;
+  text-align: center;
+  padding-top: 2px;
+
+}
+.afterDis{
+  margin-top: 1px;
+  color: blue;
+}
+
+h5 {
+  margin: 2px;
+}
+.hot-sales {
+  margin-top: 100px;
+  border-bottom: 1px solid red;
+  width: fit-content;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.current-sales {
+  border-bottom: 1px solid red;
+  width: fit-content;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+.Logos{
+  position: relative;
+  display: flex;
+  right: 160px;
+  top: 160px;
+  width: 100%;
+}
+.Logos > img {
+  height: 20px;
+  width: 25%;
+  margin-right: 30px;
+  justify-content: space-evenly;
+  
+
+}
+
+
+
+.navigator{
+  position: static;
+  margin: auto;
+  width: 350px;
+  height: 30px;
+ 
+}
+
+
+.navigatorContainer{
+  width: 100%;
+  justify-content: space-evenly;
+
+}
