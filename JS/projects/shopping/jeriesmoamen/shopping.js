@@ -39,12 +39,12 @@ const products = [
        const discountArr=[];
     for (let i in products){
         const after={...products[i]}
-        after.price =after.price-( after.price*(1-discount/100))
+        after.price =after.price-( after.price*(discount))
         discountArr.push(after)
     }
     return discountArr ;
    }
-   console.log(getDiscount(20,products));
+   console.log(getDiscount(0.2,products));
    console.log(products);
 
 
