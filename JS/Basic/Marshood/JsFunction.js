@@ -37,18 +37,15 @@ let studentsNames=[
     {gender : 'female',name:"Lele",age:15},
     {gender : 'male',name:"David",age:10}
 ];
-function std(CheckArray)
+function StudentLessThan24(CheckArray)
 {
-    let newarray=[];;
-
+let newarray=[];;
 CheckArray.map(function (elem,i)
 {    
     if(elem.age<=24)
     {
-        newarray.push(elem);
-        
+        newarray.push(elem);        
     }});
- 
     return newarray;
 }
-console.log(std(studentsNames));
+console.log(StudentLessThan24(studentsNames));
