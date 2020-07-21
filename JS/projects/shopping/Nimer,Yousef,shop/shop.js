@@ -89,11 +89,14 @@ const lowerpriceFilter = (arr,price) =>{
 }
 
 const discountFunc = (arr,discount) =>{
-    
+    const discountedArray=[];
 arr.map(function(item){
-    item.price=item.price-(item.price*discount)
+    const newitem={...item}
+
+    newitem.price=item.price-(item.price*discount)
+    discountedArray.push(newitem);
 })
-return arr;
+return discountedArray;
 
 }
 
