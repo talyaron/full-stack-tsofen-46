@@ -27,6 +27,16 @@ a ? console.log('true.....') : console.log('false....');
 
 //oprators
 
-if(!false){
+if (!false) {
     console.log('this is realy true!!!!')
 }
+
+let age = 23;
+let precentage = .4;
+let name = 'Jiris'
+
+console.log('Your name is ' + name + ' and your age is ' + (age + precentage));
+console.log('Your name is', name, 'and your age is', age+ precentage);
+console.log(`Your name is ${name} and your age is ${age + precentage}`)
+
+
