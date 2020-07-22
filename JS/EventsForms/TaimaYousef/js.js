@@ -21,8 +21,8 @@ function handleSubmit(e){
 
     document.body.style.backgroundColor = form[2].value;
 
-    // for(let i= 0; i<formLength;i++){
-    //     console.log(form[i].name, form[i].type, form[i].value)
-    // }
+    for(let i= 0; i<formLength;i++){
+        console.log(form[i].name, form[i].type, form[i].value)
+    }
             
 }

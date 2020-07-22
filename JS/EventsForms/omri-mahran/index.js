@@ -10,24 +10,9 @@ function handleSubmit(e) {
     const form = e.target;
 
     mapFormToState(form);
-    const date = new Date(state.date);
-    const age = calculateAge(date);
+    displayMessage();
 
-    const {
-        name,
-        gender,
-        color
-    } = state;
-
-    const p = document.getElementById("mainPar");
-
-    p.innerText = `Hello ${name},
-    Welcome to our amazing site.
-    your are a ${gender} :).
-    and your age is ${age}`
-
-    document.body.style.backgroundColor = color;
-
+    changeBgColor(state.color);
 }
 
 
@@ -41,5 +26,24 @@ function calculateAge(dob) {
 function mapFormToState(form) {
     for (let i = 0; i < form.length - 1; i++)
         state[form[i].form[i].name] = form[i].form[i].value;
+}
 
+function displayMessage() {
+    const date = new Date(state.date);
+    const age = calculateAge(date);
+
+    const {
+        name,
+        gender
+    } = state;
+    const p = document.getElementById("mainPar");
+
+    p.innerText = `Hello ${name},
+    Welcome to our amazing site.
+    your are a ${gender} :).
+    and your age is ${age}`
+}
+
+function changeBgColor(color) {
+    document.body.style.backgroundColor = color;
 }
