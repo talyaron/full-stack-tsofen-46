@@ -5,18 +5,21 @@ class button11{
     }
 
     goUp(){
+
         var currPaddingTop = window.getComputedStyle(element, null).getPropertyValue('margin-top')
         var y = parseInt(currPaddingTop,10) - 250
         if(y<0)
          y=0
         this.element.style.marginTop=`${y}px`
     }
+
+
     goDown(){
       
         var currPaddingTop = window.getComputedStyle(element, null).getPropertyValue('margin-top')
         var y = parseInt(currPaddingTop,10) + 250
-        if(y<0)
-         y=0
+        if(y>=screen.height)
+         y=screen.height
         this.element.style.marginTop=`${y}px`
     }
     goLeft(){
@@ -29,8 +32,8 @@ class button11{
     goRight(){
         var currPaddingLeft = window.getComputedStyle(element, null).getPropertyValue('margin-left')
         var y = parseInt(currPaddingLeft,10) + 250
-        if(y<0)
-         y=0
+        if(y>=screen.width)
+         y=screen.width
         element.style.marginLeft=`${y}px`
     }
 
