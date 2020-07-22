@@ -1,12 +1,15 @@
 .container{
+    background-color: hotpink;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-template-rows: auto auto auto ;
     column-gap: 20px;
     row-gap: 10px;
-    font-size: large;
-    font-weight: bold;}
+    text-align: center;
 
-.item{
-    background: orange;
 }
+body {
+    color: blue;
+    font-size: large;
+    font-weight: bold;
+  }
