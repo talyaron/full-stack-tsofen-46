@@ -90,7 +90,7 @@ console.log(Filterbyprice(150,allProducts));
 console.log('pruducts price 300 ');
 console.log(Filterbyprice(300,allProducts));
 
-console.log(allProducts[3].price + ' price after sale 20% is ' + sale(20,allProducts[3]) );
+console.log(allProducts[3] + ' price after sale 20% is ' + sale(20,allProducts[3]) );
 
 
 
