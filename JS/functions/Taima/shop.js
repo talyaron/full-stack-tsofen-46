@@ -23,7 +23,8 @@ function getBydiscount(products, discount) {
     }
 }
 
-const products = [{type:'socks',color:'pink',discount:'0.5'},
+const products= [
+{type:'socks',color:'pink',discount:'0.5'},
 { type:'pants', color:'white', discount:'0.6'},
 { type:'earings', color:'black', discount:'0.8'},
 { type:'pants', color:'yellow', discount:'0.5'},
