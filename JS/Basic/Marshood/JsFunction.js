@@ -32,20 +32,20 @@ return x*x;
 let sqr1=x =>x*x;
 
 //TIRGOL
-let studentsNames=[
+const studentsNames=[
     {gender : 'male',name:"Saleh",age:50},
     {gender : 'female',name:"Lele",age:15},
     {gender : 'male',name:"David",age:10}
 ];
-function StudentLessThan24(CheckArray)
+function StudentLessThan24(CheckArray,age)
 {
-let newarray=[];;
+const newarray=[];;
 CheckArray.map(function (elem,i)
 {    
-    if(elem.age<=24)
+    if(elem.age<=age)
     {
         newarray.push(elem);        
-    }});
+}});
     return newarray;
 }
-console.log(StudentLessThan24(studentsNames));
+console.log(StudentLessThan24(studentsNames,24));
