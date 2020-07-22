@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form onsubmit="handleSubmit(event)">
+        <p class="fullName">Enter your full name:</p>
+        <input type='text' name='full name' placeholder="First & Last Name" />
+        <p class="gender">Choose your gender:</p>
+        <select name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <p class="favcolor">Select your favorite color:</p>
+        <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+        <p class="birthday">Enter your Birthday Date:</p>
+        <input type='date'  name='dateOfBirth' />
+        <button type="submit">Submit</button>
+    </form>
+    <p id='paragraph' dir="rtl"></p>
+    <script src="js.js"></script>
+</body>
+
+</html>
