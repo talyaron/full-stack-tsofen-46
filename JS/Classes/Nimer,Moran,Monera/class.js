@@ -17,26 +17,29 @@ class element{
 
 
 goRight(){
-
-    this.element.style.left=`${this.left-jump}px`;
     this.left=this.left-jump;
+    this.element.style.left=`${this.left-jump}px`;
+   
     
     
 }
 goLeft(){
-    this.element.style.left=`${this.left+jump}px`;
     this.left=this.left+jump;
+    this.element.style.left=`${this.left+jump}px`;
+  
 }
 
 
 goUp(){
-    this.element.style.top=`${this.top+jump}px`
     this.top=this.top+jump;
+    this.element.style.top=`${this.top+jump}px`
+   
 
 }
 goDown(){
-    this.element.style.top=`${this.top-jump}px`;
-    this.top=this.top+jump;
+    this.top=this.top-jump;
+    this.element.style.top=`${this.top+jump}px`;
+    
 }
 
 
