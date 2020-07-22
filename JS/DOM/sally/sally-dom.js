@@ -7,7 +7,7 @@ console.dir(ps)
 ps.forEach(p=>{
     
     let deg=getRandomdeg()
-    p.style.transform = 'rotate(60deg)';
+    p.style.transform = `rotate(${deg}deg)`;
 })
 
 console.dir(ps)

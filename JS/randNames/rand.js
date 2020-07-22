@@ -1,7 +1,5 @@
 const names = [
-    "sally",
-    "lena",
-    "moran",
+     "moran",
     "monera",
     "nivin",
     "nimer",
@@ -17,6 +15,8 @@ const names = [
     "abdallah",
     "yousef",
     "marshood",
+    "Rammi",
+    "Maharn"
 ];
 
 function randomNames(names, groupSize) {
