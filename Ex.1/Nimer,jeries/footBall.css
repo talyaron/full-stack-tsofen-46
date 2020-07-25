@@ -252,3 +252,29 @@ z-index: 20;
 
 }
 
+#submitButton{
+  background-color: green; 
+  border: none;
+  color: white;
+  padding: 7px 16px;
+  text-align: center;
+  width: 90%;
+  height:  fit-content;
+  font-size: 12px;
+  margin: 4px 2px;
+  
+
+}
+#restartButton{
+  background-color: red; 
+  border: none;
+  color: white;
+  padding: 7px 16px;
+  text-align: center;
+  width: 90%;
+  height:  fit-content;
+  font-size: 12px;
+  margin: 4px 2px;
+}
+
+

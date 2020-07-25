@@ -16,6 +16,8 @@ const femalePlayer1Moving = new player("femalePlayer1");
 const femalePlayer2Moving = new player("femalePlayer2");
 const player1Score = document.getElementById("player1Score");
 const player2Score = document.getElementById("player2Score");
+
+
 let score1 = 0;
 let score2 = 0;
 
