@@ -1,9 +1,6 @@
 function handleSubmit(e){
-    
     e.preventDefault();
-    
     console.log(e)
-
     const form = e.target;
     const formLength = form.length -1;
 
@@ -14,7 +11,6 @@ function handleSubmit(e){
     var today = new Date();
     var inputDate = new Date( form[2].valueAsDate);
     var age = today.getFullYear() - inputDate.getFullYear();
-    var m = today.getMonth() - inputDate.getMonth();
      
     var x = document.getElementById("form1");
     if (x.style.display === "none") {
@@ -25,10 +21,13 @@ function handleSubmit(e){
       var gen = document.getElementById("Gender").value;
 
       if(gen==="Female"){
- 
       document.getElementById("P1").innerHTML = "Hello,"+form[0].value +"<br>" + "Wellcome to our Team .<br> " +"<br> your birthday is : " + age + "<br> And Your email : "+form[3].value + "<br> you are a young girl"  
+      document.getElementById("con1").style.backgroundColor="hotpink" 
       }else{
         document.getElementById("P1").innerHTML = "Hello,"+form[0].value +"<br>" + "Wellcome to our Team .<br> " +"<br> your birthday is : " + age + "<br> And Your email : "+form[3].value + "<br> Good Booy, Haha"  
+         document.getElementById("con1").style.backgroundColor = "lightblue";
+
+
     }
 }
 

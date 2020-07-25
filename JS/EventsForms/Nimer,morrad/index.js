@@ -14,5 +14,4 @@ function handleSubmit(e){
         parg.innerText=`שלום ${firstName} ברוך הבא ומזל טוב ליום הולדתך שמתקיים ב ${date}`
         const body = document.getElementById('body')
         body.style.backgroundColor=color;
-        
-    }
+}

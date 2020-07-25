@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="footBall.css">
+</head>
+
+<body class="body">
+
+  <div id="footBallField">
+
+    <img id="ball" src="football.svg" alt="">
+    <img id="shoppingBag" src="shoppingBag.svg" alt="">
+    <img id="malePlayer1" src="footballPlayer.svg" alt="">
+    <img id="malePlayer2" src="footballPlayer2.svg" alt="">
+    <img id="femalePlayer1" src="shoppingPlayer.svg" alt="">
+    <img id="femalePlayer2" src="shoppingPlayer2.svg" alt="">
+
+    <div id="popUp" style="display: none;"> Good Luck
+      <p id="popUpResult">0 - 0</p>
+    </div>
+    <div id="winnerpopUp1" style="display: none;color: gold;"> Player 1 Won!!
+      <p > <img id="winnerpopUpResult" src="winnerCup.svg" alt=""></p>
+    </div>
+
+    <div id="winnerpopUp2" style="display: none;color: gold;"> Player 2 Won!!
+      <p > <img id="winnerpopUpResult" src="winnerCup.svg" alt=""></p>
+    </div>
+      
+    
+
+   
+   
+   
+    <div class="rightBarInfo">
+      <div id="player1Result">
+        <h3 style="font-size: 15px;color: white;">points</h3>
+        <p id="player1Score" style="text-align: center;color: white;">0</p>
+      </div>
+      <div id="player2Result">
+        <h3 style="font-size: 15px;color: white;">points</h3>
+        <p id="player2Score" style="text-align: center;color: white;">0</p>
+      </div>
+
+      
+
+      <div class="rightBarButtons">
+        
+        <form onsubmit="handleSubmit(event)">
+          <label for="gender">gender:</label>
+          <select style="width: 100%;" id="gender" name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          <label for="score">Score:</label>
+          <select style="width: 100%;" id="score" name="score">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+          </select>
+          <button id="submitButton"  type="submit">Start</button>
+        </form>
+        <form onsubmit="handleRestart(event)">
+          <button id="restartButton" type="submit">Restart</button>
+        </form>
+      </div>
+    </div>
+
+
+
+    <div class="upperBox">
+      <div class="upperBox2"></div>
+    </div>
+    <div id="mainCircle">
+      <div class="smallerCircle"></div>
+    </div>
+    <div class="middleLine"></div>
+    <div class="bottomBox">
+      <div class="bottomBox2"></div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+  <script src="footBallClasses.js"></script>
+  <script src="footBallJs.js"></script>
+
+</body>
+
+</html>
