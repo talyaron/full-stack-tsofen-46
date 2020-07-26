@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="container" id="con1">
+    <div class="wrapper" id="con">
+        <div class="form">
+    <form onsubmit="handleSubmit(event)" id="form1">
+    <label>Full Name:</label>
+    <input type="text" placeholder="Full Namer" ><br>
+    <label>Phone Number:</label>
+    <input type="tel" placeholder="Phone Number" ><br>
+    <label>Birthday:</label>
+    <input type="date" required><br>
+    <label>Email:</label>
+    <input type="email" placeholder="E-mail" ><br>
+    Your Gender:  <select id="Gender" name="Gender" >
+        <option value=""></option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select><br>
+      <button  type="submit"> Send Data  </button>
+    </form>
+    </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>
