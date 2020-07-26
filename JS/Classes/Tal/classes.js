@@ -1,14 +1,12 @@
 class Player {
-    constructor(name, shirtNumber, element) {
+    constructor(name, shirtNumber) {
         this.name = name;
         this.shirtNumber = shirtNumber;
-        this.element = element;
-        console.dir(this.element)
        
+      
     }
 
     sayHello() {
-        this.element.innerText = `Hi ${this.name}`;
         
     }
 
@@ -19,6 +17,19 @@ class Player {
     setPosion(position){
         this.position = position
     }
+}
 
-   
+class FootballPlayer extends Player{
+
+    constructor(name, shirtNumber, numberOfGoals){
+        super(name, shirtNumber);
+
+        
+        this.numberOfGoals = numberOfGoals
+    }
+
+    shoot(){
+        
+    }
+
 }

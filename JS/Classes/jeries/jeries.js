@@ -3,7 +3,7 @@ const element = document.getElementById('output');
 const doc = new button11(element);
 
 
-document.body.addEventListener('keyup', e => {
+document.addEventListener('keyup', e => {
 
     if (e.key === 'ArrowUp') {
         doc.goUp()
