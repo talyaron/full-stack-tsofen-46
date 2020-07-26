@@ -15,7 +15,7 @@ const names = [
     "abdallah",
     "yousef",
     "marshood",
-    "Rammi",
+    "Rami",
     "Maharn"
 ];
 
