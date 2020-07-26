@@ -1,0 +1,15 @@
+#con{
+    width: 30%;
+  margin: 0 auto;
+  background-color: crimson;
+  font-size: large;
+}
+.form{
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+}
+
+#con input{
+    max-width: 150px;
+}
