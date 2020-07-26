@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="icon" href="Pictures/GameIcon.jpg" />
+    <link rel="stylesheet" type="text/css" media="all" href="Style/style.css" />
+    <script src="https://kit.fontawesome.com/181756b75b.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .box {
+            transition: all 1s;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(".btn1").click(function () {
+                var P1N = $('#PName1').val();
+                var P2N = $('#PName2').val();
+                if ($('#PName2').val() == '' || $('#PName2').val() == '') {
+                    alert("Please insert Your Names...");
+                } else {
+                    $("#form_login").hide(1000);
+                    $("TestToHide").toggle();
+                    $("#MainHide").css("display", "block");
+                    //alert("Are You Ready (^_*) ..!")
+                    var P1N = $('#PName1').val();
+                    var P2N = $('#PName2').val();
+                    $("#firstPlayerName1").html(P1N);
+                    $("#secondPlayerName2").html(P2N);
+                    $("#FistPlayerscore").html("0");
+                    $("#SecondPlayerscore").html("0");
+                    $("#MainHide").css("display", "block");
+                    //LastTest(P1N,P2N);
+                    //alert(document.getElementById("TimeCheck").value+"  hola");
+                    AddPlayersName();
+                 }
+            });
+           
+        });
+    </script>
+</head>
+
+<body class="backGroundColor" >
+    <div  id="MainBack1" class="BackGroundAnimation">
+        
+        <form id="form_login" class="">
+           
+            <h1>footScore Game</h1>
+            <div> <img class="img animationphoto" src="Pictures/ball2.svg"  alt="">
+            </div>
+            <p>  
+                <img src="Pictures/arrowKeys.png " width="150" height="100">
+                <label for="username "> Player 1:</label>
+                <input id="PName1" type="text" id="PName1" placeholder="Playyer 1 Name" required />
+            </p>
+            <p>
+                <img src="Pictures/wasd.png" width="150" height="100">
+                <label for="username"> Player 2:</label>
+                <input id="PName2" type="text" id="PName2" placeholder="Player 2 Name" required />
+            </p>
+            <label for="cars">Choose time:</label>
+            <select name="TimeCheck" id="TimeCheck" style="width: 100px; text-align: center;" class="center" required>
+              <option value="30">00:30</option>
+              <option value="60" >01:00</option>
+              <option value="120">02:00</option>
+              <option value="300" >05:00</option>
+            </select>
+            <br>
+            <input class="btn1   button1" type="button submit" value="Start.." readonly>
+
+            <!--<button class="btn2  ">Show</button >   <i class="fas fa-arrows-alt"></i>-->
+
+
+        </form>
+    </div>
+    <div class="TestToHide">
+        <div id="MainHide" class="MainHide">
+            <div id="MainGame">
+                <div class="MainBar" id="MainBar">
+                    <!-- in this div we have the players name and scour and the time to finish the game-->
+                    <div class="titile">
+                        <h1 class="center" style="color: rgb(252, 245, 245);">
+                            <div>
+                            <button class="button1" onclick="AddPlayersName()"> Restart Game </button>
+                            Game Started..
+                             <button  id="MuteBtn" class="button1" onclick="Mute()" value="Mute">
+                                <i class="fas fa-volume-mute"></i>
+                                   </button>
+                         </h1>
+                    </div>
+                    <div class="ShowData grid">
+                        <div class="firstPlayerName center BackgroundColor1 ">
+                            <form name="form1" action="index.html" method="GET">
+                                <div class="newColor">
+                                    <p>Fisrt Player :</p>
+                                    <p id="firstPlayerName1"> ####</p>
+                                    <p id="FistPlayerscore">##</p>
+                                </div>
+                                <div class="Vs center BackgroundColor2">
+                                    <p>-----</p>
+                                    <p> Vs</p>
+                                    <p>-----</p>
+                                </div>
+                                <div class="secondPlayerName center  BackgroundColor3 ">
+                                    <p>Second Player :</p>
+                                    <p class="secondPlayerName2" id="secondPlayerName2"> $$$$</p>
+                                    <p id="SecondPlayerscore">$$</p>
+                                </div>
+                                <div class="Timer center BackgroundColor2">
+                                    <p>Time Left</p>
+
+                                    <body>
+                                        <input class="BackgroundColor2" id="minutes" type="text" style="width: 20px; 
+                                        border: none; font-size: 16px; 
+                                        font-weight: bold; color: black;">
+                                        <font size="5"> : </font>
+                                        <input class="BackgroundColor2" id="seconds" type="text" style="width: 20px; 
+                                                    border: none; font-size: 16px; 
+                                                    font-weight: bold; color: black;">
+
+                                        <!--<div><span id="time">00:30</span></div>-->
+                                    </body>
+                                    <p>-----</p>
+                                </div>
+                            </form>
+                            <div class="AddinigGif">
+                                <iframe src="https://giphy.com/embed/E1JTNl5Y60nw1YX0qe" width="480" height="272"
+                                    frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                                <p><a href="https://giphy.com/gifs/atlutd-reaction-football-E1JTNl5Y60nw1YX0qe"> </a>
+                                </p>
+                            </div>
+                        </div>
+                       
+                        <div class="GameShowArea">
+                            <div class="showStadium StadiumShow BackgroundColorStadium gridGame1 " id="StadiumAr">
+                                <div class="WinnerShow">
+                                    <div id="winnerPopUp" style="display: none;"> <p id="123">Player 1 Won!!</p> 
+                                        <p> <img  id="myImg"src="Pictures/cup.svg" alt=""></p>
+                                    </div>
+                                    <div id="NoWinner" style="display: none;" class="center"> <p id="NoWinner123">No Winner !!</p> 
+                                        <p> <img  id="myImg"src="Pictures/GameOver.svg" alt=""></p>
+                                    </div>
+
+                                </div>
+                                <div class="Player1Show" id="showPlayer1Position">
+                                    <img class="img" src="Pictures/Player1.svg" width="100px" height="100px" alt="">
+                                </div>
+                                <div class=" Player2Show" id="showPlayer2Position">
+                                    <img class="img" src="Pictures/Player2.svg" width="100px" height="100px" alt="">
+                                </div>
+                                <div class=" TargetShow" id="showTargetPosition">
+                                    <img class="img" src="Pictures/ball2.svg" width="100px" height="100px" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="JavaScript/Sound.js"></script>
+    <script src="JavaScript/classses.js"></script>
+    <script src="JavaScript/JavaScript.js"></script>
+
+</body>
+
+</html>
