@@ -1,5 +1,7 @@
 /* Start Golbale Resets */
-
+body {
+    align-text: center;
+}
 /* End Golbale Resets */
 
 /* Start Header */
@@ -142,3 +144,5 @@ footer ul li {
 }
 
 /* End Footer */
+
+
