@@ -25,7 +25,7 @@ const students = [
 
 //RERST api
 app.get('/students', function (req, res) {
-  
+  console.log(students)
   res.send(students)
 })
 

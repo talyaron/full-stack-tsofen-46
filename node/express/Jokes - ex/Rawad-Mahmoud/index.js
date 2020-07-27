@@ -3,31 +3,30 @@ const app = express()
 
 app.use(express.static('public'))
 
-const students = [
+const jokes = [
   "moran",
  "monera",
  "nivin",
  "nimer",
  "sizar",
- "jeries",
- "morad",
- "rawad",
- "omri",
- "saleh",
- "taimaa",
- "abdallah",
- "yousef",
- "marshood",
- "Rami",
- "Maharn",
- "sally"
+
 ];
 
-//RERST api
-app.get('/students', function (req, res) {
+function rand(){
   
-  res.send(students)
+  
+  const randNum = Math.floor(Math.random()*jokes.length);
+  console.log(randNum)
+  return randNum
+}
+
+
+//RERST api
+app.get('/jokes', function (req, res) {
+  // console.log("dasda:",students)
+  res.send({joke:jokes[rand()]})
 })
+
 
 
 
