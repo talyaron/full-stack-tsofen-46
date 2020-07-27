@@ -9,22 +9,25 @@
 </head>
 
 <body>
-    <button>New Joke</button>
+    <button onclick="myFunction()">new joke</button>
+    
     
     <div id='root'></div>
+    <img src="https://i.pinimg.com/originals/9a/26/84/9a2684c4213171476e13732af3b26537.jpg" alt="">
     <script>
-        fetch('/students')
+        function myFunction(){
+        fetch('/jokes')
             .then(res => res.json())
             .then(data=>{
+               const {joke}= data;
+               console.log(joke)
                 let studentsHTML = '';
-
-                data.forEach(student=>{
-                    studentsHTML += `<p>${student}</p>`;
-                });
+             studentsHTML += `<p>${joke}</p>`;
+                
                 const root = document.getElementById('root');
                 root.innerHTML = studentsHTML
             })
-
+        }
     </script>
 </body>
 
