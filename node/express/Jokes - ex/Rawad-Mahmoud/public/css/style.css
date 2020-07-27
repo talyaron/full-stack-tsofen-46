@@ -1,8 +1,10 @@
-h1{
-    background-color: red;
-}
+
 p{
     text-transform: capitalize;
     font-size: 2rem;
     color: blue;
+}
+
+button{
+    background-color: red;
 }
