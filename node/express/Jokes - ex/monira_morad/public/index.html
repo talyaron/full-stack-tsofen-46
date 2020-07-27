@@ -6,6 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button  id="getJokes">get random getJokes</button>
+    <p id="joke"></p>
+
+    <script>
+        document.getElementById("getJokes").addEventListener(
+            'click', function() { 
+                console.log("aa")
+        fetch('/jokes')
+            .then(res => res.json())
+            .then(data=>{
+                let randomJoke = Math.floor(Math.random() * data.length);
+                
+                let joke = '';
+                joke += data[randomJoke];   
+                const root = document.getElementById('joke');
+                root.innerHTML = joke
+            })
+            }, false);
+
+    </script>
 </body>
 </html>
