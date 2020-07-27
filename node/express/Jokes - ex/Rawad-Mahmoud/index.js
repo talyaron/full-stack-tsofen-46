@@ -5,8 +5,8 @@ app.use(express.static('public'))
 
 const students = [
   "moran",
-  "monera",
-   "nivin",
+ "monera",
+ "nivin",
  "nimer",
  "sizar",
  "jeries",

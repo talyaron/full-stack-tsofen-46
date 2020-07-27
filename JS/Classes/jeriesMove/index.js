@@ -1,5 +1,4 @@
 
-
 const elemen=new element("move")
 
 
@@ -18,3 +17,4 @@ document.addEventListener ('keyup' , (e) => {
 
 
 })
+
