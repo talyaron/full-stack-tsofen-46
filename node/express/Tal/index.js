@@ -1,24 +1,29 @@
 const express = require('express')
 const app = express()
+const fs = require('fs');
 
-app.get('/', function (req, res) {
-  res.send('Home')
-})
+app.use(express.static('public'))
+
 
 app.get('/about', function (req, res) {
-  res.send('about me')
+
+  fs.readFile('./index.html', { encoding: 'utf-8' }, (err, data) => {
+    try {
+      if (err) { throw err }
+      res.send(data.toString());
+    } catch (err) {
+      console.error(err)
+      res.status(404).send('Not found')
+    }
+
+  })
+
 });
 
 app.get('/students/:studentID/:name?', function (req, res) {
   const { studentID, name } = req.params
-  res.send(`about the student with id: ${studentID} with name of ${name}`)
+  res.send(`<h1>about the student with id: ${studentID} with name of ${name}</h1>`)
 })
-
-// app.get('/students/:studentID', function (req, res) {
-//   const { studentID } = req.params
-//   res.send(`about the student with id: ${studentID}`)
-// })
-
 
 
 
