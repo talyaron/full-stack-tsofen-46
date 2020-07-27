@@ -11,5 +11,5 @@ app.get('/about', function (req, res) {
  
   app.get('/student', function (req, res) {
     res.send('About Student')
-  })
+  });
 app.listen(3000, ()=>{console.log('App listen on port 3000')})
