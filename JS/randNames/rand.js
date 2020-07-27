@@ -1,7 +1,7 @@
 const names = [
-     "moran",
+     "Lina",
     "monera",
-    "nivin",
+    "Mahmoud",
     "nimer",
     "sizar",
     "jeries",

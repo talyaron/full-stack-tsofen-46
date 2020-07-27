@@ -1,0 +1,144 @@
+/* Start Golbale Resets */
+
+/* End Golbale Resets */
+
+/* Start Header */
+header {
+
+    /*    background-color: mediumpurple; */
+        text-align: center;
+     /*   padding: 1.5rem; */
+
+
+    }
+
+/* End Header */
+
+
+/* Start navigation */
+    nav {
+        background-color: #303030;
+
+    }
+    nav ul {
+
+       text-align: center;
+        color: seashell;
+        padding: 1rem;
+        margin: 0.25rem;
+    }
+    nav ul li {
+        display: inline-block;
+
+    }
+
+    nav ul li:after {
+        content: " | ";
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+  
+    nav ul li:last-child::after {
+        content: ""
+    }
+    a {
+     color: seashell;
+     padding: 17px 20px;
+     text-decoration: none;
+    }
+    nav ul li a:hover {
+
+        background-color: lightskyblue;
+    }
+
+    i {
+
+        padding-left: 10px;
+    }
+
+/* End  navigation */
+
+
+/* Start Main Content */
+
+    #maimContent {
+        background-color: orangered;
+        position: fixed;
+     margin-left: 10.5%;
+    margin-right: 10.5%;
+     width: 78%;
+
+    }
+
+    #maimContent maincontentAreaSection  {
+        display: inline-block;
+        background-color: olivedrab;
+        margin-left: 19.5%;
+        margin-right: 10.5%;
+
+    }
+
+
+ /* End  Main Content */   
+
+
+/* Start aSide content */
+  /*  aside {
+
+        width:15%;
+        background-color: darksalmon;
+
+    }
+*/
+
+#scontent-l {
+    position: fixed;
+    background-color: lightslategray;
+    left: 1%;
+
+    width: 9%;
+
+}
+#scontent-r {
+    position: fixed;
+    background-color: maroon;
+    right: 1%;
+    width: 9%;
+}
+
+/* End  aSide content */
+
+
+/* Start Footer */
+    footer {
+
+        background-color: #303030;
+ 
+ 
+ /*       position: fixed; */
+        bottom: 0rem;
+        width: 100%;
+        text-align: center;
+
+    }
+footer ul {
+
+        text-align: center;
+         color: seashell;
+         padding: 1rem;
+         margin: 0.25rem;
+
+}
+footer ul li {
+    display: inline-block;
+}
+ footer ul li:after {
+     content: "|";
+ }
+
+ footer ul li:last-child::after {
+    content: ""
+}
+
+/* End Footer */

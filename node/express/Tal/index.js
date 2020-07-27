@@ -1,28 +1,32 @@
 const express = require('express')
 const app = express()
-const fs = require('fs');
 
 app.use(express.static('public'))
 
+const students = [
+  "moran",
+  "monera",
+   "nivin",
+ "nimer",
+ "sizar",
+ "jeries",
+ "morad",
+ "rawad",
+ "omri",
+ "saleh",
+ "taimaa",
+ "abdallah",
+ "yousef",
+ "marshood",
+ "Rami",
+ "Maharn",
+ "sally"
+];
 
-app.get('/about', function (req, res) {
-
-  fs.readFile('./index.html', { encoding: 'utf-8' }, (err, data) => {
-    try {
-      if (err) { throw err }
-      res.send(data.toString());
-    } catch (err) {
-      console.error(err)
-      res.status(404).send('Not found')
-    }
-
-  })
-
-});
-
-app.get('/students/:studentID/:name?', function (req, res) {
-  const { studentID, name } = req.params
-  res.send(`<h1>about the student with id: ${studentID} with name of ${name}</h1>`)
+//RERST api
+app.get('/students', function (req, res) {
+  console.log(students)
+  res.send(students)
 })
 
 
