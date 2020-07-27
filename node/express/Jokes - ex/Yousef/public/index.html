@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to out site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="button-wrapper">
+        <button id="button" onclick="clickHandle(event)"> Click Here</button>
+    </div>
+    <div id='root'></div>
+    <script>
+        function clickHandle(event) {
+            fetch('/jokes')
+                .then(res => res.json())
+                .then(data => {
+                    let studentsHTML = '';
+                    let idx = Math.floor(Math.random() * data.length);
+                    //console.log(`index = ${idx}`)
+                    studentsHTML += `<img src=${data[idx]}>`;
+                    const root = document.getElementById('root');
+                    root.innerHTML = studentsHTML
+                })
+        }
+    </script>
+</body>
+
+</html>
