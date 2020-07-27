@@ -1,3 +1,3 @@
 function onGetJoke() {
-    alert("get jockess")
+    alert("get jockes")
 }
