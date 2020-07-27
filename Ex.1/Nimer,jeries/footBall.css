@@ -134,12 +134,30 @@ font-family: Tahoma, Geneva, sans-serif;
 }
 
 
-#startButton{
-  background-color: yellow;
-  color: black;
+#submitButton{
+  background-color: green; 
+  border: none;
+  color: white;
+  padding: 7px 16px;
+  text-align: center;
+  width: fit-content;
+  height:  fit-content;
+  font-size: 12px;
+  margin: 4px 2px;
+  
 
 }
-
+#restartButton{
+  background-color: red; 
+  border: none;
+  color: white;
+  padding: 7px 16px;
+  text-align: center;
+  width: fit-content;
+  height:  fit-content;
+  font-size: 12px;
+  margin: 4px 2px;
+}
 
 
 
@@ -222,13 +240,14 @@ z-index: 20;
 }
 
 #malePlayer1{
-  
-  position: absolute;
+ 
+position: absolute;
 width: 40px;
 height: 40px;
 display: none;
 z-index: 20;
 }
+
 #malePlayer2{
   position: absolute;
 width: 40px;
