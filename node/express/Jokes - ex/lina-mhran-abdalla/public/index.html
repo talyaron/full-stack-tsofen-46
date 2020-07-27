@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+</head>
+<body>
+    <script>
+        fetch('/jokes')
+            .then(res => res.json())
+            .then(data=>{
+                let studentsHTML = '';
+
+                data.forEach(student=>{
+                    studentsHTML += `<p>${student}</p>`;
+                });
+                const root = document.getElementById('root');
+                root.innerHTML = studentsHTML
+            })
+
+    </script>
+    
+</body>
+</html>
