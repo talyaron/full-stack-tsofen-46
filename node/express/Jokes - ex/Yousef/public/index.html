@@ -20,7 +20,6 @@
                 .then(data => {
                     let studentsHTML = '';
                     let idx = Math.floor(Math.random() * data.length);
-                    //console.log(`index = ${idx}`)
                     studentsHTML += `<img src=${data[idx]}>`;
                     const root = document.getElementById('root');
                     root.innerHTML = studentsHTML
