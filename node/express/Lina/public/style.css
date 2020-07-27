@@ -1,0 +1,10 @@
+.id1{
+    color: brown;
+    font-size: medium;
+}
+
+.id1:hover{
+    transform: scale(1.2);
+
+}
+
