@@ -6,7 +6,7 @@ function onShowJocke() {
     .then(response => response.json()) //convert to JSON
     .then(data=>{
         let jokesHTML = '';
-        const {joke}=data
+        const joke=data
         const {joke}=data;
         jokesHTML += `<p>${joke}</p>`;
 
