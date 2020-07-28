@@ -5,10 +5,10 @@ app.use(express.static('public'))
 
 const jokes = [
   
- " למה עצים לא יכולים ללכת לבית הספר: כי הם לא היו שורדים את החטיבה",
- " ניקיון יסודי:מה עושות מנקות בכיתה א'-ו",
- "Why are frogs always so happy? They eat what ever bugs them",
- "Q: How do you count cows? With a cowculator"
+ "Mahmoud",
+ "Marshood",
+ "Rawad",
+ "Tal"
 
 ];
 

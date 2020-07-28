@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
 
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 const jokes = [
    {img: "/img/j1.jpg", reactions:{number:0,reaction:0 }},
@@ -23,7 +23,8 @@ const jokes = [
   ];
  
 app.get('/jokes', function (req, res) {
-    res.send(jokes)
+  
+  res.send(jokes)
 })
 
 

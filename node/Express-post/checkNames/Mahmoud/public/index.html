@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <h1>Enter a Name</h1>
+
+    <form>
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname">
+     
+    </form>
+
+    <!-- <button onclick="myFunction()">new joke</button> -->
+    
+    
+    <div id='root'></div>
+    <!-- <img src="https://i.pinimg.com/originals/9a/26/84/9a2684c4213171476e13732af3b26537.jpg" alt=""> -->
+    <script>
+        function myFunction(){
+        fetch('/jokes')
+            .then(res => res.json())
+            .then(data=>{
+               const {joke}= data;
+               console.log(joke)
+                let studentsHTML = '';
+             studentsHTML += `<p>${joke}</p>`;
+                
+                const root = document.getElementById('root');
+                root.innerHTML = studentsHTML
+            })
+        }
+    </script>
+</body>
+
+</html>
