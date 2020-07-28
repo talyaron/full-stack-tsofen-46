@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+      <h1>   WELCOME   </h1>
+      
+      <input type="text" id="mailinput">
+      <input type="text" id="passinput">
+      <button id="login">login</button>
+
+
+      <script>
+
+     const button = document.getElementById('button')
+
+     const name = document.getElementById('name').value;
+
+
+
+
+
+      button.addEventListener('click', (e) => {
+
+      const checkname = document.getElementById('checkname');
+
+      fetch('/names', {
+            method: 'POST',
+            body: JSON.stringify({ name:checkname.value}),
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        }).then(res => res.json())
+            .then(data => {
+                if(data.success === true)
+                document.getElementById("answer").innerHTML = true;
+                else document.getElementById("answer").innerHTML = false;
+                
+            })
+        }
+)
+
+      </script>
+
+
+   
+    
+</body>
+</html>
