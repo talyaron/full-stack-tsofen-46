@@ -16,9 +16,6 @@ function post(){
              else{
                 document.getElementById("answer").innerText = false;
              }
-            // const { avg } = data;
-            // console.log(avg);
-            // document.getElementById('avg').innerText = avg.toFixed(2)
         })
 }
 
