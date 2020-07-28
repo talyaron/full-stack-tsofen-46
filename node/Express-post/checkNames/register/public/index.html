@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Regitser</h1>
+<div class="one">
+      <form onsubmit="handleRegister(event)">
+        <input type="text" placeholder="you name" name="name">
+        <input type="text" placeholder="password" name="password">
+        <br>
+        <button type="submit" class="bu"> register </button>
+     </form>
+     <p id="registerResult"></p>
+</div>
+<h1>Login</h1>
+<div class="two" >
+    <form onsubmit="login(event)">
+        <input type="text" placeholder="email" name="name">
+        <input type="text" placeholder="password" name="password">
+        <br>
+        <button type="submit" class="bu"> login </button>
+    </form>
+    <p id="loginGood"></p>
+</div>
+<script src="functions.js"></script>
+</body>
+</html>
