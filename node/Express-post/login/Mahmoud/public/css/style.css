@@ -1,4 +1,8 @@
 
+h1 {text-align: center;}
+
+form {border: 10px solid #3e66ec;  padding: 16px;}
+
 p{
     text-transform: capitalize;
     font-size: 2rem;
@@ -26,3 +30,5 @@ button {
   button:hover {
     opacity: 0.8;
   }
+
+ 
