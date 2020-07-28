@@ -1,5 +1,5 @@
 const button = document.getElementById('getJoke');
-const jokes = document.getElementById('jokes');
+const jokes1 = document.getElementById('jokes');
 
 
         button.addEventListener('click', (e) => {
@@ -7,7 +7,7 @@ const jokes = document.getElementById('jokes');
             .then(res => res.json())
             .then(data =>{
                 console.log(data);
-                jokes.innerHTML = data.joke;
+                jokes1.innerHTML = data.joke;
             })
            
         })
