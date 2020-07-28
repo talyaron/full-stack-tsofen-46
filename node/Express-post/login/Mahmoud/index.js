@@ -9,13 +9,11 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 })); 
 
-const Namess = [
+const Emailes = [
   
- "Mahmoud",
- "Marshood",
- "Rawad",
- "Tal"
-
+ "Mahmoud.ataria95@gmail.com",
+ "Marshood.ayoup@gmail.com",
+ 
 ];
 
  
@@ -29,9 +27,9 @@ app.post('/names', (req, res)=>{
   const {name} = body;
  var found=false;
 
-console.log("ma"+ name)
-  for (i=0;i<=Namess.length;i++){
-    if(Namess[i] == name)
+
+  for (i=0;i<=Emailes.length;i++){
+    if(Emailes[i] == name)
     found=true;
     
   }
@@ -41,6 +39,11 @@ console.log("ma"+ name)
   else{
     res.send({success:false})}
   
+if(name=='')
+{
+  res.send({'You need to enter your E-mail'})}
+}
+
 })
 
 
