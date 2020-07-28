@@ -3,7 +3,13 @@ const app = express()
 
 app.use(express.static('public'))
 
-const jokes = [
+var bodyParser = require('body-parser')
+app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
+
+const Namess = [
   
  "Mahmoud",
  "Marshood",
@@ -12,26 +18,30 @@ const jokes = [
 
 ];
 
-function rand(){
+ 
+app.get('/names', function (req, res) {
   
-  
-  const randNum = Math.floor(Math.random()*jokes.length);
-  console.log(randNum)
-  return randNum
-}
-
-
-//RERST api
-app.get('/jokes', function (req, res) {
-  // console.log("dasda:",students)
-  res.send({joke:jokes[rand()]})
+  res.send(names)
 })
 
+app.post('/names', (req, res)=>{
+  const {body} = req;
+  const {name} = body;
+ var found=false;
 
+console.log("ma"+ name)
+  for (i=0;i<=Namess.length;i++){
+    if(Namess[i] == name)
+    found=true;
+    
+  }
 
-
-app.get('/admin', function (req, res) {
-  res.send('admin panel')
+  if(found==true){
+    res.send({success:true})}
+  else{
+    res.send({success:false})}
+  
 })
+
 
 app.listen(3000, () => { console.log('App listen on port 3000') })
