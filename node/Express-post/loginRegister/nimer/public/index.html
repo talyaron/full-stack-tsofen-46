@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container1">
+    <h1 id="title">Register</h1>
+    <form id="form1" onsubmit="register(event)">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Register</button>
+        <p id="serverRespond">
+        </p>
+    </form>
+
+    </div>
+    <div id="container2">
+        <h1 id="title2">Log In</h1>
+        <form id="form2" onsubmit="logIn(event)">
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Password">
+            <button type="submit">Sign in</button>
+            <p id="serverRespond2">
+            </p>
+        </form>
+    
+        </div>
+
+
+<script>
+
+function register(e){
+    e.preventDefault();
+    console.log(e.target.elements)
+    const email = e.target.elements.email.value;
+   
+    const password = e.target.elements.password.value;
+    
+    fetch('/register', {
+        method: 'POST',
+        body: JSON.stringify({ email,password }),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      }).then(res => res.json())
+        .then(data => {
+          console.log(data)
+          const { answer} = data;
+          console.log(answer);
+
+         
+            document.getElementById("serverRespond").innerHTML=answer
+}
+
+
+        )}
+
+function logIn(e){
+    e.preventDefault();
+    console.log(e)
+    const email = e.target.elements.email.value;
+    const password = e.target.elements.password.value;
+    fetch('/logIn', {
+        method: 'POST',
+        body: JSON.stringify({ email,password }),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      }).then(res => res.json())
+        .then(data => {
+          console.log(data)
+          const { answer} = data;
+          console.log(answer);
+
+         
+            document.getElementById("serverRespond2").innerHTML=answer
+}
+
+
+        )
+}
+
+
+
+</script>
+
+</body>
+</html>
