@@ -12,7 +12,7 @@
 
     <h1>Enter a Name</h1>
       
-      Name:<input type="text" id="fname" >
+      Name: <input type="text" id="fname" >
      
       <button onclick="myFunction()">Try it</button>
     
@@ -31,10 +31,10 @@
             .then(res => res.json())
             .then(data=>{
                if(data.success == true)
-             {  console.log("ok");
+             {  
                  studentsHTML = `<p>true</p>`;
              }else{
-                console.log("oksssss");
+                
                 studentsHTML = `<p>false</p>`;
              }
 
