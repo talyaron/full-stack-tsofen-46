@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="translation-box">
+            <div class="translation-title">
+                <h1><span class="title-span">FOOFLE</span> Translate</h1>
+            </div>
+            <div class="translation-form">
+                <form onsubmit="handleTranslation(event)">
+                    <label for="hebWord">HEB TO ENG</label>
+                    <input type="text" id="hebWord" name="hebWord">
+                    <span id="hebToEng"></span>
+                    <label for="engWord">ENG TO HEB</label>
+                    <input type="text" id="engWord" name="engWord">
+                    <span id="engToHeb"></span>
+                    <button type="submit">Translate</button>
+                    <p id="errorParagraph"></p>
+                </form>
+            </div>
+        </div>
+
+        <div class="game">
+            <h1>Lets Guess The Word</h1>
+            <form onsubmit="handleGuess(event)" class="game-form">
+                <div class="form-fields">
+                    <input type="text" id="gameWord" name="gameWord" placeholder="Enter a word">
+                    <input type="text" id="meaning" name="meaning" placeholder="Enter the meaning">
+                </div>
+                <button type="submit">Guess</button>
+
+            </form>
+            <p id="guessResult"></p>
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
