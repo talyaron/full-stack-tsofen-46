@@ -1,0 +1,31 @@
+#container1{
+    width: 420px;
+    height: 200px;
+    background-color: coral;
+}
+#title{
+    text-align: center;
+}
+#form1{
+    text-align: center;
+}
+
+#container2{
+    width: 420px;
+    height: 200px;
+    background-color: lightgreen;
+}
+#title2{
+    text-align: center;
+}
+#form2{
+    text-align: center;
+}
+#serverRespond{
+    font-size: large;
+    color: cyan;
+}
+#serverRespond2{
+    font-size: large;
+    color: blue;
+}
