@@ -10,9 +10,6 @@ app.get('/', function (req, res) {
   res.send('Home')
 })
  
-
-
-
 app.get('/about', function (req, res) {
   fs.readFile('./indext.html',{encoding:'utf-8'},(err,data)=>{
     try{

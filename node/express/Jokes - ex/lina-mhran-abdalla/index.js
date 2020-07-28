@@ -6,7 +6,7 @@ const app = express()
 app.use(express.static('public'))
 
 
-const jokes = [1,2,3,4,5]
+const jokes = ['1','2','welcommee','byeeeee','hellooooo'];
 
 
 
