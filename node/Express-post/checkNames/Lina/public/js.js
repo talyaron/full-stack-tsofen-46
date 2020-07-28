@@ -11,6 +11,14 @@ function sendName(name) {
         .then(data => {
             const { success } = data;
             
+
+            if(success=='found'){
+                document.body.style.backgroundColor="green";
+            }else{
+                document.body.style.backgroundColor="red";
+            }
+
+
             document.getElementById('result').innerText = success;
             console.log(success);
 
