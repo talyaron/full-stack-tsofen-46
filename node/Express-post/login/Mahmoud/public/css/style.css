@@ -1,4 +1,8 @@
 
+body {
+  background-color: lightblue;
+}
+
 h1 {text-align: center;}
 
 form {border: 10px solid #3e66ec;  padding: 16px;}
