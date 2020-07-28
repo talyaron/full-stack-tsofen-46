@@ -11,6 +11,11 @@ function sendName(name) {
     }).then(res => res.json())
         .then(data => {
             const {success} = data;
+            if(success==true){
+                document.body.style.backgroundColor="green";
+            }else{
+                document.body.style.backgroundColor="red";
+            }
             document.getElementById('result').innerText = success;
             console.log(success);
            
