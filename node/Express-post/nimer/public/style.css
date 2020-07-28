@@ -1,0 +1,28 @@
+#mainBorder{
+  width: 500px;
+  height: 300px;
+  background-color: chocolate;
+}
+#question{
+  text-align: center;
+  margin-top: 0px;
+}
+#options{
+  margin-top: 100px;
+  text-align: center;
+}
+.answers{
+  width: 32%;
+  height: 20px;
+}
+
+#result{
+  text-align: center;
+}
+#rating{
+  text-align: center;
+  
+}
+#startButton{
+  text-align: center;
+}
