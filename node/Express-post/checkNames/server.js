@@ -8,7 +8,6 @@ app.use(bodyParser.json());       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
     extended: true
 }));
-
 //send to client static files from public folder
 app.use(express.static('public'));
 

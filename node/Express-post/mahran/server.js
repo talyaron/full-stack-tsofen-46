@@ -2,40 +2,46 @@ const express = require('express')
 const app = express()
 
 var bodyParser = require('body-parser')
-app.use( bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.json());       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
-})); 
+}));
 app.use(express.static('public'))
 
-const names = [
-    "A",
-    "B",
-    "C",
-    "D"
-  ];
-  
-  //RERST api
-  app.get('/names', function (req, res) {
-    console.log(names)
-    res.send(names)
-  })
+const names = ['a', 'b', 'c'];
+
+//RERST api
+app.get('/names', function (req, res) {
+
+  res.send(names)
+})
 
 // POST method route
-app.post("/names", function (req, res) {
-  return res.body;
- /*  const {body} = req
-   const {data} = body
-    let found = false
-   for(let i = 0; i < names.length; i++){
-      if(names[i] === data)
-      true
-   }
-   if(found)
-   res.send({success : true})
-   else
-   res.send({success: false})
-   */
+app.post("/post-name", function (request, response) {
+  const { input } = request.body;
+  console.log(input);
+  const isInNames = names.includes(input)
+  response.send({ isInNames });
+  console.log(isInNames);
+  //return(res.body);
+
+});
+
+//
+app.post("/post-name2", function (request, response) {
+  const { input } = request.body;
+  console.log(input);
+  const isInNames = names.includes(input)
+  var result;
+ if (isInNames == true) {
+    result = 1;
+  } else {
+    result = 2;
+  }
+  response.send({ result });
+  console.log(result);
+  //return(res.body);
+
 });
 
 
