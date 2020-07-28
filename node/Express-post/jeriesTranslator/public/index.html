@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+    <h1>Translate words</h1>
+    <div>
+        <form onsubmit="handleWord(event)">
+        <input type="text" placeholder="you name" name="word">
+        <br>
+        <button type="submit" class="bu"> Translate </button>
+        </form>
+        <h1 id='result'></h1>
+    </div>
+   
+    <div>
+        <h1>Add Words </h1>
+        <form onsubmit="addWord(event)">
+        <input type="text" placeholder="arabic" name="arabic">
+        <input type="text" placeholder="hebrew" name="hebrew">
+        <br>
+        <button type="submit" class="bu"> Add  </button>
+        </form>
+        <h1 id='resultword'></h1>
+    </div>
+
+    <div id="editor">
+        <h2>Enter the correct words:</h2>
+        <form onsubmit="editWord(event)">
+            <h3>enter the wrong word : </h3>
+        <input type="text" placeholder="wrong word" name="wrong">
+            <h3>enter the correct word : </h3>
+        <input type="text" placeholder="correct word" name="newword">
+        <br>
+        <button type="submit" class="bu"> Correct it  </button>
+        </form>
+        <h1 id='fixword'></h1>
+    </div>
+</div>
+    <script src="fucntions.js"></script>
+</body>
+</html>
