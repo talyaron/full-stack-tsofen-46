@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <div id="mainBorder">
+    <h1 id="question"> Question will be here</h1>
+    <div id="options">
+      <button onclick="sendAnswer('answer1')" class="answers" id="answer1">answer1</button>
+      <button onclick="sendAnswer('answer2')" class="answers" id="answer2">answer2</button>
+      <button onclick="sendAnswer('answer3')" class="answers" id="answer3">answer3</button>
+    </div>
+
+    <h1 id="result"></h1>
+    <h3 id="rating"></h3>
+    <button onclick="startQuiz()" id="startButton">start</button>
+
+
+  </div>
+  <script>
+    let questionPart1;
+    let questionPart2;
+    // Swap the postion in the DOM of el0 and el1
+    function swapElements(el0, el1) {
+
+      // Create a temp node that can replace el0
+      var tmp = el0.cloneNode(false);
+
+      // Replace el0 with tmp
+      el0.parentNode.replaceChild(tmp, el0);
+
+      // Replace el1 with el0
+      el1.parentNode.replaceChild(el0, el1);
+
+      // Replace temp node with el1
+      tmp.parentNode.replaceChild(el1, tmp);
+    }
+    function startQuiz(){
+      const question = document.getElementById("question");
+      const answer1 = document.getElementById('answer1');
+      const answer2 = document.getElementById('answer2');
+      const answer3 = document.getElementById('answer3');
+      questionPart1 = Math.floor(Math.random() * 100);
+      questionPart2 = Math.floor(Math.random() * 100)
+      let position = Math.floor(Math.random()*1);
+      question.innerHTML = `${questionPart1} + ${questionPart2}= `;
+      answer1.innerHTML = questionPart1 + questionPart2 + 1;
+      answer2.innerHTML = questionPart1 + questionPart2 - 1;
+      answer3.innerHTML = questionPart1 + questionPart2;
+      if(position== 1){
+      swapElements(answer1,answer3);
+      }
+      else if(position==0){
+        swapElements(answer2,answer3);
+      }
+    }
+    function sendAnswer(event) {
+      const question = document.getElementById("question");
+      const answer1 = document.getElementById('answer1');
+      const answer2 = document.getElementById('answer2');
+      const answer3 = document.getElementById('answer3');
+      questionPart1 = Math.floor(Math.random() * 100);
+      questionPart2 = Math.floor(Math.random() * 100)
+      let position = Math.floor(Math.random()*1);
+      question.innerHTML = `${questionPart1} + ${questionPart2}= `;
+      answer1.innerHTML = questionPart1 + questionPart2 + 1;
+      answer2.innerHTML = questionPart1 + questionPart2 - 1;
+      answer3.innerHTML = questionPart1 + questionPart2;
+      if(position== 1){
+      swapElements(answer1,answer3);
+      }
+      else if(position==0){
+        swapElements(answer2,answer3);
+      }
+      
+
+
+
+
+      fetch('/answer', {
+        method: 'POST',
+        body: JSON.stringify({ event }),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      }).then(res => res.json())
+        .then(data => {
+          console.log(data)
+          const { avg } = data;
+          console.log(avg);
+
+          document.getElementById('result').innerText = `Success Ratio ${avg.toFixed(2) * 100}%`
+          if (avg * 100 < 30)
+            document.getElementById('rating').innerText = "what are You Doin????"
+          else if (avg * 100 < 75 && avg * 100 > 30)
+            document.getElementById('rating').innerText = "not bad..."
+          else document.getElementById('rating').innerText = "Excellent!!!"
+        })
+    }
+
+
+
+
+
+  </script>
+
+
+</body>
+
+</html>
