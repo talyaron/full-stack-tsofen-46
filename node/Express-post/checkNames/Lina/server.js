@@ -45,11 +45,10 @@ app.post('/name', (req, res) => {
     const { name } = body;
     console.log(name);
     if (students.includes(name)) {
-        res.send({ success: 'ok' });
-        document.body.style.backgroundColor = "red";
+        res.send({ success: 'found' });
     }
     else {
-        res.send({ success: false });
+        res.send({ success: 'name not found' });
     }
 })
 
