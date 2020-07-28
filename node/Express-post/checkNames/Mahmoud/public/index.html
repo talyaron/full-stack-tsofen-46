@@ -11,30 +11,35 @@
 <body>
 
     <h1>Enter a Name</h1>
-
-    <form>
-      <label for="fname">First name:</label>
-      <input type="text" id="fname" name="fname">
+      
+      Name:<input type="text" id="fname" >
      
-    </form>
-
-    <!-- <button onclick="myFunction()">new joke</button> -->
-    
+      <button onclick="myFunction()">Try it</button>
     
     <div id='root'></div>
-    <!-- <img src="https://i.pinimg.com/originals/9a/26/84/9a2684c4213171476e13732af3b26537.jpg" alt=""> -->
+  
     <script>
-        function myFunction(){
-        fetch('/jokes')
+        function myFunction() {
+           var name = document.getElementById("fname").value;
+        fetch('/names', {
+                method: 'POST',
+                body: JSON.stringify({name}),
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            })
             .then(res => res.json())
             .then(data=>{
-               const {joke}= data;
-               console.log(joke)
-                let studentsHTML = '';
-             studentsHTML += `<p>${joke}</p>`;
-                
-                const root = document.getElementById('root');
-                root.innerHTML = studentsHTML
+               if(data.success == true)
+             {  console.log("ok");
+                 studentsHTML = `<p>true</p>`;
+             }else{
+                console.log("oksssss");
+                studentsHTML = `<p>false</p>`;
+             }
+
+                 const root = document.getElementById('root');
+                 root.innerHTML = studentsHTML
             })
         }
     </script>
