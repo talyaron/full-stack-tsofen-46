@@ -1,10 +1,40 @@
 
+body {
+  background-color: lightblue;
+}
+
+h2 {text-align: center;}
+h1 {text-align: center;}
+
+
+form {border: 10px solid #3e66ec;  padding: 16px;}
+
 p{
     text-transform: capitalize;
     font-size: 2rem;
     color: blue;
 }
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
 
-button{
-    background-color: red;
-}
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+ 

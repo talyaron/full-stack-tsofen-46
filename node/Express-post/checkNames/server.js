@@ -18,7 +18,7 @@ const names = ['a', 'b', 'c'];
 app.post('/api/check-name', (request, response) => {
     //request com from the client
     const { name } = request.body;
-console.log(name)
+    console.log(name)
     //check if name is in names
     const isInNames = names.includes(name);
     console.log(isInNames)
@@ -26,6 +26,8 @@ console.log(name)
     //send response to client
     response.send({isInNames})
 })
+
+
 
 
 //listen to cliennts call on port 3000
