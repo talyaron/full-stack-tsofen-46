@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Translate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="hebrewArabicWrapper">
+    <h1 id="title">Translator</h1>
+
+
+    <form id="translateForm" onsubmit="hebrewArabicTranslate(event)">
+      <input id="hebrewWordBox" type="text" name="hebrewWord" placeholder="Hebrew">
+      <button id="hebrewArrabicButton">Translate</button>
+      <p class="status" id="meaningInArabic">status
+      
+      </p>
+      
+    </form>
+
+
+    <form id="addForm"  onsubmit="hebrewArabicAdd(event)">
+      <input id="hebrewWordBoxAdd" type="text" name="newHebrew" placeholder="Hebrew">
+      <input id="arabicWordBoxAdd" type="text" name="Arabicmeaning" placeholder="Meaning">
+      <button id="hebrewArrabicAdd">Add</button>
+      <p class="status" id="addResult">status</p>
+    </form>
+
+
+    <form id="editForm"  onsubmit="hebrewArabicEdit(event)">
+      <input id="hebrewWordBoxEdit" type="text" name="hebrewWordedit" placeholder="Hebrew">
+      <input id="arabicWordBoxEdit" type="text" name="newArabicWord" placeholder="newMeaning">
+      <button id="hebrewArrabicEdit">Edit</button>
+      <p class="status" id="editorResult">status</p>
+    </form>
+
+  </div>
+
+
+
+
+
+
+
+
+  <script>
+
+    function hebrewArabicTranslate(e) {
+      e.preventDefault();
+      console.log(e.target.elements)
+      const hebrew = e.target.elements.hebrewWord.value;
+      
+
+
+      fetch('/translateHebrewArabic', {
+        method: 'POST',
+        body: JSON.stringify({ hebrew }),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      }).then(res => res.json())
+        .then(data => {
+          console.log(data)
+          const { answer } = data;
+          console.log(answer);
+           
+            document.getElementById("meaningInArabic").innerHTML = answer
+            
+            
+        }
+        )
+    }
+
+
+
+    function hebrewArabicEdit(e) {
+      e.preventDefault();
+      console.log(e)
+      const hebrew = e.target.elements.hebrewWordedit.value;
+      const arabic = e.target.elements.newArabicWord.value;
+      fetch('/editWordHebrew', {
+        method: 'POST',
+        body: JSON.stringify({ hebrew, arabic }),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      }).then(res => res.json())
+        .then(data => {
+          console.log(data)
+          const { answer } = data;
+          console.log(answer);
+
+
+          document.getElementById("editorResult").innerHTML = answer
+        }
+
+
+        )
+    }
+
+
+
+    function hebrewArabicAdd(e) {
+      e.preventDefault();
+      console.log(e.target.elements)
+      const hebrew = e.target.elements.newHebrew.value;
+
+      const arabic = e.target.elements.Arabicmeaning.value;
+
+      fetch('/addNew', {
+        method: 'POST',
+        body: JSON.stringify({ hebrew, arabic }),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      }).then(res => res.json())
+        .then(data => {
+          console.log(data)
+          const { answer } = data;
+          console.log(answer);
+
+
+          document.getElementById("addResult").innerHTML = answer
+        }
+
+
+        )
+    }
+
+  </script>
+
+
+
+
+</body>
+
+</html>

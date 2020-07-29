@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/css.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form onsubmit="register() ,mySubmitFunction(event)">
+        <input id="name" name="name" type="text"> </br>
+        <input id="password" name="pass" type="text"> </br>
+        <input type="submit" value="register">
+        </form>
+        <p id =registerResponse></p>
+    </div>
+</br>
+</br>
+<div>
+    <form onsubmit="login() ,mySubmitFunction(event)">
+    <input id="nameLogin" name="name"  type="text"> </br>
+    <input id="passwordLogin" name="pass" type="text"> </br>
+    <input type="submit" value="login">
+    </form>
+    <p id = "loginResponse" ></p>
+</div>
+    <script src="js/js.js"></script>
+</body>
+</html>
