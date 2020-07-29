@@ -38,8 +38,8 @@ function updatePrice(event) {
     })
     .then(response => response.json())
     .then(data => {
-        let result = data
-        console.log(result);
+        let {UserMsg} = data
+        console.log(UserMsg);
 
     })
 }

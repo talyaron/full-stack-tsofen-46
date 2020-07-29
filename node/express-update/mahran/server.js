@@ -31,13 +31,14 @@ app.get('/api/getMenu', function (req, res) {
 });
 
 app.put('/api/updateMenu', function (request, response) {
-
+let UserMsg = "";
   let itemPriceToUpdate = request.body;
   console.log(itemPriceToUpdate);
   for(let i=0; i<menu.length; i++) {
     console.log(menu[i].price);
     if(menu[i].name == itemPriceToUpdate.itemToUpdate) {
       menu[i].price = itemPriceToUpdate.itemPriceToUpdate;
+      UserMsg = "The Product" + menu[i].name + "has been updated Successfuly!";
       console.log("Item found in Menu")
       break;
       
@@ -45,7 +46,7 @@ app.put('/api/updateMenu', function (request, response) {
       // do nothing
     }
   }
-  response.send("Price Updatec");
+  response.send(UserMsg);
 })
 
 
