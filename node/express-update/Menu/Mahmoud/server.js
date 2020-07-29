@@ -22,7 +22,13 @@ app.post('/update', (req, res) => {
   const { body } = req;
   const { itemID } = body;
   console.log(body);
- 
+  
+  const index = menu.findIndex(item => item.ID === itemID);
+
+        if (index > -1) {
+          //update to zero
+          menu[index].price = 0;
+        }
 
 })
 
@@ -32,31 +38,5 @@ function uid() {
   return '_' + Math.random().toString(36).substr(2, 9);
 };
 
-
-
-
-
-function updatePrice(itemID) {
-  try {
-    console.log(itemID);
-    //find in array;
-
-    const index = menu.findIndex(item => item.ID === itemID);
-
-    if (index > -1) {
-      //update to zero
-      menu[index].price = 0;
-
-    }
-
-    renderMenu(menu);
-  } catch (err) {
-    console.error(err)
-  }
-}
-
-
-// const port = process.env.PORT || 3000;
-// app.listen(port, () => { console.log('App listen on port',port) })
 
 app.listen(3000, () => { console.log('App listen on port 3000') })
