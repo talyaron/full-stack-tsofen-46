@@ -1,0 +1,42 @@
+.main{
+
+text-align: center;
+color: crimson;
+
+}
+body{
+    background-color: bisque;
+font-size: 3rem;
+}
+.containe1r{
+    /* display: flex;
+    justify-content: center;
+    flex-direction: row; */
+
+ }
+.center{
+
+    text-align: center;
+
+}
+.ShowForm {
+    color: darkmagenta;
+}
+.ShowTrans{
+    color: darkmagenta;
+
+}
+input { 
+    text-align: center; 
+}
+
+.button {
+    background-color: darkred; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
