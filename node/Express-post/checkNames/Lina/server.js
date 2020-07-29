@@ -45,7 +45,11 @@ app.post('/name', (req, res) => {
     const { name } = body;
     console.log(name);
     if (students.includes(name)) {
+<<<<<<< HEAD
+        res.send({ success: 'found' });
+=======
         res.send({ success: 'exists' });
+>>>>>>> master
     }
     else {
         res.send({ success: 'name not found' });

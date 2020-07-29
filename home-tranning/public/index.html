@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="continar">
+
+
+    <div class="midlle" >
+        <img id="logo" src="https://i.pinimg.com/originals/e6/27/c7/e627c7a19c871570314053e93f4c8536.jpg" alt="" width="80" height="80">
+        <h1 style="color: white;">The Official App of the NBA</h1>
+        <h4 style="color: white;">Download the Official app of the NBA</h4>
+        
+        <br>
+
+            <select id="country" name="country" onchange="sendcountry()">
+                <option>Select your country</option>
+                <option value="israel">Israel</option>
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="italy">Iyaly</option>
+              </select>
+              <h5 id="code"></h5>
+           
+                 <button id="Text-me-button" onclick="getCode(event)">TEXT ME THE APP</button>
+
+        <p>Standard SMS fees may apply</p>
+        <div id="imges">
+             <img src="css/img/apple.png" alt="" width="10%">
+            <img src="css/img/google.png" alt="" width="10%"> 
+        </div>
+    </div> 
+    <br><br>
+
+    <div class="scound-midlle">
+        <div id="text">
+            <h2>Mobile Enhanced Viewing</h2>
+            <h4>Watch games on-the-go with zoomed in viewing plus interactive stats and graphics with NBA Mobile View, available exclusively on the NBA app with NBA League Pass.</h4> 
+        </div>
+        <div>
+            <img src="https://global.nba.com/nba-apps/static/iphone-ipad.png" alt="" width="100%">
+        </div>
+        <div> 
+            <img src="https://cdn.dribbble.com/users/912634/screenshots/3930931/nba.gif" alt="" width="100%">
+        </div>
+        <div>
+            <h2>Personalized Homescreen</h2>
+            <h4>Get the latest on teams and players that you care about most with the all new personalized NBA app homescreen.</h4>
+        </div>
+    </div>
+
+    <h6 id="games"></h6>
+
+      <div class="first-options">
+        <div id="left-side">
+           <img src="https://i.pinimg.com/originals/e6/27/c7/e627c7a19c871570314053e93f4c8536.jpg" alt="" width="71" height="71">
+           <p onclick="opengames(event)">Games</p>
+           <p>Video</p>
+           <p>NBA TV</p>
+           <p>Schedule</p>
+           <p>Standings</p>
+           <p>stats</p>
+           <p>Players</p>
+           <p>Teams</p>
+        </div>
+           <div id="right-side">
+           <p>NBALEAGEPASS</p>
+           <P>STORE</P>
+           <P>TICKETS</P>
+       </div>
+       
+
+     <br><br><br><br>
+   
+      
+  
+  </div>    
+  <script>
+
+
+
+            
+      function getCode(event) {
+        const game = document.getElementById('games');
+        const p =document.getElementById('games');
+        fetch('/games')
+            .then(res => res.json())
+            .then(data=>{
+                let gamesHTML = '';
+
+                console.log(data)
+
+                data.forEach(game=>{
+                    gamesHTML += `<p style="color:blue">${game}</p>`;
+                });
+               
+                game.innerHTML = gamesHTML
+            })
+           
+            }
+        function sendcountry(){
+            
+            let count = document.getElementById("country").value;
+            
+       
+            console.log({count})
+
+            fetch('/Country', {
+                method: 'POST',
+                body: JSON.stringify({count}),
+       
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            }).then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    let phonecode = '';
+                     const code  = data;
+                     console.log(code.codec);
+                     phonecode += `<p>Country Code:${code.codec}</p>`;
+                    const root = document.getElementById('code');
+                    root.innerHTML = phonecode;
+                })
+        }
+
+
+
+
+  </script>
+   
+</body>
+</html>
