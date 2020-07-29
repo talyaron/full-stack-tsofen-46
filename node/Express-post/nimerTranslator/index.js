@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 app.use(express.static('public'))
 
 
-const dictonary=[{hebrew:"hello",arabic:"fuck"}];
+const dictonary=[{hebrew:"שלום",arabic:"مرحبا"}];
 
 app.post('/translateHebrewArabic', (req, res) => {
   const { body } = req;
