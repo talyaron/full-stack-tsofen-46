@@ -9,7 +9,15 @@
 </head>
 
 <body>
-    
+    <h2 >Register Form</h2> 
+    <form >
+
+        E-mail: <input type="text" placeholder="Enter Your E-mail" id="fname" required><br><br>
+        Password: <input type="password" placeholder="Enter Your Password" id="psw" required> <br><br>
+       
+        <button type="submit" onclick="myRegister()">Register</button>
+      </form>
+
     <h1 >Login Form</h1> 
     <form >
 
@@ -21,7 +29,8 @@
     <div id='root'></div>
   
     <script>
-        function myFunction() {
+
+    function myFunction() {
 
            var name = document.getElementById("fname").value;
            var Psw = document.getElementById("psw").value;
@@ -32,8 +41,6 @@
                     'Content-Type': 'application/json'
                 },
             })
-
-
 
             .then(res => res.json())
             .then(data=>{
@@ -49,6 +56,29 @@
                  root.innerHTML = studentsHTML
             })
         }
+
+
+function myRegister() {
+
+    var name = document.getElementById("fname").value;
+    var Psw = document.getElementById("psw").value;
+
+    fetch('/register', {
+     method: 'POST',
+     body: JSON.stringify({name,Psw}),
+     headers: {
+     'Content-Type': 'application/json'
+     },
+   })
+
+    .then(res => res.json())
+        .then(data => {
+          console.log(data)
+          const { answer} = data;
+          console.log(answer);
+
+        }
+    ,}
     </script>
 </body>
 
