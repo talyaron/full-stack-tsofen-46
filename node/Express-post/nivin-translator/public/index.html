@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+<div class="container"> 
+  <div class="translate-container">
+  <h4>Translate</h4>
+    <input class="translate-input" type="text" name="word">
+    <div id="alert-translate-success" class="alert-success"></div>
+    <div id="alert-translate-error" class="alert-error"></div>
+    <button class="translate-button" id="translate" type="submit">Translate</button>
+  </div>
+
+  <div class="translate-container">
+  <h4>Add new words</h4>
+  <div id="alert-add-success" class="alert-success"></div>
+  <div id="alert-add-error" class="alert-error"></div>
+    <input class="translate-input" type="text" name="newWord">
+    <input class="translate-input" type="text" name="meaning">
+    <button class="translate-button" id="addWord" type="submit">Add</button>
+  </div>
+
+  <div class="translate-container">
+    <h4>Test your memory</h4>
+    <div id="alert-test-success" class="alert-success"></div>
+    <div id="alert-test-error" class="alert-error"></div>
+    <input class="translate-input" type="text" name="testWord">
+    <input class="translate-input" type="text" name="testMeaning">
+    <button class="translate-button" id="testWords" type="submit">Test</button>
+  </div>
+</>
+   
+</body>
+<script>
+
+$("#translate").click(function(){
+    const word = $("input[name=word]").val();
+    if(!word || word === "")return  alert("Value is empty")
+    $.ajax({
+        type: "POST",
+        url: "/translate",
+        data: {word},
+        success: function(data){
+            const {result} = data;
+            const alertSuccess = document.getElementById("alert-translate-success");
+            alertSuccess.innerHTML = result;
+            alertSuccess.style.display = 'block';
+            setTimeout(()=>{
+                alertSuccess.style.display = 'none';
+            },3000)
+        },
+        error: function(_,_,error) {
+            const alertError = document.getElementById("alert-translate-error");
+            alertError.innerHTML = error;
+            alertError.style.display = 'block';
+            setTimeout(()=>{
+                alertError.style.display = 'none';
+            },3000)
+        }
+    });
+   
+});
+
+$("#addWord").click(function(){
+    const newWord = $("input[name=newWord]").val();
+    const meaning = $("input[name=meaning]").val();
+    if(!newWord || newWord === "" || !meaning || meaning === "")return  alert("Value is empty")
+    $.ajax({
+        type: "POST",
+        url: "/translate/add",
+        data: {word:newWord,meaning},
+        success: function(data){
+            const {message} = data;
+            const alertSuccess = document.getElementById("alert-add-success");
+            alertSuccess.innerHTML = message;
+            alertSuccess.style.display = 'block';
+            setTimeout(()=>{
+                alertSuccess.style.display = 'none';
+            },3000)
+        },
+        error: function(_,_,error) {
+           const alertError = document.getElementById("alert-add-error");
+            alertError.innerHTML = error;
+            alertError.style.display = 'block';
+            setTimeout(()=>{
+                alertError.style.display = 'none';
+            },3000)
+        }
+    });
+   
+});
+
+$("#testWords").click(function(){
+    const testWord = $("input[name=testWord]").val();
+    const testMeaning = $("input[name=testMeaning]").val();
+    if(!testWord || testWord === "" || !testMeaning || testMeaning === "")return  alert("Value is empty")
+    $.ajax({
+        type: "POST",
+        url: "/translate/test",
+        data: {word:testWord,meaning:testMeaning},
+        success: function(data){
+            const {message,success} = data;
+            const alert = document.getElementById(success?"alert-test-success":'alert-test-error');
+            alert.innerHTML = message;
+            alert.style.display = 'block';
+            setTimeout(()=>{
+                alert.style.display = 'none';
+            },3000)
+          
+        },
+        error: function(_,_,error) {
+             const alertError = document.getElementById("alert-test-error");
+            alertError.innerHTML = error;
+            alertError.style.display = 'block';
+            setTimeout(()=>{
+                alertError.style.display = 'none';
+            },3000)
+        }
+    });
+   
+});
+</script>
+</html>
