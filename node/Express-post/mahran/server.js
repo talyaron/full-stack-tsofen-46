@@ -44,6 +44,12 @@ app.post("/post-name2", function (request, response) {
 
 });
 
+app.post("/api/post-translate", function (request, response) {
+  const { hbrwInput } = request.body;
+  response.send({ hbrwInput });
+  console.log(hbrwInput);
+})
+
 
 
 
