@@ -3,7 +3,9 @@ body {
   background-color: lightblue;
 }
 
+h2 {text-align: center;}
 h1 {text-align: center;}
+
 
 form {border: 10px solid #3e66ec;  padding: 16px;}
 
