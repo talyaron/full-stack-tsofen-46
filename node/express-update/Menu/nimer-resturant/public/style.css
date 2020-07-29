@@ -1,0 +1,17 @@
+#root{
+width: fit-content;
+height: fit-content;
+background-color: gray;
+color: black;
+}
+
+
+.newprices{
+    width: 70px;
+    color: blue;
+}
+
+.namestitle{
+    color: black;
+    border: 1px solid blue  ;
+}
