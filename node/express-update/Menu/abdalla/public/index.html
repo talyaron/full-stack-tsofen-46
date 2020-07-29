@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id='root'>menu</div>
+
+
+    <script>
+
+        fetch('/firstmenu')
+            .then(res => res.json())
+            .then(data => {
+                renderMenu(data.menu)
+                console.log(data)
+
+            })
+
+
+
+        function updatePrice(itemID) {
+            
+            const newprice = document.getElementById(`price${itemID}`).value
+            console.log(itemID)
+            console.log(newprice)
+            fetch('/menu', {
+                method: 'PUT',
+                body: JSON.stringify({itemID :itemID , newprice :newprice }),
+
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            }).then(res => res.json())
+                .then(data => {
+                        renderMenu(data.menu)
+                })
+        }
+
+
+        function renderMenu(menu) {
+            let menuStr = '';
+            menu.forEach(item => {
+                menuStr += `<p>${item.name}, Price:${item.price} NIS
+                <input type="number" id="price${item.ID}">
+                <button onclick="updatePrice('${item.ID}')">update</button></p>`
+
+            })
+            document.getElementById("root").innerHTML =menuStr
+
+        }
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

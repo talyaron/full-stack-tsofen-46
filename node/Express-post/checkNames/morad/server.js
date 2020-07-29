@@ -35,6 +35,10 @@ app.post('/searchName', (req, res)=>{
     let found = false;
     console.log(name)
     for(let i = 0; i < names.length; i++){
+<<<<<<< HEAD
+        console.log("aaa")
+=======
+>>>>>>> master
         if(names[i] === name){
             found = true;
         }
