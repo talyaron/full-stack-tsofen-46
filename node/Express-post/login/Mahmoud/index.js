@@ -43,5 +43,18 @@ app.post('/names', (req, res) => {
 
 })
 
+app.post('/register', (req, res) => {
+  const { body } = req;
+  const { name } = body;
+  const { Psw } = body;
+  
+
+
+  Emails.push({ email: name, pass: Psw })
+  res.send({ answer: "Regsiter Completed" })
+  
+
+})
+
 
 app.listen(3000, () => { console.log('App listen on port 3000') })
