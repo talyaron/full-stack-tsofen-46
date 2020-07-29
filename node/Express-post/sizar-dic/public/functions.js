@@ -19,13 +19,9 @@ function handleRegister(e) {
             const { valid  } = data;
             console.log(valid)
             //print to DOM
-            if (valid == false)
-                result.innerText = `we dont have this voc`
-            else {
-                result.innerText = `we have this voc`
-              
-            }
-
+         
+            result.innerText = valid
+            
         })
 }
 

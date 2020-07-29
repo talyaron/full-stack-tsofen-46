@@ -9,8 +9,8 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 app.use(express.static('public'))
 
-const dic = [{ hebrow: "rami", arabic: "يسرع" },
-             { hebrow: "yara", arabic: "ياكل" },
+const dic = [{ hebrow: "למהר", arabic: "يسرع" },
+             { hebrow: "אוכל", arabic: "ياكل" },
              { hebrow: "שלום", arabic: "مرحبا" },
              { hebrow: "לומד", arabic: "يتغلم" }]
 
@@ -20,22 +20,21 @@ const dic = [{ hebrow: "rami", arabic: "يسرع" },
                 const { name } = request.body;
                 console.log(name)
                 //check if name is in names
-                let valid=false;
+                let valid=name;
                 
                 for (let i=0 ; i<dic.length ; i++){ 
                     if(dic[i].hebrow===name){
-                        valid=true;
+                        valid=dic[i].arabic;
+                    }
+                    else{
+                        if(dic[i].arabic===name ){
+                            valid=dic[i].hebrow;
                     }
                 }
-                if(valid==true){
                     
-                    response.send({valid})
-                }
-                else{
-                    response.send({valid})
-                }
-            
-               
+                
+            }
+               response.send({valid})
                 console.log(valid)
                 //send response to client
                 
