@@ -33,13 +33,13 @@
      function updatePrice(ItemID) {
        console.log(ItemID);
   
-     fetch('/update', {
-     method: 'POST',
-     body: JSON.stringify({ItemID}),
-     headers: {
+       fetch('/update', {
+        method: 'POST',
+        body: JSON.stringify({ItemID}),
+        headers: {
          'Content-Type': 'application/json'
-        }
-     })
+          }
+       })
       
 }
 
