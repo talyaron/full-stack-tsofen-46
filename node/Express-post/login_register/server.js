@@ -14,8 +14,8 @@ app.use(express.static('public'));
 
 
 const users=[
-    {name:"",password:""},
-    {name:"",password:""}
+    {name:"j",password:"j"},
+    {name:"k",password:"k"}
 
 ]
 
@@ -25,15 +25,35 @@ app.post('/addUserDB', (req, res) => {
     const {name,password} = body;
     console.log(name);
     console.log(password)
-    if (users.includes(name)) {
+    if (users.findIndex(users=>users.name ==name) ==-1) {//register user
+        users.push({name:name,password:password});
+        console.log(users);
         res.send({ValidUser:false});
     }
     else {
-        res.send({ValidUser:true });
+        
+        res.send({ValidUser:true });//can't register
       
     }
 })
 
+
+app.post('/LogInUserDB', (req, res) => {
+    const { body } = req;
+    const {name,password} = body;
+    console.log(name);
+    console.log(password)
+    if (users.findIndex(users=>users.name ==name) ==-1) {//log in failed user
+        users.push({name:name,password:password});
+        console.log(users);
+        res.send({ValidUser:false});
+    }
+    else {
+        
+        res.send({ValidUser:true });//can't register
+      
+    }
+})
 
 app.listen(3001, () => { console.log("App is Listening to 3001")})
 
