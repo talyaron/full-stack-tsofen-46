@@ -1,0 +1,10 @@
+
+p{
+    text-transform: capitalize;
+    font-size: 2rem;
+    color: blue;
+}
+
+button{
+    background-color: red;
+}

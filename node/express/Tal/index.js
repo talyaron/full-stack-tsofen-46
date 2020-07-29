@@ -5,8 +5,8 @@ app.use(express.static('public'))
 
 const students = [
   "moran",
- "monera",
- "nivin",
+  "monera",
+   "nivin",
  "nimer",
  "sizar",
  "jeries",
@@ -25,7 +25,7 @@ const students = [
 
 //RERST api
 app.get('/students', function (req, res) {
-  
+  console.log(students)
   res.send(students)
 })
 
