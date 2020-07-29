@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id='root'></div>
+    <div class="change">
+        
+
+    </div>
+    <script>
+
+        fetch('/api/getMenu')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                let menuHTML = ''
+
+                data.forEach(menu => {
+                    menuHTML += `<h1>${menu.name},${menu.price}<input type="text" placeholder="New Price" name="newprice"><button type="submit" class="update"> update </button>`
+                });
+                const root = document.getElementById('root');
+                root.innerHTML = menuHTML
+            })
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
