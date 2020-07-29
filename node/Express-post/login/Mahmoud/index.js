@@ -43,6 +43,8 @@ app.post('/names', (req, res) => {
 
 })
 
+<<<<<<< HEAD
+=======
 app.post('/register', (req, res) => {
   const { body } = req;
   const { name } = body;
@@ -56,5 +58,6 @@ app.post('/register', (req, res) => {
 
 })
 
+>>>>>>> master
 
 app.listen(3000, () => { console.log('App listen on port 3000') })
