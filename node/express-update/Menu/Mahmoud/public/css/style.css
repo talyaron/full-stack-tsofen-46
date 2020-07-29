@@ -3,15 +3,15 @@ body {
   background-color: lightblue;
 }
 
-<<<<<<< HEAD
-h1 {text-align: center;}
-
-=======
 h2 {text-align: center;}
+
+div{
+  color: red;
+}
+
 h1 {text-align: center;}
 
 
->>>>>>> master
 form {border: 10px solid #3e66ec;  padding: 16px;}
 
 p{

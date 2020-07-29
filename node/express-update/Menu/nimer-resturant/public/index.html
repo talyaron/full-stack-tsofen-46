@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <div id="root"></div>
+    <div id="status"></div>
+
+
+
+
+    <script>
+        fetch('/menu')
+            .then(res => res.json())
+            .then(data => {
+                let menuStr = '';
+
+                console.log(data)
+
+                data.forEach(item => {
+                    menuStr += `<p class="namestitle" id="${item.ID}">${item.name}  , Price:${item.price} NIS
+      <input class ="newprices" id="inp-${item.ID}" type="text" name="newPrice" placeholder="newPrice">
+      <input id="productID" type="text" name="id" placeholder="Id" value=${item.ID} style="display: none;">
+      <button  onclick="editPrice('${item.ID}')">Edit</button></p>`
+                });
+                const root = document.getElementById('root');
+                root.innerHTML = menuStr
+            })
+        function editPrice(id) {
+            const price = document.getElementById(`inp-${id}`).value;
+            console.log(price)
+           
+
+            fetch('/editMenuPrice', {
+                method: 'PUT',
+                body: JSON.stringify({ price, id }),
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            }).then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    const { answer } = data;
+                    console.log(answer);
+
+
+                    document.getElementById("status").innerHTML = answer
+                }
+
+
+                )
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
