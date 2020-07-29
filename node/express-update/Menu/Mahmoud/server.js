@@ -12,9 +12,11 @@ const menu = [
   { name: 'Ice lemonande', price: 15, ID: uid() },
 ]
 
-app.get('/jokes', function (req, res) {
+app.get('/Menu', function (req, res) {
   
-  res.send({product:menu})
+  
+  res.send(menu)
+  
 })
 
 //get Hmburger;
@@ -22,13 +24,14 @@ function uid() {
 
   return '_' + Math.random().toString(36).substr(2, 9);
 };
+
 function renderMenu(menu) {
   try {
     let menuStr = '';
     menu.forEach(item => {
       menuStr += `<p onclick='updatePrice("${item.ID}")'>${item.name}, Price:${item.price} NIS</p>`
     })
-    document.getElementById('root').innerHTML = menuStr;
+    
   } catch (err) {
     console.error(err);
   }
@@ -74,5 +77,7 @@ app.get('/admin', function (req, res) {
 
 
 
-const port = process.env.PORT || 3000;
-app.listen(port, () => { console.log('App listen on port',port) })
+// const port = process.env.PORT || 3000;
+// app.listen(port, () => { console.log('App listen on port',port) })
+
+app.listen(3000, () => { console.log('App listen on port 3000') })

@@ -10,23 +10,19 @@
 <body>
 
   <h2 >Menu </h2> 
-    <form >
-
-        E-mail: <input type="text" placeholder="Enter Your E-mail" id="fname" required><br><br>
-        Password: <input type="password" placeholder="Enter Your Password" id="psw" required> <br><br>
-       
-        <button type="submit" onclick="myRegister()">Register</button>
-      </form>
 
   <div id='root'></div>
   <script>
        fetch('/Menu')
             .then(res => res.json())
-            .then(data=>{
-               const {product}= data;
-               console.log(product)
+            .then(menu=>{
+               console.log(menu)
                 let MenuProduct = '';
-                MenuProduct += `<p>${product}</p>`;
+
+                menu.forEach(item => {
+                   MenuProduct += `<p>  Product: ${item.name},   Price:${item.price} NIS</p>`
+                    })
+                
                 
                 const root = document.getElementById('root');
                 root.innerHTML = MenuProduct
