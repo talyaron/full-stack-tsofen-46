@@ -14,9 +14,16 @@ const menu = [
 
 app.get('/Menu', function (req, res) {
   
-  
   res.send(menu)
   
+})
+
+app.post('/update', (req, res) => {
+  const { body } = req;
+  const { itemID } = body;
+  console.log(body);
+ 
+
 })
 
 //get Hmburger;
@@ -25,19 +32,7 @@ function uid() {
   return '_' + Math.random().toString(36).substr(2, 9);
 };
 
-function renderMenu(menu) {
-  try {
-    let menuStr = '';
-    menu.forEach(item => {
-      menuStr += `<p onclick='updatePrice("${item.ID}")'>${item.name}, Price:${item.price} NIS</p>`
-    })
-    
-  } catch (err) {
-    console.error(err);
-  }
-}
 
-renderMenu(menu);
 
 
 
@@ -59,22 +54,6 @@ function updatePrice(itemID) {
     console.error(err)
   }
 }
-
-
-//RERST api
-app.get('/students', function (req, res) {
-  console.log(students)
-  res.send(students)
-})
-
-
-
-app.get('/admin', function (req, res) {
-  res.send('admin panel')
-})
-
-
-
 
 
 // const port = process.env.PORT || 3000;
