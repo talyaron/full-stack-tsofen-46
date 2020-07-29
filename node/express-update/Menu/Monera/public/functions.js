@@ -31,7 +31,7 @@ function getMenu(){
         data.forEach(item=>{
             //${item.ID}")'>${item.name}, Price:${item.price} NIS
             items += `<p> ID: ${item.ID} , Name: ${item.name} , Price: ${item.price} NIS , <label for="newPrice"> new Price: </label>, 
-            <input type="text" id='item.ID'> ,<button onclick="updatePrice(item.ID)">Update Price</button></p>`;
+            <input type="text" id=${item.ID}> ,<button onclick="updatePrice('${item.ID}')">Update Price</button></p>`;
         });
      
         const root = document.getElementById('root');
@@ -40,8 +40,23 @@ function getMenu(){
 }
 
 function updatePrice(Id){
-   const newPrice=document.getElementById("newPrice").value;
-    console.log(Id);
-    console.log(newPrice);
+   const newPrice=document.getElementById(Id).value;
+   fetch('/priceUpdate', {
+    method: 'PUT',
+    body: JSON.stringify({Id,newPrice}),
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    })
+    
+    .then(res => res.json())
+    .then(data => {
+       
+        getMenu();
+        
+       
+    })
+   //console.log(Id);
+   // console.log(newPrice);
 
 }

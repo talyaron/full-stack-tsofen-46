@@ -38,5 +38,19 @@ app.get('/menu', function (req, res) {
     res.send(menu);
 })
 
+app.put('/priceUpdate',function(req,res){
+    const {body} = req;
+    const {Id,newPrice} = body;
+   // if(menu.includes(Id)){
+    //menu.indexOf(Id).price==newPrice;
+   const new1= menu.find(Element => Id);
+   new1.price=newPrice;
+   menu.find(Element => Id).price==newPrice;
+  // const found = menu.find(Element => Id);
+
+    console.log(menu.find(Element => Id))
+  
+    res.send(menu);
+})
 const port = process.env.PORT || 3000;
 app.listen(port, () => { console.log('App listen on port', port) })
