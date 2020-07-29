@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>WELCOME TO ARABIC-HEBROW LEARNING :) </h1>
+    <h3>Choose arabic or hebrow word </h3>
+    <div>
+        <input type="text" id="arabic"placeholder="ARABIC" >
+        <button id="check">check</button>
+        <input type="text" id="hebrow" placeholder="HEBROW" >
+
+
+        <h2 id="answer"> </h2>
+
+
+    </div>
+
+    <script>
+
+        const button = document.getElementById('check')
+        const answer = document.getElementById('answer').value;
+
+        
+        button.addEventListener('click', (e) => {
+
+            const arabic = document.getElementById('arabic')
+            const hebrow = document.getElementById('hebrow')
+            console.log(arabic.value)
+            console.log(hebrow.value)
+
+            fetch('/words', {
+                method: 'POST',
+                body: JSON.stringify({ arabic: arabic.value, hebrow: hebrow.value }),
+
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            }).then(res => res.json())
+                .then(data => {
+                    document.getElementById("answer").innerHTML = data;
+                   
+                   
+                   
+                    /*if (data === true) {
+                        document.getElementById("answer").innerHTML = "its alredy exist";
+                    }
+                    else
+                        document.getElementById("answer").innerHTML = "Done - welcome ";*/
+
+                })
+        }
+        )
+
+    </script>
+    
+</body>
+</html>
