@@ -10,9 +10,10 @@
 <body>
 
   <h2 >Menu </h2> 
-
+  <button onclick="updatePrice">Update</button>
   <div id='root'></div>
   <script>
+
        fetch('/Menu')
             .then(res => res.json())
             .then(menu=>{
@@ -20,14 +21,27 @@
                 let MenuProduct = '';
 
                 menu.forEach(item => {
-                   MenuProduct += `<p>  Product: ${item.name},   Price:${item.price} NIS</p>`
+                  //  MenuProduct += `<p>  Product: ${item.name},   Price:${item.price} NIS</p>`
+                   MenuProduct += `<p onclick='updatePrice("${item.ID}")'>Product: ${item.name}, Price:${item.price} NIS</p>`
                     })
-                
                 
                 const root = document.getElementById('root');
                 root.innerHTML = MenuProduct
             })
-   
+
+
+     function updatePrice(ItemID) {
+       console.log(ItemID);
+  
+     fetch('/update', {
+     method: 'POST',
+     body: JSON.stringify({ItemID}),
+     headers: {
+         'Content-Type': 'application/json'
+        }
+     })
+      
+}
 
 
   </script>

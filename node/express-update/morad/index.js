@@ -48,4 +48,4 @@ app.put('/edit', (req, res)=>{
     }
 });
 const port = process.env.PORT || 3000;
-app.listen(3000, () => { console.log('App listen on port',port) })
+app.listen(port, () => { console.log('App listen on port',port) })
