@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <form id ='register' onsubmit="checkName(event)">
+        <input type="text" placeholder="UserName" name='username' />
+        <input type="text" placeholder="Password" name='password' />
+        <button type="submit">Register</button>
+    </form>
+    <p id='resRegister'></p>
+    <form id ='login' onsubmit="checkName(event)">
+        <input type="text" placeholder="UserName" name='username' />
+        <input type="text" placeholder="Password" name='password' />
+        <button type="submit">LogIn</button>
+    </form>
+    <p id='resLogIn'></p>
+
+    <script src="js/functions.js"></script>
+</body>
+</html>

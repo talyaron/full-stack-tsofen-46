@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Dictionary</title>
+</head>
+
+<body class="container">
+    <div id="main">
+    <div class="main" >
+        <h1> Wellcom to our new D-H-E-A</h1>
+    </div>
+    <div class="ShowForm center">
+        <P>Translate a word or phrase in Hebrew or English</P>
+        <input tabindex="1" type="search" name="text" id="entry" value=""
+            class="" placeholder="הזן טקסט"
+            onchange="PostTranWord()" size="25" onent><button  id="myBtn" onclick="PostTranWord()">Search</button>
+
+ 
+        <div class="lan1combo">
+            <select name="languages" id="languages1">
+                <option value="Eng">Eng</option>
+                <option value="Arabic">Arabic</option>
+                <option value="Heb">Heb</option>
+            </select>
+            <div class="iconpos">
+                 <i class="fa fa-arrow-down fa-3x"></i>
+            </div>
+             <div class="lan2combo">
+                <select name="languages" id="languages2">
+                    <option value="Eng">Eng</option>
+                    <option value="Arabic">Arabic</option>
+                    <option value="Heb">Heb</option>
+                </select>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="ShowTrans center">
+
+        <label for="lname">Translation</label><br>
+        <input type="text" id="TranslationR" " readonly size="25" >
+
+    </div>
+    <br>
+    <div class="EditButt center">
+ 
+        <button  class="button"class="MistakeButt" onclick="SendMistake()">Did you find a mistake?</button>
+  
+    </div>
+</div>
+<div class="center ShowForm" id="showSendmistake" style="display: none;">
+    <p>the word is :-</p>
+    <p id="From1">#</p>
+    <p id="showerrorword"></p>
+    <p>insert the correct translation</p>
+    <p id="To1">#</p>
+
+
+     <input type="text" id="correctWord" size="25" >
+    <div class="EditButt center">
+ 
+        <button class="MistakeButt button" onclick="SendMistakeToServer()">Change it</button>
+  
+    </div>
+
+
+
+</div>
+    <script src="../javascript/javascript.js"></script>
+
+</body>
+
+</html>
