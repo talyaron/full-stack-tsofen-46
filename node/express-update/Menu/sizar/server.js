@@ -17,7 +17,7 @@ const menu = [
     { name: 'Cola', price: 15 },
     { name: 'Ice lemonande', price: 15 },
 ]
-app.get('/api/getMenu',(req, res)=>{
+app.get('/api/getMenu', (req, res) => {
     res.send(menu)
 })
 

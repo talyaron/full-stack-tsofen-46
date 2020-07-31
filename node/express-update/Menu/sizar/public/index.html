@@ -10,7 +10,7 @@
 <body>
     <div id='root'></div>
     <div class="change">
-        
+
 
     </div>
     <script>
@@ -20,7 +20,6 @@
             .then(data => {
                 console.log(data)
                 let menuHTML = ''
-
                 data.forEach(menu => {
                     menuHTML += `<h1>${menu.name},${menu.price}<input type="text" placeholder="New Price" name="newprice"><button type="submit" class="update"> update </button>`
                 });
@@ -29,7 +28,7 @@
             })
 
 
-
+            function render(menu)
 
 
 
