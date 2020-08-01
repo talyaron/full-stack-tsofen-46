@@ -45,8 +45,8 @@ function openPriceEditDiv(divId) {
     invisibleDiv.style.display = "flex";
 
     // getting selected product card and setting its border to red
-    const wholeDiv = document.getElementById(divId + "s");
-    wholeDiv.style.border = "3px solid #dc3545";
+    const cardDiv = document.getElementById(divId + "s");
+    cardDiv.style.border = "3px solid #dc3545";
 }
 
 //cross button clicked
