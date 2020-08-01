@@ -10,8 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
+    "express": "^4.17.1"
+=======
     "express": "^4.17.1",
     "init": "^0.1.2"
+>>>>>>> master
   },
   "devDependencies": {},
   "description": ""

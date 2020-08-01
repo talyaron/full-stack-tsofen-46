@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div>
+        <h3 id="checknameTitle">check names:</h3>
+        <button id="checkname" onclick="oncheckName(event)">OK</button>
+        <input id="inputField" placeholder="name" name='inputF'></input>
+        <h3 id="OutputResult"></h3>
+
+    </div>
+    <div>
+        <h3>Translator Hebrew  - Arabic</h3>
+
+        <form >
+            <label for="fname">Hebrew</label>
+            <input type="text" id="hebInpFs" name="hebInpFs">
+            <button type="submit" onclick="onSaveTranslation(event)" id="SubmitBtn">update Price</button>
+          </form>
+
+    </div>
+    <div id="TranslResult">Text</div>
+    <script src="js/logic.js"></script>
+</body>
+
+</html>
