@@ -6,8 +6,14 @@ function getItems(e){
         console.log(items)
         let itemslist ='';
         items.forEach(item => {
-            itemslist += `<div class=''`
+            itemslist += 
+            `<div class='item'>
+            <img src='${item.URL}'>
+            <div class='topic'>${item.TOPIC}</div>
+            <div id='aa'>${item.PRICE}</div>
+            </div>`
           })
+          document.getElementById("market").innerHTML = itemslist;
         //document.getElementById("market").innerHTML = `<div class='item'><img src='${items}</div>`;
     })
 
