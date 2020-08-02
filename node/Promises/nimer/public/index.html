@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sport Shop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="MainWrapper">
+  
+
+  
+    <div id="LogInPannel" style="display: none;">
+      <div>Admin Log In</div>
+      <form id="form2" onsubmit="logIn(event)">
+        <input class="user" type="name" name="name" placeholder="UserName">
+        <input class="password" type="password" name="password" placeholder="Password">
+        <br>
+        <button class="Signin" type="submit">Sign in</button>
+        <p id="serverRespond2">
+        </p>
+    </form>
+    
+    </div>
+    <div id="Header">
+      
+      <h1  id="headerTitle">Buy Online Sport Gear And Supplements!</h1>
+      <h3>Over 10,000 Products Are Waiting For You!</h3>
+      <div> 
+      <button class="headerButtons" >Sign Up</button>
+      <button class="headerButtons" onclick="signInFunction()">Sign in</button></div>
+      <h5>Eid Sale Is currently On!<h5>
+      <h6 id="currentSales" >Free Shipping!</h6>
+
+
+
+    </div>
+    <div id="SortingOptions">
+      <button id="allbuttonDesign" onclick="allProducts()"  class="sortingButtons">All</button>
+      <button onclick="womenClothes()" class="sortingButtons">Women's Clothes</button>
+      <button onclick="womanShoes()" class="sortingButtons">Women's Shoes</button>
+      <button onclick="menClothes()" class="sortingButtons">Men's Clothes</button>
+      <button onclick="menShoes()" class="sortingButtons">Men's Shoes</button>
+      <button onclick="supplement()" class="sortingButtons">Supplements</button>
+    </div>
+    <div id="ShopContent">
+
+      <!--<div id="products" class="productsOverlay">-->
+        
+      
+
+
+      </div>
+
+
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="sortFunctions.js"></script>
+<script src="functions.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+</body>
+</html>
