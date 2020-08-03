@@ -3,22 +3,21 @@
    grid-area: sidebar;
    height: 100vh;
    height: fit-content;
-   background-color: gray;
+   background-color: lightgray;
    width: 80%;
    margin-left: 10%;
+   margin-top: 10px;
 }
 #signOut{
-  background-color: blueviolet;
+  background-color: blue;
   color: white;
 }
 #signOut:hover{
-  background-color: #3e8e41;
+  background-color: red;
   color: white;
   opacity:1.2;
  }
-.container:hover {
-  background-color: lightblue;
-  }
+
 
 .deleteButton{
   opacity: 0.6;
@@ -46,11 +45,11 @@
 }
 
 #addButton{
-  background-color: blueviolet;
+  background-color: blue;
   color: white;
 }
 #addButton:hover{
-  background-color: #3e8e41;
+  background-color: red;
   color: white;
   opacity:1.2;
 }
@@ -71,19 +70,6 @@
 }
 */
 
- /* #MainWrapper{
-   hereeeee@@@@@@
-  display: grid;
-  grid-template-columns: 15vw auto  auto 15vw;
-  grid-template-rows: 30% auto;
-  width: auto;
-  height: 100vh; 
-  background-color: #1F2605;
-  
-  grid-template-areas: 
-  "header header header header"
-  "sort main main sidebar";
-}  */
 
 
 /* #MainWrapper{
