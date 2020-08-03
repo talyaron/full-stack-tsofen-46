@@ -2,9 +2,9 @@
 html * {
     font-family:   Arial, Helvetica, sans-serif;
   }
-  header {
+  #pageheader {
       padding: 3%;
-      background-color: khaki;
+      background-color: #DCDCDC
   
   }
   header nav {
@@ -20,7 +20,8 @@ html * {
       justify-content: flex-start;
       list-style: none;
       margin: 0; 
-      background: #202020;
+    background: #003366; 
+
   
   
   }
@@ -65,6 +66,8 @@ html * {
   
   
   }
+
+
   #maincontent article p {
       margin: 2px;
   }
@@ -122,7 +125,7 @@ html * {
   #delBtn{
   
   }
-  #A001-saveBtn, #A002-saveBtn, #A003-saveBtn  {
+  #A001-saveBtn, #A002-saveBtn, #A003-saveBtn, #A004-saveBtn  {
       display: none;
   }
   #actionbar button { 

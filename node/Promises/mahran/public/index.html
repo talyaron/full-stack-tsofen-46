@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <header id="header">
+    <header id="pageheader">
 
         <h2><i class="fa fa-home" aria-hidden="true"></i>&nbsp;House Rental Agency</h2>
 
@@ -21,13 +21,11 @@
             <li><a href="#">Services</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact us</a></li>
-
         </ul>
-
     </nav>
     <div id="maincontent">
         <article id="A001">
-            <header>
+            <header id="articleHeader">
                 <h3>Sales Item 1</h3>
             </header>
 
@@ -59,7 +57,6 @@
             </section>
 
             <div id="actionbar">
-
                 <button id="A001-editBtn" onclick="onEditArticle(event)"><i class="fa fa-pencil" aria-hidden="true"></i> </button>
                 <button id="A001-saveBtn" onclick="onSaveArticle(event)"><i class="fa fa-floppy-o" aria-hidden="true" hidden></i> </button>
                 <button id="A001-delBtn" onclick="onDeleteArticle(event)"> <i class="fa fa-trash"></i></button>
@@ -98,7 +95,6 @@
                 </table>
             </section>
             <div id="actionbar">
-
                 <button id="A002-editBtn" onclick="onEditArticle(event)"><i class="fa fa-pencil" aria-hidden="true"></i> </button>
                 <button id="A002-saveBtn" onclick="onSaveArticle(event)"><i class="fa fa-floppy-o" aria-hidden="true" hidden></i> </button>
                 <button id="A002-delBtn" onclick="onDeleteArticle(event)"> <i class="fa fa-trash"></i></button>
@@ -135,10 +131,46 @@
                 </table>
             </section>
             <div id="actionbar">
-
                 <button id="A003-editBtn" onclick="onEditArticle(event)"><i class="fa fa-pencil" aria-hidden="true"></i> </button>
                 <button id="A003-saveBtn" onclick="onSaveArticle(event)"><i class="fa fa-floppy-o" aria-hidden="true" hidden></i> </button>
                 <button id="A003-delBtn" onclick="onDeleteArticle(event)"> <i class="fa fa-trash"></i></button>
+            </div>
+        </article>
+
+        <article id="A004">
+            <header>
+                <h3>Sales Item 4</h3>
+            </header>
+            <section id="articleContent">
+                <p>
+                    <img src="https://pitsou.com/wp-content/uploads/AD-PENTHOUSE_079.jpg">
+                </p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><label for="fname">Location:</label></th>
+                            <td><input type="text"  id="A004-ipt-location" name="ipt-location" readonly></td>
+                        </tr>
+                        <tr>
+                            <th><label for="fname">Size:</label></th>
+                            <td><input type="text"  id="A004-ipt-livingSpace" name="ipt-size" readonly> </td>
+                        </tr>
+                        <tr>
+                            <th> <label for="fname">Availability:</label></th>
+                            <td><input type="text"  id="A004-ipt-availability" name="ipt-availabe" readonly>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="fname">Price:</label></th>
+                            <td><input type="text"  id="A004-ipt-price" name="ipt-price" readonly></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <div id="actionbar">
+                <button id="A004-editBtn" onclick="onEditArticle(event)"><i class="fa fa-pencil" aria-hidden="true"></i> </button>
+                <button id="A004-saveBtn" onclick="onSaveArticle(event)"><i class="fa fa-floppy-o" aria-hidden="true" hidden></i> </button>
+                <button id="A004-delBtn" onclick="onDeleteArticle(event)"> <i class="fa fa-trash"></i></button>
             </div>
         </article>
     </div>
