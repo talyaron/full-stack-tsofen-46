@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 
 
-    <script src="js/logic.js"></script>
+
 </head>
 <body>
-    <form display="inline-block">
+  <section id="RestauratMenu">
+      <h3>Update Restaurt Menu:</h3>
+    <form display="inline-block" onsubmit="updatePrice(event)">
         <label for="fname">Item</label>
         <input type="text" id="ItemValue" name="ItemValue">
  <!----
@@ -17,8 +20,25 @@
         <input type="text" id="ItemIDValue" name="ItemIDValue"> -->      
         <label for="fname"> New Price</label>
         <input type="text" id="priceValue" name="priceValue">
-        <button type="submit" onclick="updatePrice(event)" id="SubmitBtn">update Price</button><br><br>
-      </form>
+        <button type="submit"  id="SubmitBtn">update Price</button><br><br>
+    </form>
   <div id="MenuList"></div>
+  <div id="userMsg"></div>
+
+  </section> 
+
+  <div id="navigationBar">
+    <button id="btn1" >Home</button>
+    <button id="btn2"  >Products00000</button>
+    <button id="btn3"  >Contact usssssssssssssssss</button>
+  </div>
+
+  <div id="navigationBar2">
+    <button id="btn1" >Home</button>
+    <button id="btn2"  >Products00000</button>
+    <button id="btn3"  >Contact usssssssssssssssss</button>
+  </div>
+
+  <script src="js/logic.js"></script>
 </body>
 </html>
