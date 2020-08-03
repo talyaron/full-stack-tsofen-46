@@ -14,6 +14,9 @@ const resturant = [
     { name: 'mnsaf', img: 'https://www.tareekaa.com/wp-content/uploads/2014/12/%D9%85%D9%86%D8%B3%D9%811.jpg', price: 15, ID: uid() },
     { name: 'Maclobe', img: 'https://kitchen.sayidaty.net/uploads/small/36/36fb0116ed3b918c96f3b1f3b3f1c333_w750_h750.jpg', price: 40, ID: uid() },
     { name: 'Cola', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Coca-Cola_Glas_mit_Eis.jpg/280px-Coca-Cola_Glas_mit_Eis.jpg', price: 15, ID: uid() },
+    { name: 'Knafe', img: 'https://turkishfoodchef.com/wp-content/uploads/2018/09/Knafeh-Kunefe-10.jpg', price: 15, ID: uid() }
+
+    
 
 ]
 
@@ -33,6 +36,7 @@ app.put('/resturant2', (req, res) => {
     const { itemID } = req.body;
 
     const index = resturant.findIndex(item => item.ID === itemID);
+    
     resturant[index].price = newprice;
 
 
@@ -44,20 +48,22 @@ app.put('/resturant3', (req, res) => {
     const { itemID } = req.body;
 
     const index = resturant.findIndex(item => item.ID === itemID);
+    
 
-    delete resturant[index];
+    if(index!=-1){
+        resturant.splice(index,1)}
 
-    res.send({ resturant });
+     res.send({ resturant });
 
 })
 
 app.put('/resturant4', (req, res) => {
-    const { itemID } = req.body;
+    const { itemID } = uid();
     const {newprice} =req.body;
-    const{newname} =req.body;
     const{newimg}=req.body;
+    
 
-    resturant.push({newname , newimg , newprice,itemID});
+    resturant.push({ name:'newMeal' , img:newimg , price:newprice,ID:itemID});
 
     res.send({ resturant });
 
@@ -65,6 +71,6 @@ app.put('/resturant4', (req, res) => {
 
 
 
-app.listen(3334, () => { console.log("App is Listening") })
+app.listen(3335, () => { console.log("App is Listening") })
 
 
