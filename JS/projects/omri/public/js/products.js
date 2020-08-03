@@ -43,12 +43,18 @@ async function renderProducts() {
 function openPriceEditDiv(divId) {
     const invisibleDiv = document.getElementById(divId.toString());
     invisibleDiv.style.display = "flex";
+
+    // getting selected product card and setting its border to red
+    const cardDiv = document.getElementById(divId + "s");
+    cardDiv.style.border = "3px solid #dc3545";
 }
 
 //cross button clicked
 function closePriceEditDiv(divId) {
     const invisibleDiv = document.getElementById(divId.toString());
     invisibleDiv.style.display = "none";
+
+    removeCardBorder(divId + "s");
 }
 
 async function handleDelete(productId) {
@@ -83,7 +89,10 @@ async function handlePriceUpdate(productId) {
         const price = invisibleDiv.firstElementChild.valueAsNumber;
         invisibleDiv.style.display = "none";
 
-        if (!price) return;
+        if (!price) {
+            removeCardBorder(productId + "s");
+            return;
+        }
 
         await fetch("/api/updatePrice", {
             method: "PUT",
@@ -95,6 +104,7 @@ async function handlePriceUpdate(productId) {
                 "Content-Type": "application/json",
             },
         });
+
         location.reload();
     } catch (error) {
         alert(error.message)
@@ -120,10 +130,14 @@ async function sortBy(property) {
     }
 }
 
+function removeCardBorder(cardId) {
+    const cardDiv = document.getElementById(cardId);
+    cardDiv.style.border = "none";
+}
 
 function generateCard(productId, name, price, imgSrc) {
     return `
-    <div class="card">
+    <div class="card" id="${productId+"s"}">
         <div class="card-img">
             <img src="${imgSrc}">
         </div>
