@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="welcome" style="text-align: center;">Welcome to our ShoesShop </h1>
+    <div id="root"></div>
+    <h1 id='resultword'></h1>
+   
+    <div>
+        <h1>Add item </h1>
+        <form onsubmit="addWord(event)">
+        <input type="text" placeholder="Url" name="nurl">
+        <input type="number" placeholder="Price" name="nPrice">
+        <br>
+        <button type="submit" class="bu"> Add  </button>
+        </form>
+     
+    </div>
+    <div>
+        <h1>Remove item</h1>
+        <form onsubmit="deleteItem(event)">
+        <input type="text" placeholder="Item ID" name="ItemId1">
+        <br>
+        <button type="submit" class="bu1"> Delete  </button>
+        </form>
+     
+    </div>
+
+    <script src="functions.js"></script>
+</body>
+</html>

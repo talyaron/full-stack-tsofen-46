@@ -123,7 +123,7 @@ app.get('/menu', (req, res) => {
 
 
 
-app.put('/delete-item', function (req, res) {
+app.delete('/delete-item', function (req, res) {
   const { id } = req.body;
 
   //find index of the element

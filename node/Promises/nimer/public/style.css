@@ -1,8 +1,20 @@
 
+ #MainWrapper{
+  display: grid;
+  grid-template-columns: 15vw auto  auto 15vw;
+  grid-template-rows: 30% auto;
+  width: auto;
+  height: 100vh; 
+  background-color: lightgray;
+  
+  grid-template-areas: 
+  "header header header header"
+  "sort main main sidebar";
+} 
 #LogInPannel{
   grid-area: sidebar;
   z-index: 10;
-   background-color: #1F2605;
+   background-color: lightgray;
    width: 80%;
    margin-left: 10%;
 }
@@ -15,22 +27,22 @@
 }
 .Signin{
   margin-top: 10px;
-  background-color: blueviolet;
+  background-color: blue;
   color: white;
 }
 .Signin:hover{
-  background-color: #3e8e41;
+  background-color: red;
   color: white;
   opacity:1.2;
 }
 
 #Header{
-  background-color: #D6CE15;
+  background-color: rgb(83, 82, 82);
   grid-area: header;
   text-align: center;
   color: white;
    border-bottom-left-radius: 20%;
-   border-bottom-right-radius: 20%;
+   border-bottom-right-radius: 0%;
   
 }
 #headerTitle{
@@ -49,42 +61,70 @@
 }
 
 #SortingOptions{
-  background-color: #1F2605;
+  background-color: lightgray;
   height: fit-content;
   grid-area: sort;
   justify-content: space-evenly;
   
 }
+
 .sortingButtons{
-  background-color: #53900F;
+  background-color: blue;
   width: 90%;
   height: 50px;
-  opacity: 0.8;
+  opacity: 0.7;
   margin-bottom: 20px;
   color: white;
  
 }
 .sortingButtons:hover  {
-  background-color: #1F6521;
+  background-color: red;
   color: white;
   opacity:1.2;
   
 } 
+
+.sortingButtons span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.sortingButtons span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.sortingButtons:hover span {
+  padding-right: 25px;
+}
+
+.sortingButtons:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
 .headerButtons{
-background-color: #53900F;
+background-color: blue;
 color: white;
 opacity: 0.8;
   
 }
 .headerButtons:hover{
-  background-color: #3e8e41;
+  background-color: red;
   opacity:1.2;
 }
 
 
 #ShopContent{
   grid-area: main;
-  background-color: #1F2605;
+  background-color: lightgray;
 }
 #allbuttonDesign{
 margin-top: 15px;
@@ -92,6 +132,17 @@ margin-top: 15px;
 
 
 
+@keyframes drop{
+  0%{
+      opacity: 0;
+      transform: translateY(100px);
+  }
+  100%{
+      opacity: 1;
+      transform: translateY(0px);
+      
+  }
+}
 
 
 
@@ -100,20 +151,24 @@ margin-top: 15px;
 
 
 .container {
-  
+  animation: drop 1s ease;
   display: flex;
   height: 200px;
   width: 100%;
   top: 20px;
-  background-color: #A4A71E;
-  border-radius: 20px ;
+  background-color: whitesmoke;
+  
   margin-top: 15px;
   margin-bottom: 20px;
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.418); 
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.418);
+  
+  
+  border-bottom-left-radius: 20px;
+  border-top-left-radius:20px ;
     
 }
 .container:hover {
-  background-color: lightgray;
+  background-color: rgb(164, 168, 172);
   }
 
 .deleteButton{
