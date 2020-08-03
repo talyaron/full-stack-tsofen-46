@@ -1,3 +1,6 @@
+body{
+    background-color: #728cb5;
+}
 #market{
     display: flex;
     flex-wrap: wrap;
