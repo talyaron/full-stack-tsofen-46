@@ -37,7 +37,6 @@ function register(e){
     e.preventDefault();
     console.log(e.target.elements)
     const email = e.target.elements.email.value;
-   
     const password = e.target.elements.password.value;
     
     fetch('/register', {
