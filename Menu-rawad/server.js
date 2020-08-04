@@ -13,17 +13,51 @@ app.use(express.static('public'))
 
 
 
-const games =[
-{ }
-"DAS VS DAFAF",
-"SDASDA VS DASDD",
-"DASFGAD VS AFEGAEG",
-"DAS VS DAFAF",
-"SDASDA VS DASDD",
-"DASFGAD VS AFEGAEG",
+
+    const menu = [
+        { name: 'Hamburger', price: 25, ID: uid() },
+        { name: 'Pizza', price: 15, ID: uid() },
+        { name: 'Maclobe', price: 40, ID: uid() },
+        { name: 'Rvioly', price: 15, ID: uid() },
+        { name: 'Cola', price: 15, ID: uid() },
+        { name: 'Ice lemonande', price: 15, ID: uid() },
+      ]
+  
+       //get Hmburger;
+       function uid() {
+
+        return '_' + Math.random().toString(36).substr(2, 9);
+      };
+
+      app.get('/menu', function (req, res) {
+        console.log(menu)
+        res.send(menu)
+      })
+
+      
+app.put('/updet', (req, res)=>{
+    const {body} = req;
+    const itemId = body.itemID;
+    const itemprice =body.itemnewprice;
+    console.log(itemprice);
+
+       
+    const index = menu.findIndex(item => item.ID === itemId);
+
+    if (index > -1) {
+      //update to zero
+     console.log(menu[index].price)
+     menu[index].price=itemprice;
+
+    }
+
     
+    
+    
+
+
+  })
    
-];
 
 
 
