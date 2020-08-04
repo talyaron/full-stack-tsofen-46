@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/css.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <div id="mainDIV">
+    <div class="middleDiv">
+        <button id="orderBtn" onclick="orderByPrice()">order</button>
+    </div>
+    <div class="middleDiv" id="Div_shopContent"></div>
+    <div class="middleDiv">
+        <img onclick="showInputItems()" id="addItemImg"
+            src="https://cdn0.iconfinder.com/data/icons/flat-design-database-set-6/24/button-circle-add-512.png"
+            alt="add item">
+        <form id="Form_addItems" onsubmit="addItemValues(event)">
+            <label class="labelForm" for="imgUrl">Image url :</label>
+            <input class="inputForm" type="text" id="imgURl" name="imgUrl"><br>
+            <label class="labelForm" for="itemName">item Name :</label>
+            <input class="inputForm" type="text" id="itemName" name="itemName"><br>
+            <label class="labelForm" for="itemPrice">Item price :</label>
+            <input class="inputForm" type="number" id="itemPrice" name="itemPrice"><br>
+            <input class="subitFormBtn" type="submit">
+        </form>
+        <p id = "responseForm"></p>
+    </div>
+</div>
+    <script src="js/js.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

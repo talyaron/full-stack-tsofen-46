@@ -1,0 +1,118 @@
+#mainDIV{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+#orderBtn{
+    border-radius:10px ;
+    border: 2px solid black;
+    font: bold;
+    color: blue;
+    background-color: #f3f8fa;
+    font-size: 29px;
+    padding: 0px;
+    margin: 10px;
+    width: 200px;
+    height: 40px;
+}
+.middleDiv{
+    margin:auto;
+    text-align: center;
+}
+#addItemImg{
+    margin: 10px;
+    width : 60px;
+    height : 60px;
+}
+.labelForm{
+    margin: 3px;
+    color: blue;
+    font: bold;
+}
+.inputForm{
+    margin: 3px;  
+    border-radius: 5px;  
+    border: 1px solid blue;
+}
+.subitFormBtn{
+    margin-top: 3px;
+    border-radius:10px ;
+    border: 2px solid green;
+    font: bold;
+    color: blue;
+    background-color: white;
+    font-size: 18px;
+    width: 120px;
+    height: 30px;
+}
+#Form_addItems{
+    visibility: hidden;
+}
+.DivItem{
+    margin: 4px;
+    border-radius: 10px;
+    background-color: rgba(95, 119, 107, 0.089);
+    justify-content: space-evenly;
+    display: flex;
+    overflow: visible
+}
+.itemImage{
+    margin-top: 50%;
+    margin-bottom: 50%;
+    border-radius: 9px;
+    width: 130px;
+    height: 130px;
+}
+#Div_shopContent{
+    display: flex;
+    height: 70%;
+    flex-flow: column;
+    width: 60%;
+    overflow: scroll;
+}
+.itemBtnDiv{
+    width: 180px;
+    justify-content: space-evenly;
+    display: flex;
+    flex-flow: column;
+    overflow: visible
+}
+.itemBtnDiv button{
+    border-radius: 9px;
+    font-size: 18px;
+    border: 2px solid black;
+    color: blue;
+}
+.itemBtnDiv p{
+    font-size: 18px;
+    color: blue ;
+}
+.itemBtnDiv input{
+    text-align: center;
+    border-radius: 9px;
+    font-size: 18px;
+    border: 2px solid black;
+    color: blue;
+}
+.itemDetailsDiv{
+    justify-content: space-evenly;
+    display: flex;
+    flex-flow: column;
+    overflow: visible
+}
+.itemDetailsDiv p{
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 3px;
+    color: black;
+    font-size: 18px;
+}
+button:hover {background-color: rgb(160, 156, 156)}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
