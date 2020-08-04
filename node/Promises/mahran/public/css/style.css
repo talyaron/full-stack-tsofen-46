@@ -3,7 +3,7 @@ html * {
     font-family:   Arial, Helvetica, sans-serif;
   }
   #pageheader {
-      padding: 3%;
+      padding: 1%;
       background-color: #DCDCDC
   
   }
@@ -42,7 +42,7 @@ html * {
     #filterbar {
         padding: 1rem;
         width: 98.1%;
-        background-color: lightcoral;
+        background-color: transparent;
         display: flex;
 
     }
