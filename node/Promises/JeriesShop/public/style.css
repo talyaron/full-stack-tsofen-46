@@ -1,0 +1,185 @@
+body {
+    background-color: lightgray;
+    
+}
+.root {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin: auto; 
+    width: fit-content; 
+  }
+  
+  .container {
+    position: relative;
+    display: flex;
+    height: 200px;
+    width: 420px;
+    top: 20px;
+    background-color: whitesmoke;
+    border-radius: 20px ;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.418);   
+    animation: drop 1s ease; 
+  }
+  
+  .cart-image img {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    left: 20px;
+    top: 35px;
+  }
+  
+  .data{
+    padding: 5px;
+    position: relative;
+    left: 80px;
+    top:50px;
+    font-weight: bold;
+    /*font-family: 'Rowdies', cursive;*/
+    font-family: 'Source Serif Pro', serif;
+  }
+
+  .updatePrice {
+      position: relative;
+      top: 20px;
+      right: 100px;
+      background-color: blue; /* Green */
+      border: none;
+      color: white;
+      padding:7px 16px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 8px;
+      margin: 2px 2px;
+      cursor: pointer;
+      display: none;
+  }
+
+  .deleteItem {
+    position: relative;
+    top: 20px;
+    right: 100px;
+    background-color: red; /* Green */
+    border: none;
+    color: white;
+    padding:7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px;
+    margin: 2px 2px;
+    cursor: pointer;
+    display: none;
+    
+}
+
+.button {
+    background-color: #4CAF50; 
+   border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  h6 {
+      color: darkblue;
+  }
+
+  h4 {
+      color: black;
+      font-size: medium;
+      width: fit-content;
+      border-bottom: solid 1px red;
+     
+  }
+  .two input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid lightblue;
+    border-radius: 4px;
+  }
+h1 {
+  position: relative;
+  justify-content: center;
+}
+.bu {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+    border-radius:15px;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: relative;
+    
+    width: 100%;
+}
+.bu[type=submit]:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+.two {
+    position: absolute;
+    right: 20px;
+    animation: drop 1s ease;
+}
+
+#copyright {
+    color: white;
+}
+.enterPrice {
+    display: none;
+}
+#sortList:hover{
+color: #008CBA;
+border-bottom: 1px solid #008CBA ;
+border-top: 1px solid #008CBA ;
+border-radius: 7px;
+padding: 6px;
+}
+
+  /* Other Classes for Page Styling */
+  
+
+@keyframes drop{
+    0%{
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

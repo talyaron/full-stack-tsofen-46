@@ -45,5 +45,10 @@ app.put('/priceUpdate', function (req, res) {
     new1.price = newPrice;
     res.send(menu);
 })
+<<<<<<< HEAD
 const port = process.env.PORT || 8000;
 app.listen(port, () => { console.log('App listen on port', port) })
+=======
+const port = process.env.PORT || 3000;
+app.listen(3002, () => { console.log('App listen on port', port) })
+>>>>>>> master

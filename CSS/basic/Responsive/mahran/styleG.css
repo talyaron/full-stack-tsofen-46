@@ -1,0 +1,92 @@
+html {
+    height: 100%;
+    font-family:   Arial, Helvetica, sans-serif;
+}
+/*** Header | Navbar ****/
+header {
+    grid-area: header;
+    background-color:darkgoldenrod;
+}
+
+header nav  ul {
+    border-radius: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 0; 
+    background: #202020;
+    margin-top: 5rem;
+
+
+}
+nav ul li  a{
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+    color: white;
+   
+
+}
+nav ul li  a:hover {
+    background: #4b93d6;
+    flex-grow: 1;
+  }
+
+#side-left {
+
+    grid-area: side-left;
+    background-color:lightskyblue;
+}
+
+/*** Main Content */
+#maincontent {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:initial;
+}
+
+#maincontent article {
+    background-color: orangered;
+
+
+    
+}
+
+#maincontent #actionbar {
+    background-color: azure;
+    display: flex;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    justify-content: flex-end;
+    
+}
+/*** Side Right */
+
+#side-right {
+
+    grid-area: side-right;
+    background-color:lightskyblue;
+}
+
+footer {
+
+    grid-area: footer;
+    background-color:darkgoldenrod;
+
+
+}
+
+body {
+
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows:  8rem 55rem 4rem;
+    grid-row-gap: 10px;
+
+    grid-template-areas: 
+    "header header header"
+    "side-left  main side-right"
+    "footer footer footer";
+
+}
+
+

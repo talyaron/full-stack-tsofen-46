@@ -1,0 +1,286 @@
+body {
+    background-color: lightgray;
+
+}
+.root {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin: auto; 
+    width: fit-content; 
+  }
+  
+  .container {
+    position: relative;
+    display: flex;
+    height: 200px;
+    width: 420px;
+    top: 20px;
+    background-color: whitesmoke;
+    border-radius: 20px ;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.418); 
+    animation: drop 1s ease; 
+  }
+  
+  .cart-image img {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    left: 20px;
+    top: 35px;
+  }
+  
+  .data{
+    padding: 5px;
+    position: relative;
+    left: 80px;
+    top:50px;
+    font-size: bold;
+   /* font-family: 'Rowdies', cursive;*/
+    font-family: 'Source Serif Pro', serif;
+  }
+
+  .updatePrice {
+      position: relative;
+      top: 20px;
+      right: 30px;
+      background-color: blue; /* Green */
+      border: none;
+      color: white;
+      padding:7px 16px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 8px;
+      margin: 2px 2px;
+      cursor: pointer;
+      display: display;
+      font-size: 10px;
+  }
+  .updatePrice:hover {
+      background-color: gainsboro;
+      border: 1px solid blue;
+      color: blue;
+  }
+
+  .deleteItem {
+    position: relative;
+    top: 20px;
+    right: 20px;
+    background-color: red; /* Green */
+    border: none;
+    color: white;
+    padding:7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px;
+    margin: 2px 2px;
+    cursor: pointer;
+    display: display;
+    font-size: 10px;
+}
+.deleteItem:hover {
+    background-color: gainsboro;
+    border: 1px solid red;
+    color: red;
+}
+
+.button {
+    background-color: #4CAF50; 
+   border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  h6 {
+      color: darkblue;
+  }
+
+  h4 {
+      color: black;
+      font-size: medium;
+      width: fit-content;
+      border-bottom: solid 1px red;
+     
+  }
+  .two input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid lightblue;
+    border-radius: 4px;
+  }
+h1 {
+  position: relative;
+  justify-content: center;
+}
+.bu {
+  background-color: blue;
+    border-radius: 10%;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+  position: relative;
+
+  left: 50px;
+}
+
+.two {
+    position: absolute;
+    right: 20px;
+}
+
+#copyright {
+    color: white;
+}
+.enterPrice {
+    display: block;
+}
+
+#addPannel {
+    position: fixed;
+    width: fit-content;
+    padding: 10px 10px 10px 10px;
+    left: 50px;
+    top:20%;
+    border-radius: 25px;
+}
+
+#AddForm input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px double #008CBA ;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .addButton  {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+    border-radius:15px;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    position: relative;
+    left: 35px;
+    width: 70%;
+}
+  
+  #AddForm >button[type=submit]:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+
+#addPannel {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 20px;
+    animation: Side 1s ease;
+  }
+
+  
+
+  hr{
+      color: blue;
+  }
+  
+  /* Other Classes for Page Styling */
+  
+
+
+
+  #addproduct {
+      text-align: center;
+      justify-content: center;
+  }
+
+
+
+
+  #sortList:hover{
+    color: #008CBA;
+border-bottom: 1px solid #008CBA ;
+border-top: 1px solid #008CBA ;
+border-radius: 7px;
+padding: 6px;
+    
+    }
+    @keyframes drop{
+        0%{
+            opacity: 0;
+            transform: translateY(-80px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateY(0px);
+            
+        }
+    }
+
+    @keyframes Side{
+        0%{
+            opacity: 0;
+            transform: translateX(-80px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(-0px);
+            
+        }
+    }
+
+
+
+    @media only screen and (max-width: 1050px) {
+        #addPannel {
+            position: absolute;
+            left: 25%;
+            top: 20px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 20px;
+            animation: drop 1s ease;
+            
+          }
+          #root {
+            position: relative;
+            top: 400px;
+          }
+          #fotter {
+              position: relative;
+              top: 400px;
+              
+          }
+          #fotter img {
+              position: relative;
+              left: 200px;
+          }
+        }
+
+
+
+

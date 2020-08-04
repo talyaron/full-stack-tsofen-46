@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital@1&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light">
+
+        <a class="navbar-brand" href="#!">
+          <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="30" alt="mdb logo">
+        </a>
+      
+        
+      
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="basicExampleNav1">
+      
+          <!-- Right -->
+          <ul class="navbar-nav ml-auto">
+            
+            <li class="nav-item">
+              <a href="#!" class="nav-link waves-effect" id="sortList">
+                Filter by price
+ 
+              </a>
+            </li>
+            
+            
+            
+            <li class="nav-item pl-2 mb-2 mb-md-0">
+              <a href="#!" type="button"
+                class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light" id="signin">Sign In <img src="user1.svg" style="width: 15px; height: 20px;"></img></a>
+            </li>
+            <li class="nav-item pl-2 mb-2 mb-md-0">
+                <a href="#!" type="button"
+                  class="btn btn-outline-info btn-md btn-rounded btn-navbar waves-effect waves-light" id="signout" style="display: none;">Sign Out </a>
+              </li>
+          </ul>
+      
+        </div>
+        <!-- Links -->
+      
+      </nav>
+      <!-- Navbar -->
+
+
+      <div class="two" style="display: none;">
+        <form onsubmit="login(event)">
+            <input type="text" placeholder=" userName " name="name">
+            <br>
+            <input type="text" placeholder="password" name="password">
+            <br>
+            <button type="submit" class="bu"> Login </button>
+        </form>
+        <p id="response"> </p>
+      </div>
+    
+
+    <div id="root" ></div>
+    <footer class="bg-dark text-white mt-4" id="fotter">
+        <div class="container-fluid py-3">
+            <div class="row">
+                <div class="col-md-3">
+                    <h6 id="copyright"> <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="20" alt="mdb logo"> </div>
+                <div class="col-md-2"> </div>
+                <div class="col-md-4" > &nbsp;  Copyright © Jeries</div>
+                <div class="col-md-3">&nbsp; &nbsp; &nbsp; &nbsp; <img src="instagram.svg" style="width: 30px; height: 30px;"></img> <img src="facebook.svg" style="width: 30px; height: 30px;"></img> <img src="snapchat.svg" style="width: 30px; height: 30px;"></img></div>
+            </div>
+            
+        </div>
+    </footer>
+   <script src="functions.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+</body>
+</html>
