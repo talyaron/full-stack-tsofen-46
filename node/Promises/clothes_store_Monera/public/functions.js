@@ -1,7 +1,7 @@
-const resultword = document.getElementById('resultword');
-renderMenu();
+const ResultMsg = document.getElementById('ResultMsg');
+getClothes();
 
-function renderMenu() {
+function getClothes() {
 
 
     fetch('/getmenu', {
@@ -17,20 +17,20 @@ function renderMenu() {
         
         let menuStr = '';
         menu.forEach(item => {
-          menuStr += `<img src=" ${item.name}"></img> Price:${item.price} NIS  <input id=${item.ID} type='number'><button id=${item.ID} onclick=updateBTN(event,${item.ID},this.id)>update Price</button><br>ID:${item.ID}<br><br>`
+          menuStr += `<img src=" ${item.name}" style="width: 150px; height:150px ;"></img> ID:${item.ID} , Price:${item.price}  NIS    <input id=${item.ID} type='number' placeholder="New Price">   <button id=${item.ID} onclick=updatePrice(event,${item.ID},this.id) style="background-color: chocolate;"> Update Price </button><br><br>`
         })
         document.getElementById('root').innerHTML = menuStr;
 
 
     })
   }
-  function additem(e){
+  function addNewClothe(e){
     e.preventDefault();
 
     const url = e.target.elements.nurl.value;
     const price = e.target.elements.nPrice.value;
 
-    fetch('/api/additem', {
+    fetch('/api/addClothe', {
         method: 'POST',
         body: JSON.stringify({ url ,price }),
         headers: {
@@ -43,22 +43,22 @@ function renderMenu() {
             console.log(wordExist)
             //print to DOM
             if(wordExist == true){
-             resultword.innerText = `its Already exist`}
+             ResultMsg.innerText = `The Clothe Already exist`}
              else {
-            resultword.innerText = `Added succesfully` 
+            ResultMsg.innerText = `Succesfully Added` 
              }
         }) 
-        renderMenu();
+        getClothes();
 }
 
 
-function deleteItem(e){
+function deleteClothe(e){
   e.preventDefault();
 
   const ItemId = e.target.elements.ItemId1.value;
 
 
-  fetch('/api/delete-item', {
+  fetch('/api/deleteTheClothe', {
       method: 'PUT',
       body: JSON.stringify({ ItemId }),
       headers: {
@@ -72,12 +72,12 @@ function deleteItem(e){
 
 
   })
-  renderMenu();
+  getClothes();
 }
 
 
 
-        function updateBTN(e,itemV,id)
+        function updatePrice(e,itemV,id)
 {
   e.preventDefault();
 
@@ -99,7 +99,7 @@ function deleteItem(e){
 
 
     })
-    renderMenu();
+    getClothes();
 }
 catch(error){
     console.error();

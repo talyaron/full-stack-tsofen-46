@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturant</title>
+    <link rel="stylesheet" href="./css/resturantFood.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+<div class="navbar">
+    
+   <div onclick="showCart();" class="cart">
+     <img class="cartIcon" src="./assets/cart.png"/>
+     <h4 id="cartCount">0</h4>
+   </div>
+   <div id="cartItems" class="cartItemsClass">
+   <button onclick="clearCart()">Clear</button>
+    </div>
+</div>
+    <div id="mainContainer" class="container">
+    </div>
+</body>
+
+<script src="./js/main.js">
+</script>
+
+</html>

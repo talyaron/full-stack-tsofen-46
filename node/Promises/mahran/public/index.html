@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Real Estate</title>
+</head>
+
+<body>
+    <header id="pageheader">
+
+        <h2><i class="fa fa-home" aria-hidden="true"></i>&nbsp;House Rental Agency</h2>
+
+    </header>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+    </nav>
+    <div id="maincontent">
+        <article id="A001">
+            <header id="articleHeader">
+                <h3>Sales Item 1</h3>
+            </header>
+
+            <section id="articleContent">
+                <p>
+                    <img src="https://pitsou.com/wp-content/uploads/AD-PENTHOUSE_079.jpg">
+                </p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><label for="fname">Location:</label></th>
+                            <td><input type="text"  id="A001-ipt-location" name="ipt-location" readonly></td>
+                        </tr>
+                        <tr>
+                            <th><label for="fname">Size:</label></th>
+                            <td><input type="text"  id="A001-ipt-livingSpace" name="ipt-size" readonly> </td>
+                        </tr>
+                        <tr>
+                            <th> <label for="fname">Availability:</label></th>
+                            <td><input type="text"  id="A001-ipt-availability" name="ipt-availabe" readonly>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="fname">Price:</label></th>
+                            <td><input type="text"  id="A001-ipt-price" name="ipt-price" readonly></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <div id="actionbar">
+                <button id="A001-editBtn" onclick="onEditArticle(event)"><i class="fa fa-pencil" aria-hidden="true"></i> </button>
+                <button id="A001-saveBtn" onclick="onSaveArticle(event)"><i class="fa fa-floppy-o" aria-hidden="true" hidden></i> </button>
+                <button id="A001-delBtn" onclick="onDeleteArticle(event)"> <i class="fa fa-trash"></i></button>
+            </div>
+
+        </article>
+
+        <article id="A002">
+            <header>
+                <h3>Sales Item 2</h3>
+            </header>
+            <section id="articleContent">
+                <p>
+                    <img src="https://pitsou.com/wp-content/uploads/AD-PENTHOUSE_079.jpg">
+                </p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><label for="fname">Location:</label></th>
+                            <td><input type="text"  id="A002-ipt-location" name="ipt-location" readonly></td>
+                        </tr>
+                        <tr>
+                            <th><label for="fname">Size:</label></th>
+                            <td><input type="text"  id="A002-ipt-livingSpace" name="ipt-size" readonly> </td>
+                        </tr>
+                        <tr>
+                            <th> <label for="fname">Availability:</label></th>
+                            <td><input type="text"  id="A002-ipt-availability" name="ipt-availabe" readonly>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="fname">Price:</label></th>
+                            <td><input type="text"  id="A002-ipt-price" name="ipt-price" readonly></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <div id="actionbar">
+                <button id="A002-editBtn" onclick="onEditArticle(event)"><i class="fa fa-pencil" aria-hidden="true"></i> </button>
+                <button id="A002-saveBtn" onclick="onSaveArticle(event)"><i class="fa fa-floppy-o" aria-hidden="true" hidden></i> </button>
+                <button id="A002-delBtn" onclick="onDeleteArticle(event)"> <i class="fa fa-trash"></i></button>
+            </div>
+        </article>
+        <article id="A003">
+            <header>
+                <h3>Sales Item 3</h3>
+            </header>
+            <section id="articleContent">
+                <p>
+                    <img src="https://pitsou.com/wp-content/uploads/AD-PENTHOUSE_079.jpg">
+                </p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><label for="fname">Location:</label></th>
+                            <td><input type="text"  id="A003-ipt-location" name="ipt-location" readonly></td>
+                        </tr>
+                        <tr>
+                            <th><label for="fname">Size:</label></th>
+                            <td><input type="text"  id="A003-ipt-livingSpace" name="ipt-size" readonly> </td>
+                        </tr>
+                        <tr>
+                            <th> <label for="fname">Availability:</label></th>
+                            <td><input type="text"  id="A003-ipt-availability" name="ipt-availabe" readonly>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="fname">Price:</label></th>
+                            <td><input type="text"  id="A003-ipt-price" name="ipt-price" readonly></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <div id="actionbar">
+                <button id="A003-editBtn" onclick="onEditArticle(event)"><i class="fa fa-pencil" aria-hidden="true"></i> </button>
+                <button id="A003-saveBtn" onclick="onSaveArticle(event)"><i class="fa fa-floppy-o" aria-hidden="true" hidden></i> </button>
+                <button id="A003-delBtn" onclick="onDeleteArticle(event)"> <i class="fa fa-trash"></i></button>
+            </div>
+        </article>
+
+        <article id="A004">
+            <header>
+                <h3>Sales Item 4</h3>
+            </header>
+            <section id="articleContent">
+                <p>
+                    <img src="https://pitsou.com/wp-content/uploads/AD-PENTHOUSE_079.jpg">
+                </p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th><label for="fname">Location:</label></th>
+                            <td><input type="text"  id="A004-ipt-location" name="ipt-location" readonly></td>
+                        </tr>
+                        <tr>
+                            <th><label for="fname">Size:</label></th>
+                            <td><input type="text"  id="A004-ipt-livingSpace" name="ipt-size" readonly> </td>
+                        </tr>
+                        <tr>
+                            <th> <label for="fname">Availability:</label></th>
+                            <td><input type="text"  id="A004-ipt-availability" name="ipt-availabe" readonly>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th><label for="fname">Price:</label></th>
+                            <td><input type="text"  id="A004-ipt-price" name="ipt-price" readonly></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <div id="actionbar">
+                <button id="A004-editBtn" onclick="onEditArticle(event)"><i class="fa fa-pencil" aria-hidden="true"></i> </button>
+                <button id="A004-saveBtn" onclick="onSaveArticle(event)"><i class="fa fa-floppy-o" aria-hidden="true" hidden></i> </button>
+                <button id="A004-delBtn" onclick="onDeleteArticle(event)"> <i class="fa fa-trash"></i></button>
+            </div>
+        </article>
+    </div>
+    <footer></footer>
+
+
+    <script src="js/logic.js"></script>
+</body>
+
+</html>
