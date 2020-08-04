@@ -39,7 +39,19 @@ html * {
       flex-grow: 1;
     }
   
-  
+    #filterbar {
+        padding: 1rem;
+        width: 98.1%;
+        background-color: lightcoral;
+        display: flex;
+
+    }
+    #sorterBtn {
+        background-color: lightgreen;
+
+
+    }
+
   
   
   
@@ -73,13 +85,18 @@ html * {
   }
   
   #maincontent article p img{
+
       width: 30%;
       height: 5.5rem; 
       float: left;
       margin-right: 5px;
   
   }
-  
+ 
+  .articleHeader {
+      padding: 1rem;
+      background-color: khaki;
+  }
   #articleContent {
       height: 40%;
       background-color:AliceBlue;

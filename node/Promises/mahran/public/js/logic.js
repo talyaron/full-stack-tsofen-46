@@ -64,6 +64,8 @@ function onEditArticle(event) {
     InputArray.forEach(function (Input) {
         Input.readOnly = false;
         Input.style.backgroundColor = "#ffffcc";
+        Input.style.border = "groove";
+
     })
 
     //handle Buttons
@@ -93,6 +95,7 @@ function onSaveArticle() {
     InputArray.forEach(function (Input) {
         Input.readOnly = true;
         Input.style.backgroundColor = "white";
+        Input.style.border = "none";
     })
 
     currActionbar.children[0].style.display = "initial";
@@ -157,3 +160,8 @@ function onSaveArticle() {
             document.getElementById(currArticel).style.display = "none";
         })
 }
+
+function onSortResult(event) {
+    var content3 = document.getElementById("maincontent").children[2].children;
+}
+
