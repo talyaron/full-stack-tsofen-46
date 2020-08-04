@@ -17,6 +17,20 @@ console.time('sync')
 //         })
 // })
 
+function a() {
+    const getStudents = new Promise((resolve, reject) => {
+
+        fetch('/api/students')
+            .then(res => res.json())
+            .then(data => {
+                resolve(data)
+            })
+    })
+
+    getStudents.then(x=>console.log(x))
+}
+
+
 function getPupilsImproved() {
     return new Promise((resolve, reject) => {
 
@@ -54,7 +68,7 @@ function handleGetStudent() {
 async function getAllData() {
     console.time('sdfsdf')
     let x = await getStudentImproved();
-    
+
     console.log(x)
     let y = await getPupilsImproved();
     console.log(y)
