@@ -1,0 +1,173 @@
+body {
+    background-color: cornsilk;
+}
+
+
+
+.TopBox {
+    width: 800px;
+    height:  600px;
+    position: relative;
+    background-color: green;
+right:0 ;
+left: 0;
+top: 0;
+bottom: 0;
+}
+
+.middle {
+    width: 400px;
+    height:  200px;
+    margin: auto;
+    position: absolute;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.middle2 {
+    width: 200px;
+    height:  100px;
+    margin: auto;
+    position: absolute;
+
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+}
+.circle {
+    width: 20px;
+    height:  20px;
+    margin: auto;
+    border: 5px solid white;
+    border-radius: 50%;
+    position: relative;
+    top: 20px;
+}
+.bottomBox {
+    width: 800px;
+    height:  600px;
+    background-color: green;
+    border-top: 5px solid white ;
+}
+
+.middleb {
+    position: relative;
+    top: 400px;
+    width: 400px;
+    height:  200px;
+    margin: auto;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+}
+.middle2b {
+    position: relative;
+    width: 200px;
+    height:  100px;
+    top: 100px;
+    margin: auto;
+    border-right: 2px solid white;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+}
+.circleb {
+    width: 20px;
+    height:  20px;
+    margin: auto;
+    border: 5px solid white;
+    border-radius: 50%;
+    position: relative;
+    top: 20px;
+}
+
+.middleCircle{
+    width: 400px;
+    height:  400px;
+    position: relative;
+    top: 200px;
+    border: 5px solid white;
+    border-radius: 50%;
+    margin: auto;
+}
+.circle2 {
+    width: 50px;
+    height:  50px;
+    margin: auto;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    top: 170px;
+}
+
+.score {
+    
+    color: red;
+}
+
+.score2 {
+   color: blue;
+}
+
+#player1 {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    z-index: 20px;
+}
+
+#player2{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    z-index: 20px;
+}
+
+#ball{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    z-index: 40px;
+    background-color: black;
+    border-radius: 20px;
+}
+
+#score {
+    position: relative;
+    left: 900px;
+    top: 100px;
+    z-index: 20px;
+    color: red;
+    width: 100px ;
+    
+
+}
+
+#score1 {
+    position: relative;
+    left: 900px;
+    top: 250px;
+    z-index: 20px;
+    color: blue;
+    width: 100px ;
+    
+
+}
+
+.p1 {
+    position: relative;
+    top: 80px;
+    left: 900px;
+}
+
+.p2 {
+    position: relative;
+    left: 900px;
+    top:200px;
+}
+
+#winner{
+    position: relative;
+    left: 900px;
+    top:300px;
+    color: red;
+}

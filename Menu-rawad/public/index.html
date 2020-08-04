@@ -7,7 +7,86 @@
 </head>
 <body>
     <div class="continer"></div>
-    <button id="menu" onclick="getmenu(event)">Menu</button>
+    <button id="menubutton" onclick="getmenu(event)">Menu</button>
+    <p id="menu"></p>
+    <input id="newPrice" type="newPrice" onkeyup="handleName(event)" >
+    <button id="UPDATE" onclick="Updetp(event)">UPDATE</button>
+
+    <script>
+     
+      function getmenu(event){
+          fetch('/menu')
+        .then(res => res.json())
+            .then(data=>{
+                let menuhtml = '';
+
+                console.log(data)
+
+                data.forEach(menu=>{
+                    menuhtml += `<p onclick='updatePrice("${menu.ID}")'>${menu.name} - ${menu.price}$  </p>`;
+                });
+               const menu =document.getElementById('menu');
+                menu.innerHTML = menuhtml
+            })   
+      }
+
+      function Updetp(event){
+          fetch('/menu')
+        .then(res => res.json())
+            .then(data=>{
+                let menuhtml = '';
+
+                console.log(data)
+
+                data.forEach(menu=>{
+                    menuhtml += `<p onclick='updatePrice("${menu.ID}")'>${menu.name} - ${menu.price}$</p>`;
+                });
+               const menu =document.getElementById('menu');
+                menu.innerHTML = menuhtml
+            })   
+      }
+
+
+const itemnewprice =120;
+
+    //   const itemp=document.getElementById("newPrice");
+      
+
+      
+      
+      function updatePrice(itemID){
+
+//               function handleName(e) {
+//     console.log(e);
+
+//     const value = e.target.value;
+
+//     // add to root element
+//     const root = document.getElementById('newPrice').value;
+//     console.log(root);
+//     const itemnewprice=root;
+    
+// }
+
+       
+                console.log(itemID);
+
+                fetch('/updet', {
+                method: 'PUT',
+                body: JSON.stringify({itemID,itemnewprice}),
+       
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+
+            }
+
+
+    
+
+
+    </script>
 
 
 </body>
