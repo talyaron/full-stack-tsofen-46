@@ -41,7 +41,7 @@ location.reload()}
 function deleteItem(id){
   console.log(id);
   fetch('/delete-item', {
-      method: 'PUT',
+      method: 'DELETE',
       body: JSON.stringify({ id  }),
       headers: {
           "Content-Type": "application/json"
