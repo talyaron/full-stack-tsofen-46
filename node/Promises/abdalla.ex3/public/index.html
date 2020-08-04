@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="functions.js"></script>
+</head>
+<h1>Welcom to our Resturant </h1>
+
+<h2>MEALS : </h2>
+
+<body>
+
+    <div class="sort" id="sort"></div>
+
+    <div class="root" id='root'></div>
+
+    <h3>YOU can Add your MEAL : </h3>
+
+    <div class="root2" id='root2'></div>
+
+</body>
+
+
+
+<SCRipt>
+
+
+    // fetch('/resturant1')
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         renderMenu(data.resturant)
+    //     })
+
+
+
+    // function updatePrice(itemID) {
+
+    //     const newprice = document.getElementById(`price${itemID}`).value
+
+
+    //     fetch('/resturant2', {
+    //         method: 'PUT',
+    //         body: JSON.stringify({ itemID: itemID, newprice: newprice }),
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             renderMenu(data.resturant);
+    //         })
+
+    // }
+
+    // function delete1(itemID) {
+
+
+
+    //     fetch('/resturant3', {
+    //         method: 'PUT',
+    //         body: JSON.stringify({ itemID: itemID }),
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             renderMenu(data.resturant);
+    //         })
+
+
+
+    // }
+
+    // function addmeal(img,name,price) {
+
+    //     // const url = e.target.elements.nurl.value;
+    //     // const price = e.target.elements.nPrice.value;
+
+
+    //     fetch('/resturant4', {
+    //         method: 'PUT',
+    //         body: JSON.stringify({ newprice: price.value, newname: name.value, newimg: img.value }),
+    //         headers: {
+    //             'Content-Type': 'application/json'
+    //         },
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             renderMenu(data.resturant);
+    //         })
+
+    // }
+
+
+    // function renderMenu(menu) {
+    //     let menuStr = '';
+    //     let addmeal = '';
+    //     menu.forEach(item => {
+    //         menuStr += `<p><img  src="${item.img}" width="400px" height="250" >
+    //                     ${item.name}, Price:${item.price}$
+    //             <input type="number" id="price${item.ID}">
+    //             <button onclick="updatePrice('${item.ID}')">updat-Pricce</button>
+    //             <button onclick="delete1('${item.ID}')">Delete-Meal</button>
+    //             </p> `
+
+    //     })
+    //     addmeal = '<p> <input id="img" type="img" placeholder="url img"><input id="name" type="text" placeholder=" meal name" ><input id="price" type="number" placeholder="meal price"><button onclick="addmeal(img,name,price)"> Add </button>  </p>'
+
+    //     document.getElementById("root").innerHTML = menuStr;
+    //     document.getElementById("root2").innerHTML = addmeal;
+
+
+
+    // }
+
+
+
+
+
+
+</SCRipt>
+
+
+
+</html>

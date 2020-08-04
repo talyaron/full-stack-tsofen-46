@@ -46,4 +46,4 @@ app.put('/priceUpdate',function(req,res){
    res.send(menu);
 })
 const port = process.env.PORT || 3000;
-app.listen(port, () => { console.log('App listen on port', port) })
+app.listen(3002, () => { console.log('App listen on port', port) })

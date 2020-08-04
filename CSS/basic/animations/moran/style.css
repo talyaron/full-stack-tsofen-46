@@ -1,7 +1,7 @@
 .square {
    
     position: relative;
-
+    
     animation: name duration timing-function delay iteration-count direction fill-mode;
     animation: runRight 1s linear 1s infinite alternate forwards ;
 }

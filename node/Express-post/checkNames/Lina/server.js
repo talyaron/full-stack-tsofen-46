@@ -45,11 +45,11 @@ app.post('/name', (req, res) => {
     const { name } = body;
     console.log(name);
     if (students.includes(name)) {
-<<<<<<< HEAD
+// <<<<<<< HEAD
         res.send({ success: 'found' });
-=======
+// =======
         res.send({ success: 'exists' });
->>>>>>> master
+// >>>>>>> master
     }
     else {
         res.send({ success: 'name not found' });
@@ -58,7 +58,7 @@ app.post('/name', (req, res) => {
 
 
 
-app.listen(3001, () => { console.log('App listenting on 3000') })
+app.listen(3003, () => { console.log('App listenting on 3000') })
 
 
 
