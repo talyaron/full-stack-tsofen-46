@@ -1,0 +1,24 @@
+
+*{
+margin:0;
+padding: 0;
+}
+.container{
+height: 100vh;
+ margin:0 auto; 
+width: 800px;
+background-color: rgb(105, 63, 22);  
+display: flex;
+flex-direction: column;
+align-items: center;
+color: white;
+}
+
+.img{
+    height: 250px;
+    width: 240px;
+}
+
+p{
+    padding:2rem
+}

@@ -1,7 +1,6 @@
 function updateBTN(e,itemV,id)
 {
     const val = itemV[0].value;
-    console.log(val)
     try{
     fetch('/updateprice', {
         method: 'PUT',
@@ -20,6 +19,7 @@ function updateBTN(e,itemV,id)
     })
     renderMenu();
 }
+
 catch(error){
     console.error();
 }

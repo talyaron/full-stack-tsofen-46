@@ -1,0 +1,22 @@
+#market{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#market>div{
+        flex: 1 1 30%; /*grow | shrink | basis */
+        height: auto;
+}
+
+.item{
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.ItemImg{
+    width: 15vw;
+    height: 25vh;
+}
