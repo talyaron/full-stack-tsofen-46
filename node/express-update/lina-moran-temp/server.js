@@ -50,7 +50,7 @@ app.get('/menu', function (req,res) {
 // })
 
 
-app.listen(3000, () => { console.log("App is Listening to 3000")})
+app.listen(3002, () => { console.log("App is Listening to 3000")})
 
 
 

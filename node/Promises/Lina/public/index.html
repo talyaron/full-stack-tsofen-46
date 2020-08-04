@@ -3,10 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>league of legends</title>
+    <link rel="stylesheet" href="style/lol.css">
 </head>
 <body>
-    <h1>Hi</h1>
+    <div class="wrapper">
+
+        <div class="logo">
+            <div><img src="img/logo.jpg"></div> 
+        </div>
+
+
+        <div class="main-champions">
+            <div class="champion" id='anne'>
+                <button id="Anne" onclick="renderChampions('Annie')">Anne</button>
+            </div>
+            <div class="champion" id='lux'>
+                <button id="Lux" onclick="renderChampions('Lux')">Lux</button>
+            </div>
+            <div class="champion" id='miss fortune'>
+                <button id="miss_fortune" onclick="renderChampions('MissFortune')">Miss fortune</button>
+            </div>
+            <div class="champion" id='leblanc'>
+                <button id="leblanc" onclick="renderChampions('Leblanc')">Leblanc</button>
+            </div>
+            <!-- <div class="champion" id='admin'>
+                <button id="admin" onclick="admin()">Add Skin</button>
+            </div> -->
+        </div>
+
+        <div class="container">
+            <div class="item" id='item'>
+                <img src="img/map.jpg">
+                <img src="img/home.jpg">
+                
+            </div>  
+
+        </div>
+
+        <div class="container">
+            <div class="admin">
+                <h3>Add new Skin</h3>
+                <form onsubmit="AddSkin(event)">
+                <label>Champion's Name: </label>
+                <input type="text" id="name">
+                <br><br>
+                <label>Skin's Name: </label>
+                <input type="text" id="skin">
+                <br> <br>  
+                <label>Skin's img: </label>
+                <input type="text" id="img">
+                <br><br>
+                <label>Skin's Price: </label>
+                <input type="text" id="price">
+                <br><br>
+                <!-- <p id='res'>result</p> <br> -->
+                <!-- <button id="admin" onclick="AddSkin(event)">Add Skin</button> -->
+                <button type="submit">Add!!!</button>   
+                </form>
+
+            </div>   
+        </div>
+
+    </div>
+
+
     <script src="functions.js"></script>
 </body>
 </html>
