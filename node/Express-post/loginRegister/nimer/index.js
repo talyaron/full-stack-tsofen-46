@@ -22,7 +22,8 @@ app.post('/register', (req, res) => {
     if (user.email == email) result = true
   }
       if(result){
-        res.send({answer:"register not completed user exist"})
+        let answer=user.password
+        res.send({answer:answer})
       }
       else{
       users.push({ email: email, password: password })
