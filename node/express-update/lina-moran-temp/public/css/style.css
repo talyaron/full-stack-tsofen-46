@@ -1,0 +1,70 @@
+body{
+    text-align: center;
+    background-color: tan;
+   
+}
+.all{
+    border-style: double;
+}
+h1{
+    
+    color: purple;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 5px palevioletred;
+    /* transform:rotate(-5deg); */
+    letter-spacing: 3px;
+    animation-name: example;
+    animation-duration: 10s;
+  }
+  
+  @keyframes example {
+    from {background-color:darkorchid;}
+    to {background-color:darksalmon;}
+  }
+
+
+}
+h2{
+    color: purple;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 5px palevioletred;
+    transform:rotate(-5deg);
+    letter-spacing: 3px;
+    
+
+
+}
+.img{
+    border: purple;
+    vertical-align: middle;
+    opacity: 0.5;
+    box-shadow: 10px 10px;
+
+    
+}
+label{
+    
+    color:peru;
+    font-weight: bold;
+    font-size: 25px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* border-style: dotted; */
+    border-bottom: 6px solid pink;
+    background-color: lightgrey;
+    text-indent: 50px;
+    text-align: justify;
+    letter-spacing: 3px;
+    overflow: auto;
+    display: flex;
+   opacity 0.5
+
+    /* text-transform: uppercase; */
+    /* background-color: lightgrey;
+    width: 300px;
+    border: 15px solid pink;
+    /* padding: 50px; */
+    /* margin: 20px;  */
+
+}

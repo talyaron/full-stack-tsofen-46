@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tsofen Snacks Shop</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <main class="content-area">
+        <div class="side-nav">
+          <div class="side-nav-title">Sort By</div>
+          <div class="side-nav-content">
+            <button class="side-btn" name="name" onclick="sortBy('name')">
+              Name
+            </button>
+            <button class="side-btn" name="price" onclick="sortBy('price')">
+              Price
+            </button>
+          </div>
+        </div>
+        <div class="products" id="productsSection">
+          <h1>Low Prices, High Quality</h1>
+          <div class="cards" id="cardsList"></div>
+        </div>
+      </main>
+
+      <script src="js/products.js"></script>
+    </div>
+  </body>
+</html>

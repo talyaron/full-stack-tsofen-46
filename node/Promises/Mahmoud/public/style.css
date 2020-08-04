@@ -1,0 +1,64 @@
+
+
+#root{
+width: fit-content;
+height: fit-content;
+background-color:OLIVE;
+color: black;
+text-align: center;
+margin: auto; 
+padding: 16px;
+border: 10px solid #3e66ec;
+margin-bottom: 50px;
+}
+
+#addproduct {
+    border: 10px solid #3e66ec; 
+     padding: 16px;
+     margin: auto;
+     margin-bottom: 20px;
+     width: 50%;
+}
+
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  button:hover {
+    opacity: 0.8;
+  }
+
+  body {
+    background-color: lightblue;
+  }
+
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 2px solid red;
+    border-radius: 4px;
+}
+  
+img {
+    border-radius: 8px;
+  }
+  h1 { color: #b48608; font-family: 'Droid serif', serif; font-size: 36px; font-weight: 400; font-style: italic; line-height: 44px; margin: 0 0 12px; text-align: center; }
+
+  h2 { color: #d04764; font-family: 'Lobster', cursive; font-size: 36px; font-weight: normal; line-height: 48px; margin: 0 0 18px; text-shadow: 1px 0 0 #fff; text-align: center }
+
+  p3 { color:black#ff4411; font-size: 48px; font-family: 'Signika', sans-serif; padding-bottom: 10px;}
+
+
+ p { color: blue; font-family: 'Oleo Script', cursive; font-size: 24px; font-weight: normal; line-height: 32px; margin: 0 0 18px; text-shadow: 1px 0 0 #fff; }
+

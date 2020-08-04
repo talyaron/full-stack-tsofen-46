@@ -1,0 +1,139 @@
+/* Header */
+html * {
+  font-family:   Arial, Helvetica, sans-serif;
+}
+header {
+    padding: 3%;
+    background-color: khaki;
+
+}
+header nav {
+   
+}
+
+
+/* Navigationbar */
+ nav  ul {
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0; 
+    background: #202020;
+
+
+}
+nav ul li  a{
+    text-decoration: none;
+    display: block;
+    padding: 1rem;
+    color: white;
+   
+
+}
+
+nav ul li  a:hover {
+    background: #4b93d6;
+    flex-grow: 1;
+  }
+
+
+
+
+
+  /* Main Content Area */
+
+#maincontent {
+
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        /* This is better for small screens, once min() is better supported */
+        /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
+        grid-gap: 1rem;
+        margin: 2.5rem;
+}
+
+
+/** Atricle Content  **/
+
+#maincontent article {
+    border-style: solid;
+
+   
+
+
+}
+#maincontent article p {
+    margin: 2px;
+}
+
+#maincontent article p img{
+    width: 30%;
+    height: 5.5rem; 
+    float: left;
+    margin-right: 5px;
+
+}
+
+#articleContent {
+    height: 40%;
+    background-color:AliceBlue;
+}
+#articleContent table {
+
+    width: 68%;
+}
+th {
+    text-align: start;
+
+}
+
+tr input{
+    border: none;
+}
+#ipt-location {
+    border: none;
+}
+#actionbar {
+    background-color: AliceBlue;
+    display: flex;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    justify-content: flex-end;
+
+
+}
+#actionbar button {
+    background-color: rgb(97, 157, 216);
+    color: white;
+    padding: 10px 16px;
+    font-size: 14px;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.1rem;
+    margin-right: 0.1rem;
+    border: none;
+    cursor: pointer;
+    
+}
+#editBtn{
+
+}
+#delBtn{
+
+}
+#actionbar button { 
+
+}
+  /* Footer */
+
+  footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding: 1rem;
+  }

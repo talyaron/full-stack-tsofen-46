@@ -23,9 +23,6 @@ function renderMenu()
             <input type="text" id="newPrice">
             <button type="submit">Change!!!</button><br><br><br>  
             </form>`
-            
-            
-            //`<p onclick='updatePrice("${item.ID}")'>${item.name}, Price:${item.price} NIS</p>`
             })
             document.getElementById('root').innerHTML = menuStr;
         })

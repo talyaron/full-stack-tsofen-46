@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+  <div id='productsDiv' ></div>
+  <script src="function.js"></script>
+ 
+ <script>
+
+    fetch('/menu')
+        .then((res) => res.json())
+        .then((data) => {
+            let productsList = "";
+                data.forEach((item) => {
+                productsList += `<p>${item.name},
+                Price:${item.price}
+                <input id="${item.ID}" type="number">
+                <button onclick="update('${item.ID}')">Update price</button>
+                </p>`
+            });
+            document.getElementById("productsDiv").innerHTML = productsList;
+        });
+
+
+  </script>
+</body>
+
+</html>
