@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<style>
+    body {
+        text-align: center;
+        background-color: aquamarine;
+    }
+
+    #root {
+        border: 2px solid black;
+        width: fit-content;
+        height: fit-content;
+        padding: 5px;
+        margin: auto;
+
+
+    }
+
+    #cart {
+        position:fixed;
+        border: 2px solid black;
+        width: fit-content;
+        height: fit-content;
+        padding: 5px;
+        top: 10px;
+        
+    }
+
+    #addition {
+        border: 2px solid black;
+        width: fit-content;
+        height: fit-content;
+        padding: 5px;
+        margin: auto;
+    }
+    #sort{
+        margin:3px;
+    }
+</style>
+
+<body>
+
+
+    <button id="sort" onclick=sortMenu(event)>SORT BY PRICE</button>
+
+    <div id="root">MENU</div>
+    <div id="cart">CART</div>
+    <div id="addition">
+        ADD ITEM TO THE MENU
+        <br>
+        <input type="text" name="" id="itemImage" placeholder="IMAGE">
+        <br>
+        <input type="number" name="" id="itemPrice" placeholder="PRICE">
+        <br>
+        <input type="number" name="" id="itemId" placeholder="ID">
+        <br>
+        <button id="addmenu" onclick=addToMenu(event)>ADD TO MENU</button>
+
+    </div>
+
+</body>
+<script src="js.js"></script>
+
+</html>

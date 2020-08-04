@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="continer">
+        <br>
+        <img src="img/10.png" width="20%" >
+        <br><br>
+        <select  id="sort" onchange="myFunction()">
+            <option hidden value="sort">Sort</option>
+            <option value="hight-price">Hight Price</option>
+            <option value="low-price">Low Price</option>
+        </select>
+        <br><br><br>
+       <div id="result"></div>
+       <br><br>
+       <div style="border-top:1px solid blue ;" ></div>
+       <h1 style="color: rgb(32, 137, 179);" >Add Shoes</h1>
+      <label for="add-img">Add Image: </label>
+       <input id="add-imges" type="text" name="newimg">
+  
+       <br><br>
+       <label for="add-price">Add price:</label>
+        <input id="add-price" type="text">
+        <br><br>
+        <img onclick="addshoes(event)" id="add-img" src="img/add.png" alt="" width="8%">
+          <br><br><br>
+          <p><img src="img/nikelogo.png " alt="" width="25%"> <img src="img/kobe.png" alt="" width="25%"> </p>
+          <br><br>
+    </div>
+    <script>
+
+
+function refresh(){
+    const Getdata = new  Promise((resolve,reject)=>{
+        fetch('/Shopitems')
+                .then(res => res.json())
+                .then(data => {
+                    let studentsHTML = '';
+                    
+                    data.forEach(shoesimg=>{
+                      
+                        studentsHTML += `<P  style="font-size: 30px" > 
+                            <img src=${shoesimg.img} width="20%"> Price :${shoesimg.price}$
+                             <input style="width:70px"  type="new-price" id="inp-${shoesimg.ID}" placeholder="New Price">  
+                              <button  onclick="editPrice('${shoesimg.ID}')" id="updet">EDIT</button>
+                               <button onclick="deleteshoes('${shoesimg.ID}')" id="delete">DELETE</button>  </p>`;
+                        
+                });
+                     
+                    
+                    const root = document.getElementById('result');
+                    root.innerHTML = studentsHTML;
+                })
+
+            
+
+    });
+    return Getdata;
+}
+
+            refresh();
+
+                function editPrice(id) {
+            const price = document.getElementById(`inp-${id}`).value;
+            console.log(price)
+           
+            const updetdata = new Promise((resolve,reject)=>{
+
+                fetch('/editshoesPrice', {
+                method: 'PUT',
+                body: JSON.stringify({ price, id }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+             })
+
+             refresh()
+       
+
+            });
+
+        }
+
+
+  
+
+        function addshoes(event){
+            const newimg = document.getElementById('add-imges').value;
+            const addprice = document.getElementById('add-price').value;
+            console.log(addprice);
+            console.log(newimg);
+        const ubdateshoe = new Promise((resolve,reject)=>{
+            fetch('/addimg', {
+                method: 'PUT',
+                body: JSON.stringify({newimg,addprice}),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+             })       
+
+            })
+
+             refresh();
+        }
+
+        function deleteshoes(id){
+               
+            fetch('/delete', {
+              method:'DELETE',
+              body: JSON.stringify({id}),
+              headers:{
+                'Content-Type': 'application/json'
+              }
+            })
+            refresh()
+         }
+
+         
+        (async () => {
+
+   
+const get = await refresh(); 
+const updet = await updetdata;
+const updetshoe =await ubdateshoe;
+
+
+})();
+  
+   
+   function myFunction(){
+       const sortvalue = document.getElementById('sort').value;
+       console.log(sortvalue);
+
+       fetch('/sort',{
+           method:'PUT',
+           body: JSON.stringify({sortvalue}),
+           headers: {
+                    'Content-Type': 'application/json'
+                }
+       })
+
+       refresh()
+   }
+
+    </script>
+
+    
+</body>
+</html>

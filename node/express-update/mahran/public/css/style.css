@@ -1,0 +1,79 @@
+/***** Globale Variables *******/
+html *  {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#RestauratMenu {
+    margin-bottom: 2rem;
+    border-width: 20px;
+    background-color: cornsilk;
+}
+
+#RestauratMenu form {
+    margin: 1rem;
+}
+
+#RestauratMenu div {
+    margin: 1rem;
+}
+
+#SubmitBtn{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 5px 16px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+
+/***** Flex Module Style*******/
+
+#navigationBar {
+    background-color: darkgreen;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    height: 4rem;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    margin-bottom: 20px;;
+ 
+  }
+
+ /** #navigationBar button {
+ 
+      flex-grow: 1;
+      flex-basis: auto;
+  } */
+
+  #navigationBar #btn1 {
+     flex-grow: 1;
+     flex-basis: auto;
+    
+    
+
+  }
+
+  #navigationBar #btn2 {
+    flex-grow: 1;
+    flex-basis: auto;
+  
+}
+#navigationBar #btn3 {
+    flex-grow:1;
+    flex-basis: auto;
+
+}
+
+
+
+#navigationBar2 {
+    background-color: darkslategrey;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}

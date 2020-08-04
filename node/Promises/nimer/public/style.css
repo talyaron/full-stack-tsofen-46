@@ -1,0 +1,210 @@
+
+ #MainWrapper{
+  display: grid;
+  grid-template-columns: 15vw auto  auto 15vw;
+  grid-template-rows: 30% auto;
+  width: auto;
+  height: 100vh; 
+  background-color: lightgray;
+  
+  grid-template-areas: 
+  "header header header header"
+  "sort main main sidebar";
+} 
+#LogInPannel{
+  grid-area: sidebar;
+  z-index: 10;
+   background-color: lightgray;
+   width: 80%;
+   margin-left: 10%;
+}
+
+.password{
+  margin-top: 10px;
+}
+.user{
+  margin-top: 0px;
+}
+.Signin{
+  margin-top: 10px;
+  background-color: blue;
+  color: white;
+}
+.Signin:hover{
+  background-color: red;
+  color: white;
+  opacity:1.2;
+}
+
+#Header{
+  background-color: rgb(83, 82, 82);
+  grid-area: header;
+  text-align: center;
+  color: white;
+   border-bottom-left-radius: 20%;
+   border-bottom-right-radius: 0%;
+  
+}
+#headerTitle{
+  margin-top: 0vh;
+  color: white;
+  
+}
+#currentSales{
+  animation: blinker 2s linear infinite;
+  color: red;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+#SortingOptions{
+  background-color: lightgray;
+  height: fit-content;
+  grid-area: sort;
+  justify-content: space-evenly;
+  
+}
+
+.sortingButtons{
+  background-color: blue;
+  width: 90%;
+  height: 50px;
+  opacity: 0.7;
+  margin-bottom: 20px;
+  color: white;
+ 
+}
+.sortingButtons:hover  {
+  background-color: red;
+  color: white;
+  opacity:1.2;
+  
+} 
+
+.sortingButtons span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.sortingButtons span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.sortingButtons:hover span {
+  padding-right: 25px;
+}
+
+.sortingButtons:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+.headerButtons{
+background-color: blue;
+color: white;
+opacity: 0.8;
+  
+}
+.headerButtons:hover{
+  background-color: red;
+  opacity:1.2;
+}
+
+
+#ShopContent{
+  grid-area: main;
+  background-color: lightgray;
+}
+#allbuttonDesign{
+margin-top: 15px;
+}
+
+
+
+@keyframes drop{
+  0%{
+      opacity: 0;
+      transform: translateY(100px);
+  }
+  100%{
+      opacity: 1;
+      transform: translateY(0px);
+      
+  }
+}
+
+
+
+
+
+
+
+.container {
+  animation: drop 1s ease;
+  display: flex;
+  height: 200px;
+  width: 100%;
+  top: 20px;
+  background-color: whitesmoke;
+  
+  margin-top: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.418);
+  
+  
+  border-bottom-left-radius: 20px;
+  border-top-left-radius:20px ;
+    
+}
+.container:hover {
+  background-color: rgb(164, 168, 172);
+  }
+
+.deleteButton{
+  
+  background-color: red;
+
+}
+.editButton{
+  background-color: seagreen;
+}
+.editPrice{
+  display: none;
+  width: 50%;
+}
+.adminButtons{
+  display: none;
+  position: relative;
+ left: 50%;
+ top: 35px;
+}
+
+.cart-image img {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  left: 50%;
+  top: 35px;
+}
+.cart-image img:hover{
+  transform: scale(1.6);
+}
+
+.data{
+  padding: 5px;
+  position: relative;
+  left: 30%;
+  font-size: small;
+  font-family: 'Rowdies', cursive;
+}
