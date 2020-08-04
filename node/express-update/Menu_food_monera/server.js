@@ -22,7 +22,7 @@ app.get('/admin', function (req, res) {
 })*/
 
 const menu = [
-    { name: 'hamburger', price: 25, ID: uid() , },
+    { name: 'hamburger', price: 25, ID: uid(), },
     { name: 'pizza', price: 15, ID: uid() },
     { name: 'maklobe', price: 40, ID: uid() },
     { name: 'ravioly', price: 15, ID: uid() },
@@ -38,12 +38,12 @@ app.get('/menu', function (req, res) {
     res.send(menu);
 })
 
-app.put('/priceUpdate',function(req,res){
-    const {body} = req;
-    const {Id,newPrice} = body;
-   const new1= menu.find(Element => Element.ID===Id);
-   new1.price=newPrice;
-   res.send(menu);
+app.put('/priceUpdate', function (req, res) {
+    const { body } = req;
+    const { Id, newPrice } = body;
+    const new1 = menu.find(Element => Element.ID === Id);
+    new1.price = newPrice;
+    res.send(menu);
 })
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 app.listen(port, () => { console.log('App listen on port', port) })
