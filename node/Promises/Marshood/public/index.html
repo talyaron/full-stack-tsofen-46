@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IAT</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body id="BackGroundColor">
+
+
+  <div class="main wrapper">
+    <h1 class="header">
+      Wellcome to IAT store
+      <br><br>
+
+      <button id="ShowCartButt" class="center" onclick="ShowCart()"><i class="fa fa-shopping-cart fa-2x"
+          aria-hidden="true"></i></button>
+      <!-- <i class="fa fa-cart-plus" aria-hidden="true"></i> -->
+      <button id="ShowMarketButt" onclick="clickShowMarket()">Show Market</button>
+
+
+    </h1>
+    <!-- <button  id="ShowMarketButt" onclick="clickShowMarket()" >Show Market</button> -->
+    <div id="test123"><div class="center">
+      IMG: <input type="url" name="IMG" id="NewIMG" oninput="unableEditbutt()"readonly > 
+      Name: <input type="text" name="Name" id="NewName"  oninput="unableEditbutt()" readonly>
+    </div>
+    <div class="center">
+      Price: <input type="text" name="Price" id="NewPrice"  oninput="unableEditbutt()" readonly>
+      Quantity: <input type="number" name="Quantity" id="NewQuantity"  oninput="unableEditbutt() " readonly >
+    </div>
+    <div class="center">
+      ID <input type="text" name="ID" id="IDITEM" readonly>
+    </div>
+    <button id="EditB" onclick="EditItem()" disabled="disabled">Edit</button>
+
+  </div>
+</div>
+  <div class="table" id="ShowStroeTable">
+    <table class="center" id="myTable">
+      <tr>
+        <th onclick="sortTable(0)">IMG</th>
+        <th colspan="1" onclick="sortTable(1)">Name</th>
+        <th onclick="sortTable(2)">Price</th>
+        <th onclick="sortTable(3)">Quantity</th>
+        <th>Add</th>
+        <th>Remove</th>
+       </tr>
+    </table>
+
+  </div>
+  <div id="ShowCartTable">
+    <table class="center" id="cartTableShow" style="display: none;">
+      <tr>
+        <th>IMG</th>
+        <th colspan="1">Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Add</th>
+        <th>Remove</th>
+
+
+      </tr>
+
+
+    </table>
+
+
+  </div>
+
+
+  <script>
+
+    // get selected row
+    // display selected row data in text input
+
+    var table = document.getElementById("myTable"), rIndex;
+        table.addEventListener('click', function (event) {
+      const row = event.target.parentNode;
+      document.getElementById("NewIMG").value = row.cells[0].innerHTML;
+      document.getElementById("NewName").value = row.cells[1].innerHTML;
+      document.getElementById("NewPrice").value = row.cells[2].innerHTML;
+      document.getElementById("NewQuantity").value = row.cells[3].innerHTML;
+      document.getElementById("IDITEM").value = row.id
+      document.getElementById("NewIMG").removeAttribute("readonly")
+      document.getElementById("NewName").removeAttribute("readonly")
+      document.getElementById("NewPrice").removeAttribute("readonly")
+      document.getElementById("NewQuantity").removeAttribute("readonly")
+
+
+      // row = '<tr>' 
+    });
+     
+
+
+
+  </script>
+  <script src="javascript.js"></script>
+
+</body>
+
+</html>

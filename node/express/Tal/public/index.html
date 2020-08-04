@@ -17,10 +17,9 @@
         fetch('/students')
             .then(res => res.json())
             .then(data=>{
+                
                 let studentsHTML = '';
-
                 console.log(data)
-
                 data.forEach(student=>{
                     studentsHTML += `<p>${student}</p>`;
                 });
