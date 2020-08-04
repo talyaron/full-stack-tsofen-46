@@ -17,7 +17,7 @@
     <div id="root"></div>
   
     <script>
- const getMenu = new Promise((resolve, reject) => {
+ const getMenu = new Promise((res, rej) => {
     try {
         fetch('/menu')
             .then(res => res.json())
@@ -42,6 +42,7 @@
 
                 const root = document.getElementById('root');
                 root.innerHTML = menuStr
+            
             })
         } catch (err) {
         console.error(err);
