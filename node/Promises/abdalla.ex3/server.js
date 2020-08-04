@@ -71,6 +71,18 @@ app.put('/resturant4', (req, res) => {
 
 
 
+app.put('/resturant5', ( req,res) => {
+
+   // const {resturant}=req.body;
+
+    resturant=resturant.sort(function(a, b){return a.price - b.price});
+
+    res.send({ resturant });
+
+})
+
+
+
 app.listen(3335, () => { console.log("App is Listening") })
 
 
