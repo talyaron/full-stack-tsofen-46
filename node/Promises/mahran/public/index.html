@@ -23,9 +23,18 @@
             <li><a href="#">Contact us</a></li>
         </ul>
     </nav>
+    <div id="filterbar">
+        <label id="filterbar-label" for="sorter">sort by  </label>
+        <select name="sorter" id="sorter">
+            <option value="Price">Price</option>
+            <option value="availability Date">Living Space</option>
+            <option value="availability Date">availability Date</option>
+            </select>
+            <button id="sorterBtn"  onclick="onSortResult(event)" type="submit">submit</button>
+    </div>
     <div id="maincontent">
         <article id="A001">
-            <header id="articleHeader">
+            <header class="articleHeader">
                 <h3>Sales Item 1</h3>
             </header>
 
@@ -65,7 +74,7 @@
         </article>
 
         <article id="A002">
-            <header>
+            <header class="articleHeader">
                 <h3>Sales Item 2</h3>
             </header>
             <section id="articleContent">
@@ -101,7 +110,7 @@
             </div>
         </article>
         <article id="A003">
-            <header>
+            <header class="articleHeader">
                 <h3>Sales Item 3</h3>
             </header>
             <section id="articleContent">
@@ -138,7 +147,7 @@
         </article>
 
         <article id="A004">
-            <header>
+            <header class="articleHeader">
                 <h3>Sales Item 4</h3>
             </header>
             <section id="articleContent">
