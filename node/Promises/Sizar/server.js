@@ -40,7 +40,7 @@ app.get('/getmenu', function (req,res) {
     res.send('Got a PUT request at user')
 })
 
-app.post('/api/add-word', (request, response) => {
+app.post('/api/additem', (request, response) => {
   //request com from the client
   const {  url , price } = request.body;
   console.log(url )

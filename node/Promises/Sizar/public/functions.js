@@ -24,13 +24,13 @@ function renderMenu() {
 
     })
   }
-  function addWord(e){
+  function additem(e){
     e.preventDefault();
 
     const url = e.target.elements.nurl.value;
     const price = e.target.elements.nPrice.value;
 
-    fetch('/api/add-word', {
+    fetch('/api/additem', {
         method: 'POST',
         body: JSON.stringify({ url ,price }),
         headers: {
