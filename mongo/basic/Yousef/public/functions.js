@@ -8,6 +8,7 @@ function menuHandler(event) {
     fetch('/api/shawarmaList')
         .then(res => res.json())
         .then(data => {
+            console.log(data)
             let items = '';
             data.forEach(element => {
                 items += `<div><img src=${element.src}><p>Name: ${element.name} , Price: ${element.price} NIS </p> 
@@ -83,6 +84,7 @@ function updatePrice(name) {
     })
         .then(res => res.json())
         .then(data => {
+            console.log(data)
             menuHandler();
         })
 
