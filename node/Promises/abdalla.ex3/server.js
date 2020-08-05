@@ -33,25 +33,23 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const Item = mongoose.model('Item', {
     name: String,
-    img: img,
-    price :number 
+    img: String,
+    price: Number
 });
 
-const item1  = new Item({ name: 'Hamburger', img: 'https://www.kingsford.com/wp-content/uploads/2014/11/kfd-howtohamburger-Burgers_5_0391-1024x621.jpg',price:25 });
-const item1  = new Item({ name: 'mnsaf', img: 'https://www.kingsford.com/wp-content/uploads/2014/11/kfd-howtohamburger-Burgers_5_0391-1024x621.jpghttps://www.tareekaa.com/wp-content/uploads/2014/12/%D9%85%D9%86%D8%B3%D9%811.jpg',price:30 });
-const item1  = new Item({ name: 'maqlobe', img: 'https://kitchen.sayidaty.net/uploads/small/36/36fb0116ed3b918c96f3b1f3b3f1c333_w750_h750.jpg',price:36 });
+const item1 = new Item({ name: 'Hamburger', img: 'https://www.kingsford.com/wp-content/uploads/2014/11/kfd-howtohamburger-Burgers_5_0391-1024x621.jpg', price: 25 });
+const item2 = new Item({ name: 'mnsaf', img: 'https://www.kingsford.com/wp-content/uploads/2014/11/kfd-howtohamburger-Burgers_5_0391-1024x621.jpghttps://www.tareekaa.com/wp-content/uploads/2014/12/%D9%85%D9%86%D8%B3%D9%811.jpg', price: 30 });
+const item3 = new Item({ name: 'maqlobe', img: 'https://kitchen.sayidaty.net/uploads/small/36/36fb0116ed3b918c96f3b1f3b3f1c333_w750_h750.jpg', price: 36 });
 
 
 
-
-
-
-
-
-app.get('/resturant1', function (req, res) {
-
-    res.send({ resturant });
-})
+app.get('/resturant1', (req, res) => {
+    Item.find({}, function (err,docs) {
+        console.log(docs)
+        res.send({resturat:docs})
+    })
+} )
+    
 
 
 app.put('/resturant2', (req, res) => {
