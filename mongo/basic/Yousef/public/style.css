@@ -1,0 +1,28 @@
+body{
+    text-align: center;
+    background-color: gray;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+}
+
+.getmenu{
+    margin-bottom: 10px;
+}
+
+#root div{
+    margin-bottom: 20px;
+}
+
+button:hover{
+    color: red;
+}
+
+#add-wrapper{
+    border: black solid 2px;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    margin: auto;
+}
