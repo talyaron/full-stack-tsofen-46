@@ -162,6 +162,6 @@ function onSaveArticle() {
 }
 
 function onSortResult(event) {
-    var content3 = document.getElementById("maincontent").children[2].children;
+   // var content3 = document.getElementById("maincontent").children[2].children;
 }
 
