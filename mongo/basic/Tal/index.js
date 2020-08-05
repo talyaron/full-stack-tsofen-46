@@ -12,8 +12,13 @@ const User = mongoose.model('User', {
     age: Number
 });
 
-const mahmood = new User({ name: 'mahmood', age: 25 });
-mahmood.save().then(() => console.log('meow2'));
+User.updateOne({name:'salah'},{age:25}).then(doc=>{
+    
+})
+
+// const salah = new User({ name: 'salah', age: 24 });
+// salah.save().then(() => console.log('meow2'));
+User.find({age:{$lte:24}}).then(docs=>{console.log(docs)})
 
 
 
