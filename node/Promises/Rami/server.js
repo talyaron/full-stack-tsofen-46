@@ -17,7 +17,6 @@ let items=[
     {ID:'4',TOPIC:'perfect flower',URL:'img/3.jpg',PRICE:'5'}
 ]
 
-
 app.get('/api/items', (req, res) => {
     res.send(items)
 })
