@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="twiiter.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="twitter-page-container">
+        <div class="side-nav">
+            <div class="icons">
+                <div class="icon">
+                    <img src="https://image.flaticon.com/icons/svg/25/25347.svg" alt="">
+                </div>
+                <div class="icon">
+                    <img src="https://image.flaticon.com/icons/svg/1051/1051360.svg" alt="">
+                </div>
+                <div class="icon">
+                    <img src="https://image.flaticon.com/icons/svg/1051/1051377.svg" alt="">
+                </div>
+                <div class="icon">
+                    <img src="https://image.flaticon.com/icons/svg/733/733614.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="nav-title">
+                <h1>Home</h1>
+            </div>
+            <div class="post-box">
+                <div class="post-icon">
+                    <img id="userPhoto" src="https://assets.sainsburys-groceries.co.uk/gol/3654316/1/640x640.jpg"
+                        alt="">
+                </div>
+                <div class="post-content">
+                    <textarea id="postContent" name="postContent" rows="4" cols="50">
+
+                        </textarea>
+                </div>
+                <div class="post-btn">
+                    <button onclick="handlePostCreate()">Tweet</button>
+                </div>
+            </div>
+            <div id="posts">
+
+            </div>
+        </div>
+    </div>
+    <script src="../js/twitter.js"></script>
+</body>
+
+</html>
