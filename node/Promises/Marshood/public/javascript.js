@@ -409,6 +409,31 @@ async function EditItem() {
 }
 
  
+async function DeleteItem(){
+
+    await fetch("/DeleteItem", {
+        method: "DELETE",
+        body: JSON.stringify({
+
+            id: document.getElementById("IDITEM").value ,
+            NewIMG: document.getElementById("NewIMG").value,
+            NewName: document.getElementById("NewName").value ,
+            NewPrice: document.getElementById("NewPrice").value ,
+            NewQuantity: document.getElementById("NewQuantity").value ,
+         }),
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }).then(response => response.json())
+        .then(data => {
+           // reload items table ....
+           deleteTableElem(document.getElementById("myTable"))
+           getitemOnMarket1();
+        });
+
+
+
+}
 // let cartTableShowP = new Promise((resolve, reject) => {
 //     fetch('/cartTableShow')
 //         .then(res => res.json())

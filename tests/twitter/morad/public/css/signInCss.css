@@ -1,0 +1,35 @@
+body {
+    background-color: black;
+}
+
+#logInDiv {
+    text-align: center;
+    width: 30%;
+    height: 40%;
+    border-radius: 18px;
+    border: blue solid 6px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.formLabels {
+    font-size: 22px;
+    font-style: bold;
+}
+
+.formInputs {
+    border-radius: 8px;
+    border: blue solid 4px;
+}
+
+.formSubmit {
+    border-radius: 8px;
+    border: blue solid 3px;
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    font-style: bold;
+}
