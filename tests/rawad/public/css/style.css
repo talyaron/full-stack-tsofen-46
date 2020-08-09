@@ -1,0 +1,266 @@
+.website{
+    /* display: flex; */
+    width: 90%;
+    margin: auto;
+    display: none;
+}
+.left{
+    background-color: whitesmoke;
+    width: 15%;
+}
+.middle{
+    background-color: whitesmoke;
+    border: 1px solid rgb(139, 226, 226);
+
+    width: 55%;
+}
+.right{
+    background-color: whitesmoke;
+    width: 30%;  
+   
+    text-align: center;
+}
+.right #search{
+    width: 90%;
+  border-radius: 12px;
+  height: 30px;
+}
+
+.theards{
+    width: 90%;
+    border: 1px solid rgb(139, 226, 226);
+    border-radius: 12px;
+    margin: auto;
+}
+#threadheader{
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid teal;
+}
+#threadheader img{
+    margin-top: 20px;
+}
+
+.theardend a {
+    text-decoration: none;
+    margin-right: 75%;
+    color: turquoise;
+}
+.thearddata{
+    display: flex;
+ border-bottom :1px solid teal; 
+
+}
+
+#rthd select{
+    border: none;
+
+}
+
+
+
+#buttons{
+    display: block;
+}
+#homebutton{
+    font-size: 30px;
+    color: rgb(51, 51, 226);
+    border: none;
+    border-radius: 12px;
+
+}
+#homebutton:hover{
+    font-size: 30px;
+    color: rgb(51, 51, 226);
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(189, 243, 238);
+    
+}
+#explorebutton{
+    font-size: 27px;
+    border: none;
+    border-radius: 12px;
+
+}
+#explorebutton:hover{
+    font-size: 27px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(189, 243, 238);
+ color: rgb(51, 51, 226);
+}
+#notificationbutton{
+    font-size: 27px;
+    border: none;
+    border-radius: 12px;
+
+}
+#notificationbutton:hover{
+    font-size: 27px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(189, 243, 238);
+ color: rgb(51, 51, 226);
+}
+#messagesbutton{
+    font-size: 27px;
+    border: none;
+    border-radius: 12px;
+
+}
+#messagesbutton:hover{
+    font-size: 27px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(189, 243, 238);
+ color: rgb(51, 51, 226);
+}
+#bookmarkbutton{
+    font-size: 27px;
+    border: none;
+    border-radius: 12px;
+
+}
+#bookmarkbutton:hover{
+    font-size: 27px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(189, 243, 238);
+ color: rgb(51, 51, 226);
+}
+#listsbutton{
+    font-size: 27px;
+    border: none;
+    border-radius: 12px;
+}
+#listsbutton:hover{
+    font-size: 27px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(189, 243, 238);
+ color: rgb(51, 51, 226);
+}
+#profilebuttn{
+    font-size: 27px;
+    border: none;
+    border-radius: 12px;
+}
+#profilebuttn:hover{
+    font-size: 27px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(189, 243, 238);
+ color: rgb(51, 51, 226);
+}
+#morebutton{
+    font-size: 27px;
+    border: none;
+    border-radius: 12px;
+}
+#morebutton:hover{
+    font-size: 27px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(189, 243, 238);
+ color: rgb(51, 51, 226);
+}
+#tweetbutton{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    border-radius: 12px ;
+    height: 40px;
+    color: white;
+    font-size: 27px;
+    background-color: rgb(25, 73, 231);
+    border: rgb(25, 73, 231);
+}#tweetbutton:hover{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    border-radius: 12px ;
+    height: 40px;
+    color: white;
+    font-size: 27px;
+    background-color: rgb(16, 64, 221);
+    border: rgb(25, 73, 231);
+}
+
+
+.login{
+    width: 50%;
+    height: 500px;
+    margin: auto;
+    background-color: rgb(80, 121, 184);
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+#profileimg{
+    width: 40%;
+    height: 30px;
+    border-radius: 12px;
+    border: none;
+}
+#username{
+    width: 40%;
+    height: 30px;
+    border-radius: 12px;
+    border: none;
+}
+#loginbutton{
+    width: 30%;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+    font-size: 20px;
+    background-color: rgb(36, 84, 187);
+    color: white;
+}
+#loginbutton:hover{
+    background-color: rgb(18, 56, 136);
+}
+h1{
+    margin-left:10px ;
+    margin-top:5px ;
+    border-bottom :1px solid teal ;
+}
+.homeheadre{
+    position: fixed;
+    width: 48%;
+}
+#userimg{
+    margin-top: 60px;
+    margin-left: 10px;
+  
+}
+#batman{
+    border-radius:50% ;
+    border: 1px solid black;
+}
+#usertweet{
+    display: flex;
+  
+}
+#tweet{
+    margin-top: 65px;
+    height: 50px;
+    width: 100%;
+    border: none;
+    background-color: whitesmoke;
+    margin-left: 5px;
+
+}
+#tweetb{
+    background-color: rgb(24, 98, 168);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 20px;
+    width: 20%;
+    margin-left: 75%;
+}
+#tweeting{
+    border-bottom: 1px solid teal;
+}
