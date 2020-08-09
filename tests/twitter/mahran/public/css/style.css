@@ -1,0 +1,65 @@
+body {
+    background-color:  rgb(172, 172, 219);
+}
+
+#submit {
+
+width: 200px;
+
+}
+
+#UserInoutForm {
+    padding: 1rem;
+}
+
+#UserInoutForm input {
+    padding: 1rem;
+}
+
+
+#InputFormContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    position: absolute;
+    top: 50%;
+    left: 30%;
+}
+
+
+
+
+#outputcontainer {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-bottom: solid;
+
+    position: absolute;
+    top: 20%;
+    left: 20%;
+
+}
+
+#UsercommentInput {
+    width: 600px;
+    height: 75px;
+
+}
+
+#userImage {
+    width: 75px;
+    height: 75px;
+}
+
+#postBtn {
+    width: 100px;
+    height: 75px;
+}
+
+
+
+
