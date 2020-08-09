@@ -1,16 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Burger",
-    "img": "./assets/burger.jpeg",
-    "price": 10,
-    "actions": [
-      { "name": "add", "icon": "./assets/add.png" },
-      { "name": "edit", "icon": "./assets/edit.png" },
-      { "name": "delete", "icon": "./assets/delete.png" }
-    ]
-  },
-  {
     "id": 2,
     "name": "Shawerma",
     "img": "./assets/Shawerma.jpg",

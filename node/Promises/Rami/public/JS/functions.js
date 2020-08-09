@@ -92,7 +92,7 @@ function PriceUp(id){
         .then(res=>res.json())
         .then(data=>{
             const {success} = data;
-    
+            console.log(success)
         })
         getItems(0)
     }

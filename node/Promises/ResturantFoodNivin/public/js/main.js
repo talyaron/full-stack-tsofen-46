@@ -1,28 +1,28 @@
 var storage = window.localStorage;
 
-const mainContainer = document.getElementById('mainContainer');
-const cartCount = document.getElementById('cartCount');
-const cartItemsContainer = document.getElementById('cartItems');
+const mainContainer = document.getElementById("mainContainer");
+const cartCount = document.getElementById("cartCount");
+const cartItemsContainer = document.getElementById("cartItems");
 var foodData = [];
 var cartItemsCount = 0;
 var currentCartItems = [];
 var cartOpen = false;
 
 const createCartItem = ({ img, name, price }) => {
-  const itemContainer = document.createElement('div');
-  itemContainer.classList.add('item');
+  const itemContainer = document.createElement("div");
+  itemContainer.classList.add("item");
 
-  const imgElement = document.createElement('img');
-  imgElement.classList.add('imageFood');
+  const imgElement = document.createElement("img");
+  imgElement.classList.add("imageFood");
   imgElement.src = img;
 
-  const detailsElement = document.createElement('div');
-  detailsElement.classList.add('namePrice');
+  const detailsElement = document.createElement("div");
+  detailsElement.classList.add("namePrice");
 
-  const nameElement = document.createElement('h1');
+  const nameElement = document.createElement("h1");
   nameElement.innerHTML = name;
 
-  const priceElement = document.createElement('h4');
+  const priceElement = document.createElement("h4");
   priceElement.innerHTML = `$${price}`;
 
   detailsElement.appendChild(nameElement);
@@ -39,7 +39,7 @@ const addToCart = (id) => {
   cartCount.innerHTML = cartItemsCount;
   currentCartItems.push(item);
   createCartItem(item);
-  storage.setItem('currentCartItems', JSON.stringify(currentCartItems));
+  storage.setItem("currentCartItems", JSON.stringify(currentCartItems));
 };
 
 const editItem = (id) => {
@@ -47,62 +47,62 @@ const editItem = (id) => {
 };
 
 const deleteItem = (id) => {
-  // $.ajax({
-  //   type: 'POST',
-  //   url: '/food/delete',
-  //   data: { id },
-  //   success: function (data) {},
-  //   error: function (_, _, error) {},
-  // });
+  $.ajax({
+    type: "POST",
+    url: "/food/delete",
+    data: { id },
+    success: function (data) {},
+    error: function (_, _, error) {},
+  });
   const element = document.getElementById(`item-${id}`);
   element.remove();
 };
 
 const clearCart = () => {
   storage.clear();
-  cartItemsContainer.innerHTML = '';
-  cartCount.innerHTML = '0';
+  cartItemsContainer.innerHTML = "";
+  cartCount.innerHTML = "0";
 };
 
 const showCart = () => {
   cartOpen = !cartOpen;
-  cartItemsContainer.style.display = cartOpen ? 'none' : 'flex';
+  cartItemsContainer.style.display = cartOpen ? "none" : "flex";
 };
 
 const createItems = (data = []) => {
   data.map(({ id, img, price, name, actions }) => {
-    const itemContainer = document.createElement('div');
-    itemContainer.classList.add('item');
+    const itemContainer = document.createElement("div");
+    itemContainer.classList.add("item");
     itemContainer.id = `item-${id}`;
 
-    const imgElement = document.createElement('img');
-    imgElement.classList.add('imageFood');
+    const imgElement = document.createElement("img");
+    imgElement.classList.add("imageFood");
     imgElement.src = img;
 
-    const detailsElement = document.createElement('div');
-    detailsElement.classList.add('namePrice');
+    const detailsElement = document.createElement("div");
+    detailsElement.classList.add("namePrice");
 
-    const nameElement = document.createElement('h1');
+    const nameElement = document.createElement("h1");
     nameElement.innerHTML = name;
 
-    const priceElement = document.createElement('h4');
+    const priceElement = document.createElement("h4");
     priceElement.innerHTML = `$${price}`;
 
-    const actionsElement = document.createElement('div');
+    const actionsElement = document.createElement("div");
 
-    actionsElement.classList.add('buttonContainer');
+    actionsElement.classList.add("buttonContainer");
     actions.map(({ name, icon }) => {
-      const buttonElement = document.createElement('button');
-      buttonElement.classList.add('buttonItem');
+      const buttonElement = document.createElement("button");
+      buttonElement.classList.add("buttonItem");
 
-      const imgElement = document.createElement('img');
-      imgElement.classList.add('inputImgIcon');
+      const imgElement = document.createElement("img");
+      imgElement.classList.add("inputImgIcon");
       imgElement.src = icon;
 
       buttonElement.onclick =
-        name === 'add'
+        name === "add"
           ? () => addToCart(id)
-          : name === 'edit'
+          : name === "edit"
           ? () => editItem(id)
           : () => deleteItem(id);
 
@@ -122,11 +122,11 @@ const createItems = (data = []) => {
 $(document).ready(() => {
   // get data from server
   $.ajax({
-    type: 'GET',
-    url: '/food',
-    success: function (data) {
-      foodData = data;
-      createItems(data);
+    type: "GET",
+    url: "/meal",
+    success: function (docs) {
+      foodData = docs;
+      createItems(docs);
     },
     error: function (_, _, error) {
       console.log(error);
@@ -134,7 +134,7 @@ $(document).ready(() => {
   });
 
   // populate cart from storage if exists
-  currentCartItems = JSON.parse(storage.getItem('currentCartItems')) || [];
+  currentCartItems = JSON.parse(storage.getItem("currentCartItems")) || [];
   currentCartItems.map((item) => createCartItem(item));
   cartCount.innerHTML = currentCartItems.length;
 });

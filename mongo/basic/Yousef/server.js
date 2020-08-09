@@ -29,13 +29,13 @@ const shawarmaList = [
 
 ]
 
-Items.insertMany(shawarmaList, function (err, docs) {
-    if (err) {
-        return console.error(err);
-    } else {
-        console.log("Multiple documents inserted to Collection Items");
-    }
-});
+// Items.insertMany(shawarmaList, function (err, docs) {
+//     if (err) {
+//         return console.error(err);
+//     } else {
+//         console.log("Multiple documents inserted to Collection Items");
+//     }
+// });
 
 
 
@@ -47,13 +47,14 @@ app.get('/api/shawarmaList', (req, res) => {
     })
 })
 
-// app.put('/updatePrice', function (req, res) {
-//     const { body } = req;
-//     const { name, newPrice } = body;
-//     const new1 = shawarmaList.find(Element => Element.name === name);
-//     new1.price = newPrice;
-//     res.send(shawarmaList)
-// })
+app.put('/updatePrice', function (req, res) {
+    const { body } = req;
+    const { name, newPrice } = body;
+    Items.updateOne({name:name} , {price:newPrice},function(err,docs){
+        res.send(docs)
+    })
+    
+})
 
 // app.put('/deleteItem', function (req, res) {
 //     const { body } = req;
