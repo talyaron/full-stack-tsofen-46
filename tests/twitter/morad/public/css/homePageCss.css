@@ -1,0 +1,103 @@
+body {
+    background-color: rgb(2, 2, 29);
+}
+
+#divContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 60% 30%;
+    grid-template-rows: auto;
+    column-gap: 2px;
+}
+
+#leftPanel {
+    border-right: 1px solid white;
+}
+
+#centerPanel {
+    border-right: 1px solid white;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 10% 18% 18% 18% 18%;
+}
+
+#rightPanel {}
+
+.iconDiv {
+    display: flex;
+}
+
+.imageIcon {
+    width: 50%;
+    height: 8%;
+    margin: auto;
+}
+
+.title {
+    margin-left: 10px;
+    color: white;
+    font-size: 30px;
+    font-style: bold;
+}
+
+#profileImg {
+    width: 80%;
+    height: 30%;
+    margin: 2%;
+}
+
+#inputPost {
+    background-color: rgb(2, 2, 29);
+    padding: 10px;
+    color: white;
+    width: 70%;
+    height: 20%;
+    margin: 2%;
+}
+
+#post {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    grid-template-rows: auto auto;
+    column-gap: 5px;
+}
+
+.iconToPost {
+    width: 9%;
+    height: 20%;
+}
+
+#searchTwitter {
+    width: 80%;
+    background-color: rgb(2, 2, 29);
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 4px;
+}
+
+#trends {
+    margin: 5px;
+    background-color: rgb(112, 112, 179);
+    border-radius: 13px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 5% 15% 15% 15% 15% 15% 7.5%;
+    column-gap: 5px;
+}
+
+.newTrendWriter {
+    font-style: bold;
+    color: white;
+    font-size: 18px;
+}
+
+.newTrendContent {
+    color: grey;
+    font-size: 18px;
+}
+
+.newTrend {
+    padding: 8px;
+    border-top: white solid 1px;
+}

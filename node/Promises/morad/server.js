@@ -65,7 +65,7 @@ app.put('/api/addItem', (req, res) => {
     const { imageUrl, itemName, itemPrice } = req.body;
     ShopItems.push({ id: uid(), image: imageUrl, price: itemPrice, name: itemName });
     addItemToDb()
-    res.send({ added: true });
+    res.send({ added:true });
 })
 
 app.get('/api/getShopItems', (req, res) => {

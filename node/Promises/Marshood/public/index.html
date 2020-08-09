@@ -26,21 +26,24 @@
 
     </h1>
     <!-- <button  id="ShowMarketButt" onclick="clickShowMarket()" >Show Market</button> -->
-    <div id="test123"><div class="center">
-      IMG: <input type="url" name="IMG" id="NewIMG" oninput="unableEditbutt()"readonly > 
-      Name: <input type="text" name="Name" id="NewName"  oninput="unableEditbutt()" readonly>
-    </div>
-    <div class="center">
-      Price: <input type="text" name="Price" id="NewPrice"  oninput="unableEditbutt()" readonly>
-      Quantity: <input type="number" name="Quantity" id="NewQuantity"  oninput="unableEditbutt() " readonly >
-    </div>
-    <div class="center">
-      ID <input type="text" name="ID" id="IDITEM" readonly>
-    </div>
-    <button id="EditB" onclick="EditItem()" disabled="disabled">Edit</button>
+    <div id="test123">
+      <div class="center">
+        IMG: <input type="url" name="IMG" id="NewIMG" oninput="unableEditbutt()" readonly>
+        Name: <input type="text" name="Name" id="NewName" oninput="unableEditbutt()" readonly>
+      </div>
+      <div class="center">
+        Price: <input type="text" name="Price" id="NewPrice" oninput="unableEditbutt()" readonly>
+        Quantity: <input type="number" name="Quantity" id="NewQuantity" oninput="unableEditbutt() " readonly>
+      </div>
+      <div class="center">
+        ID <input type="text" name="ID" id="IDITEM" readonly>
+      </div>
+      <button id="EditB" onclick="EditItem()" disabled="disabled">Edit</button>
+      <button id="DeleteB" onclick="DeleteItem()" >Delete</button>
 
+
+    </div>
   </div>
-</div>
   <div class="table" id="ShowStroeTable">
     <table class="center" id="myTable">
       <tr>
@@ -50,7 +53,7 @@
         <th onclick="sortTable(3)">Quantity</th>
         <th>Add</th>
         <th>Remove</th>
-       </tr>
+      </tr>
     </table>
 
   </div>
@@ -80,7 +83,7 @@
     // display selected row data in text input
 
     var table = document.getElementById("myTable"), rIndex;
-        table.addEventListener('click', function (event) {
+    table.addEventListener('click', function (event) {
       const row = event.target.parentNode;
       document.getElementById("NewIMG").value = row.cells[0].innerHTML;
       document.getElementById("NewName").value = row.cells[1].innerHTML;
@@ -95,7 +98,7 @@
 
       // row = '<tr>' 
     });
-     
+
 
 
 
