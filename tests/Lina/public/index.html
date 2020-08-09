@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>twitter</title>
+    <link rel="stylesheet" href="style/twitter.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="main-articles-wrapper">
+            <div class="main-article" id="icons">
+                <img src="img/logo.jpg">
+                <img src="img/home.jpg">
+                <img src="img/hashtag.png">
+                <img src="img/notification.png">
+                <img src="img/mail.png">
+            </div>
+
+            <div class="main-article" id="feed">
+                <p>Home</p>
+                <form onsubmit="logIn(event)">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQF8ugIVhszKdSNtfMHha2gbPW3G_JtlIbZkQ&usqp=CAU">
+                    <input type="text" id="feed" value="What's happening?">
+                    <button id="newFeed" onclick="AddFeed(event)">Tweet</button>
+                </form>
+
+                <div class="c1">gg</div>
+                <div class="news" id="news">
+                    news
+                </div>
+            </div>
+
+            <div class="main-article" id="feed">
+                <input type="text" id="search" value="Search Twitter">
+                <p>Trends for you</p>
+                <p>trending in Israel</p>
+                <p>President</p>
+                <p>Netanyahu</p>
+                <p>#israel</p>
+                <p>Lebanese</p>
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+    <script src="functions.js"></script>
+</body>
+
+</html>
