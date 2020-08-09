@@ -55,15 +55,25 @@ html * {
     
     /* Main Content Area */
   
+#sideLeft {
+
+
+    
+}
   #maincontent {
   
-  
+
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+          grid-template-columns: repeat(auto-fill, minmax(10%, 1fr));
           /* This is better for small screens, once min() is better supported */
           /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
           grid-gap: 1rem;
-          margin: 2.5rem;
+          margin-left: 11rem;
+          margin-right: 11rem;
+          position: relative;
+          min-height: calc(100vh - 147px -32px - 50px);
+
+
   }
   
   
@@ -141,7 +151,7 @@ html * {
   #delBtn{
   
   }
-  #A001-saveBtn, #A002-saveBtn, #A003-saveBtn, #A004-saveBtn  {
+  #A001-saveBtn, #A002-saveBtn, #A003-saveBtn, #A004-saveBtn, #A005-saveBtn, #A006-saveBtn  {
       display: none;
   }
   #actionbar button { 
@@ -150,7 +160,7 @@ html * {
     /* Footer */
   
     footer {
-      position: fixed;
+      position: fixed;;
       left: 0;
       bottom: 0;
       width: 100%;
@@ -158,4 +168,8 @@ html * {
       color: white;
       text-align: left;
       padding: 1rem;
+      clear:both;
+
+
+    /*  z-index: 1; */
     }

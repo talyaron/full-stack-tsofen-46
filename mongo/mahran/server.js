@@ -18,13 +18,30 @@ const article = mongoose.model('article', {
 });
 
 // create record
-const Art_Tira01 = new article({
-    articleNr: 'A001',
+const Art_Tira02 = new article({
+    articleNr: 'A002',
     location: 'Tira Town',
-    livingSpace: 100,
-    rentalPrice: 3500
+    livingSpace: 50,
+    rentalPrice: 1500
 
 })
+//Art_Tira02.save();
+console.log("server is there");
+//article.find().then(docs=>{console.log(docs)})
+//let docs = [];
+//docs.push(article.find());
+//console.log(docs);
+ //article.find();
+//console.log({docs})
+//let docs = article.find({});
+
 
 // save toi database
-Art_Tira01.save().then(() => console.log('article saved to database'));
+//Art_Tira01.save().then(() => console.log('article saved to database'));
+//let arr = [];
+//arr.push(article.findOne());
+//console.log(arr);
+
+article.find( { }, (err, res) => {
+        console.log(res);
+})

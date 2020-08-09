@@ -125,8 +125,8 @@ function onSaveArticle() {
     })
     .then(response => response.json())
         .then( data => {
-            let {result} = data;
-            console.log(result);
+            let result = data;
+            alert(result.nModified);
         })
 
 }

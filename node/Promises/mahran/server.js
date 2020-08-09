@@ -12,9 +12,9 @@ app.use(express.static('public'))
 
 
 // # File System:
-const fs = require('fs');
-let datamodel = fs.readFileSync('articles.json');
-let articles = JSON.parse(datamodel);
+//const fs = require('fs');
+//let datamodel = fs.readFileSync('articles.json');
+//let articles = JSON.parse(datamodel);
 //console.log(articles);
 
 
@@ -36,26 +36,30 @@ const RE_Article = mongoose.model('RE_Article', {
 
 });
 
-const Article_005 = new RE_Article ({
-  articleNr: 'A005',
-  location: 'Taybee',
-  livingSpace: 50,
+const Article_006 = new RE_Article ({
+  articleNr: 'A006',
+  location: 'Tol Karem',
+  livingSpace: 80,
   availability: "15.01.2021",
-  rentalPrice: 3000,
+  rentalPrice: 1500,
   currency: 'NIS',
   status: 'active'
 })
 
-//Article_005.save().then( () => console.log(" A005 written to DB"))
+//Article_006.save().then( () => console.log(" A006 written to DB"))
 
 //GET the Articles
- app.get('/api/getArticles', function (request, response) {
-//  response.send(articles);
-let docs =   RE_Article.find().then( () => console.log(RE_Article.find()));
-response.send(docs);
-console.log(RE_Article.find());
+app.get('/api/getArticles', function (request, response) {
+  //  response.send(articles);
+
+  RE_Article.find({}, (err, res) => {
+    response.send(res);
+  });
+
 
 })
+
+
 
 //Update Article
 app.put('/api/updateArticle', function (request, response) {
@@ -64,49 +68,94 @@ app.put('/api/updateArticle', function (request, response) {
   let rarticleNr = oReqBody.vArticleNr;
   let rLocation = oReqBody.vLocationInptut;
 
-  for (let i = 0; i < articles.length; i++) {
-    if (articles[i].articleNr == oReqBody.vArticleNr) {
-
-      articles[i].location = oReqBody.vLocationInptut;
-      articles[i].livingSpace = oReqBody.vLivingSpaceInput;
-      articles[i].availability = oReqBody.vAvailabilityInput;
-      articles[i].rentalPrice = oReqBody.vPriceInput;
-
-      response.send(articles);
-    } else {
-      // do nothing
-    }
+  /*  RE_Article.findOne( {articleNr: rarticleNr}, (err, res) => {
+      location = oReqBody.vLocationInptut;
+      livingSpace = oReqBody.vLivingSpaceInput;
+      availability = oReqBody.vAvailabilityInput;
+      rentalPrice = oReqBody.vPriceInput;
+      console.log(location);
+    })
+    */
+  var filter = { 'articleNr': rarticleNr };
+  var update = {
+    location: oReqBody.vLocationInptut,
+    livingSpace: oReqBody.vLivingSpaceInput,
+    availability: oReqBody.vAvailabilityInput,
+    rentalPrice: oReqBody.vPriceInput,
   }
-
-  const fs = require('fs');
-  fs.writeFileSync('articles.json', JSON.stringify(articles));
-
+  RE_Article.updateOne(filter, update, (err, res) => {
+    if (err) {
+      console.log(err);
+    } else {
+      response.send(res);
+      console.log(res.nModified);
+    }
+  })
+  /*
+    for (let i = 0; i < articles.length; i++) {
+      if (articles[i].articleNr == oReqBody.vArticleNr) {
+  
+        articles[i].location = oReqBody.vLocationInptut;
+        articles[i].livingSpace = oReqBody.vLivingSpaceInput;
+        articles[i].availability = oReqBody.vAvailabilityInput;
+        articles[i].rentalPrice = oReqBody.vPriceInput;
+  
+        response.send(articles);
+      } else {
+        // do nothing
+      }
+    }
+  
+    const fs = require('fs');
+    fs.writeFileSync('articles.json', JSON.stringify(articles));
+  */
 })
 
 //Delete Article
-
 app.put('/api/removeArticle', function (request, response) {
 
   let oReqBody = request.body;
-  for (let i = 0; i < articles.length; i++) {
-    if (articles[i].articleNr == oReqBody.vArticleNr) {
+  let rarticleNr = oReqBody.vArticleNr;
 
-
-      articles[i].status = oReqBody.vArticleStatus;
-
-
-      response.send(articles);
-
+  //Delete in MongoDB
+  var filter = { 'articleNr': rarticleNr };
+  var update = { 'articleNr': rarticleNr, status: "deleted" };
+  RE_Article.updateOne(filter, update, (err, res) => {
+    if (err) {
+      console.log(err);
     } else {
-      // do nothing
+      response.send(res);
     }
-  }
 
-  const fs = require('fs');
-  fs.writeFileSync('articles.json', JSON.stringify(articles));
-  console.log(articles[i].articleNr + "" + "set to deleted");
 
+  })
+
+  /* 
+   for (let i = 0; i < articles.length; i++) {
+     if (articles[i].articleNr == oReqBody.vArticleNr) {
+ 
+ 
+       articles[i].status = oReqBody.vArticleStatus;
+ 
+ 
+       response.send(articles);
+ 
+     } else {
+       // do nothing
+     }
+   }
+ 
+   //write to file system
+   const fs = require('fs');
+   fs.writeFileSync('articles.json', JSON.stringify(articles));
+   console.log(articles[i].articleNr + "" + "set to deleted");
+ */
 })
 
+
+/*RE_Article.find( { }, (err, res) => {
+  console.log(res);
+}) */
+//console.log(doc);
 
 app.listen(3000, () => { console.log("App is Listening to 3000") })
