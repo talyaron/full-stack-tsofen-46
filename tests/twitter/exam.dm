@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 astart
+=======
+start
+>>>>>>> master

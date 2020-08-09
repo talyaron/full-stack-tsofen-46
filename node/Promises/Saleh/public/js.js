@@ -3,14 +3,17 @@ const root = document.getElementById("root");
 const cart = document.getElementById("cart");
 
 
-
-// let menu = [
-//     {img:"images/img1.jpg", price:55, id:1},
-//     {img:"images/img2.jpg", price:33, id:2},
-//     {img:"images/img3.jpg", price:12, id:3},
-
-// ]
-// render(menu)
+function change55(event){
+    fetch('/change55', {
+        method: 'POST',
+        body: JSON.stringify({}),
+        headers: { 'Content-Type': 'application/json' }
+    })
+        .then(res => res.json())
+        .then(data => {
+            render(data.menu)
+        })
+}
 
 
 function render(menu) {

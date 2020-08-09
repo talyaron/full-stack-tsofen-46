@@ -9,6 +9,25 @@ const fs = require("fs");// to read json file
 //
 //
 //
+
+
+// DB
+
+const url = "mongodb+srv://Marshood:raMHdQuDOBxwrcss@cluster0.ifcjp.mongodb.net/test";
+
+
+const mongoose = require('mongoose');
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
+
+const Items = mongoose.model('Item', {
+  img: String,
+  name: String,
+  Price: String,
+  quantity: String,
+  ID: String
+});
+
+//END DB
 var bodyParser = require('body-parser');
 const { isNull } = require('util');
 app.use(bodyParser.json());       // to support JSON-encoded bodies
@@ -19,35 +38,54 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 app.use(express.static('public'));
 
+Items.findOne({}).populate('Carts').exec((err,Item)=>
+{
+  if(err){console.log(err)}
+  console.log(Item)
+})
 
-var itemOnMarket = [
 
-  { img: "c2RLAG7h_400x400.jpg", name: "BMW", Price: "100$", quantity: "5", ID: uid() },
-  { img: "c2RLAG7h_400x400.jpg", name: "test2", Price: "10$", quantity: "5", ID: uid() },
-  { img: "c2RLAG7h_400x400.jpg", name: "test3", Price: "500$", quantity: "5", ID: uid() },
-  { img: "c2RLAG7h_400x400.jpg", name: "test4", Price: "20$", quantity: "5", ID: uid() },
-  { img: "c2RLAG7h_400x400.jpg", name: "test5", Price: "200$", quantity: "5", ID: uid() },
-  { img: "c2RLAG7h_400x400.jpg", name: "test6", Price: "250$", quantity: "5", ID: uid() },
-  { img: "c2RLAG7h_400x400.jpg", name: "test7", Price: "50$", quantity: "5", ID: uid() },
-  { img: "c2RLAG7h_400x400.jpg", name: "test8", Price: "27$", quantity: "5", ID: uid() },
-  { img: "c2RLAG7h_400x400.jpg", name: "test9", Price: "100$", quantity: "5", ID: uid() },
-  { img: "c2RLAG7h_400x400.jpg", name: "test11", Price: "5$", quantity: "5", ID: uid() },
-  { img: "c2RLAG7h_400x400.jpg", name: "test22", Price: "10$", quantity: "5", ID: uid() },
-  { img: "c2RLAG7h_400x400.jpg", name: "test33", Price: "10$", quantity: "5", ID: uid() },
-  { img: "c2RLAG7h_400x400.jpg", name: "test44", Price: "1000$", quantity: "5", ID: uid() },
-  { img: "c2RLAG7h_400x400.jpg", name: "test55", Price: "1001$", quantity: "5", ID: uid() }
-]
+// var itemOnMarket = [
 
+//   { img: "c2RLAG7h_400x400.jpg", name: "BMW", Price: "100$", quantity: "5", ID: uid() },
+//   { img: "c2RLAG7h_400x400.jpg", name: "test2", Price: "10$", quantity: "5", ID: uid() },
+//   { img: "c2RLAG7h_400x400.jpg", name: "test3", Price: "500$", quantity: "5", ID: uid() },
+//   { img: "c2RLAG7h_400x400.jpg", name: "test4", Price: "20$", quantity: "5", ID: uid() },
+//   { img: "c2RLAG7h_400x400.jpg", name: "test5", Price: "200$", quantity: "5", ID: uid() },
+//   { img: "c2RLAG7h_400x400.jpg", name: "test6", Price: "250$", quantity: "5", ID: uid() },
+//   { img: "c2RLAG7h_400x400.jpg", name: "test7", Price: "50$", quantity: "5", ID: uid() },
+//   { img: "c2RLAG7h_400x400.jpg", name: "test8", Price: "27$", quantity: "5", ID: uid() },
+//   { img: "c2RLAG7h_400x400.jpg", name: "test9", Price: "100$", quantity: "5", ID: uid() },
+//   { img: "c2RLAG7h_400x400.jpg", name: "test11", Price: "5$", quantity: "5", ID: uid() },
+//   { img: "c2RLAG7h_400x400.jpg", name: "test22", Price: "10$", quantity: "5", ID: uid() },
+//   { img: "c2RLAG7h_400x400.jpg", name: "test33", Price: "10$", quantity: "5", ID: uid() },
+//   { img: "c2RLAG7h_400x400.jpg", name: "test44", Price: "1000$", quantity: "5", ID: uid() },
+//   { img: "c2RLAG7h_400x400.jpg", name: "test55", Price: "1001$", quantity: "5", ID: uid() }
+// ]
+//  itemOnMarket.forEach(item=>{
+//   const ItemI = new Items({ 
+
+//     img: item.img,
+//     name: item.name,
+//     Price: item.Price,
+//     quantity: item.quantity,
+//     ID: item.ID
+//   });
+//   ItemI.save().then(() => console.log('Done...'));
+// })
 var cart = []
 function uid() {
-
   return '_' + Math.random().toString(36).substr(2, 9);
 };
 console.log(cart)
 app.get('/getItems', function (req, res) {
   console.log("test server get menu")
-  res.send(itemOnMarket)
+  //res.send(itemOnMarket)
+  Items.find({}, function (err, doc) {
+    res.send(doc)
+  })
 })
+
 app.put('/AddItem', function (req, res) {
   console.log("Adding...")
   var IDitem = req.body.id;
@@ -178,26 +216,50 @@ app.put('/EditItem', function (req, res) {
   var NewName = req.body.NewName;
   var NewPrice = req.body.NewPrice;
   var NewQuantity = req.body.NewQuantity;
-   //console.log(cart)
+  //console.log(cart)
+  Items.updateOne({ ID: IDitem }, { name: NewName, Price: NewPrice, quantity:NewQuantity}).then(doc => {
+ console.log("UP DOne" +doc )
+  })
 
   cart.forEach(elemCart => {
     if (elemCart.ID == IDitem) {
-        
-        // elemCart.img=NewIMG;
-        elemCart.name=NewName;
-        elemCart.Price=NewPrice;
-        elemCart.quantity=NewQuantity;
-       }});
 
-       itemOnMarket.forEach(elemMarket => {
-        if (elemMarket.ID == IDitem) {
-            
-             //elemMarket.img=NewIMG;
-            elemMarket.name=NewName;
-            elemMarket.Price=NewPrice;
-            elemMarket.quantity=NewQuantity;
-           }});
-           res.send(success)
+      // elemCart.img=NewIMG;
+      elemCart.name = NewName;
+      elemCart.Price = NewPrice;
+      elemCart.quantity = NewQuantity;
+    }
+  });
+
+  // itemOnMarket.forEach(elemMarket => {
+  //   if (elemMarket.ID == IDitem) {
+
+  //     //elemMarket.img=NewIMG;
+  //     elemMarket.name = NewName;
+  //     elemMarket.Price = NewPrice;
+  //     elemMarket.quantity = NewQuantity;
+  //   }
+  // });
+  res.send(success)
+
+})
+
+app.get('/', function (req, res) {
+  res.send('admin panel')
+})
+
+
+
+app.delete('/DeleteItem', function (req, res) {
+  console.log("Edit ITem...")
+  var success = { success: false }
+
+  var IDitem = req.body.id;
+  Items.deleteOne({ ID: IDitem }, function (err) {
+    if (err) return handleError(err);
+    // deleted at most one tank document
+  });
+
 
 })
 //*********/
