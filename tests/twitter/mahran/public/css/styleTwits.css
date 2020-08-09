@@ -1,0 +1,31 @@
+#header {
+    padding: 5rem;
+    background-color: blueviolet;
+}
+
+
+#main-InputArea {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-bottom: solid;
+
+}
+
+#UsercommentInput {
+    width: 600px;
+    height: 75px;
+
+}
+
+#userImage {
+    width: 75px;
+    height: 75px;
+}
+
+#postBtn {
+    width: 100px;
+    height: 75px;
+}
