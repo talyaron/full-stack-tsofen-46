@@ -1,0 +1,45 @@
+#mainPageDecoratorGrid{
+    display: grid; 
+    grid-template-columns: 5vw auto  auto 15vw; /* define each collumns of the templates area to a certain size*/
+    grid-template-rows: 5% auto;/* define each row of the templates area to a certain size*/
+    grid-template-areas:  /* define the page templates area to place the items easily in the website*/
+    "logo header header search"
+    "navigator main main sidebar";
+    background-color:white;
+    width: auto;
+    height: 100vh; 
+  } 
+  #header{
+    grid-area: header;
+    text-align: center;
+    background-color: white;
+  }
+  #addPannel{
+    grid-area: sidebar;
+  }
+#itemDisplayer{
+  grid-area: main;
+}
+
+
+#logInPannel{
+  grid-area: main;
+  width: 100%;
+  height: 30vw;
+  background-color:teal;
+  color: white;
+  text-align: center;
+  
+}
+
+#logInInfo{
+margin-top: 10%;
+
+}
+#welcomingText{
+text-align: center;
+color: white;
+
+}
+
+
