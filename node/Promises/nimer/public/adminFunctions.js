@@ -18,7 +18,6 @@ function signOut(){
   window.location.replace("index.html")
 }
 function addNewProduct(e){
- 
     e.preventDefault();
     const url = e.target.elements.url.value;
     const name = e.target.elements.name.value;

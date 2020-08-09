@@ -1,0 +1,145 @@
+#mainPageDecoratorGrid{
+    display: grid; 
+    grid-template-columns: 5vw auto  auto 15vw; /* define each collumns of the templates area to a certain size*/
+    grid-template-rows: 8% 15vw auto;/* define each row of the templates area to a certain size*/
+    grid-template-areas:  /* define the page templates area to place the items easily in the website*/
+    "logo header header search"
+    "navigator user user sidebar"
+    "navigator main main sidebar";
+    background-color:teal;
+    width: auto;
+    height: auto; 
+  } 
+  #allLogos{
+      grid-area: navigator;
+      border-right: white solid;
+  }
+  .allIcons{
+    display: list-item;
+    margin-top: 50px;
+}
+
+
+  #Search{
+      grid-area: search;
+       border-radius: 20px;
+      background-color: lightblue;
+      color: white;
+      margin-top: 10px;
+  }
+  #header{
+      grid-area: header;
+      border-bottom: solid white 1px;
+      border-right: white solid;
+      border-left: white solid;
+  }
+
+
+  #trendingPosts{
+      background-color: rgb(58, 95, 95);
+      margin-top: 30px;
+    border-radius: 20px;
+    color: white;
+    grid-area: sidebar;
+    height: fit-content;
+
+  }
+  .trendsBox{
+      text-align: center;
+      border-bottom: solid white 1px;
+
+  }
+
+  .trendingDescriptions{
+      font-weight: bold;
+      
+  }
+  .trendingTweets{
+      margin-top: 0px;
+  }
+  .terndingShowMore{
+      margin-left: 10px;
+  }
+
+  #newTweetPannel{
+     grid-area: user;
+     height: 20vw;
+     width: 97%;
+     display: flex;
+     margin-top:5px ;
+     
+  }
+
+  .newTweetImage{
+      border-radius: 50%;
+      width: 3vw;
+      height: 3vw;
+      margin-top: 15px;
+  }
+  .tweetPannel{
+    background-color:teal ; 
+    border: teal; 
+    margin-left: 10px;
+    width: 100%;
+    height: 50%;
+    border-bottom: solid white;
+  }
+  .tweetMessagePannel{
+    border: teal;
+      width: 100%;
+      height: 70%;
+      background-color: rgb(39, 173, 173);
+
+  }
+  .tweetName{
+      display: flex;
+      margin-top: 30px;
+      margin-left: 10px;
+      
+  }
+  .tweetButton{
+      position: relative;
+      margin-left: 97%;
+      margin-top: 5px;
+      border-radius: 20px;
+      background-color:white;
+      color: teal;
+  }
+
+
+  #currentTweets{
+      grid-area: main;
+
+      
+  }
+  .oneTweet{
+      height: 200px;
+      margin-left: 20px;
+  }
+  .tweetContent{
+      position: relative;
+    margin-top:20px ;
+    margin-left: 20px;
+    width: 100%;
+    background-color: teal;
+
+  }
+  .logos{
+      position: absolute;
+      display: inline;
+      width: 75vw;
+      margin-bottom: 0px;
+      border-bottom: solid white;
+      
+      
+  }
+
+  .icons{
+      margin-right: 22vw;
+  }
+
+  .tweetDescription{
+      width: 97%;
+      display: flex;
+      margin-top:5px ;
+  }
