@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+</head>
+<style>
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 3fr;
+        grid-template-rows: repeat(3, 1fr);
+        gap:10px;
+        grid-template-areas: 
+        "menu menu aside"
+        "menu menu aside"
+        "1 2 aside";
+    }
+
+    .item {
+        background-color: purple;
+        color: white;
+        text-align: center;
+    }
+
+    #menu{
+        grid-area: menu;
+        background-color: green;
+    }
+
+    #aside{
+        grid-area: aside;
+        background-color: blue;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="item" id='menu'>Menu</div>
+        <div class="item" id='aside'>aside</div>
+        <div class="item">c</div>
+        <div class="item">d</div>
+        <div class="item">e</div>
+        <div class="item">f</div>
+        <div class="item">e</div>
+        <div class="item">f</div>
+    </div>
+</body>
+
+</html>

@@ -47,7 +47,7 @@ async function postTwitt() {
             "Content-Type": "application/json",
         },
     });    
- 
+ //better to redraw..
         window.location.replace("mainScreen.html");
        
 
