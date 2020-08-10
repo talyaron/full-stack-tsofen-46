@@ -1,16 +1,18 @@
 const express = require('express');
 const app = express();
 
-const url = "mongodb+srv://tal2:cFjgmJTT9b42Aoin@tal-test1-m39if.mongodb.net/test";
+const url = "mongodb+srv://rami30080:mxzmxz123@cluster0.halwb.mongodb.net/market";
 
 
 const mongoose = require('mongoose');
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
-const User = mongoose.model('Users', {
+const User = mongoose.model('market', {
     name: String,
     age: Number
 });
+
+User.insertMany({name:'Rami',age: 3})
 
 
 

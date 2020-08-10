@@ -1,7 +1,6 @@
 {
   "name": "Rami",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "express-mongoose": "^0.1.0",
     "mongoose": "^5.9.27"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
