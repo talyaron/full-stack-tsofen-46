@@ -127,7 +127,7 @@ function onSaveArticle() {
         .then( data => {
             let result = data;
             alert(result.nModified);
-        })
+
 
 }
 
