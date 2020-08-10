@@ -1,4 +1,4 @@
-function addNewUser(){
+30function addNewUser(){
     console.log("aaa")
 let name = document.getElementById("name").value;
 let imageUrl = document.getElementById("imageUrl").value;
