@@ -16,11 +16,23 @@ function onUserLogIn() {
     .then(response => response.json())
         .then( data => {
             let result = data
-            console.log(result.id)
+            let userID = result._id;
+            console.log(result._id)
+
+            localStorage.setItem('twitterUserID', userID);
+            window.location.replace('/home.html');
+
         }
 
         )
 
+}
+
+
+// pass the ID to the sencond screen and navigate
+
+function getUserID() {
+    return(localStorage.getItem('twitterUserID'));
 }
 
 

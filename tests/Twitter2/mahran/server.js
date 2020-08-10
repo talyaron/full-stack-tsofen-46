@@ -5,7 +5,7 @@ const app = express()
 var bodyParser = require('body-parser')
 app.use(bodyParser.json());       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
-  extended: true
+    extended: true
 }));
 
 app.use(express.static('public'))
@@ -22,34 +22,31 @@ const twitterDB = mongoose.model('twitterDB', {
 
     username: String,
     imgURL: String
-  
-  });
+
+});
 
 // API:
-  app.post('/api/postUserlogIn', function (request, response) {
-        let vNewUser = request.body.username;
-        let vImg = request.body.imgSrc;
+app.post('/api/postUserlogIn', function (request, response) {
+    let vNewUser = request.body.username;
+    let vImg = request.body.imgSrc;
 
-        //post to DB:
-        const newUserData = new twitterDB ({
-            username : vNewUser,
-            imgURL : vImg
-        })
-
-        newUserData.save( (err, product) => {
-            console.log(product);
-            response.send(product);
-        }
-        )
-        //save to DB
-        newUserData.save().then( () => 
-
-                //send response
-             response.send()
-        );
+    //create Instance of twitterDB
+    const newUserData = new twitterDB({
+        username: vNewUser,
+        imgURL: vImg
+    })
+    //update user value
+    let filter = { username: vNewUser }
+    let update = { imgURL: vImg }
+    newUserData.save().then(doc => {
+        response.send(doc);
+        console.log(doc);
+    })
 
 
-  })
+
+
+})
 
 
 
