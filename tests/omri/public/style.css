@@ -1,0 +1,37 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #494d5f;
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+
+form input {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+form input:focus {
+    outline: none;
+}
+
+form button {
+    padding: 1rem;
+    font-size: 1rem;
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="Tstyle.css">
+</head>
+<body>
+
+    
+    <div class="side-main">
+        <i class="fab fa-twitter fa-7x"></i>
+    </div>
+    
+    <div class="side-right">
+        <div class="search-form">
+            <form action="">
+                <label for=""><i class="fas fa-search"></i></label>
+                <input type="text" name="" id="" value="Search Twitter">
+                
+            </form>
+            
+        </div>
+
+
+    <div class="side-left">
+        <ul class="menu">
+              <li class="menu-item">
+                  <a class="menu-link active">
+                      <i class="fas fa-dove"></i>
+                  </a>
+              </li>
+  
+              <li class="menu-item">
+                  <a class="menu-link">
+                          <i class="fas fa-home"></i>
+                  </a>
+              </li>
+              <li class="menu-item">
+                  <a class="menu-link">
+                          <i class="fas fa-hashtag"></i>
+                  </a>
+              </li>
+              <li class="menu-item">
+                      <a class="menu-link">
+                          <i class="fas fa-bell"></i>
+                      </a>
+              </li>
+              <li class="menu-item">
+                      <a class="menu-link">
+                          <i class="fas fa-envelope"></i>
+                      </a>
+              </li>
+              <li class="menu-item">
+                      <a class="menu-link">
+                          <i class="fas fa-bookmark"></i>
+                      </a>
+              </li>
+        
+              <li class="menu-item">
+                  <a class="menu-link">
+                          <i class="fas fa-sticky-note"></i>
+                  </a>
+              </li>
+
+  
+              <li class="menu-item">
+                  <a class="menu-link">
+                      <i class="fas fa-ellipsis-h"></i>
+                  </a>
+              </li>
+  
+              <li class="menu-item ">
+                   <a class="menu-link add-twit">
+                      <i class="fas fa-feather-alt"></i>
+                  </a>
+              </li>
+        </ul>
+       </div>
+      </div>
+
+
+    <div id="root"></div>
+    <script>
+     
+               fetch('/menu')
+                   .then(res => res.json())
+                   .then(data => {
+                       let menuStr = '';
+       
+                       console.log(data)
+       
+                       data.forEach(item => {
+                           
+                           menuStr += `<p> ${item.Username} <br> <img src=" ${item.photo}"><br></img> </p>`
+              
+                       });
+       
+       
+                       const root = document.getElementById('root');
+                       root.innerHTML = menuStr;
+                   })
+    
+       
+           </script>
+
+</body>
+</html>

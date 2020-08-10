@@ -10,6 +10,22 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 
 app.use(express.static('public'))
 
+const url = "mongodb+srv://rami30080:mxzmxz123@cluster0.halwb.mongodb.net/Rami2";
+
+
+const mongoose = require('mongoose');
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
+
+const User = mongoose.model('Rami', {
+    ID: Number,
+    TOPIC: String,
+    URL: String,
+    PRICE: Number
+});
+
+
+
+
 let items=[
     {ID:'5',TOPIC:'good flower',URL:'https://gardenseedsmarket.com/images/watermarked/5/detailed/54/010516.jpg',PRICE:'5'},
     {ID:'2',TOPIC:'not bad flower',URL:'img/1.jpg',PRICE:5},
@@ -17,69 +33,69 @@ let items=[
     {ID:'4',TOPIC:'perfect flower',URL:'img/3.jpg',PRICE:'5'}
 ]
 
-
 app.get('/api/items', (req, res) => {
-    res.send(items)
+    User.find().then(docs=>{res.send(docs)})
 })
 
 app.put('/api/update/price', (req, res, next) => {
     const {id , val} = req.body;
-    items.forEach(element => {
-        if(element.ID==id){
-            element.PRICE=val;
+    User.updateOne({ID: id} ,{ $set: { PRICE: val } },).then((result) => {
+        if(result.n){
+            res.send({success:true})
         }else{
-            res.send(false)
+            res.send({success:false})
         }
-    });
-    res.send(true)
+    }
+    
+    );
+    
 })
 
 app.put('/api/update/topic', (req, res, next) => {
     const {id , val} = req.body;
-    items.forEach(element => {
-        if(element.ID==id){
-            element.TOPIC=val;
+    User.updateOne({ID: id} ,{ $set: { TOPIC: val } },).then((result) => {
+        if(result.n){
+            res.send({success:true})
         }else{
-            res.send(false)
+            res.send({success:false})
         }
-    });
-    res.send(true)
+    }
+    
+    );
 })
 
 app.put('/api/update/img', (req, res, next) => {
     const {id , val} = req.body;
-    items.forEach(element => {
-        if(element.ID==id){
-            element.URL=val;
+    User.updateOne({ID: id} ,{ $set: { URL: val } },).then((result) => {
+        if(result.n){
+            res.send({success:true})
         }else{
-            res.send(false)
+            res.send({success:false})
         }
-    });
-    res.send(true)
+    }
+    
+    );
 })
 
 app.delete('/api/Deleteitems',(req,res)=>{
     const {id} = req.body;
-    var found = 0;
-    items.forEach((elem,index) => {
-        if(elem.ID==id)
-        {
-            items.splice(index, 1)
-            found = 1;
+    User.deleteOne({ID:id}).then((result)=>{
+        if(result.n){
+            res.send({success:true})
+        }else{
+            res.send({success:false})
         }
-    });
-    if(found){
-        res.send(true);
-        console.log("im returning true")
-    }else{
-        res.send(false);
-    }
+    })
 })
+
+
+
+
 
 app.post('/api/Additem',(req,res)=>{
     const {url,topic,price} = req.body;
-    items.push({ID:Date.now(),TOPIC:topic,URL:url,PRICE:price})
-    console.log(items.slice(-1).pop())
+    const temp = new User({ ID:Date.now(),TOPIC:topic ,URL:url,PRICE:price});
+    temp.save().then(() => console.log('meow Add'));
     res.send({success:true})
 })
 

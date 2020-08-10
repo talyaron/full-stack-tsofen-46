@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="website" id="website">
+        <div class="left">
+            <img src="css/twitter.png" >
+            <br><br>
+            <div id="buttons">
+            <button id="homebutton"><img src="css/home.png" width="20px" height="20px" >  Home</button><br><br>
+            <button id="explorebutton"># Explore</button><br><br>
+            <button id="notificationbutton"><img src="css/bell.png" width="20px" height="20px">  Notifications </button><br><br>
+            <button id="messagesbutton"><img src="css/message.png" width="20px" height="20px">  Messages</button><br><br>
+            <button id="bookmarkbutton"> <img src="css/bookmark.png" width="20px" height="20px">  Bookmarks</button><br><br>
+            <button id="listsbutton"> <img src="css/lists.png" width="20px" height="20px">  Lists</button><br><br>
+            <button id="profilebuttn"> <img src="css/profile.png" width="20px" height="20px">  Profile</button><br><br>
+            <button id="morebutton"><img src="css/more.png" width="20px" height="20px">  More</button><br><br><br>
+            <button id="tweetbutton">Tweet</button>
+        </div>
+        </div>
+
+        <div class="middle"> 
+            <div class="homeheadre">
+               <h1>Home</h1>
+             </div>
+             <div id="tweeting">
+             <div id="usertweet">
+             <div id="userimg"></div>
+             <input type="text" id="tweet" placeholder="Whats happening?">
+            </div>
+            <button id="tweetb" onclick="savetweet(event)">Tweet</button>
+            <br><br>
+             </div>
+
+             <div id="infotweeting"></div>
+     
+            
+        </div>
+      
+
+
+        <!-- right side -->
+
+        <div class="right">
+            <input type="text" id="search"  placeholder=" Search Twitter">
+<br><br>
+            <div class="theards">
+                <div id="threadheader">
+                    <h2>Trends for you</h2>
+                    <img src="css/setting.png" alt="" width="20px" height="20px" >
+                </div>
+           
+
+            <div class="thearddata">
+              <div id="rthd">
+                 <select></select>
+                 
+              </div>
+              <div id="lthd">
+                <p>trending in isreal</p>
+                <h4>עמית סיגל</h4>
+                <p>1293 Tweet</p>
+              </div>
+            </div>
+
+            <div class="thearddata">
+                <div id="rthd">
+                   <select></select>
+                   <h4>bibi</h4>
+                </div>
+                <div id="lthd">
+                  <p>trending in isreal</p>
+                  <p>1333 Tweet</p>
+                </div>
+              </div>
+
+            <div>
+
+            </div>
+
+            <div class="theardend">
+                <br>
+                <a href="#"> Show more </a>
+                 <br><br>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="login" id="login">
+        <br><br><br><br>
+        <label for="profileimg">Enter your IMG:</label><br>
+        <input type="text" id="profileimg" placeholder="profile img"><br><br>
+        <label for="username">Enter your Name:</label><br>
+        <input type="text" id="username" placeholder="Name"><br><br><br>
+        <button id="loginbutton" onclick="login(event)">LOGIN</button>
+    </div>
+
+
+    <script src="function.js"></script>
+</body>
+</html>
