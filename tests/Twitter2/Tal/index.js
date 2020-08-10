@@ -17,11 +17,12 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const User = mongoose.model('User', {
     name: String,
-    imageUrl: String
+    imgUrl: String
 }); 
 
 app.post('/api/login',(req, res)=>{
     const {name, imgUrl} = req.body;
+    console.log(name, imgUrl)
     
     let user  = User({name, imgUrl})
     user.save().then(doc=>{
@@ -29,7 +30,14 @@ app.post('/api/login',(req, res)=>{
         res.send({login:true, id:doc._id})
     })
 })
-
+app.post('/api/getUser',(req,res)=>{
+    const {id} = req.body;
+    console.log(id)
+    User.findOne({_id:id}).then(doc=>{
+        res.send({user:doc})
+    })
+   
+})
 const port = process.env.PORT || 3000;
 
 app.listen(port, () => { console.log("App is Listening to",port) })
