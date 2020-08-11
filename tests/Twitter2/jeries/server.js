@@ -24,9 +24,9 @@ const tweets = mongoose.model('tweets', {
 });
 
 
-app.get('/registerAdmin', (req, res) => {
+/*app.get('/registerAdmin', (req, res) => {
     res.send(userRegister)
-})
+})*/
 
 app.post('/addAdmin', (req, res) => {
     const { body } = req;
@@ -37,7 +37,6 @@ app.post('/addAdmin', (req, res) => {
                 console.log(doc)
                 res.send({login:true, id:doc._id})
             })
-        
   })
 
   app.post('/api/getUser',(req,res)=>{
@@ -46,22 +45,22 @@ app.post('/addAdmin', (req, res) => {
     userRegister.findOne({_id:id}).then(doc=>{
         res.send({user:doc})
     })
-   
 })
 
 app.get('/api/data', (req, res) => {
     tweets.find({},function(err,tweets){
         console.log(tweets)
-    res.send(tweets) 
+        
+        res.send(tweets) 
     })
 })
+
 app.post('/addData', (req, res) => {
     const { body } = req;
     console.log(body)
     const { text } = body;
      let newpost=new tweets ( { tweet  : text } )
      newpost.save().then(() => console.log("Added"));
-        
   })
   
 const port=process.env.PORT || 3000;
