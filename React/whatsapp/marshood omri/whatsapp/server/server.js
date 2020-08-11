@@ -42,6 +42,7 @@ app.use(express.static(path.join(__dirname,"public")));
 
 
     app.get('/get/chats',function(req,res) {
+        console.log("Ayoub")
         Twitt.find({}, function (err, doc) {
             res.send(doc)
           })

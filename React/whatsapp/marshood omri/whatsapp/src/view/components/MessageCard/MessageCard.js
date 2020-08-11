@@ -3,6 +3,8 @@ import './MessageCard.css';
 
 function MessageCard(props) {
     const { msgInfo } = props;
+
+
     console.log("dsefse", msgInfo)
     return (
         <div className='MessageCard'>
