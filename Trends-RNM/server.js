@@ -51,9 +51,9 @@ app.post('/api/login',(req, res)=>{
     user.save().then(doc=>{
         console.log(doc)
         res.send({login:true, id:doc._id});
-        // trenddata.updateMany({},{ID:doc._id}).then(doc=>{
+        trenddata.updateMany({},{ID:doc._id}).then(doc=>{
     
-        // })
+        })
     })
     
 })
