@@ -1,0 +1,10 @@
+.userForm{
+    text-align: center;
+    font-size: medium;
+    border: medium;
+    border-width: 2px;
+    border-color: black;
+}
+.fimg, .fname{
+    padding-bottom: 10px;
+}

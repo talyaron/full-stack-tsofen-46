@@ -264,3 +264,7 @@ h1{
 #tweeting{
     border-bottom: 1px solid teal;
 }
+#timg{
+    border-radius: 50%;
+    margin-left: 10px;
+}

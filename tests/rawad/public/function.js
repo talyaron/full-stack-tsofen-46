@@ -60,12 +60,34 @@ function savetweet(event){
      })
 
 
+refresh();
 
 }
 
-// function refresh(){
-//     const data = document.getElementById('infotweeting');
-//     let datahtml='';
-//     datahtml += `<img id="batman" src="${img}" width="60px" <p>${} <br>
-//                   `
-// }
+function refresh(){
+    const Getdata = new  Promise((resolve,reject)=>{
+        fetch('/twitter')
+                .then(res => res.json())
+                .then(data => {
+                    let tweetHTML = '';
+                    
+                    data.forEach(tweetimg=>{
+                      
+                        tweetHTML += `<P  style="font-size: 30px" > 
+                            <img id="timg" src=${tweetimg.img} width="100px" height="100px"> ${tweetimg.name}  </p>`;
+                        
+                });
+                     
+                    
+                    const infotweeting = document.getElementById('infotweeting');
+                    infotweeting.innerHTML = tweetHTML;
+                })
+
+            
+
+    });
+    return Getdata;
+
+}
+
+refresh();
