@@ -15,6 +15,8 @@ const url = "mongodb+srv://lina:linanijem1@cluster0.mzrxp.mongodb.net/test";
 const mongoose = require('mongoose');
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
+
+//Model with capital letter
 //Table
 const account = mongoose.model('account', {
   name: String,
