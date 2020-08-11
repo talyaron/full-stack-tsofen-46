@@ -18,8 +18,6 @@ const getMenu = new Promise((resolve, reject) => {
   });
  
 
-
-
 (async()=>{
     const menu= await getMenu;
     let productsList = "";
@@ -48,10 +46,10 @@ async function sortList(){
     menu.forEach(item => {
         if(item.price>5000){
         productsListSorted += `<div class="container"> <div class ="cart-image "><img src="${item.name}"></img></div>
-    <div class="data"> <h6> ${item.type} </h6>  <h6> ${item.color} </h6> <h4> Price:${item.price}</h4>
-    <input id="${item.ID}" type="text" placeholder="price" class="enterPrice" style="width:60px; position:absolute; top:58px; left: 90px; ">
-    <button onclick="update('${item.ID}')" class="updatePrice">Update price</button>
-    <button onclick="deleteItem('${item.ID}')" class="deleteItem" >Delete Item</button></div>
+         <div class="data"> <h6> ${item.type} </h6>  <h6> ${item.color} </h6> <h4> Price:${item.price}</h4>
+         <input id="${item.ID}" type="text" placeholder="price" class="enterPrice" style="width:60px; position:absolute; top:58px; left: 90px; ">
+         <button onclick="update('${item.ID}')" class="updatePrice">Update price</button>
+         <button onclick="deleteItem('${item.ID}')" class="deleteItem" >Delete Item</button></div>
        
     </div>`}
        
