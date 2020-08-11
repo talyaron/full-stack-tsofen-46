@@ -28,7 +28,7 @@ function App() {
       <Nav name={name} year={1999} />
       <h1>{name}</h1>
       <input type='text' />
-      <Button />
+      <Button style={{}} />
       <div className='news-wrapper'>
         {
           news.map((newsItem, index) => {
