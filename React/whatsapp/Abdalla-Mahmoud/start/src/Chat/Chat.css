@@ -1,0 +1,30 @@
+.Chat{
+    border-radius: 5px;
+    padding: 5px;
+    width: 1000px;
+    
+    display: flex;
+    background-color: lightgrey;
+    border: 15px solid green;
+    grid-template-columns: repeat(1,10fr);
+    display: grid;
+    
+}
+.Chat img{
+    margin-right: 50px;
+    width: 200px;
+    border-radius: 50%;
+      
+}
+
+.Chat p{
+   font-size: 30px;
+}
+
+  #txt{
+text-align: left;
+  }
+
+  .tog{
+    display: flex;
+  }
