@@ -8,8 +8,8 @@ const mongoose = require('mongoose');
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const Students = mongoose.model('Students', {
-    name: String,
-    age: Number
+      name: String ,
+      age: Number
 });
 
 const jeries = new Students({ name: 'jeries', age: 23 });
