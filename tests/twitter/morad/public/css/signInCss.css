@@ -16,12 +16,16 @@ body {
 }
 
 .formLabels {
+    width: 30%;
+    height: 10%;
     font-size: 22px;
     font-style: bold;
 }
 
 .formInputs {
     border-radius: 8px;
+    width: 60%;
+    height: 10%;
     border: blue solid 4px;
 }
 
@@ -30,6 +34,16 @@ body {
     border: blue solid 3px;
     background-color: black;
     color: white;
+    text-align: center;
     font-size: 25px;
+    width: 40%;
+    height: 10%;
     font-style: bold;
+}
+
+#formLogIn {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: auto;
 }

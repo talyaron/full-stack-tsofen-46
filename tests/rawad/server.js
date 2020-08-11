@@ -59,12 +59,24 @@ app.put('/login',(req,res)=>{
    console.log(tweetdata.tweet);
 
   
-    // const save = new twitterdata({   img:`${tweetdata.userimg}`,  name:`${tweetdata.user}`,info:`${tweetdata.tweet}`})
-    // save.save().then(()=>console.log('doneee'));
+    const save = new twitterdata({   img:`${tweetdata.userimg}`,  name:`${tweetdata.user}`,info:`${tweetdata.tweet}`})
+    save.save().then(()=>console.log('doneee'));
 
   })
 
 
+  
+  app.get('/twitter',(req,res)=>{
+    setTimeout(() => {
+     // res.send(Shopitems)
+     twitterdata.find({},function(err,docs){
+      res.send(docs)
+
+     
+     })
+
+   }, 1000);
+})
 
 
 
