@@ -32,18 +32,24 @@ function getUserID() {
 }
 
 function getUser() {
-    const userID = getUserID();
 
-    fetch('/api/getUser', {
-        method: 'POST',
-        body: JSON.stringify({ id: userID }),
-        headers: {
-            'Content-Type': 'application/json'
-        }
-    }).then(res => res.json())
-        .then(data => {
-            console.log(data)
+    return new Promise((resolve, reject) => {
+        const userID = getUserID();
+
+        fetch('/api/getUser', {
+            method: 'POST',
+            body: JSON.stringify({ id: userID }),
+            headers: {
+                'Content-Type': 'application/json'
+            }
         })
+            .then(res => res.json())
+            .then(data => {
+                resolve(data)
+            })
+            .catch(err=>reject(err))
+
+    })
 
 }
-console.log();
+
