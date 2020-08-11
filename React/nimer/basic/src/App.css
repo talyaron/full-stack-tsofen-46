@@ -2,36 +2,18 @@
   text-align: center;
 }
 
-body{
-  margin-top: 0px;
-}
-
-div h1 {
-  text-align: center;
-  color: #1b8f47;
-}
-.btn-group{
-  width: 100%;
-  position: fixed;
-  bottom: 0px;
-}
-.btn-group button{
-  width: 20%;
-  height: 50px;
-}
-
-.btn-group img{
-  width :25px;
-  height: 25px;
-}
 .App-logo {
-  height: 40vmin;
+  height: 50vmin;
   pointer-events: none;
 }
+  
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 120ms linear; 
+   
+    
   }
 }
 
@@ -58,5 +40,3 @@ div h1 {
     transform: rotate(360deg);
   }
 }
-
-

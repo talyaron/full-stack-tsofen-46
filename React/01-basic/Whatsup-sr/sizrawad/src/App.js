@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import {Search} from './view/componets/Search/search';
@@ -9,7 +8,8 @@ import Cards from './view/componets/Cards/cards'
 const message = [
   { name: 'sizar', img: 'https://cdn.getyourguide.com/img/tour/5c73fd9be1c30.jpeg/146.jpg' ,massege:'hi' }, 
   { name: 'rawad', img: 'https://2.bp.blogspot.com/-vvv-lJoFGMU/WPRrp0S6qaI/AAAAAAAAQCY/dRIwqy9jLs8ZnOm8kOox4VASvC_iL1vkwCLcB/s1600/inlgnz30.jpg' ,massege:'bye'},
-   { name: 'tal', img: 'https://cdn.getyourguide.com/img/tour/5c73fd9be1c30.jpeg/146.jpg',massege:'ok' }
+   { name: 'tal', img: 'https://cdn.getyourguide.com/img/tour/5c73fd9be1c30.jpeg/146.jpg',massege:'ok' },
+   { name: 'omri', img: 'https://www.football.org.il/ImageServer/GetImage.ashx?type=2&id=2941&width=240&height=305',massege:'رد' }
 
   ]
 
@@ -23,7 +23,7 @@ function App() {
      </div>
      <div className='whats-wrapper'>
          {
-           massege.map((whatsItem,index) =>{
+           message.map((whatsItem,index) =>{
              return <Cards key={index} whatsItem={whatsItem} />
            })
          }
