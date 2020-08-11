@@ -10,7 +10,20 @@ div h1 {
   text-align: center;
   color: #1b8f47;
 }
+.btn-group{
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+}
+.btn-group button{
+  width: 20%;
+  height: 50px;
+}
 
+.btn-group img{
+  width :25px;
+  height: 25px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
