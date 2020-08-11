@@ -1,0 +1,39 @@
+.headerWrapper{
+    display: grid;
+    grid-template-columns:auto auto auto;
+    grid-row: 50% 50%;
+    grid-template-areas: 
+    "name . logos"
+    "chats status calls";
+    background-color: #075E54;
+}
+.iconContainer{
+    grid-area: logos;
+    display: flex;
+   
+}
+.icons{
+    width: 20px;
+    height: 20px;
+    margin:auto;
+    justify-content: space-between;
+}
+.navigatorNames{
+color: #DCF8C6;
+text-align: center;
+}
+.whatsappWord{
+    grid-area: name;
+    color: #DCF8C6;
+    margin-left: 10px;
+}
+#chats{
+    grid-area: chats;
+    border-bottom: 1px solid white;
+}
+#status{
+    grid-area: status;
+}
+#calls{
+    grid-area: calls;
+}
