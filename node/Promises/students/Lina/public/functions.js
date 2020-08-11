@@ -5,6 +5,7 @@ function renderChampions(name) {
         fetch('/champions')
             .then(res => res.json())
             .then(champions => {
+                console.log(champions)
                 let championsStr = '';
                 champions.forEach(item => {
                     if (item.name == name) {
