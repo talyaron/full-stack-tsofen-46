@@ -1,0 +1,64 @@
+body {
+    background-color: indigo;
+}
+.container {
+
+    /* Grid Properties*/
+    display: grid;
+    grid-template-columns: 200px 200px 100px;
+    grid-template-rows: 1fr 3fr;  
+    row-gap: 10px;
+    column-gap: 10px;
+
+    grid-template-areas: 
+        "l-username l-img ."
+        "Inp-username Inp-img goBtn" ;
+
+    /* Positioning*/
+    position:fixed;
+    left: 18%;
+    top: 35%;
+
+
+
+   /* container style */
+    border-radius: 10px;
+    border: solid whitesmoke 3px;
+    background-color: indigo;
+    color: whitesmoke;
+
+    padding-left: 8rem;
+    padding-right: 8rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    }
+
+    #l-username {
+    grid-area: l-username;
+    width: 100px;
+    }
+
+    #l-img {
+    grid-area: l-img;
+    }
+
+    #Inp-username {
+    grid-area: Inp-username;
+    }
+    #Inp-img {
+    grid-area: Inp-img;
+
+    
+        }
+    #goBtn {
+        grid-area: goBtn;
+        background-color: whitesmoke;
+        border-radius: 10px;
+        border: none;
+        
+     }
+
+     #goBtn:hover {
+         background-color: rgb(166, 124, 196);
+     }
