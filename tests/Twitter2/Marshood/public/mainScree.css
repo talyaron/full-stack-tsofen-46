@@ -1,0 +1,21 @@
+body{
+    background-color: coral;
+}
+.Left_Nav{
+
+display: flex;
+ 
+flex-flow: column wrap;
+
+}
+img{
+    border-radius: 50%;
+    
+  
+}
+.TweetIMG{
+    width: 150px;
+}
+textarea {
+    resize: none;
+    }
