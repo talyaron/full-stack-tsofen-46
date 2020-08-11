@@ -1,0 +1,25 @@
+.chatItem{
+    position: relative;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-bottom: 1px solid grey ;
+    display: flex;
+    flex-flow: row-reverse;
+}
+.chatImage{
+    
+    border-radius: 50%;
+    width: 10%;
+    height: 10%;
+    padding: 10px;
+}
+.textSender{
+    text-align: center;
+    color: black;
+    font-size: 15px;
+}
+.textInfo{
+    color: black;
+    font-size: 15px;
+    font-weight: lighter;
+}
