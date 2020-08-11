@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+}
+.mainPage{
+  display: grid;
+  grid-template-columns:20vw 60vw 20vw;
+  grid-template-rows: 20vh 80vh;
+
+  grid-template-areas: ". mainHeader ."
+  ". mainChats .";
+}
+.top{
+grid-area: mainHeader;
+  }
+
+.chats{
+    grid-area: mainChats;
+  }
