@@ -1,6 +1,11 @@
 const names = [
      "Lina",
-   
+   "Micky",
+   "Abdalla",
+   "Cizar",
+   "Rami",
+   "Morad",
+   "Tima",
     "Mahmoud",
     "nimer",
    
@@ -51,4 +56,4 @@ function getRandomName(names) {
     return indexOfName;
 }
 
-randomNames(names, 3);
+randomNames(names, 2);
