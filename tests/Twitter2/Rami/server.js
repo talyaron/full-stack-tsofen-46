@@ -33,5 +33,7 @@ app.post('/api/checkuser',(req,res)=>{
     
 })
 
+app.get('/')
+
 
 app.listen(3000, () => { console.log("App is Listening") })
