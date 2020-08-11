@@ -1,0 +1,27 @@
+body {
+    background-color: aquamarine;
+    font-size: 28px;
+    color: coral;
+}
+
+.continer {
+    display: flex;
+}
+button{
+    background-color: brown;
+    font-size: larger;
+}
+.center {
+    position: fixed;
+     top: 50% ;
+    left: 50%; 
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+ }
+/* 
+ @media (max-width: 640px) {
+    .center {
+        margin-top: 0%;  
+      }
+  } */

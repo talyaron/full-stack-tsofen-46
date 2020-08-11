@@ -24,16 +24,20 @@ const name = 'Nivin';
 
 function App() {
 
+
+  //creating a state for news (with setter of state)
   const [news, setNews] = useState([]);
   const [counter, setCounter] = useState(0)
 
-  
+  //call only on first time the component loads
   useEffect(() => {
    
       fetch('/api/news')
         .then(res => res.json())
         .then(data => {
           console.log(data)
+          
+          //set state (news)
           setNews(data);
         })
    
