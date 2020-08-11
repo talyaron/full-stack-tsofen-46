@@ -10,10 +10,8 @@ async function LoginCheck() {
     await fetch("/AddUser", {
         method: "PUT",
         body: JSON.stringify({
-             
             Name:NewUser ,
             IMG:imgSrc,
-
         }),
         headers: {
             "Content-Type": "application/json",

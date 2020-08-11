@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+<body>
+ <div class="container">
+    <label id="l-username" for="Inp-username">Username</label>
+    <input type="text" name="Inp-username" id="Inp-username">
+
+    <label id="l-img" for="Inp-img">Image Src</label>
+    <input type="text" name="Inp-img" id="Inp-img">
+
+    <button id="goBtn">Go</button>
+ </div> 
+</body>
+=======
 const express = require('express')
 const app = express()
 
@@ -17,17 +30,27 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const User = mongoose.model('User', {
     name: String,
-    imageUrl: String
+    imgUrl: String
 }); 
 
 app.post('/api/login',(req, res)=>{
     const {name, imgUrl} = req.body;
+    console.log(name, imgUrl)
     
     let user  = User({name, imgUrl})
     user.save().then(doc=>{
         console.log(doc)
         res.send({login:true, id:doc._id})
     })
+})
+
+app.post('/api/getUser',(req,res)=>{
+    const {id} = req.body;
+    
+    User.findOne({_id:id}).then(doc=>{
+        res.send({user:doc})
+    })
+   
 })
 
 const port = process.env.PORT || 3000;
@@ -37,3 +60,4 @@ app.listen(port, () => { console.log("App is Listening to",port) })
 
 
 
+>>>>>>> master
