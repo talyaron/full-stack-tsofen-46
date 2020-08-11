@@ -1,0 +1,43 @@
+.chatItem{
+    position: relative;
+    margin-left: 3%;
+    margin-right: 3%;
+    border-bottom: 1px solid grey ;
+    display: flex;
+    flex-flow: row-reverse;
+    padding: 15px;
+}
+.chatImage{
+
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 15px;
+}
+.textSender{
+    margin-top: 40px;
+    text-align: center;
+    color: black;
+    font-size: 15px;
+}
+.textInfo{
+    color: black;
+    font-size: 15px;
+    font-weight: lighter;
+}
+#clock{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+#alert {
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    font-size: small;
+    border-radius: 50%;
+    text-align: center;
+    position: absolute;
+    left: 20px;
+    top: 100px;
+}

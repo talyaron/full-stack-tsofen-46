@@ -7,8 +7,8 @@
   function uid() {
     return '_' + Math.random().toString(36).substr(2, 9);
 };
-  function login(e){
- 
+  
+function login(e){
     e.preventDefault();
     const id=uid();
     const img = e.target.elements.img.value;
@@ -56,7 +56,6 @@ function getUser() {
         })
 
 }
-console.log();
 
 
 const getdata= new Promise((resolve, reject) => {
@@ -65,7 +64,7 @@ const getdata= new Promise((resolve, reject) => {
         .then(tweet => resolve(tweet))
   });
 
-  (async()=>{
+(async()=>{
     const tweets= await getdata;
     let tweetlist = "";
     tweets.forEach(item => {
@@ -78,9 +77,10 @@ const getdata= new Promise((resolve, reject) => {
     
 });
     document.getElementById("root").innerHTML = tweetlist;
+    
 
-
-})();
+})
+();
 
 function post(e){
     e.preventDefault();
