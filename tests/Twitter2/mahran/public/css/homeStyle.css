@@ -1,0 +1,54 @@
+body {
+    background-color: #191970;
+}
+
+.container {
+
+    display: grid;
+    grid-template-columns: 1fr 10fr  5fr;
+    grid-template-rows: 100%;
+
+
+    row-gap: 2px;
+
+    grid-template-areas: 
+        "sidebar main trends";
+
+
+
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    grid-area: sidebar;
+    border: solid white;
+    background-color: transparent;
+    justify-content: space-evenly;
+    justify-self: center;
+
+}
+#main {
+    grid-area: main;
+    border: solid white;
+
+}
+#trends {
+    grid-area: trends;
+    border: solid white;
+
+}
+
+
+
+.sb-btn {
+    width: 100px;
+    height:100px;
+
+}
+#sidebar i {
+    font-size: 60px;
+    color:white
+
+
+}
