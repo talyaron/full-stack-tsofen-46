@@ -1,4 +1,4 @@
-/* .App {
+.App {
   text-align: center;
 }
 
@@ -35,18 +35,4 @@
   to {
     transform: rotate(360deg);
   }
-} */
-
-
-.App{
-background-color: aquamarine;
 }
-
-.container{
-  background-color: darkgoldenrod;
-  text-align: center;
-}
-
-
-
-

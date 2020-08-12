@@ -1,0 +1,33 @@
+.InputMessageCard {
+    background-color: rgb(41, 40, 40);
+    color: white;
+    width: 600px;
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px black;
+    padding: 0px;
+    margin: 2px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 2fr ;
+    grid-template-rows: 1fr 2fr ;
+    grid-template-areas: "imgA text" "imgA text";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.img1 {
+    position: relative;
+    grid-area: imgA;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+}
+
+.formDiv {
+    position: relative;
+grid-area: text;
+}
