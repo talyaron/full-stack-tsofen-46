@@ -1,6 +1,6 @@
 
 import React from 'react';
-//import logo from './logo.svg';
+//ximport logo from './logo.svg';
 import './App.css';
 
 import {Nav,Footer, Nav2} from './view/components/Nav/Nav';
