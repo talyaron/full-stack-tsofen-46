@@ -79,6 +79,12 @@ const getJiraByStatus = async () => {
 getJiraByStatus();
 
 
+//UI Object
+// const UIObject = [
+//     {label:String, order:Number, Tasks:Array},
+//     {label:String, order:Number, Tasks:Array},
+// ]
+
 
 
 
