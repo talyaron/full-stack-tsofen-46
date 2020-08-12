@@ -2,38 +2,43 @@ import React, { useEffect, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import MessageCard from './view/components/MessageCard/MessageCard';
- import messages from './data/messages'
- //console.log(messages)
+import messages from './data/messages'
+import msginputbox from './view/components/msginput/msginput';
+//console.log(messages)
 function App() {
-   // const { msgInfo } = props;
-    const [tweet, setTweet] = useState([]);
+  // const { msgInfo } = props;
+  const [tweet, setTweet] = useState([]);
 
-    useEffect(() => {
+  useEffect(() => {
 
-        fetch('/get/chats')
-            .then(res => res.json())
-            .then(data => {
-                //set state (news)
-                console.log(data)
-                setTweet(data);
-            })
-    }, [])
+    fetch('/get/chats')
+      .then(res => res.json())
+      .then(data => {
+        //set state (news)
+        console.log(data)
+        setTweet(data);
+      })
+  }, [])
   return (
-    <body>
-    <div className="App">
-    <h1>Fake WhatsApp (^_*) </h1>
-
-    <div className='msg-wrapper'>
+  
+      <div className="App">
+        <h1>Fake WhatsApp (^_*) </h1>
+        <div className='msg-wrapper'>
+          {
+            tweet.map((newsItem, index) => {
+              return <MessageCard key={index} msgInfo={newsItem} />
+            })
+          }
+        </div>
+        <p> Send Message: </p>
         {
-          messages.map((tweet, index) => {
-            return <MessageCard key={index} msgInfo={tweet} />
-          })
-
+        msginputbox()
+        
+        
         }
       </div>
-
-    </div></body>
+       
+     
   );
 }
-
 export default App;
