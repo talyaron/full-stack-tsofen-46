@@ -14,14 +14,14 @@ function MessageCard(props) {
 
                     <p className='msgname'>{msgInfo.name}</p>
                     <div className='RT'>
-                        {checkMsg(msgInfo.received,msgInfo.text)}
+                        {checkMsg(true,msgInfo.Twitt)}
                         {/* <p className='msgtext'><img src="https://img.icons8.com/small/16/000000/double-tick.png" />    {"     "}{msgInfo.text}</p> */}
                     </div>
                 </div>
             </div>
 
             <div className='divtime'>
-                <p className='msgtime'>{msgInfo.timeReceived}</p>
+                <p className='msgtime'>{'23:10'}</p>
             </div>
 
         </div>
