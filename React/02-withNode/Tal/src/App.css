@@ -1,0 +1,63 @@
+body {
+  padding: 20px;
+  background: rgb(124,56,56);
+  background: linear-gradient(90deg, rgba(124,56,56,1) 0%, rgba(236,236,236,1) 35%, rgba(152,31,31,1) 100%);
+
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+  animation: rotate 1s linear 0s infinite alternate forwards;
+}
+
+/* @keyframes rotate {
+  from {
+   
+   
+    background: linear-gradient(90deg, rgba(124,56,56,1) 0%, rgba(236,236,236,1) 35%, rgba(152,31,31,1) 100%);
+  }
+  to {
+    
+    
+    background: linear-gradient(180deg, rgba(124,56,56,1) 0%, rgba(236,236,236,1) 35%, rgba(152,31,31,1) 100%);
+  }
+} */
+
+.App {
+  text-align: center;
+}
+
+.wow {
+  color: chocolate;
+}
+
+.news-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+@media only screen and (max-width: 600px) {
+  .news-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+button {
+  display: flex;
+  align-items: center;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px;
+  transition: 200ms all;
+}
+
+button:hover {
+  background-color: rgb(201, 201, 201);
+}
+button:active{
+  background-color: rgb(163, 162, 162);
+  box-shadow: 4px 4px 12px gray;
+}
+
+button img {
+  width: 20px;
+  margin-right: 10px;
+}

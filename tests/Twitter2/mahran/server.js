@@ -25,7 +25,11 @@ const twitterDB = mongoose.model('twitterDB', {
 
 });
 
-// API:
+/*
+* API:
+*/
+
+// User Login
 app.post('/api/postUserlogIn', function (request, response) {
     let vNewUser = request.body.username;
     let vImg = request.body.imgSrc;
@@ -43,6 +47,18 @@ app.post('/api/postUserlogIn', function (request, response) {
         console.log(doc);
     })
 
+//Get Active User in Home Screen
+app.post('/api/getUser', function(request, response) {
+    let id = request.body.userID;
+    twitterDB.findById(id, (err, res) => {
+        response.send(res);
+        console.log(res);
+    })
+
+
+}
+
+)
 
 
 

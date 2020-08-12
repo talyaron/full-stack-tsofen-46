@@ -1,12 +1,16 @@
 body {
-    background-color: indigo;
+    background-color: white;
+    background-color: #7FDBFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    
 }
 .container {
 
     /* Grid Properties*/
     display: grid;
     grid-template-columns: 200px 200px 100px;
-    grid-template-rows: 1fr 3fr;  
+    grid-template-rows: 1fr 2.5fr;  
     row-gap: 10px;
     column-gap: 10px;
 
@@ -18,14 +22,17 @@ body {
     position:fixed;
     left: 18%;
     top: 35%;
+   
 
 
 
    /* container style */
     border-radius: 10px;
-    border: solid whitesmoke 3px;
-    background-color: indigo;
-    color: whitesmoke;
+    border: none;
+    
+
+  
+  
 
     padding-left: 8rem;
     padding-right: 8rem;
@@ -37,17 +44,21 @@ body {
     #l-username {
     grid-area: l-username;
     width: 100px;
+    color: white;
     }
 
     #l-img {
     grid-area: l-img;
+    color: white;
     }
 
     #Inp-username {
     grid-area: Inp-username;
+    border: solid white;
     }
     #Inp-img {
     grid-area: Inp-img;
+    border: solid white;
 
     
         }
@@ -56,9 +67,11 @@ body {
         background-color: whitesmoke;
         border-radius: 10px;
         border: none;
+        color: #7FDBFF;
         
      }
 
      #goBtn:hover {
-         background-color: rgb(166, 124, 196);
+         background-color: #0074D9;
+
      }

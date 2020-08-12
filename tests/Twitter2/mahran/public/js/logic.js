@@ -23,16 +23,37 @@ function onUserLogIn() {
             window.location.replace('/home.html');
 
         }
-
         )
 
 }
 
 
-// pass the ID to the sencond screen and navigate
+// receive the ID from the localStorage
 
 function getUserID() {
     return(localStorage.getItem('twitterUserID'));
+}
+
+// get the logged In user Details
+
+function getUser() {
+    const userID = getUserID();
+    fetch('/api/getUser', {
+        method: 'POST',
+        body: JSON.stringify ({
+            userID            
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+            
+        }
+
+    })
+    .then(res => res.json())
+    .then(data => {
+        let result = data;
+        console.log(result);
+    })
 }
 
 
