@@ -1,0 +1,61 @@
+.MessageCard {
+    background-color: rgb(41, 40, 40);
+    color: white;
+     width: 600px;
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px black;
+    padding: 0px;
+    margin: 2px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "imgA name time" 
+    "imgA text text";
+    display: flex;
+    flex-direction: row;
+     justify-content: space-between;
+}
+
+.MessageCard div {
+    margin: 20px;
+    gap: 10px;
+}
+
+.imgM {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* top: 20px; */
+}
+
+.MessageCard p {
+    padding: 10px;
+}
+
+.imgdiv {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    grid-area: imgA;
+}
+
+.divmsginfo {
+    position: relative;
+    grid-area: name;
+    top: -30%;
+    left: -10%;
+}
+
+.divtime {
+    grid-area: time;
+}
+.msgtime{
+ opacity: 0.3;   
+}
+ .msgtext{
+    opacity: 0.75+;   
+
+ }
