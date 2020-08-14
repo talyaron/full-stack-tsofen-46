@@ -129,10 +129,6 @@ app.get('/api/getDeletedJiras', function (request, response) {
 
 
 
-
-
-
-
 const port = process.env.PORT || 3000
 app.listen(port, () => { console.log("App is Listening on port", port) })
 
