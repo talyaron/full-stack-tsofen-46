@@ -3,14 +3,14 @@ const names = [
    "Micky",
    "Abdalla",
    "Cizar",
-   "Rami",
-   "Morad",
+  
+   
    "Tima",
     "Mahmoud",
     "nimer",
    
     "jeries",
-    "rawad",
+    "Saleh",
     "omri",
    
  
