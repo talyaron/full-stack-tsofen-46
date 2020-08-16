@@ -1,0 +1,25 @@
+.open-tasks-table {}
+
+.open-tasks-title {
+    color: #0049b7;
+}
+
+.open-tasks-title h3 {
+    margin-bottom: 1rem;
+    font-size: 2.4rem;
+}
+
+
+
+
+th {
+    font-size: 1.2rem;
+}
+
+td {
+    font-size: 1.2rem;
+}
+
+.jiraname-column {
+    font-size: 1rem;
+}
