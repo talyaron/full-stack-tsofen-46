@@ -5,9 +5,9 @@ import './Box.css';
 function Box(props) {
     const [name, setName] = useState('name');
     const [edit, setEdit] = useState(false);
-    const { number } = props
+    const { number, setCounter, counter } = props
     return (
-        <div className={isEven(number) ? 'box even' : 'box odd'}>
+        <div onMouseOver={()=>{setCounter(counter +1)}} className={isEven(number) ? 'box even' : 'box odd'}>
             <div onClick={()=>{setEdit(!edit)}}>{number}</div>
             {edit ?
                 <input type='text' placeholder={name} onBlur={e=>{
