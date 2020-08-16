@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 
@@ -16,16 +16,24 @@ function App() {
 
   ]
 
+  const [myArray, setMyArray] = useState([])
+
   return (
-    <div>
+    <div className="all-wrapper">
     <div className="message-wrapper">
       {
         players.map((player, index) =>{
-          return <Box key={index} player={player}/>
+          return <Box key={index} player={player} setMyArray={setMyArray} myArray={myArray} />
         })
       }
     </div>
-    <div className="updated-boxes"></div>
+    <div className="updated-boxes">
+      {
+        myArray.map((item,index)=>{
+            return <img src={item.url} alt='player' key={index}></img>
+        })
+      }
+    </div>
     </div>
 
 
