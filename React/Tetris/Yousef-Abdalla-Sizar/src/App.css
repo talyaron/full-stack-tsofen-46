@@ -4,5 +4,52 @@ body{
 
 .message-wrapper{
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4,1fr);
+  margin-bottom: 5px;
+}
+
+
+
+.ronaldo{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-areas: "ronaldo . . .";
+  margin-bottom: 5px;
+}
+
+.ronaldo img{
+  grid-area: ronaldo;
+}
+
+.messi{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-areas: ". messi . .";
+  margin-bottom: 5px;
+}
+
+.messi img{
+  grid-area: messi;
+}
+
+.ibra{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-areas: ". . ibra .";
+  margin-bottom: 5px;
+}
+
+.ibra img{
+  grid-area: ibra;
+}
+
+.ramos{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-areas: ". . . ramos";
+  margin-bottom: 5px;
+}
+
+.ramos img{
+  grid-area: ramos;
 }
