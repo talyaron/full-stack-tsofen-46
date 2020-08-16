@@ -1,6 +1,6 @@
 //UI Object
 const UIObject = [
-    {label:String, order:Number, Tasks:Array},
+    {label:String, order:Number, Tasks:Array}, //column, label: "week 1", order: [Taks, Task ,Task] for sorting purpose, 
     {label:String, order:Number, Tasks:Array},
 ]
 
