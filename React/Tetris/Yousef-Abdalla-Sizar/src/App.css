@@ -9,10 +9,45 @@ body{
 
 .all-wrapper{
   display: grid;
-  grid-template-rows: auto auto;
 }
 
-.updated-boxes{
+
+.ronaldo{
   display: grid;
-  grid-template-areas: "";
+  grid-template-columns: auto auto auto auto;
+  grid-template-areas: "ronaldo . . .";
+}
+
+.ronaldo img{
+  grid-area: ronaldo;
+}
+
+.messi{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-areas: ". messi . .";
+}
+
+.messi img{
+  grid-area: messi;
+}
+
+.ibra{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-areas: ". . ibra .";
+}
+
+.ibra img{
+  grid-area: ibra;
+}
+
+.ramos{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-areas: ". . . ramos";
+}
+
+.ramos img{
+  grid-area: ibra;
 }
