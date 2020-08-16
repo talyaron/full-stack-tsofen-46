@@ -1,0 +1,19 @@
+.messages{
+   width :50%;
+    height: 30px;
+    margin: auto;
+    border: 2px solid green;
+}
+
+.me{
+    background-color: rgb(93, 212, 89);
+    width: 123px; margin-top: 5px;
+}
+
+.notme{
+    background-color: rgb(235, 235, 238);
+    width: 123px;
+    margin-top: 5px;
+    text-align: right;
+    margin-left: 50%;
+}
