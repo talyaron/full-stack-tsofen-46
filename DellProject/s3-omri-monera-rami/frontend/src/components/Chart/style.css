@@ -1,0 +1,27 @@
+.chart {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.chart-inputs {
+    display: flex;
+}
+
+.selectInput {
+    margin-right: 1rem;
+}
+
+.selectInput select {
+    padding: 1rem;
+}
+
+.chart-content span {
+    color: red;
+    font-size: 3rem;
+}
+
+.jira-item {
+    color: green;
+    font-size: 2rem
+}
