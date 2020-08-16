@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const url = "mongodb+srv://tal2:cFjgmJTT9b42Aoin@tal-test1-m39if.mongodb.net/test";
+const url = "mongodb+srv://TaBs:TaBs1998!!@cluster0.yl4n3.mongodb.net/test?authSource=admin&replicaSet=atlas-gm677r-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true";
 
 
 const mongoose = require('mongoose');
