@@ -17,13 +17,15 @@ function App() {
   ]
 
   return (
+    <div>
     <div className="message-wrapper">
       {
         players.map((player, index) =>{
           return <Box key={index} player={player}/>
         })
       }
-      
+    </div>
+    <div className="updated-boxes"></div>
     </div>
 
 
