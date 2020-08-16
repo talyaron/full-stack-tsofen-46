@@ -28,7 +28,7 @@
  .msg-wrapper {
     position: relative;
    text-align: center;
-   left: 20%;
+   /* left: 20%; */
  }
 
  .App-header {

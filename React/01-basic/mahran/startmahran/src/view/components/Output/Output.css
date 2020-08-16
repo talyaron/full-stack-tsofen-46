@@ -1,0 +1,37 @@
+.Resultcontainer {
+
+
+        display: grid;
+ 
+        grid-template-columns: 1fr 10fr;
+        grid-template-rows: 1fr 10fr;
+        grid-template-areas:
+            "image username"
+            "userHistory userHistory";
+
+        column-gap: 05.rem;
+        row-gap: 0.5rem;
+        width:40%;
+        
+    
+    }
+    
+    
+    
+    #usernameField {
+      grid-area: username;
+      background-color: yellow;
+
+    
+    }
+    
+    #imgField {
+      grid-area: image;
+      width: 50px;
+      height: 50px;
+    }
+    
+    #userHistory {
+      grid-area: userHistory;
+    background-color: aqua;
+    }
