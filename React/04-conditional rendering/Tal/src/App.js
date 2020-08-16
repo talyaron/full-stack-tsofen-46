@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div>
-      <h1>Hovers: {counter}</h1>
+      <h1 style={{background:'red'}}>Hovers: {counter}</h1>
 
       <Box number={1} setCounter={setCounter} counter={counter} />
       <Box number={2} setCounter={setCounter} counter={counter} />
