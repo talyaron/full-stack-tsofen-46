@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+ #input {
+  width: 100px;
+  height: 40px;
+  position: absoluet;
+  left: 20%;
+  top: 20%;
+  background-color: cadetblue;
+}
+#sendButton {
+  width: 50px;
+  height: auto;
+  position: absoluet;
+  
+  background-color: cadetblue;
+}
+
+.container {
+  height: 50px;
+  display:flex;
+  justify-content: center;
+  background-color: bisque ;
+
+}
+
+#output{
+  align-content: center;
+}
+
+
+
+
+ 
