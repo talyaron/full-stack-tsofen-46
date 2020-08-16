@@ -31,8 +31,8 @@ function App() {
 
       <div className="chats">
         {
-          chatList.map((item) => {
-            return <ChatBar newItem={item} />
+          chatList.map((item, index) => {
+            return <ChatBar key={index} newItem={item} />
           })
         }
       </div>
