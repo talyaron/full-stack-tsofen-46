@@ -4,18 +4,17 @@ body{
 
 .message-wrapper{
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4,1fr);
+  margin-bottom: 5px;
 }
 
-.all-wrapper{
-  display: grid;
-}
 
 
 .ronaldo{
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4,1fr);
   grid-template-areas: "ronaldo . . .";
+  margin-bottom: 5px;
 }
 
 .ronaldo img{
@@ -24,8 +23,9 @@ body{
 
 .messi{
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4,1fr);
   grid-template-areas: ". messi . .";
+  margin-bottom: 5px;
 }
 
 .messi img{
@@ -34,8 +34,9 @@ body{
 
 .ibra{
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4,1fr);
   grid-template-areas: ". . ibra .";
+  margin-bottom: 5px;
 }
 
 .ibra img{
@@ -44,10 +45,11 @@ body{
 
 .ramos{
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(4,1fr);
   grid-template-areas: ". . . ramos";
+  margin-bottom: 5px;
 }
 
 .ramos img{
-  grid-area: ibra;
+  grid-area: ramos;
 }
