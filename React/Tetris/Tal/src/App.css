@@ -1,0 +1,14 @@
+body{
+  background-color: #ECE5DD;
+}
+
+header{
+  display: flex;
+  width: 100%;
+}
+.row{
+  display:flex;
+}
+.row>*{
+  width:25vw;
+}

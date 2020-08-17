@@ -10,7 +10,7 @@ import Output from './view/components/Output/Output'
 
 
 function App(props) {
-  const {name, lastname} = props;
+  //const {name, lastname} = props;
 
   const [output, setOutput] = useState([]); 
 
