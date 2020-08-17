@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState}from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,6 +10,8 @@ import {
 import './App.css';
 
 export default function App() {
+  const [cnt2, setCnt2] = useState(0)
+  console.log('app....');
   return (
     <Router>
       <div className='app'>
@@ -26,6 +28,7 @@ export default function App() {
               <Link to="/users">Users</Link>
             </li>
           </ul>
+          <button onClick={()=>{setCnt2(cnt2+1)}}>Counting {cnt2}</button>
         </nav>
 
         {/* A <Switch> looks through its children <Route>s and
@@ -47,6 +50,7 @@ export default function App() {
 }
 
 function Home() {
+  console.log('home')
   return (
     <div className='page'>
       <h2>Home</h2>
@@ -55,10 +59,16 @@ function Home() {
 }
 
 function About() {
+  console.log('about')
   let history = useHistory();
-
+  const [counter, setCounter] = useState(0);
+ 
+  console.log('counter:',counter)
+  
   return (
     <div className='page'>
+      <h1>{counter}</h1>
+      <button onClick={()=>setCounter(counter+1)}>Count+</button>
       <h2>About</h2>
       <div onClick={()=>{
         history.push('/')
@@ -68,6 +78,7 @@ function About() {
 }
 
 function Users() {
+  console.log('users')
   return (
     <div className='page'>
       <h2>Users</h2>

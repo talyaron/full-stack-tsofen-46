@@ -18,7 +18,10 @@ const names = [
     "marshood",
   "moran",
     "Maharn",
-    "Nivin"
+    "Nivin",
+    'Rami',
+    'Rawad',
+    'Morad'
 ];
 
 function randomNames(names, groupSize) {
@@ -56,4 +59,4 @@ function getRandomName(names) {
     return indexOfName;
 }
 
-randomNames(names, 2);
+randomNames(names, 3);
