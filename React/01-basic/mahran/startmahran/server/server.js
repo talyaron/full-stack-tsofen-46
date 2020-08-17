@@ -21,9 +21,9 @@ const userHistory = [
     { username: "abed" ,messages: ["hi", "its me abed"] } 
 ]
 
-const userHistoryobj = {
-    { username: "Salwa" , messages: ["hi abed"] } ,
-    { username: "abed" ,messages: ["hi", "its me abed"] } 
+let userHistoryobj = {
+    { Salwa , messages: ["hi abed"] 
+
 }
 
 
