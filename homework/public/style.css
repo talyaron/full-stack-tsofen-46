@@ -1,0 +1,218 @@
+.wrapper-login {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 50vh;
+    box-shadow: 5px 10px 8px 10px #888888;
+    margin: auto;
+    margin-top:10% ;
+}
+
+.wrapper-login img {
+    width: 100px;
+}
+
+.wrapper-login form {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper-login form input {
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(197, 197, 197);
+    padding: 5px;
+    
+}
+
+.wrapper-login form input[type='submit'] {
+   background-color:#e3b36c;
+   color: white;
+   cursor: pointer; 
+}
+
+
+.wrapper-login form input::placeholder{
+    color: #6ca5e3;
+}
+
+.conteiner{
+    display: flex;
+    width: 70%;
+    margin: auto;
+    background-color: white;
+    
+
+}
+
+
+#username{
+    margin-top: 40px;
+    color: #4b4e38;
+    
+}
+#kitchen{
+    border: 1px solid #e3b36c;
+    border-radius: 12px;
+    width: 100%;
+
+    
+}
+#kitchen-hrader{
+    margin: auto;
+    border: 2px solid #e3b36c;
+    display: flex;
+}
+#kitchen-hrader h2{
+width: 40%;
+margin-left:20% ;
+margin-top:5% ;
+}
+#kitchendatat{
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    
+}
+#kitchendatat input{
+    margin: 10px;
+    border-radius: 12px;
+    border: 1px solid lightblue ;
+    width: 60%;
+    text-align: center;
+}
+#kitchendatat label{
+    margin: 20px;
+    font-size: large;
+    color:#a18330;
+    text-align: center;
+}
+#kitchendatat textarea{
+    margin: 20px;
+    font-size: large;
+    color: #a18330;
+    text-align: center;
+    width: 80%;
+    height: 90px;
+    overflow: auto;
+}
+#kitchendatat img{
+    margin-top: 20px ;
+width: 16%;
+}
+#kitchendatat img:hover {
+    cursor: pointer;
+width: 17%;
+}
+
+#kitchendatat form input[type='submit'] {
+    width: 30%;
+    height: 30px;
+    background-color:#e3c36c;
+    color: white;
+    font-size: large;
+     
+ }
+ #kitchendatat form input[type='submit']:hover {
+    width: 33%;
+    height: 35px;
+    background-color:#cfad4d;
+    color: white;
+    font-size: large;
+ }
+
+
+
+#profile{
+    width: 30%;
+    height: 100px;
+    display: flex;
+    border: 1px solid #e3b36c;
+    border-radius:12px;
+    
+}
+#profile h2{
+  margin: auto;
+    
+}
+
+
+
+
+
+.menu{
+    
+    width: 65%;
+    margin: auto;
+    border: 1px solid #e3b36c;
+    background-color: white;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    box-shadow: 5px 10px 8px 10px #888888;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "back title ."
+    ".  body  .";
+}
+#menutitle{
+    grid-area: title;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+}
+#menutitle h1{
+margin-right: 20px;
+color:  #e7ac53;
+font-size: 60px;
+}
+#menutitle img{
+    margin-top: 30px;
+
+    }
+#back{
+    margin: auto;
+    grid-area: back;
+}
+#back:hover{
+    width: 70px;
+    cursor: pointer;
+}
+
+#menucard{
+    grid-area: body;
+    border: 2px solid #e3b36c;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 5px 10px 8px 10px #888888;
+}
+
+.card{
+    display: flex;
+    margin: 20px;
+    border-bottom: 1px solid #e3b36c;
+}
+.card-img{
+    display: flex;
+    margin-right: 40px;
+}
+.card-img img{
+    border-radius: 50%;
+    border: 1px solid #e3b36c;
+}
+.card-img p{
+    margin-top: 80px;
+    
+}
+
+.card-content h3{
+color:rgb(131, 102, 60);
+}
+.card-content p{
+    color:rgb(119, 116, 116)
+    }
+
