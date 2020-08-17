@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+}
+
+.wow {
+  color: chocolate;
+}
+
+.news-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+@media only screen and (max-width: 600px) {
+  .news-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.mainBox{
+
+  width: 560px;
+  height: 100%;
+  color: white;
+  background-color: gray;
+  text-align: center;
+  margin: auto;
+  border-radius: 20%;
+}

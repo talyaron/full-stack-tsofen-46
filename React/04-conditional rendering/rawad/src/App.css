@@ -1,0 +1,13 @@
+.App {
+
+  width: 60%;
+  margin: auto;
+
+}
+#cont{
+  margin-top: 3%;
+  border: 1px solid grey;
+  width: 20%;
+  margin: auto;
+  background-color: khaki;
+}
