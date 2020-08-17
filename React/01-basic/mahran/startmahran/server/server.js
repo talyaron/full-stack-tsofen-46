@@ -21,6 +21,11 @@ const userHistory = [
     { username: "abed" ,messages: ["hi", "its me abed"] } 
 ]
 
+const userHistoryobj = {
+    { username: "Salwa" , messages: ["hi abed"] } ,
+    { username: "abed" ,messages: ["hi", "its me abed"] } 
+}
+
 
 // API:
 
@@ -28,11 +33,16 @@ app.post('/api/getUser', function(request, response) {
 
     const user = request.body.vInput;
     const aResult = [];
+    const aUserHistory = []
     console.log(user);
     for(let i =0; i< userProfiles.length; i++) {
         console.log("in the loop");
         if(user == userProfiles[i].username) {
+            for(let j=0;j<userHistory.length; j++) {
+
+            }
             aResult.push(userProfiles[i]);
+
             console.log(aResult);
 
 
@@ -43,6 +53,8 @@ app.post('/api/getUser', function(request, response) {
     }
     response.send(aResult);
 })
+
+
 
 
 
