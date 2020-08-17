@@ -7,8 +7,8 @@ import Box from './view/components/Box/Box';
 
 const candies = [
   'https://lh3.googleusercontent.com/proxy/kAULm9SbGHEVDRCaoDI_e7T4EwA48YqARle0ACgYFUi1Jk7z6r_jDcUcTYAZAkCAq67p84Xun-h-i8T-04xw8KgccLdUM5ybpeSo7Dz5cDxTa_hYyAZ8iSgOauB8s_AtbkyDFI8',
-  'https://lh3.googleusercontent.com/proxy/qjEF5iw0iydoze3YAS7vdqv5LkDlDfrMVBRZ5fZyHqlVZHdPwpEipsf-2QlicuSAlTYvUEB61FzRXdVx6P99ntPDZqiKGsNLcHKhyxvTjmAuuspWIPlZrO_rELZkxS7CV01gThzTEKNW',
-  'https://data.whicdn.com/images/340393671/original.jpg',
+  'https://images-na.ssl-images-amazon.com/images/I/71WDXCkJ9BL._SL1044_.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Candy-Corn.jpg/250px-Candy-Corn.jpg',
   'https://i.pinimg.com/originals/ee/b4/ce/eeb4cef1d99926096674fc669d69be1c.jpg'
 ]
 
@@ -28,10 +28,13 @@ function App() {
         {
           boxes.map((box, index) => {
             
+           
+
             let empties =[];
             for (let i=0; i<box.location; i++){
-              empties.push('aa')
+              empties.push('a')
             }
+           
             console.log(empties)
 
             return (
