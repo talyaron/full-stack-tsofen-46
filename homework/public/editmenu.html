@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="conteiner" class="conteiner">
+        <div id="profile"></div>
+
+        <div id="kitchen">
+            <div id="kitchen-hrader"><h2>Be creative </h2> <img src="img/chef2.png" alt="" width="90px" > </div>
+            <div id="kitchendatat"> 
+              <form onsubmit='handlemenu(event)'>
+                <label>Name of the food:</label> <br>
+                <input type="text" name="foodname" placeholder="FoodName" required/><br>
+                <label>Picture for food:</label> <br>
+                <input type="text" name="imgefood" placeholder="FoodPicture" required/><br>
+                <label>Price of the food:</label> <br>
+                <input type="text" name="foodprice" placeholder="FoodPrice" required/><br>
+                <label>  A food recipe:</label> <br>
+                <textarea name="foodrecipe" placeholder="recipe"></textarea><br>
+                <input type="submit" name='submit' value="Add"><br>
+                <img src="img/menu.png" alt="menu"  onclick="openmenu()">
+            </form>
+            
+            </div>
+        </div>
+        
+    </div>
+
+
+    <script src="function.js"></script>
+    <script>getUser()</script>
+</body>
+</html>
