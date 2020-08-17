@@ -1,34 +1,77 @@
-import React, { useState } from 'react';
-// import logo from './logo.svg';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useHistory
+} from "react-router-dom";
+
 import './App.css';
 
-//components
-import Box from './view/components/Box/Box';
-
-
-function App() {
-
-  const [counter, setCounter] = useState(0);
-
+export default function App() {
   return (
-    <div>
-      <h1 style={{background:'red'}}>Hovers: {counter}</h1>
+    <Router>
+      <div className='app'>
+        {/* location of nav... it is not a must */}
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/users">Users</Link>
+            </li>
+          </ul>
+        </nav>
 
-      <Box number={1} setCounter={setCounter} counter={counter} />
-      <Box number={2} setCounter={setCounter} counter={counter} />
-      <Box number={3} setCounter={setCounter} counter={counter} />
-      <Box number={4} setCounter={setCounter} counter={counter}/>
-      <Box number={5} setCounter={setCounter} counter={counter}/>
-      <Box number={6} setCounter={setCounter} counter={counter}/>
-      <Box number={7} setCounter={setCounter} counter={counter}/>
-      <Box number={8} setCounter={setCounter} counter={counter}/>
-    </div>
-
-
-
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
+function Home() {
+  return (
+    <div className='page'>
+      <h2>Home</h2>
+    </div>
+  )
+}
 
+function About() {
+  let history = useHistory();
 
-export default App;
+  return (
+    <div className='page'>
+      <h2>About</h2>
+      <div onClick={()=>{
+        history.push('/')
+      }}>Go to home</div>
+    </div>
+  )
+}
+
+function Users() {
+  return (
+    <div className='page'>
+      <h2>Users</h2>
+      <Link to="/about"><div>Go to about</div></Link>
+    </div>
+  )
+}
