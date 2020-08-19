@@ -1,0 +1,37 @@
+#mainWrapper{
+    width: 100%;
+    
+background-color: steelblue;
+
+}
+
+.td{
+    padding: 10px;
+}
+.th{
+    justify-content: space-between;
+    display: table-row;
+}
+.icons{
+  text-align: center;
+    width: 60px;
+    height: 60px;
+  background-color: steelblue;
+  border: rgb(107, 158, 199) solid 3px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#icon1{
+    grid-area: icon1;
+}
+#icon2{
+    grid-area: icon2;
+  
+}
+#icon3{
+    grid-area: icon3;
+}
+#icon4{
+    grid-area: icon4;
+}
