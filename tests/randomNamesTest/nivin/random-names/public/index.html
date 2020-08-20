@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Participants</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <h1 style="text-align: center;">Participants</h1>
+    <div class="container">
+      <div class="participantsContainer">
+        <div id="participantsGroups" class="participants"></div>
+        <button id="addMe" class="addMeButton" onclick="addParticipant()">
+          add me
+        </button>
+        <div id="createGroup" class="createGroupContainer">
+          <button style="margin: 4px;" type="button" onclick="setGroupSize();">
+            Create Group
+          </button>
+          <input
+            type="number"
+            class="holo"
+            style="margin: 4px;"
+            placeholder="group size..."
+            id="groupSize"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/participants.js"></script>
+</html>
