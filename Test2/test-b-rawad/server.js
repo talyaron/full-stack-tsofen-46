@@ -79,14 +79,16 @@ app.post('/api/group',(req, res)=>{
     
           console.log(date)
     
-         if(docs==null){
-    let group  = Group({email,name,userimg,time})
-    group.save().then(doc=>{
-      
-    })
+        //   let group  = Group({email,name,userimg,time})
+        //   group.save().then(doc=>{
+
+        //   })
+
    
-}
-    })
+      })
+
+
+    
     
 })
 
