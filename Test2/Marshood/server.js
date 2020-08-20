@@ -74,7 +74,7 @@ app.get('/GetOnlineUsers', async function (req, res) {
     const Halfhourago = new Date(today.getTime() - (500 * 60 * 60));
     const UMin = today.getMinutes();
     const UHour = today.getHours();
-    OnlineUser.find({ "DateOnline": { $gt: new Date(Date.now() - 5*60*60 * 1000) } }, function (err, doc) {
+    OnlineUser.find({ "DateOnline": { $gt: new Date(Date.now() - 0.5*60*60 * 1000) } }, function (err, doc) {
          res.send(doc);
 
     })
