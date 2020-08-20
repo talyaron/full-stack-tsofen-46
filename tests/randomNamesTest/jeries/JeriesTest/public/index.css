@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+/* BASIC */
+
+html {
+  background-color: gold;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+#signinh2 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display:inline-block;
+  margin: 40px 8px 10px 8px; 
+  color: black;
+}
+
+/* STRUCTURE */
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  padding: 20px;
+  
+}
+
+#formContent {
+  border-radius: 10px 10px 10px 10px;
+  background: gold;
+  padding: 30px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  padding: 0px;
+  box-shadow: 8px 30px 60px 8px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+
+
+/* FORM TYPOGRAPHY*/
+
+#submitBtn {
+  background-color: gold;
+  border: 1px solid black;
+  color: black;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  border-radius: 5px 5px 5px 5px;
+  margin: 5px 20px 40px 20px;
+ 
+}
+
+#submitBtn:hover {
+  font-weight: bolder;
+}
+
+
+#login-Register , #passwordRegister , #imgRegister , #login , #password{
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  width: 80%;
+  border-bottom: 2px solid black;
+  border-radius: 5px 5px 5px 5px;
+  background-color: gold;
+}
+
+
+
+
+
+
+
+/* Other Classes for Page Styling */
+
+
+#wrapperPannel{
+  display: flex;
+  margin:auto;
+  justify-content: center;
+}
+
+
