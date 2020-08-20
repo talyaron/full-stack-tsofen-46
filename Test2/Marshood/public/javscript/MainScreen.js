@@ -49,13 +49,13 @@ function addTheuser() {
     document.getElementById("userAddMe").innerHTML = `<div class="MyUser" id="MyUser" onclick="UserClickedBtn()">
      <br>
      <img src="${imguser}">
-    Add me ${username} </div>
+      ${username}Add me </div>
 </div>`;
 
 }
 
 function LogOutBtn() {
-    let email = localStorage.getItem("img")
+    let email = localStorage.getItem("Email")
 
     fetch('/LogOutUser', {
         method: 'POST',
@@ -84,6 +84,26 @@ function LogOutBtn() {
 }
 // to show the user box
 function UserClickedBtn() {
+
+    // add the user to online user table to be able 
+    fetch('/addOnlineUser', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(
+            {
+                UserID: localStorage.getItem("UserID"),
+               
+            })
+    })
+        .then(res => res.json())
+        .then(data => {
+                 
+
+             });
+        
+
     document.getElementById('userAddMe').innerHTML = `<br>
    <div> <button id="CreateGBtn" onClick="StartRandomGropus()" disabled >Create Grooup</button></div>
    <br>
@@ -98,6 +118,7 @@ function StartRandomGropus() {
     document.getElementById("CreateGBtn").style.display = "none";
     document.getElementById("txtn").style.display = "none";
     document.getElementById("numberOfGroup").style.display = "none";
+    
     NewData = {};
     let gropuNumber = document.getElementById("numberOfGroup").value;
     newData = randomNames(dataArray, gropuNumber);
@@ -163,7 +184,6 @@ function randomNames(names, groupSize) {
 function getRandomName(names) {
     const arraySize = names.length;
     let indexOfName = Math.ceil(Math.random() * arraySize) - 1;
-
     return indexOfName;
 }
 

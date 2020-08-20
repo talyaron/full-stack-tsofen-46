@@ -10,8 +10,7 @@ function RegisterUser(event) {
      let email = event.target.email.value;
     let Password = event.target.Password.value;
      //check if the user exit on DB and Login 
-    console.log("asdL" ,email ,Password)
-    fetch('/Login', {
+     fetch('/Login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -25,11 +24,12 @@ function RegisterUser(event) {
     })
         .then(response => response.json())
         .then(data => {
-            console.log('Success:', data[0].success);
+            alert('Success:', data[1]);
             if (data[0].success) {//true
                 localStorage.setItem("name", data[1].name);
                 localStorage.setItem("img", data[1].img);
-                localStorage.setItem("Email",data[1].email);
+                localStorage.setItem("Email",email);
+                localStorage.setItem("UserID",data[1]._id);
                 // will to add function to get the online users later ...
                 location.replace("MainScreen.html");
             }

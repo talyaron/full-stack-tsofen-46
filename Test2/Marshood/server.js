@@ -59,17 +59,13 @@ app.post('/Login', function (req, res) {
             res.send([{ success: false }])
         } else {
             var myDate = new Date(Date.now());
-            console.log(myDate ,"myDatemyDatemyDatemyDate")
-            const date = Date("2014-12-11T14:12:00Z")
-            console.log(date ,"datedatedatedatedatedatedate")
-            const currDate = new Date();
+             const date = Date("2014-12-11T14:12:00Z")
+             const currDate = new Date();
             const UMin = currDate.getMinutes();
             const UHour = currDate.getHours();
             const CurrentUser = new OnlineUser({ email: email, name: doc[0].name, img: doc[0].img,DateOnline:myDate, UHour: UHour, UMin: UMin });
-            console.log("UserUserUserUserUser")
-            console.log(CurrentUser)
-            CurrentUser.save().then(() => console.log('wellcome'));
-            res.send([{ success: true }, { name: doc[0].name, img: doc[0].img }])
+            // CurrentUser.save().then(() => console.log('wellcome'));
+            res.send([{ success: true }, { name: doc[0].name, img: doc[0].img ,_id:doc[0]._id}])
         }
     })
 })
@@ -93,4 +89,23 @@ app.post('/LogOutUser', function (req, res) {
     res.send([{ success: true }]);
 });
 
+
+app.post('/addOnlineUser', function (req, res) {
+    var UserID = req.body.UserID;
+    console.log(UserID+" asad")
+     let { success } = false;
+    UserT.findById(UserID, function (err, doc) {
+             var myDate = new Date(Date.now());
+              const date = Date("2014-12-11T14:12:00Z")
+             const currDate = new Date();
+            const UMin = currDate.getMinutes();
+            const UHour = currDate.getHours();
+            const CurrentUser = new OnlineUser({ email: doc.email, name: doc.name, img: doc.img,DateOnline:myDate, UHour: UHour, UMin: UMin });
+            console.log("UserUserUserUserUser")
+           // console.log(CurrentUser)
+           CurrentUser.save().then(() => console.log('wellcome'));
+            res.send([{ success: true }])
+        
+    })
+})
 app.listen(3000, () => { console.log("App is Listening : 3000") })
