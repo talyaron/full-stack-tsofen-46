@@ -1,6 +1,8 @@
 var members = document.getElementById('names')
 var secs = 3000
 var check = true
+var arr1 = []
+var flag = true
 
 function randomNames(names, groupSize) {
     try {
@@ -39,18 +41,25 @@ function getRandomName(names) {
 
 
 function renderUsers(){
+    
     fetch('/renderUsers', {
     }).then(res=>res.json())
     .then(data => {
              const {arr} = data
-             console.log(arr)
              let membersarray = ''
              arr.map((user,index)=>{
+                if(globalThis.flag){
+                 globalThis.arr1.push(user)
+                }
                  membersarray +=  `<div id='member${index}' class='member'><div class='img'><img src='${user.img}'/></div><div class='name'>${user.name}</div></div>`
                })
                globalThis.members.innerHTML= membersarray
                
    })
+   if(globalThis.arr1.length>0){
+       globalThis.flag=false
+   }
+   console.log(globalThis.arr1)
     
 }
 
@@ -89,26 +98,21 @@ function createGroups(e){
     var memberswrapper = document.getElementById( 'names' );
 
     globalThis.check = false
-
-    fetch('/renderUsers', {
-    }).then(res=>res.json())
-    .then(data => {
-            const {arr} = data
-            console.log(arr)
-
-            var groups = randomNames(arr, number)
+    const groups = randomNames(globalThis.arr1,number)
+    console.log(groups[0].length)
              const flexnum = 100/groups[0].length-15;
              let temparr = ""
-             for (let index = 0; index < arr.length; index++) {
-             groups[index].map((element,index)=>{
-                 console.log(element.name)
-                 temparr += `<div id='member${index}' class='member'><div class='img'><img src='${element[0].img}'/></div><div class='name'>${element[0].name}</div></div>`
-             })}
+             for (let index = 0; index < groups.length; index++) {
+                 for (let j = 0; j < groups[0].length; j++) {
+                     console.log(groups[j][index].name)
+                     temparr += `<div id='member${index+j}' class='member'><div class='img'><img src='${groups[j][index].img}'/></div><div class='name'>${groups[j][index].name}</div></div>`
+    
+                 }
+                }
              memberswrapper.innerHTML = temparr
 
              var css = ''
              for (let index = 0; index < memberswrapper.childElementCount; index++) {
-                console.log(1)
                 css += `#member${index} { flex: 1 0 ${flexnum}%; }`
              }
              
@@ -125,10 +129,6 @@ function createGroups(e){
             } else {
             style.appendChild(document.createTextNode(css));
             }
-        
-
-            
-   })
 
 
 }
