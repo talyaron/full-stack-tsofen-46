@@ -1,0 +1,129 @@
+body {
+  background-color: #ffcc00;
+}
+
+input.holo {
+  /* You can set width to whatever you like */
+  width: 200px;
+  font-family: 'Roboto', 'Droid Sans', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 8px 8px 6px 8px;
+  position: relative;
+  display: block;
+  outline: none;
+  border: none;
+  background: bottom left linear-gradient(#a9a9a9, #a9a9a9) no-repeat,
+    bottom center linear-gradient(#a9a9a9, #a9a9a9) repeat-x,
+    bottom right linear-gradient(#a9a9a9, #a9a9a9) no-repeat;
+  background-size: 1px 6px, 1px 1px, 1px 6px;
+}
+input.holo:hover,
+input.holo:focus {
+  background: bottom left linear-gradient(#0099cc, #0099cc) no-repeat,
+    bottom center linear-gradient(#0099cc, #0099cc) repeat-x,
+    bottom right linear-gradient(#0099cc, #0099cc) no-repeat;
+  background-size: 1px 6px, 1px 1px, 1px 6px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  background-color: transparent;
+  margin: 16px;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.participantsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 500px;
+}
+
+.participants {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.createGroupContainer {
+  display: none;
+  justify-content: center;
+}
+
+.createGroupContainer button {
+  padding: 16px;
+  border: 1px solid #404040;
+  background-color: #ffcc00;
+  border-radius: 8px;
+}
+
+.participantsGroup {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 4px solid #404040;
+  flex-wrap: wrap;
+  border-radius: 50px;
+  height: 45px;
+  margin: 4px;
+}
+
+.participant {
+  padding-right: 8px;
+  padding-left: 8px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #d8d8d8;
+  border-radius: 50px;
+  margin: 8px;
+  height: 30px;
+}
+
+.participant img {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+.addMeButton {
+  display: none;
+}
+
+.formButton {
+  padding: 16px;
+  border: 1px solid #404040;
+  background-color: #ffcc00;
+  border-radius: 8px;
+  width: 200px;
+}
