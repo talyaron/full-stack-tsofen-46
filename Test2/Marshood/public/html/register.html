@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/register.css">
+</head>
+<body>
+    <div class="MainBox">      
+        <div class="FormRegister"  >
+            <form id="FormRegister">
+                <div>name:<br> <input type="text" name="name" id="name" placeholder="name" onclick="AlertHide()" required/></div>
+                <div>email: <br><input type="email" name="email" id="email" placeholder="email"  onclick="AlertHide()"required/></div>
+                <div>Password:<br> <input type="Password" name="Password" id="Password" placeholder="Password"  onclick="AlertHide()" required/></div>
+                <div>img:<br> <input type="text" name="img" id="img" placeholder="img" onclick="AlertHide()" required/></div>
+                <div><br><input type="submit" name="btnSubmeit" value="Register"/>
+                    <button onclick="LoginBtn()">Login</button>
+                </div>
+            </form>
+        </div>
+        <div class="AlertBox" id="AlertBox">
+            The user exist on DB..!
+        </div>
+        
+    </div>
+
+
+
+    <script src="../javscript//register.js"></script>
+
+</body>
+
+</html>
