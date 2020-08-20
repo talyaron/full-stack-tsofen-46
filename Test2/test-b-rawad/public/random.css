@@ -1,0 +1,80 @@
+.wrapper-random {
+    width:90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  
+    box-shadow: 5px 10px 8px 10px #888888;
+    margin: auto;
+    margin-top:10% ;
+}
+
+.wrapper-random #add {
+    width: 5%;
+    margin-top: 6%;
+}
+.wrapper-random #add:hover {
+    
+    cursor: pointer;
+}
+h1{
+    color: rgba(158, 84, 228, 0.753);
+    text-shadow: 2px 2px 2px gray;
+}
+#groupcard{
+    display: grid;
+    grid-template-columns:  auto auto auto auto auto auto auto;
+}
+.card{
+    display: flex;
+    border:1px solid rgba(158, 84, 228, 0.753);
+    margin: 3%;
+    width:90%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius:12px ;
+    box-shadow: 5px 8px 8px 8px #888888;
+}
+.card-img img{
+    border-radius: 50%;
+    border:1px solid steelblue;
+    width: 60%;
+    height: 60%;
+}
+.card-img{
+    width: 40%;
+}
+.card-name{
+    width: 50%;
+    color: steelblue;
+    font-size: large;
+}
+#creategroup {
+    display: none;
+    margin-top: 6%;
+    margin-bottom: 3%;
+}
+
+#creategroup form input  {
+ border: none;
+ width: 80%;
+ text-align: center;
+ height: 30px;
+}
+#creategroup #createbtn  {
+    border: none;
+    width: 80%;
+    text-align: center;
+    height: 30px;
+    background-color:rgba(158, 84, 228, 0.753) ;
+    color: white;
+    border-radius: 12px;
+    margin-top: 3%;
+   }
+#groups{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
