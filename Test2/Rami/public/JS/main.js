@@ -37,28 +37,21 @@ function getRandomName(names) {
     return indexOfName;
 }
 
-function activeUsers(){
-    let result = []
+
+function renderUsers(){
     fetch('/renderUsers', {
     }).then(res=>res.json())
     .then(data => {
              const {arr} = data
-             arr.map((item,index)=>{
-                 result.push(item)
-             })
+             console.log(arr)
+             let membersarray = ''
+             arr.map((user,index)=>{
+                 membersarray +=  `<div id='member${index}' class='member'><div class='img'><img src='${user.img}'/></div><div class='name'>${user.name}</div></div>`
+               })
+               globalThis.members.innerHTML= membersarray
+               
    })
-   return (result)
-}
-
-function renderUsers(){
-    const {arr1} = activeUsers()
-    console.log(arr1);
-    let membersarray = ''
-           arr1.map((user,index)=>{
-
-               membersarray +=  `<div id='member${index}' class='member'><div class='img'><img src='${user.img}'/></div><div class='name'>${user.name}</div></div>`
-             })
-             members.innerHTML= membersarray
+    
 }
 
 function keepRendering(){
@@ -100,12 +93,9 @@ function createGroups(e){
     fetch('/renderUsers', {
     }).then(res=>res.json())
     .then(data => {
-            const {arr1} = data
-            let newarr = []
+            const {arr} = data
             console.log(arr)
-            arr.map((item,index)=>{
-                newarr.push(item.name)
-            })
+
             var groups = randomNames(arr, number)
              const flexnum = 100/groups[0].length-15;
              let temparr = ""
