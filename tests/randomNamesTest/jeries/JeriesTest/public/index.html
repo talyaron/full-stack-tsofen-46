@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="index.css"> 
+    <title>Register-Page</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+            <h2 class=active id="signinh2"> Sign Up </h2>
+
+            <!-- Login Form -->
+            <form onsubmit="HandleRegister(event)">
+                <input type="text" id="login-Register" name="name" placeholder="Username">
+                <input type="text" id="imgRegister" name="img" placeholder="Url">
+                <input type="password" id="passwordRegister" name="password" placeholder="password">
+                <input type="submit" id="submitBtn" value="Log In"></input>
+                <div id="root"></div>
+            </form>
+            
+        </div>
+    </div>
+    <script src="functions.js"></script>
+</body>
+
+</html>
