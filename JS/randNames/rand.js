@@ -25,6 +25,7 @@ const names = [
 ];
 
 function randomNames(names, groupSize) {
+    console.log("random "+names)
     try {
         const groups = [];
         const lengthNames=names.length / groupSize

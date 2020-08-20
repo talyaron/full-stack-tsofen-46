@@ -1,0 +1,61 @@
+.wrapper-login {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 50vh;
+    box-shadow: 5px 10px 8px 10px #888888;
+    margin: auto;
+    margin-top:10% ;
+}
+
+.wrapper-login img {
+    width: 100px;
+}
+
+.wrapper-login form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.wrapper-login form input {
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(197, 197, 197);
+    padding: 5px;
+    width: 40%;
+    
+}
+
+.wrapper-login form input[type='submit'] {
+   background-color:#cb6ce3;
+   color: white;
+   cursor: pointer; 
+}
+
+
+.wrapper-login form input::placeholder{
+    color: #6ca5e3;
+}
+
+#registerbtn{
+    background-color:#cb6ce3;
+    color: white;
+    cursor: pointer; 
+    margin: 5px;
+    border-radius: 10px;
+    border: 1px solid rgb(197, 197, 197);
+    padding: 5px;
+    width: 40%;
+}
+
+
+#worngm{
+    color: red;
+    border: 1px solid red;
+    display: none;
+}
