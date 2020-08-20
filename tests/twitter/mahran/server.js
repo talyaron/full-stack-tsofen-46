@@ -28,58 +28,47 @@ const TwitUser = mongoose.model('TwitsUser', {
 
 const Twits = mongoose.model('Twits', {
 
-    username: String,
-    comment: String
-  
-  
-  });
+  username: String,
+  comment: String
+
+
+});
 
 app.use(express.static('public'))
 
 //API
 
-app.post('/api/postUserInput', function(request, response) {
-    let oReqBody = request.body;
-    let newUserInp = oReqBody.vUsename;
-    let newImgInp = oReqBody.vImage;
-    let currStatus = "active"
+app.post('/api/postUserInput', function (request, response) {
+  let oReqBody = request.body;
+  let newUserInp = oReqBody.vUsename;
+  let newImgInp = oReqBody.vImage;
+  let currStatus = "active"
 
 
-    let currUser = new TwitUser ({
-        username: newUserInp,
-        imageSrc: newImgInp,
-        status : currStatus
+  let currUser = new TwitUser({
+    username: newUserInp,
+    imageSrc: newImgInp,
+    status: currStatus
 
-    })
-  
-    var filter = { 'username': newUserInp};
-    var update = {'imageSrc': newImgInp, 'status': currStatus };
+  })
 
-    currUser.updateOne(filter, update, (err, res) => {
-      if (err) {
-        console.log(err);
-      } else {
-        response.send(res);
+  var filter = { 'username': newUserInp };
+  var update = { 'imageSrc': newImgInp, 'status': currStatus };
+
+  currUser.updateOne(filter, update, (err, res) => {
+    if (err) {
+      console.log(err);
+    } else {
+      response.send(res);
       }
-  
-  
-    })
 
-
- 
+  })
 
 })
 
 app.get('/api/getUserDetails', function (request, response) {
 
-}
-)
-
-
-
-
-
-
+})
 
 
 

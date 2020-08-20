@@ -1,0 +1,51 @@
+.contact{
+  
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px gray;
+    padding: 10px;
+   
+    margin: 10px;
+    display: flex;
+}
+
+
+.contact img{
+   
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+
+}
+
+
+
+
+
+.wrapper{
+    margin-left: 25px;
+    display: flex;
+    flex-direction:column ;
+    
+}
+
+.wrapper h2{
+    margin:0px;
+}
+
+
+.sent{
+   flex-direction: row-reverse;
+   background-color: #52ab16;
+   border-radius: 20px 20px 0px 20px;
+}
+
+.sent p{
+    margin-right: 20px;
+    padding: 8px;
+}
+
+.recieved{
+    background-color: #becccb;
+    border-radius: 20px 20px 20px 0px;
+}

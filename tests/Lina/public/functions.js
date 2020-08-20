@@ -35,6 +35,8 @@ function AddFeed(e) {
     const feed = e.target.elements.feed.value;
     console.log(feed);
 
+//route should be add addTwitt
+
     fetch('/addAccount', {
         method: 'PUT',
         body: JSON.stringify({ name, img, feed}),

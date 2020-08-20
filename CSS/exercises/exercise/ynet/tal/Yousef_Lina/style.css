@@ -1,0 +1,50 @@
+body{
+    display: grid;
+    grid-template-columns: 40vw 40vw 20vw;
+    grid-template-rows: 20vh 40vh 10vh 30vh;
+    grid-template-areas:
+    "header header logo"
+    "main-photo main-article sidebar"
+    "navigator navigator navigator"
+    "second-article  . ." ;
+}
+
+.header{
+    grid-area: header;
+    width: 100%;
+    background-color: purple;
+}
+
+.logo{
+    grid-area: logo;
+    width: 100%;
+    text-align: center;
+}
+
+.side-bar{
+    grid-area: sidebar;
+    width: 100%;
+    background-color: blue;
+}
+.main-article{
+    grid-area: main-article;
+    width: 100%;
+    background-color: yellow;
+}
+.main-photo{
+    grid-area: main-photo;
+    width: 100%;
+    background-color: gray;
+}
+
+.navigator{
+    grid-area: navigator;
+    width: 100%;
+    background-color: black;
+}
+
+.second-article{
+    grid-area: second-article;
+    width: 100%;
+    background-color: brown;
+}

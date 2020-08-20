@@ -1,0 +1,33 @@
+.header {
+    height: 70px;
+    color: darkgray;
+    grid-area: header;
+    background-color: black;
+}
+.main {
+    color: darkgray;
+    padding: 48%;
+    grid-area: main;
+    background-color: blue;
+}
+.footer {
+    
+    color: darkgray;
+    grid-area: footer;
+    background-color: crimson;
+    bottom: 10px;
+    left: 400px;
+}
+  
+.container {
+    align-content: 40px;   
+    text-align: center;
+    margin: auto;
+   display: grid;
+   justify-items: stretch;
+   grid-template-rows: auto;
+   grid-template-areas: 
+     "header header header header"
+     ". main main ."
+     "footer footer footer footer";
+}

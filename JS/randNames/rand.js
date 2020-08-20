@@ -1,24 +1,31 @@
 const names = [
      "Lina",
-    "monera",
+   "Micky",
+   "Abdalla",
+   "Cizar",
+  
+   
+   "Tima",
     "Mahmoud",
     "nimer",
-    "sizar",
+   
     "jeries",
-    "morad",
-    "rawad",
+    "Saleh",
     "omri",
-    "saleh",
-    "taimaa",
-    "abdallah",
+   
+ 
     "yousef",
     "marshood",
-    "Rami",
+  "moran",
     "Maharn",
-    "sally"
+    "Nivin",
+    'Rami',
+    'Rawad',
+    'Morad'
 ];
 
 function randomNames(names, groupSize) {
+    console.log("random "+names)
     try {
         const groups = [];
         const lengthNames=names.length / groupSize
@@ -53,4 +60,4 @@ function getRandomName(names) {
     return indexOfName;
 }
 
-randomNames(names, 2);
+randomNames(names, 3);

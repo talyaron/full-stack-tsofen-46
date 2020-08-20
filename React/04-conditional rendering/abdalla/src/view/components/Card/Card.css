@@ -1,0 +1,15 @@
+.card{
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px gray;
+    padding: 10px;
+   
+    margin: 10px;
+    display: flex;
+}
+.card img{
+    width: 100px;
+}
+
+.card p{
+   padding: 10px;
+}
