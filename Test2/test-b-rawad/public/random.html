@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="random.css">
+</head>
+<body>
+    <div class="wrapper-random">
+      <h1>Random Name</h1>
+      <div id="groupcard"></div>
+      <div id="groups">
+         
+      </div>
+      <img id="add" onclick="addname()" src="img/contact.png" alt="add" >
+      <div id="creategroup">
+        <form onsubmit='handlecreate(event)'>
+            <input type="text" name="groupnum" placeholder="Group Num" required />
+            <input id="createbtn" type="submit" name='submit' value="Create Group">
+        </form>
+    </div>
+    </div>
+    <script src="function.js"></script>
+</body>
+</html>
