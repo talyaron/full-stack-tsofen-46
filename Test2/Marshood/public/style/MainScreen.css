@@ -168,3 +168,25 @@ button {
     border: none;
     padding: 15px;
 }
+
+
+.ShowOnlineUsers_inner {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  .GroupShowBox{
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
