@@ -30,11 +30,12 @@ function getUserPannel() {
                 <input type="text" name="particpantImg" value="${data.user.img}" style=" display:none">
                 <input type="text" name="particpantname" value="${data.user.name}"  style=" display:none">
                 <button type="submit" id="addbtn"> Add me to the group </button>
+                <div id="response"></div>
                 </div>
                 </form>
                 <form class ="groupForm" onsubmit="handleGroups(event)" >
-                <input type=text name="groupNumber" id="groupNumbers" placeholder="Number:">
-                <button type="submit" style="display:none;">submit</button> 
+                <input type=text name="groupNumber" id="groupNumbers" onclick="showBtn()" placeholder="Number:">
+                <button type="submit" id="Create" onclick="Hidebtn()" style="display:none;">Create Group</button> 
                 </form>`
             })
             .catch(err => reject(err))
@@ -43,12 +44,20 @@ function getUserPannel() {
 
 
 }
+function showBtn() {
+    document.getElementById('Create').style.display="block";
+    document.getElementById('wrapperPannel').style.display="none";
+}
 
+function Hidebtn() {
+    document.getElementById('groupNumbers').style.display="none";
+    document.getElementById('Create').style.display="none";
+    document.getElementById('posts').style.display="none";
+}
 
 
 function HandleParticpent(e) {
     e.preventDefault()
-    
     const img = e.target.elements.particpantImg.value;
     const name = e.target.elements.particpantname.value;
 
@@ -59,9 +68,24 @@ function HandleParticpent(e) {
             'Content-Type': 'application/json'
         },
     })
+    .then(res => res.json())
+    .then(data => {
+        const { particpant } = data;
+        if (particpant == true) {
+            document.getElementById('response').innerText = `Exist`
+            document.getElementById('response').style.color = "red";
+            document.getElementById('response').style.textAlign = "center";
+            document.getElementById('response').style.fontWeight = "bolder";
+            document.getElementById('response').style.marginTop = "3px";
+        }
+        if (particpant == false) {
+            location.reload()
+
+        }
+    })
 
 
-    location.reload()
+
 }
 
 
@@ -159,24 +183,27 @@ function handleGroups(e) {
                         counter = counter - 1;
                         
                         console.log("hellobro")
-                        currentgroup += `<div class="wrapper-group" ;>
+                        currentgroup += `
+                     
                         <div class="GroupPannel">
-                        <div> ${participate.name} <div>
+                        <div class="paricontName"> ${participate.name} </div>
                         <img class="imgParticpnts" src="${participate.img} ">  </img>
-                        </div>
+                    
+                    
                           ` 
                           if(counter==0 ){
                             currentgroup += `</div>`;
                             counter = number;
                             }}
-                    else if (counter > 0) {
+                          else if (counter > 0) {
                         counter = counter - 1;
                         
                         currentgroup += `
-                        <div class="GroupPannel">
-                        <div> ${participate.name} <div>
+                        
+                        <div class="paricontName"> ${participate.name} </div>
                         <img class="imgParticpnts" src="${participate.img} ">  </img>
-                        </div>
+                        
+                       
                           `
                           if(counter==0){
                           currentgroup += `</div>`;
