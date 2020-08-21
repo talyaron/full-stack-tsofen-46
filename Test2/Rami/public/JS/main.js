@@ -77,7 +77,7 @@ keepRendering();
  function Add(){
     const x = document.getElementById('footer')
     x.innerHTML =
-    "<div class=`createGroups`><button class='btn' onclick='createGroups(event)'>Create groups</button></div><div class='groupSize'><input placeholder='group size' type='text' id='groupSize'/></div>";
+    "<div class=`createGroups`><button id='btn-gr' class='btn' onclick='createGroups(event)'>Create groups</button></div><div class='groupSize'><input placeholder='group size' type='text' id='groupSize'/></div>";
     const user = localStorage.getItem('user')
     fetch('/add', {
         method: 'PUT',
@@ -99,21 +99,23 @@ function createGroups(e){
 
     globalThis.check = false
     const groups = randomNames(globalThis.arr1,number)
-    console.log(groups[0].length)
              const flexnum = 100/groups[0].length-15;
              let temparr = ""
              for (let index = 0; index < groups.length; index++) {
+                 temparr += `<div class=row>`
                  for (let j = 0; j < groups[0].length; j++) {
-                     console.log(groups[j][index].name)
-                     temparr += `<div id='member${index+j}' class='member'><div class='img'><img src='${groups[j][index].img}'/></div><div class='name'>${groups[j][index].name}</div></div>`
+                     console.log(j)
+                     temparr += `<div id='member${index+j}' class='member'><div class='img'><img src='${groups[index][j].img}'/></div><div class='name'>${groups[index][j].name}</div></div>`
     
                  }
+                 temparr += `</div>`
                 }
+                memberswrapper.style.flexDirection = "column";
              memberswrapper.innerHTML = temparr
 
              var css = ''
              for (let index = 0; index < memberswrapper.childElementCount; index++) {
-                css += `#member${index} { flex: 1 0 ${flexnum}%; }`
+                css += `.row { flex: 1 0 ${flexnum}%; }`
              }
              
             head = document.head || document.getElementsByTagName('head')[0]
@@ -124,11 +126,11 @@ function createGroups(e){
 
             style.type = 'text/css';
             if (style.styleSheet){
-  // This is required for IE8 and below.
              style.styleSheet.cssText = '';
             } else {
             style.appendChild(document.createTextNode(css));
             }
+            document.getElementById('btn-gr').style.display = "none";
 
 
 }
