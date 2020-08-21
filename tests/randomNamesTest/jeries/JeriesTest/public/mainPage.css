@@ -124,13 +124,13 @@ body {
     background-color:gold ;
     
     border-radius:10px ;
-    width: 50vw;
+    width: 55vw;
     justify-content: center;
     margin-left: 10px;
     margin-bottom: 5px;
     
 }
 .paricontName {
-    margin-left: 50px;
-    
+    margin-left: 40px;
+    padding:16px
 }
