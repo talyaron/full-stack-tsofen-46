@@ -88,15 +88,24 @@ app.post('/login-user', function (req, res) {
     })
 });
 app.post('/addParticpnt', (req, res) => {
-    const { body } = req;
-    console.log(body)
-    const {img,name } = body;
 
-        let newParticipnts= new Participnts( { img:img, name:name} )
-        newParticipnts.save()
-        
+    const {img,name } = req.body;
+    let particpant=false;
+    Participnts.findOne( {name:name , img:img } , function(err, docs) {
+        if ( docs!=null ) {
+            let particpant=true;
+            res.send( {particpant:particpant} )
+        } 
+        else {
+            let newParticipnts= new Participnts( { img:img, name:name} )
+             newParticipnts.save()
+            res.send({particpant:particpant})
+        }
+
+    })
       
   })
+
 
   app.post('/api/userPannel',(req,res)=>{
     const {id} = req.body;

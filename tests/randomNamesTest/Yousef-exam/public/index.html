@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <div class="register-container">
+        <h1 class="register-header">Random Names</h1>
+        <form class="register-form-wrapper" onsubmit="handleRegister(event)">
+            <input class="inputbtn" type="email" placeholder="Email" name="email" size="50" required>
+            <input class="inputbtn" type="text" placeholder="User-Name" name="userName" size="50" required>
+            <input class="inputbtn" type="password" placeholder="Password" name="password" size="50" required>
+            <input class="inputbtn" type="text" placeholder="Image URL" name="imgUrl" size="50" required>
+            <input class="registerInput" type="submit" value="Register">
+        </form>
+    </div>
+    <script src="functions.js"></script>
+
+</body>
+
+</html>

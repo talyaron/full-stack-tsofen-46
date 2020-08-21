@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/index.css" />
+  <script src="./js/main.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form">
+      <div>
+        <h2 style="text-align: center;">Login</h2>
+      </div>
+      <div class="inputContainer">
+        <input class="holo" type="email" id="email" onchange="onLoginElementsChange(this)" required
+          placeholder="email" />
+      </div>
+      <div class="inputContainer">
+        <input class="holo" type="password" id="password" onchange="onLoginElementsChange(this)" required
+          placeholder="password" />
+      </div>
+      <div style="text-align: center;">
+        <button class="formButton" onclick="login()">Login</button>
+      </div>
+      <div style="text-align: center;">
+        <button class="formButton" onclick="redirectToRegister()">Sign Up</button>
+      </div>
+      <h4 id=" error_login"></h4>
+    </div>
+  </div>
+</body>
+
+</html>

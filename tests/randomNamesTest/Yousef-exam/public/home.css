@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+}
+
+.participents-container {
+    background-color: goldenrod;
+    border: 5px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    min-width: 600px;    
+    justify-content: center;
+    position: relative;
+}
+
+
+.participents-header {
+    font-family: Impact, Charcoal, sans-serif;
+    font-size: 50px;
+    position: absolute;
+    top: 0;
+}
+
+.img-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    background-color: gainsboro;
+    border-radius: 50px;
+    width: fit-content;
+    margin-left: 5px;
+}
+
+.grouped {
+    display: flex;
+    margin-bottom: 10px;
+    border: 5px solid black;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.img-container img {
+    height: 50px;
+    width: 50px;
+    border-radius: 70%;
+}
+
+#username {
+    margin: 10px;
+}
+
+.clickbtn {
+    margin: 10px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+#button-container {
+    position: absolute;
+    bottom: 0;
+}
+
+.groupSizeInput {
+    background: transparent;
+    margin-bottom: 10px;
+    border: hidden;
+    border-bottom: 2px solid black;
+    padding: 20px;
+    outline: none;
+    font-size: 20px;
+}
+
+.createGroup {
+    margin: 10px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+#user-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    position: absolute;
+    top: 20%;
+    direction: rtl;
+}
