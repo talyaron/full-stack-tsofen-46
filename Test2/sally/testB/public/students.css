@@ -1,0 +1,81 @@
+*{
+    padding: 15px;
+     /* margin: 40 ; */
+    
+
+}
+
+
+body{
+    
+    /* background: url(http://www.overseasstudentsconsulting.com/wp-content/uploads/Students2.jpg) no-repeat; */
+    background-color: orange;
+    background-size:cover ;
+    padding: 20px;
+    /* align-items: center; */
+    justify-content: center;
+     display: flex; 
+    
+    margin-top:100px;
+    font-family: sans-serif;
+    
+  
+
+}
+.loginclass{
+    /* justify-content: center; */
+    padding-top: 60px;
+    border: 1px solid silver;
+    background-color: lightgray;
+    border-radius: 70px;
+    
+   
+   
+    
+
+}
+.text{
+    
+    font-size: 30px;
+    color: orange;
+    font:bold;
+    float: left;
+    display: block;
+    padding-right: 20px;
+    color:black;
+    font-weight: lighter;
+    text-shadow: 0.5px 0.5px #fdfefe;
+
+
+}
+
+#root{
+    display: flex;
+    padding: 20px 30px;
+
+}
+#container{
+    justify-content: space-between;
+}
+#addbtn{
+    padding: 12px 30px;
+    border-radius: 12px;
+    background-color:burlywood;
+    border: 1px solid black;
+    color: black;
+    font-weight: bold;
+    font-family: Groudy Old Style;
+    cursor: pointer;
+    margin-top: 40px;
+    font-size: 22px;
+    width: 200px;
+    opacity: 0.85;
+
+}
+
+btn:hover{
+    opacity: 1;
+    border: 1.5px solid black;
+
+
+}

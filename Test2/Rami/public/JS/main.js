@@ -1,6 +1,8 @@
 var members = document.getElementById('names')
 var secs = 3000
 var check = true
+var arr1 = []
+var flag = true
 
 function randomNames(names, groupSize) {
     try {
@@ -39,18 +41,25 @@ function getRandomName(names) {
 
 
 function renderUsers(){
+    
     fetch('/renderUsers', {
     }).then(res=>res.json())
     .then(data => {
              const {arr} = data
-             console.log(arr)
              let membersarray = ''
              arr.map((user,index)=>{
+                if(globalThis.flag){
+                 globalThis.arr1.push(user)
+                }
                  membersarray +=  `<div id='member${index}' class='member'><div class='img'><img src='${user.img}'/></div><div class='name'>${user.name}</div></div>`
                })
                globalThis.members.innerHTML= membersarray
                
    })
+   if(globalThis.arr1.length>0){
+       globalThis.flag=false
+   }
+   console.log(globalThis.arr1)
     
 }
 
@@ -68,7 +77,7 @@ keepRendering();
  function Add(){
     const x = document.getElementById('footer')
     x.innerHTML =
-    "<div class=`createGroups`><button class='btn' onclick='createGroups(event)'>Create groups</button></div><div class='groupSize'><input placeholder='group size' type='text' id='groupSize'/></div>";
+    "<div class=`createGroups`><button id='btn-gr' class='btn' onclick='createGroups(event)'>Create groups</button></div><div class='groupSize'><input placeholder='group size' type='text' id='groupSize'/></div>";
     const user = localStorage.getItem('user')
     fetch('/add', {
         method: 'PUT',
@@ -89,27 +98,24 @@ function createGroups(e){
     var memberswrapper = document.getElementById( 'names' );
 
     globalThis.check = false
-
-    fetch('/renderUsers', {
-    }).then(res=>res.json())
-    .then(data => {
-            const {arr} = data
-            console.log(arr)
-
-            var groups = randomNames(arr, number)
+    const groups = randomNames(globalThis.arr1,number)
              const flexnum = 100/groups[0].length-15;
              let temparr = ""
-             for (let index = 0; index < arr.length; index++) {
-             groups[index].map((element,index)=>{
-                 console.log(element.name)
-                 temparr += `<div id='member${index}' class='member'><div class='img'><img src='${element[0].img}'/></div><div class='name'>${element[0].name}</div></div>`
-             })}
+             for (let index = 0; index < groups.length; index++) {
+                 temparr += `<div class=row>`
+                 for (let j = 0; j < groups[0].length; j++) {
+                     console.log(j)
+                     temparr += `<div id='member${index+j}' class='member'><div class='img'><img src='${groups[index][j].img}'/></div><div class='name'>${groups[index][j].name}</div></div>`
+    
+                 }
+                 temparr += `</div>`
+                }
+                memberswrapper.style.flexDirection = "column";
              memberswrapper.innerHTML = temparr
 
              var css = ''
              for (let index = 0; index < memberswrapper.childElementCount; index++) {
-                console.log(1)
-                css += `#member${index} { flex: 1 0 ${flexnum}%; }`
+                css += `.row { flex: 1 0 ${flexnum}%; }`
              }
              
             head = document.head || document.getElementsByTagName('head')[0]
@@ -120,15 +126,11 @@ function createGroups(e){
 
             style.type = 'text/css';
             if (style.styleSheet){
-  // This is required for IE8 and below.
              style.styleSheet.cssText = '';
             } else {
             style.appendChild(document.createTextNode(css));
             }
-        
-
-            
-   })
+            document.getElementById('btn-gr').style.display = "none";
 
 
 }
