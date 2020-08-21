@@ -16,12 +16,6 @@ body {
     position: relative;
 }
 
-@media only screen and (max-width: 820px) {
-    .participents-container {
-        background-color: lightblue;
-        width: 25vw;
-    }
-}
 
 .participents-header {
     font-family: Impact, Charcoal, sans-serif;
