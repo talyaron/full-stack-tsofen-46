@@ -1,16 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/newQuestion.css">
     <title>Create Question</title>
 </head>
-<body>
-    <h1>create Question</h1>
 
+<body>
+    <div class="newQuestion">
+
+
+        <div id="questionTitle">
+            <input id="question-Inp" placeholder="type you Question"></input>
+        </div>
+        <div id="questionDescription">
+            <input id="questionDesc-Inp" placeholder="descripte you Question"></input>
+        </div>
+        <div id="optionCount">
+            <p>Simple:</p>
+            <div>
+                <button onclick="onChooseOption(event)">1</button>
+                <button onclick="onChooseOption(event)">2</button>
+                <button onclick="onChooseOption(event)">3</button>
+            </div>
+            
+        </div>
+        <div id="questionForm"></div>
+        <div id="footer">
+            <button>save</button>
+            <button>cancel</button>
+            <button>delete</button>
+        </div>
+    </div>
 
 
     <script src="js/newQuestion.js"></script>
 </body>
+
 </html>

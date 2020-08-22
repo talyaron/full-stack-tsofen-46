@@ -58,36 +58,61 @@ window.addEventListener("load", function (event) {
 // Event handling:
 
 function onUserVote(event) {
-
-    let optionTile = event-innerText;
+    //user choise handling:
+    let graphconent = event.path[2].children; 
+    let optionTile = event.currentTarget.innerText;
     let choosedCloumn = event.currentTarget.parentElement;
-
     let currentUser = localStorage.getItem("username");
 
+    for (let i = 0; i < graphconent.length; i++) {
+        for (let j = 0; j < graphconent[i].children.length - 1; j++) {
+
+            let username = graphconent[i].children[j].innerHTML;
+
+            if (username == currentUser) {
+                graphconent[i].removeChild(graphconent[i].childNodes[0]);
+
+            }
+
+
+        }
+    }
+
+    // apply changes and get the latest changed column:
+    let newvoteRecord = document.createElement("p");
+    newvoteRecord.setAttribute("id", "votingrecord");
+    newvoteRecord.innerHTML = currentUser;
+    choosedCloumn.insertBefore(newvoteRecord, choosedCloumn.childNodes[0]);
+
+    let updatedColumnResult = [];
+    for (let i = 0; i < choosedCloumn.children.length - 1; i++) {
+        updatedColumnResult.push(choosedCloumn.children[i].innerHTML);
+    }
+
+    let columntoUpdate = {
+        optionTile, updatedColumnResult
+    }
+    //write latest results to backend:
     fetch('/api/addVote', {
 
         method: 'POST',
-        body: JSON.stringify({ title , optionTile  }),
+        body: JSON.stringify({ title, columntoUpdate }),
         headers: {
             'Content-Type': 'application/json'
         }
 
     })
-    .then(res => res.json())
-    .then( data => {
-
-        console.log(data);
-
-    })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
 
 
-    // multi:
+
+        })
 
 
-    let newvoteRecord = document.createElement("p");
-    newvoteRecord.setAttribute("id", "votingrecord");
-    newvoteRecord.innerHTML = currentUser;
-    choosedCloumn.insertBefore(newvoteRecord, choosedCloumn.childNodes[0]);
+
+
 
 
 

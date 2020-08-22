@@ -49,19 +49,19 @@ const newVotes = [
                 optionTile: "I like",
                 optionDesc: "i like",
                 voters: ["user1", "user2", "user3", "user4"]
-    
+
             },
             {
                 optionTile: "I dont like",
                 optionDesc: "i dont like",
                 voters: ["user1"]
-    
+
             },
             {
                 optionTile: "maybe sometimes",
                 optionDesc: "maybe sometimes",
                 voters: ["user1", "user3"]
-    
+
             }
         ]
     }
@@ -83,7 +83,7 @@ const newVotes = [
 app.get('/api/getVotes', (request, respons) => {
     Votes.find({}, (err, res) => {
         respons.send(res);
-        console.log(res);
+
     })
 
 })
@@ -92,17 +92,30 @@ app.post('/api/getSelectedQuestion', (request, respons) => {
     let { title } = request.body
     Votes.findOne({ title }, (err, res) => {
         respons.send(res);
-        console.log(res);
+
     })
 })
 
 
 app.post('/api/addVote', (request, respons) => {
-    let {}
-} )
+    let title = request.body.title;
+    let choosenOption = request.body.columntoUpdate;
+    let optionTitle = choosenOption.optionTile;
+    let newVoters = choosenOption.updatedColumnResult;
+    console.log(optionTitle);
+    console.log(newVoters);
+
+    Votes.findOneAndUpdate(
+        { title, "voteOptions.optionTile": optionTitle }, { $set: { "voteOptions.$.voters": newVoters } }, (err, doc) => {
+            if (err) {
+                console.log(err);
+            } else {
+                response.send(doc);
+            }
+        })
 
 
-
+})
 
 
 const port = process.env.PORT || 3000
