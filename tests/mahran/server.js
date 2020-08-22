@@ -97,6 +97,11 @@ app.post('/api/getSelectedQuestion', (request, respons) => {
 })
 
 
+app.post('/api/addVote', (request, respons) => {
+    let {}
+} )
+
+
 
 
 

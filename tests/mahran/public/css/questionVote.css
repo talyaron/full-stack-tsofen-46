@@ -42,11 +42,18 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #graphColumn {
-    background-color: khaki;
+
     width: 30%
 }
 #voteOptionBtn{
     padding: 1rem;
     background-color: teal;
     width: 100%;
+
+}
+
+#votingrecord {
+    background-color: yellowgreen;
+    padding: 0;
+    margin:2px;
 }
