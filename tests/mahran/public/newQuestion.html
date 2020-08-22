@@ -19,19 +19,24 @@
             <input id="questionDesc-Inp" placeholder="descripte you Question"></input>
         </div>
         <div id="optionCount">
-            <p>Simple:</p>
+            <p>Number of Options:</p>
             <div>
                 <button onclick="onChooseOption(event)">1</button>
                 <button onclick="onChooseOption(event)">2</button>
                 <button onclick="onChooseOption(event)">3</button>
+                <button onclick="onChooseOption(event)">4</button>
             </div>
             
         </div>
-        <div id="questionForm"></div>
+        <div id="questionForm">
+
+        </div>
         <div id="footer">
-            <button>save</button>
-            <button>cancel</button>
-            <button>delete</button>
+            <button onclick="onDelete()" id="deletebtn">delete</button>
+            <button onclick="onCancel()" id="cancelbtn">cancel</button>
+            <button onclick="onSave(event)" id="savebtn">save</button>
+ 
+
         </div>
     </div>
 

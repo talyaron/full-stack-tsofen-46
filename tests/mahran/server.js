@@ -14,6 +14,7 @@ app.use(express.static('public'));
 // MongoDB: Estaplish connection
 const url = "mongodb+srv://mahran:mahran84@cluster0.mr6bw.mongodb.net/test";
 const mongoose = require('mongoose');
+const { request, response } = require('express');
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
 
@@ -97,7 +98,7 @@ app.post('/api/getSelectedQuestion', (request, respons) => {
 })
 
 
-app.post('/api/addVote', (request, respons) => {
+app.post('/api/addVote', (request, response) => {
     let title = request.body.title;
     let choosenOption = request.body.columntoUpdate;
     let optionTitle = choosenOption.optionTile;
@@ -114,6 +115,32 @@ app.post('/api/addVote', (request, respons) => {
             }
         })
 
+
+})
+
+
+app.post('/api/createQuestion', (request,response) => {
+    let newQuestion = request.body;
+
+    newQuestion = new Votes({
+        title: newQuestion.title,
+        description: newQuestion.description,
+        voteOptionType: newQuestion.voteOptionType,
+        voteOptionCount: newQuestion.voteOptionCount,
+        voteOptions: newQuestion.voteOptions
+
+    })
+    console.log(newQuestion);
+    newQuestion.save(function(err,result){ 
+        if (err){ 
+            console.log(err); 
+        } 
+        else{ 
+            console.log(result)
+            response.send(result);
+        } 
+    
+    })
 
 })
 

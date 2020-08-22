@@ -1,8 +1,10 @@
 body {
     font-size: 16px;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-padding: 2rem;
+padding: 1rem;
+
 }
+
 
 .newQuestion {
     display: grid;
@@ -27,14 +29,20 @@ padding: 2rem;
 /* section question header area */
 #questionTitle {
     grid-area: questionTitle;
-    background-color:rgb(165, 222, 241);
+    background-color:#003366;
 
 
 }
+#optionCount {
+    padding-top:0.5rem;
+}
 #question-Inp, #questionDesc-Inp {
-    width: 80%;
-    height: 40%;
-    margin-top: 1rem;
+    width: 100%;
+    height: 100%;
+
+    background-color:#003366;
+    color: white;
+    font-size: 20px;
 
 
 }
@@ -60,12 +68,35 @@ padding: 2rem;
 }
 #optionCount button {
      width: 4rem;
+     height: 2rem;
+     text-align: center;
+
 
 }
 /* form */
 #questionForm{
     grid-area: questionForm;
+    display: flex;
+    flex-direction: column;
 }
+
+.newVotingOpt {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: lavender;
+    border-radius: 30px;
+}
+ #votingOptInput {
+ width: 100%;
+ height:2rem;
+
+ 
+}
+ #votingDescInput{
+    width: 100%;
+    height:5rem;
+} 
+
 #footer{
     display: flex;
     align-items: center;
@@ -75,7 +106,18 @@ padding: 2rem;
 }
 /* footer */
 #footer button {
-    height: 20%;
+    height: 2rem;
     width: 30%;
 
+    text-align: center;
+
+
+}
+
+#savebtn{
+    background-color: forestgreen
+}
+
+#deletebtn {
+    background-color: red
 }

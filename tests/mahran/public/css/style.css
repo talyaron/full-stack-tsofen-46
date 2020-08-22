@@ -22,4 +22,6 @@
 
 .login button {
     height: 2rem;
+    background-color: #003366;
+    color: white;
 }
