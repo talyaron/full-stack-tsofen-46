@@ -1,0 +1,52 @@
+.oneQuestionWrapper{
+    display: flex;
+    flex-direction: column;
+    width: 26%;
+    margin-right: 37%;
+    margin-top: 4%;
+    text-align: center;
+    border: 2px solid gray;
+    box-shadow: 3px 3px 20px 3px #4b8568;
+    border-radius: 5px;
+    height: 80vh; 
+}
+
+.welcomeUser{
+    margin-top: 8%;
+    font-size: 200%;
+    margin-bottom: 5%;
+}
+
+img{
+    width: 20px;
+    margin-right: 80%;
+}
+
+.theQuestion{
+    font-size: 120%;
+    margin-bottom: 5%;
+    color: rgb(76, 182, 218);
+    font-weight: bold;
+}
+
+.chart{
+    display: flex;
+    margin-top: 84%;
+}
+
+.dataWrapper{
+    display: flex;
+    flex-direction: column;
+    margin-right: 13%;
+}
+
+.option{
+    background-color: lightcoral;
+    color: whitesmoke;
+    width: 120%;
+    height: 35px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questions</title>
+    <link rel="stylesheet" href="style/addQuestion.css">
+</head>
+
+<body dir="rtl">
+    <div class="wrapperAddQ">
+        <div class="addTitle">הוספת שאלה חדשה</div>
+        <form onsubmit="addNewQuestion(event)">
+            <input id="qName" name="name" placeholder="שם השאלה" required/>
+            <input id="qDis" name="description" placeholder="תיאור השאלה">
+            
+            <div class="answer">
+                <div>תשובות</div>
+                <input id="option1" name="option1" placeholder="האופציה הראשונה" required/>
+                <input id="option2" name="option2" placeholder="האופציה השניה" required/>
+                <input id="option3" name="option3" placeholder="האופציה השלישית" required/>
+            </div>
+            <div>
+                <button class="accept" type="submit">אישור</button>
+                <div class="delete" onclick="backToQuestion()">מחיקה</div>
+            </div>
+        </form>
+    </div>
+    <script src="functions.js"></script>
+</body>
+
+</html>
