@@ -1,0 +1,68 @@
+body {
+    font-size: 16px;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+
+
+.qv-grid {
+ 
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 7fr 2fr;
+    
+        grid-template-areas: 
+        "QuestionTitle"
+        "q-votingGraph";
+
+    
+        width: 60vw;
+        height: 100vh;
+    
+        position: absolute;
+        left:20%
+    
+
+
+}
+
+#questionTitle {
+    grid-area:QuestionTitle ;
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding:2rem;
+
+}
+
+#qVotingGraph{
+    display: flex;
+    flex-direction: coulmn;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    grid-area: q-votingGraph;
+    background-color: white;
+
+}
+
+#graphColumn {
+
+     width: 100%;
+     margin-right:1rem;
+
+}
+#voteOptionBtn{
+    padding: 1rem;
+    background-color: #003366;
+    color:white;
+    width: 100%;
+
+}
+
+#votingrecord {
+    background-color: yellowgreen;
+    padding: 0;
+    margin:2px;
+}

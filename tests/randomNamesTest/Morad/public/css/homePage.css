@@ -1,0 +1,25 @@
+h1{
+    text-align: center;
+    top: 2%;
+}
+.addQuestion{
+    position: fixed;
+    top: 70%;
+    left: 2%;
+}
+.addQuestion>img{
+    height: 10%;
+    width: 10%;
+}
+.card{
+    display: grid;
+    grid-template-columns: 90% 10%;
+}
+.card>img{
+}
+.questionDiv{
+   position: relative;
+   width: fit-content;
+   display: flex;
+   flex-flow: row;
+}
