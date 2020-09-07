@@ -33,6 +33,14 @@ const stories = [
 
 const posts = [
   {img:'https://i.pinimg.com/originals/97/e4/2a/97e42a82fc7911961d3ca55f54d1372c.jpg', text:'bla'},
+  {img:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTJxJo9xQYG8gWAEQFEWrjcBcnYvTbQUxxMiA&usqp=CAU', text:'blo'},
+  {img:'https://i.pinimg.com/originals/97/e4/2a/97e42a82fc7911961d3ca55f54d1372c.jpg', text:'bla'},
+  {img:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTJxJo9xQYG8gWAEQFEWrjcBcnYvTbQUxxMiA&usqp=CAU', text:'blo'},
+  {img:'https://i.pinimg.com/originals/97/e4/2a/97e42a82fc7911961d3ca55f54d1372c.jpg', text:'bla'},
+  {img:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTJxJo9xQYG8gWAEQFEWrjcBcnYvTbQUxxMiA&usqp=CAU', text:'blo'},
+  {img:'https://i.pinimg.com/originals/97/e4/2a/97e42a82fc7911961d3ca55f54d1372c.jpg', text:'bla'},
+  {img:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTJxJo9xQYG8gWAEQFEWrjcBcnYvTbQUxxMiA&usqp=CAU', text:'blo'},
+  {img:'https://i.pinimg.com/originals/97/e4/2a/97e42a82fc7911961d3ca55f54d1372c.jpg', text:'bla'},
   {img:'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTJxJo9xQYG8gWAEQFEWrjcBcnYvTbQUxxMiA&usqp=CAU', text:'blo'}
 ]
 
@@ -73,10 +81,12 @@ function Feed(props){
 
   const {post} = props
 
-  return(<div className='post'>
-    <img src={post.img} alt={post.text}/>
-    <p>{post.text}</p>
-  </div>)
+  return(
+    <div className='post'>
+      <img src={post.img} alt={post.text}/>
+      <p>{post.text}</p>
+    </div>
+  )
 }
 
 export default App;
