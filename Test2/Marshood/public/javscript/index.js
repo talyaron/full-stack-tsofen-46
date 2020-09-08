@@ -24,7 +24,7 @@ function RegisterUser(event) {
     })
         .then(response => response.json())
         .then(data => {
-            alert('Success:', data[1]);
+           // alert('Success:', data[1]);
             if (data[0].success) {//true
                 localStorage.setItem("name", data[1].name);
                 localStorage.setItem("img", data[1].img);

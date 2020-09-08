@@ -1,0 +1,345 @@
+[
+    {
+        "jiraItem": {
+            "jiraId": "TRIES-43173",
+            "jiraName": "PSI 42: SAR Support for FHC FSCK",
+            "jiraType": "Epic",
+            "priority": "P00",
+            "status": "Funnel",
+            "specialfields": {
+                "JiraParentId": "TRIES-21957",
+                "FunctionalTest": true,
+                "QaRepresentative": "Morad",
+                "FixVersion": "Foothills V1.1.0 (Core)"
+            }
+        },
+        "qcItem": {
+            "status": "Blocked",
+            "requirementType": "Epic",
+            "requirementId": "2284",
+            "CreationTime": 1596500759
+        },
+        "diffItem": {
+            "updatedTime": 1596500759,
+            "type": "Delete"
+        }
+    },
+    {
+        "jiraItem": {
+            "priority": "P00",
+            "status": "Backlog",
+            "jiraType": "Epic",
+            "jiraId": "TRIES-41773",
+            "jiraName": "PSI 41: SAR Support for FSCK/Recovery",
+            "specialfields": {
+                "JiraParentId": "TRIES-21957",
+                "FunctionalTest": true,
+                "QaRepresentative": "Marshod",
+                "FixVersion": "Foothills V1.1.0 (Core)"
+            }
+        },
+        "qcItem": {
+            "status": "Backlog",
+            "requirementType": "Epic",
+            "requirementId": "2244"
+        },
+        "diffItem": {
+            "updatedTime": 1596500759,
+            "type": "Update",
+            "updatedfields": [
+                {
+                    "FieldName": "priority",
+                    "OldVal": "low",
+                    "NewVal": "critical"
+                }
+            ]
+        }
+    },
+    {
+        "jiraItem": {
+            "priority": "P00",
+            "status": "Backlog",
+            "jiraType": "Epic",
+            "jiraId": "TRIES-37201",
+            "jiraName": "PSI 41: FSCK Support for Late Dedup and VLB Defrag Phase 1 & 2",
+            "specialfields": {
+                "JiraParentId": "TRIES-21957",
+                "FunctionalTest": true,
+                "QaRepresentative": "Lina",
+                "FixVersion": "handhills V1.1.0 (Core)"
+            }
+        },
+        "qcItem": {
+            "status": "Backlog",
+            "requirementType": "Epic",
+            "requirementId": "2011",
+            "CreationTime": 1596500759
+        },
+        "diffItem": {
+            "updatedTime": 1596500759,
+            "type": "Delete"
+        }
+    },
+    {
+        "jiraItem": {
+            "priority": "P01",
+            "status": "Done",
+            "jiraType": "Epic",
+            "jiraId": "TRIES-36948",
+            "jiraName": "PSI 39: RAID fsck - Infrastructure update and validation rules expansion",
+            "specialfields": {
+                "JiraParentId": "TRIES-21957",
+                "FunctionalTest": true,
+                "QaRepresentative": "Moran",
+                "FixVersion": "handhills V1.1.0 (Core)"
+            }
+        },
+        "qcItem": {
+            "status": "Done",
+            "requirementType": "Epic",
+            "requirementId": "2008"
+        },
+        "diffItem": {
+            "updatedTime": 1596500759,
+            "type": "Update",
+            "updatedfields": [
+                {
+                    "FieldName": "status",
+                    "OldVal": "backlog",
+                    "NewVal": "in progress"
+                }
+            ]
+        }
+    },
+    {
+        "jiraItem": {
+            "priority": "P00",
+            "status": "Backlog",
+            "jiraType": "Epic",
+            "jiraId": "TRIES-34825",
+            "jiraName": "PSI 40: Fault Containment - FSCK support",
+            "specialfields": {
+                "JiraParentId": "TRIES-21957",
+                "FunctionalTest": true,
+                "QaRepresentative": "Tal",
+                "FixVersion": "handhills V1.1.0 (Core)"
+            }
+        },
+        "qcItem": {
+            "status": "Backlog",
+            "requirementType": "Epic",
+            "requirementId": "2009",
+            "CreationTime": 1596500759
+        },
+        "diffItem": {
+            "updatedTime": 1596500760,
+            "type": "Delete"
+        }
+    },
+    {
+        "jiraItem": {
+            "priority": "P00",
+            "status": "Backlog",
+            "jiraType": "Epic",
+            "jiraId": "TRIES-34722",
+            "jiraName": "PSI 41: RAID fsck - Support V2 new features",
+            "specialfields": {
+                "JiraParentId": "TRIES-21957",
+                "FunctionalTest": true,
+                "QaRepresentative": "Rami",
+                "FixVersion": "handhills V1.1.0 (Core)"
+            }
+        },
+        "qcItem": {
+            "status": "Backlog",
+            "requirementType": "Epic",
+            "requirementId": "1956"
+        },
+        "diffItem": {
+            "updatedTime": 1596500760,
+            "type": "Update",
+            "updatedfields": [
+                {
+                    "FieldName": "status",
+                    "OldVal": "in progress",
+                    "NewVal": "done"
+                }
+            ]
+        }
+    },
+    {
+        "jiraItem": {
+            "priority": "P00",
+            "status": "Backlog",
+            "jiraType": "Epic",
+            "jiraId": "TRIES-34722",
+            "jiraName": "PSI 41: RAID fsck - Support V2 new features",
+            "specialfields": {
+                "JiraParentId": "TRIES-21957",
+                "FunctionalTest": true,
+                "QaRepresentative": "Rami",
+                "FixVersion": "handhills V1.1.0 (Core)"
+            }
+        },
+        "qcItem": {
+            "status": "Backlog",
+            "requirementType": "Epic",
+            "requirementId": "1956",
+            "CreationTime": 1596500759
+        },
+        "diffItem": {
+            "updatedTime": 1596500760,
+            "type": "Update",
+            "updatedfields": [
+                {
+                    "FieldName": "Qa - Representative",
+                    "OldVal": "Tal",
+                    "NewVal": "Rami"
+                }
+            ]
+        }
+    },
+    {
+        "jiraItem": {
+            "priority": "P01",
+            "status": "Implementing",
+            "jiraType": "Epic",
+            "jiraId": "TRIES-32895",
+            "jiraName": "PSI 40: RAID fsck - Infrastructure update and validation rules expansion",
+            "specialfields": {
+                "JiraParentId": "TRIES-21957",
+                "FunctionalTest": true,
+                "QaRepresentative": "Walla",
+                "FixVersion": "handhills V1.1.0 (Core)"
+            }
+        },
+        "qcItem": {
+            "status": "In Progress",
+            "requirementType": "Epic",
+            "requirementId": "1892"
+        },
+        "diffItem": {
+            "updatedTime": 1596500760,
+            "type": "Update",
+            "updatedfields": [
+                {
+                    "FieldName": "status",
+                    "OldVal": "in progress",
+                    "NewVal": "done"
+                }
+            ]
+        }
+    },
+    {
+        "jiraItem": {
+            "priority": "P00",
+            "status": "Backlog",
+            "jiraType": "Epic",
+            "jiraId": "TRIES-28635",
+            "jiraName": "PSI 42: FSCK Support for Late Dedup and VLB Defrag Phase 3 & 4",
+            "specialfields": {
+                "JiraParentId": "TRIES-21957",
+                "FunctionalTest": true,
+                "QaRepresentative": "Maharan",
+                "FixVersion": "handhills V1.1.0 (Core)"
+            }
+        },
+        "qcItem": {
+            "status": "Backlog",
+            "requirementType": "Epic",
+            "requirementId": "1793",
+            "CreationTime": 1596500759
+        },
+        "diffItem": {
+            "updatedTime": 1596500761,
+            "type": "Update",
+            "updatedfields": [
+                {
+                    "FieldName": "priority",
+                    "OldVal": "High",
+                    "NewVal": "low"
+                }
+            ]
+        }
+    },
+    {
+        "jiraItem": {
+            "priority": "P00",
+            "status": "Backlog",
+            "jiraType": "Epic",
+            "jiraId": "TRIES-28531",
+            "jiraName": "Quality: PSI 41: FSCK Test Support for FH-C DP Features",
+            "specialfields": {
+                "JiraParentId": "TRIES-21957",
+                "FunctionalTest": true,
+                "QaRepresentative": "Lina",
+                "FixVersion": "Foothills V1.1.0 (Core)"
+            }
+        },
+        "qcItem": {
+            "status": "Backlog",
+            "requirementType": "Epic",
+            "requirementId": "2264"
+        },
+        "diffItem": {
+            "updatedTime": 1596500761,
+            "type": "Update",
+            "updatedfields": [
+                {
+                    "FieldName": "status",
+                    "OldVal": "in progress",
+                    "NewVal": "done"
+                }
+            ]
+        }
+    },
+    {
+        "jiraItem": {
+            "priority": "P00",
+            "status": "Implementing",
+            "jiraType": "Feature",
+            "jiraId": "TRIF-789",
+            "jiraName": "Display cluster time in GUI and Resync when NTP between nodes are out of sync",
+            "specialfields": {
+                "JiraParentId": "TRIES-21957",
+                "FunctionalTest": true,
+                "QaRepresentative": "Mahmood",
+                "FixVersion": "Foothills V1.1.0 (Core)"
+            }
+        },
+        "qcItem": {
+            "status": "N/A",
+            "requirementType": "Feature",
+            "requirementId": "1765",
+            "CreationTime": 1596500759
+        },
+        "diffItem": {
+            "updatedTime": 1596500761,
+            "type": "Updated"
+        }
+    },
+    {
+        "jiraItem": {
+            "priority": "P00",
+            "status": "Implementing",
+            "jiraType": "Feature",
+            "jiraId": "TRIF-761",
+            "jiraName": "Warning State for Job Steps  is not intuitively available for users",
+            "specialfields": {
+                "JiraParentId": "TRIES-21957",
+                "FunctionalTest": true,
+                "QaRepresentative": "Tal",
+                "FixVersion": "Foothills V1.1.0 (Core)"
+            }
+        },
+        "qcItem": {
+            "status": "N/A",
+            "requirementType": "Feature",
+            "requirementId": "1918111"
+        },
+        "diffItem": {
+            "updatedTime": 1596500763,
+            "type": "Updated"
+        }
+    }
+  ]
