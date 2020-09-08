@@ -1,0 +1,10 @@
+npm init --y
+npm i express
+
+npm i -g nodemon
+
+cmd
+nodemon
+
+
+npm i express mongoose
