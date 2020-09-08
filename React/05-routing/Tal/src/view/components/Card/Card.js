@@ -3,6 +3,9 @@ import './Card.css';
 
 function Card(props) {
     const {newsItem} = props;
+    
+    
+    
     return (
         <div className='card'>
             <img src={newsItem.img} alt=''/>

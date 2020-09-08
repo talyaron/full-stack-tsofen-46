@@ -44,10 +44,6 @@ function onSave(event) {
     let voteOptionCount = createdQF.length;
     let voteOptions = [];
 
-
-
-
-
     for (let i = 0; i < createdQF.length; i++) {
         let optionTile = createdQF[i].children[0].value;
         let optionDesc = createdQF[i].children[1].value;
@@ -88,13 +84,13 @@ function onSave(event) {
 
 }
 
-function onCancel () {
+function onCancel() {
     window.location.reload(true);
     window.location.href = "main.html"
 }
 
 
-function onDelete () {
+function onDelete() {
     window.location.reload(true);
     window.location.href = "main.html"
 }
