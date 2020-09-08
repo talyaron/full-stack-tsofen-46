@@ -66,9 +66,9 @@ function handleLogin(e){
 
 
 
-window.setInterval(function(){
-    getgroup()
-  }, 2000);
+// window.setInterval(function(){
+//     getgroup()
+//   }, 2000);
 
 
 
@@ -113,7 +113,7 @@ function getgroup(){
 
         data.forEach(element => {
             
-            if(parseInt(element.time) + 1800000 >= realtime){
+            if(true){
                 itemHTML +=   buildcard(element.name,element.userimg) 
                     
             }
@@ -159,7 +159,7 @@ function handlecreate(e){
         let realtime=realdate.getTime();
      data.forEach(element => {
             
-        if(parseInt(element.time) + 1800000 >= realtime){
+        if(true){
             group.push({name:element.name,userimg:element.userimg})
             console.log(group)
                 

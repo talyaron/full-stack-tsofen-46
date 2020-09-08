@@ -1,0 +1,64 @@
+
+.page{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-right: 26%;
+    margin-top: 4%;
+    border: 2px solid gray;
+    box-shadow: 3px 3px 20px 3px #4b7d85;
+    border-radius: 5px;
+    width: 45%;
+    height: 80vh; 
+}
+
+.newPage{
+    -webkit-text-stroke: 1px rgb(51, 54, 243);
+    color: white;
+    font-size: 300%;
+
+    margin-left: 10%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.aria{
+    font-weight: bold;
+    font-size: 220%;
+    color: blue;
+    margin-top: -3%;
+    margin-right: 23%;
+}
+
+.title{
+    font-size: 200%;
+}
+
+.logo img{
+    width: 50%;
+    height: 20vh;
+}
+
+.logIn{
+    font-weight: bold;
+    border-bottom-style: groove;
+    margin-top: 5%;
+    margin-right: 35%;
+    width: 30%;
+    
+}
+
+
+.inputUser{
+    margin-right: 35%;
+    margin-top: 4%;
+    width: 20%;
+}
+button{
+    margin-top: 4%;
+    color: whitesmoke;
+    background-color: royalblue;
+    border-radius: 12px;
+    width: 20%;
+    height: 8vh;
+    box-shadow: 5px 10px #888888;
+}

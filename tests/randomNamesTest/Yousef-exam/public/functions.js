@@ -67,7 +67,7 @@ function getUsers() {
                 var totalSeconds = totalMiliseconds / 1000;
                 var totalMinuts = totalSeconds / 60;
                 var minutes = Math.floor(totalMinuts);
-                if (minutes <= 30) {
+                if (true) {
                     lst.push(item)
                     usersHtml += `<div class="img-container"><img src="${item.imgUrl}" id="userimg"> <h2 id="username">${item.userName}</h2></div>`;
                 }
@@ -92,7 +92,7 @@ function updateUsers() {
                 var totalSeconds = totalMiliseconds / 1000;
                 var totalMinuts = totalSeconds / 60;
                 var minutes = Math.floor(totalMinuts);
-                if (minutes <= 30) {
+                if (true) {
                     lst.push(item)
                     usersHtml += `<div class="img-container"><img src="${item.imgUrl}" id="userimg"> <h2 id="username">${item.userName}</h2></div>`;
                 }

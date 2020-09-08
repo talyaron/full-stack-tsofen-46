@@ -1,0 +1,46 @@
+body{
+  background: white;
+}
+
+.stories{
+  display: flex;
+  height: fit-content;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+}
+.story{
+  text-align:center;
+  margin:5px
+}
+
+.story img{
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+}
+
+.story p{
+  margin:3px 0px
+}
+
+/* feed */
+.feed{
+  margin: 100px auto;
+  width: fit-content;
+  text-align: center;
+  
+}
+
+.post{
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.452);
+  border-radius: 10px;
+  padding:10px;
+}
+
+.post img{
+  width: 400px;
+  border-radius: 10px 10px 0px 0xp;
+}
+.post p{
+  color: gray;
+}

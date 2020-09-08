@@ -1,0 +1,27 @@
+.login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 20vw;
+    position: absolute;
+    left:40%;
+    top:40%;
+}
+
+.login h3 {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 2px solid gray;
+}
+
+.login input {
+    margin-bottom: 1rem;
+    height: 1.5rem;
+}
+
+.login button {
+    height: 2rem;
+    background-color: #003366;
+    color: white;
+}

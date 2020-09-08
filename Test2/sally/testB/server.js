@@ -90,7 +90,7 @@ app.get('/getStudents', function (req, res) {
 })
 
 
-
+//You should get by date of last 30 minutes
 //get the all the students from database
 app.get('/getgroup', (req, res) => {
     Users.find({}, function (err, docs) {

@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-<body>
- <div class="container">
-    <label id="l-username" for="Inp-username">Username</label>
-    <input type="text" name="Inp-username" id="Inp-username">
 
-    <label id="l-img" for="Inp-img">Image Src</label>
-    <input type="text" name="Inp-img" id="Inp-img">
-
-    <button id="goBtn">Go</button>
- </div> 
-</body>
-=======
 const express = require('express')
 const app = express()
 
@@ -57,7 +45,3 @@ const port = process.env.PORT || 3000;
 
 app.listen(port, () => { console.log("App is Listening to",port) })
 
-
-
-
->>>>>>> master

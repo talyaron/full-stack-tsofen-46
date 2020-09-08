@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="style/index.css">
+
+</head>
+
+<body dir="rtl">
+
+    <div class="page">
+
+        <div class="newPage">דף חדש</div>
+        <div class="aria">אזור</div>
+        <div class="title">בשיתוף עם</div>
+        <div class="logo">
+            <img src='img/logo.jpg'>
+        </div>
+        <div class="title">מחליטים ביחד</div>
+        <form onsubmit='handleLogin(event)'>
+            <div class="logIn">התחברות</div>
+
+            <div class="inputUser" >
+                <input type="text" name="username" placeholder="שם משתמש" required/>
+            </div>
+
+            <div class="sendUser">
+            <button  type="submit">התחברות</button>
+        </div>
+        </form>
+    </div>
+    <script src="functions.js"></script>
+</body>
+
+</html>

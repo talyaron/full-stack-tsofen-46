@@ -34,8 +34,9 @@ app.post('/register',(req,res)=>{
   })
 
   
+  //You swhould have sent an object
 
-  res.send('done')
+  res.send({success:'done'})
 
 })
 

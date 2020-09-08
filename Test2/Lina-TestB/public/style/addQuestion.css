@@ -1,0 +1,53 @@
+.wrapperAddQ{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 4%;
+    margin-right: 35%;
+    box-shadow: 3px 3px 20px 3px #2645d1;
+    border-radius: 5px;
+    width: 30%;
+    height: 80vh;  
+}
+
+.addTitle{
+    margin-top: 4%;
+    font-weight: bold;
+    font-size: 200%;
+}
+
+input{
+    margin-top: 3%;
+    margin-right: 3%;
+    background-color: rgb(236, 236, 236);
+    width: 70%;
+    height: 5vh;
+}
+
+.answer{
+    margin-top: 14%;
+    font-weight: bold;
+}
+button{
+    width: 30%;
+    height: 35px;
+    margin-top: 15%;
+    border-radius: 5px;
+    color: whitesmoke;
+}
+
+.accept{
+    background-color: seagreen;
+    margin-left: 30%;
+}
+
+.delete{
+    width: 30%;
+    height: 35px;
+    margin-top: -9%;
+    margin-right: 55%;
+    border-radius: 5px;
+    color: whitesmoke;
+    background-color: red;
+    text-align: center;
+}
